@@ -10,6 +10,7 @@ const [portFile, logFile] = process.argv.slice(2);
 const relDir = process.env.GH_FAKE_RELEASES;
 let polls = 0;
 let mediaCount = 0;
+let containerCount = 0;
 const server = http.createServer((req, res) => {
   let body = '';
   req.on('data', (c) => (body += c));
@@ -31,13 +32,13 @@ const server = http.createServer((req, res) => {
     const p = url.pathname.replace(/^\/v[\d.]+/, '');
     if (p === '/me') return json({user_id: 'IGID', username: 'dailydeenreminders', account_type: 'MEDIA_CREATOR'});
     if (p === '/IGID/content_publishing_limit') return json({data: [{quota_usage: mediaCount, config: {quota_total: 100}}]});
-    if (p === '/IGID/media' && req.method === 'POST') return json({id: `c${mediaCount + 1}`});
+    if (p === '/IGID/media' && req.method === 'POST') return json({id: `c${++containerCount}`});
     if (/^\/c\d+$/.test(p)) return json({status_code: ++polls % 2 === 0 ? 'FINISHED' : 'IN_PROGRESS'});
     if (p === '/IGID/media_publish') {
       mediaCount++;
       return json({id: `m${mediaCount}`});
     }
-    if (/^\/m\d+$/.test(p)) return json({permalink: `https://www.instagram.com/reel/TEST${p.slice(2)}/`});
+    if (/^\/m\d+$/.test(p)) return json({permalink: `https://www.instagram.com/p/TEST${p.slice(2)}/`});
     if (/^\/m\d+\/insights$/.test(p)) {
       const values = {reach: 1840, saved: 61, shares: 23, views: 3120, comments: 9, ig_reels_avg_watch_time: 11800};
       const m = url.searchParams.get('metric');

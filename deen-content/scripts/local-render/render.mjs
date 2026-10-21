@@ -103,9 +103,23 @@ function serve() {
   return new Promise((resolve) => server.listen(0, '127.0.0.1', () => resolve(server)));
 }
 
-async function openPage(server, query) {
+// Output size and layout-checker box per kind (keep in sync with src/brand/canvas.tsx).
+const CANVAS = {
+  reel: {width: 1080, height: 1920, box: {left: 96, right: 930, top: 250, bottom: 1500}},
+  carousel: {width: 1080, height: 1350, box: {left: 90, right: 990, top: 60, bottom: 1325}},
+  story: {width: 1080, height: 1920, box: {left: 96, right: 984, top: 250, bottom: 1600}},
+};
+const reelKind = (id) => {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(projectRoot, 'src/content/reels', `${id}.json`), 'utf8')).kind ?? 'reel';
+  } catch {
+    return 'reel';
+  }
+};
+
+async function openPage(server, query, size = {width: 1080, height: 1920}) {
   const browser = await chromium.launch();
-  const page = await browser.newPage({viewport: {width: 1080, height: 1920}, deviceScaleFactor: 1});
+  const page = await browser.newPage({viewport: {width: size.width, height: size.height}, deviceScaleFactor: 1});
   const errors = [];
   page.on('pageerror', (e) => errors.push(String(e)));
   page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
@@ -123,9 +137,9 @@ async function openPage(server, query) {
   return {browser, page, errors};
 }
 
-async function shot(page, frame, type = 'png') {
+async function shot(page, frame, type = 'png', size = {width: 1080, height: 1920}) {
   await page.evaluate((f) => window.__setFrame(f), frame);
-  return page.screenshot({type, quality: type === 'jpeg' ? 92 : undefined, clip: {x: 0, y: 0, width: 1080, height: 1920}});
+  return page.screenshot({type, quality: type === 'jpeg' ? 92 : undefined, clip: {x: 0, y: 0, width: size.width, height: size.height}});
 }
 
 async function main() {
@@ -170,15 +184,30 @@ async function main() {
       }
       await browser.close();
       console.log(`Wrote ${frames.length} stills → ${out}`);
+    } else if (mode === 'slides') {
+      // Carousel slides / story: one PNG per scene, each at its settled state.
+      const kind = reelKind(target);
+      const size = CANVAS[kind === 'story' ? 'story' : 'carousel'];
+      const n = JSON.parse(fs.readFileSync(path.join(projectRoot, 'src/content/reels', `${target}.json`), 'utf8')).scenes.length;
+      fs.mkdirSync(out, {recursive: true});
+      for (let i = 0; i < n; i++) {
+        const {browser, page} = await openPage(server, `reel=${encodeURIComponent(target)}&mode=still&slide=${i}`, size);
+        fs.writeFileSync(path.join(out, `slide-${String(i + 1).padStart(2, '0')}.png`), await shot(page, 0, 'png', size));
+        await browser.close();
+      }
+      console.log(`Wrote ${n} slide(s) → ${out}`);
     } else if (mode === 'layout-check') {
       // Checks every visible text element at the given frames against the
       // Instagram safe zone and for clipped/truncated text. Writes JSON.
       const isCover = opt('cover') === '1';
-      const {browser, page} = await openPage(server, `reel=${encodeURIComponent(target)}&mode=${isCover ? 'cover' : 'reel'}`);
+      const slide = opt('slide');
+      const kind = reelKind(target);
+      const stillKind = kind === 'story' ? 'story' : 'carousel';
+      const size = slide !== undefined ? CANVAS[stillKind] : CANVAS.reel;
+      const query = slide !== undefined ? `mode=still&slide=${slide}` : `mode=${isCover ? 'cover' : 'reel'}`;
+      const {browser, page} = await openPage(server, `reel=${encodeURIComponent(target)}&${query}`, size);
       const frames = (opt('frames') ?? '0').split(',').map(Number);
-      const box = isCover
-        ? {left: 90, right: 990, top: 285, bottom: 1635}
-        : {left: 96, right: 930, top: 250, bottom: 1500};
+      const box = isCover ? {left: 90, right: 990, top: 285, bottom: 1635} : slide !== undefined ? CANVAS[stillKind].box : CANVAS.reel.box;
       const results = [];
       for (const f of frames) {
         await page.evaluate((fr) => window.__setFrame(fr), f);

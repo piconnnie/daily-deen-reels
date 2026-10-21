@@ -1,0 +1,42 @@
+[
+  {
+    "id": "one-ayah-one-lesson",
+    "name": "One Ayah. One Lesson.",
+    "kicker": "ONE AYAH. ONE LESSON.",
+    "defaultKind": "carousel",
+    "pillar": "A",
+    "concept": "A Qur'anic verse, its context (neighbouring ayat, quoted), and one takeaway."
+  },
+  {
+    "id": "heart-reminder",
+    "name": "A Reminder Your Heart Needs",
+    "kicker": "A REMINDER YOUR HEART NEEDS",
+    "defaultKind": "reel",
+    "pillar": "B",
+    "concept": "A reflective message about a real-life struggle, anchored in a verse or authentic hadith."
+  },
+  {
+    "id": "dua-of-the-day",
+    "name": "Dua of the Day",
+    "kicker": "DUA OF THE DAY",
+    "defaultKind": "reel",
+    "pillar": "D",
+    "concept": "A du'a from the Qur'an or Sahih al-Bukhari/Muslim: Arabic, transliteration (Qur'an only, verified), meaning and source."
+  },
+  {
+    "id": "daily-check-in",
+    "name": "A Muslim's Daily Check-In",
+    "kicker": "A MUSLIM'S DAILY CHECK-IN",
+    "defaultKind": "carousel",
+    "pillar": "C",
+    "concept": "One habit or character trait to reflect on, with a short checklist."
+  },
+  {
+    "id": "before-you-scroll",
+    "name": "Before You Scroll",
+    "kicker": "BEFORE YOU SCROLL",
+    "defaultKind": "reel",
+    "pillar": "E",
+    "concept": "A short, thoughtful reminder that makes someone pause (15–20 s)."
+  }
+]

@@ -3,9 +3,9 @@
 // so generated copy is checked against the same rules it was asked to follow.
 
 export const LIMITS = {
-  hook: {lineChars: 13, lines: [2, 5], sub: 34, kicker: 26},
+  hook: {lineChars: 13, lines: [2, 5], sub: 34, kicker: 30},
   headline: {lineChars: 22, lines: [1, 2]},
-  kicker: 26,
+  kicker: 30,
   cards: {count: [2, 5], text: 30, tag: 18},
   table: {rows: [2, 3], input: 30, chip: 22, notes: [0, 2], note: 38},
   comparison: {label: 26, value: 9, caption: 28, conclusionLineChars: 22},
@@ -15,9 +15,13 @@ export const LIMITS = {
   takeaway: {lineChars: 15, lines: [2, 3], cta: 38},
   cover: {lineChars: 14, lines: [2, 4]},
   // Quotes need reading time: at least base + perChar frames for the English shown.
-  source: {english: 260, arabic: 220, excerptMin: 40, baseFrames: 75, perChar: 1.5, maxFrames: 1500},
+  source: {english: 260, arabic: 220, arabicStill: 320, excerptMin: 40, baseFrames: 75, perChar: 1.5, maxFrames: 1500},
   scene: {minFrames: 45, maxFrames: 330},
   totalSec: [15, 60],
+  reflection: {paragraphs: [1, 3], paragraph: 170, total: 320},
+  carousel: {slides: [3, 10], recommended: [5, 7]},
+  story: {replyPrompt: 60},
+  transliteration: 200,
 };
 
 const len = (s) => [...(s ?? '')].length;
@@ -47,8 +51,14 @@ export function checkLimits(reel) {
   const str = (where, s, max) => len(s) > max && out.push(`${where} "${s}" is ${len(s)} chars (max ${max})`);
   const count = (where, arr, [lo, hi]) => (!Array.isArray(arr) || arr.length < lo || arr.length > hi) && out.push(`${where}: ${arr?.length ?? 0} items (allowed ${lo}–${hi})`);
 
+  const kind = reel.kind ?? 'reel';
+  if (kind === 'carousel') count('carousel slides', reel.scenes, L.carousel.slides);
+  if (kind === 'story') {
+    if (reel.scenes?.length !== 1) out.push(`a story has exactly 1 scene (got ${reel.scenes?.length ?? 0})`);
+    if (reel.replyPrompt) str('story replyPrompt', reel.replyPrompt, L.story.replyPrompt);
+  }
   reel.scenes.forEach((s, i) => {
-    const w = `scene ${i + 1} (${s.id}, ${s.type})`;
+    const w = `${kind === 'reel' ? 'scene' : 'slide'} ${i + 1} (${s.id}, ${s.type})`;
     const maxFrames = s.type === 'source' ? L.source.maxFrames : L.scene.maxFrames;
     if (s.durationInFrames < L.scene.minFrames || s.durationInFrames > maxFrames) out.push(`${w}: duration ${s.durationInFrames} frames (allowed ${L.scene.minFrames}–${maxFrames})`);
     if (s.kicker) str(`${w} kicker`, s.kicker, L.kicker);
@@ -66,10 +76,20 @@ export function checkLimits(reel) {
         }
         const d = sourceDisplay(s);
         str(`${w} English on screen`, d.english, L.source.english);
-        if (d.arabic) str(`${w} Arabic on screen`, d.arabic, L.source.arabic);
+        if (d.arabic) str(`${w} Arabic on screen`, d.arabic, kind === 'reel' ? L.source.arabic : L.source.arabicStill);
         if (s.excerpt && len(s.excerpt) < L.source.excerptMin) out.push(`${w}: excerpt is too short to keep its meaning (min ${L.source.excerptMin} chars)`);
+        if (s.showTransliteration && s.resolved.transliteration) str(`${w} transliteration`, s.resolved.transliteration, L.transliteration);
+        if (s.showTransliteration && !s.resolved.transliteration) out.push(`${w}: no verified transliteration exists for ${s.ref} (only the Qur'an has one)`);
+        if (s.showTransliteration && (s.arabicExcerpt || s.excerpt)) out.push(`${w}: transliteration covers the whole ayah, so it can't be shown with an excerpt`);
         const need = Math.ceil(L.source.baseFrames + L.source.perChar * len(d.english));
-        if (s.durationInFrames < need) out.push(`${w}: ${s.durationInFrames} frames is too short to read ${len(d.english)} chars of quote (needs ≥${need})`);
+        if (kind === 'reel' && s.durationInFrames < need) out.push(`${w}: ${s.durationInFrames} frames is too short to read ${len(d.english)} chars of quote (needs ≥${need})`);
+        break;
+      }
+      case 'reflection': {
+        count(`${w} body`, s.body, L.reflection.paragraphs);
+        (s.body ?? []).forEach((b, j) => str(`${w} paragraph ${j + 1}`, b, L.reflection.paragraph));
+        const total = (s.body ?? []).reduce((a, b) => a + len(b), 0);
+        if (total > L.reflection.total) out.push(`${w}: body is ${total} chars in total (max ${L.reflection.total})`);
         break;
       }
       case 'hook':
@@ -134,7 +154,7 @@ export function checkLimits(reel) {
     }
   });
   lineCheck('cover headline', reel.cover?.headline, L.cover.lineChars, L.cover.lines);
-  if (reel.scenes.at(-1)?.type !== 'takeaway') out.push('last scene must be a takeaway scene');
+  if (kind !== 'story' && reel.scenes.at(-1)?.type !== 'takeaway') out.push('last scene must be a takeaway scene');
   return out;
 }
 
@@ -143,6 +163,9 @@ export function limitsForPrompt() {
   const L = LIMITS;
   return [
     `- source: give only ref (+ optional verbatim excerpt / arabicExcerpt); English shown ≤${L.source.english} chars, Arabic shown ≤${L.source.arabic}; duration ≥ ${L.source.baseFrames} + ${L.source.perChar} × English chars, ≤${L.source.maxFrames} frames`,
+    `- reflection: ${L.reflection.paragraphs[0]}–${L.reflection.paragraphs[1]} paragraphs ≤${L.reflection.paragraph} chars each, ≤${L.reflection.total} in total; kicker usually "REFLECTION"`,
+    `- carousel: ${L.carousel.slides[0]}–${L.carousel.slides[1]} slides (aim for ${L.carousel.recommended[0]}–${L.carousel.recommended[1]}); first = hook (cover), last = takeaway; slides are stills, so durations only stage the reveal`,
+    `- story: exactly 1 scene; replyPrompt ≤${L.story.replyPrompt} chars`,
     `- hook: ${L.hook.lines[0]}–${L.hook.lines[1]} lines, ≤${L.hook.lineChars} chars per line (112 px type); sub ≤${L.hook.sub} chars`,
     `- kicker (all scenes): ≤${L.kicker} chars, UPPERCASE`,
     `- headline (cards/table/checklist/diagram/terminal): ${L.headline.lines[0]}–${L.headline.lines[1]} lines, ≤${L.headline.lineChars} chars per line`,

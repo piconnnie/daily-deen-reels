@@ -1,20 +1,22 @@
 {
+  "kind": "reel",
   "brief": {
-    "topic": "Real strength is self-control in anger",
+    "topic": "Allah does not burden a soul beyond its capacity",
     "audience": "Muslims looking for a short, authentic reminder they can act on today",
-    "pillar": "C: Character and Manners",
-    "objective": "saves",
-    "format": "hadith-practice",
-    "targetDurationSec": 26,
+    "pillar": "B: Heart-Softening Reminders",
+    "objective": "shares",
+    "format": "ayah-reflection",
+    "targetDurationSec": 24,
     "technicalDepth": "beginner",
     "voiceover": false,
     "research": "not-required",
-    "constraints": []
+    "constraints": [],
+    "series": "heart-reminder"
   },
-  "coreInsight": "In Sahih al-Bukhari 6114, strength is measured by self-control when angry, not by overpowering others.",
+  "coreInsight": "Qur'an 2:286 opens with the reassurance that no soul is charged beyond its capacity.",
   "hooks": [
     {
-      "text": "Who's the strongest person you know?",
+      "text": "Feeling overwhelmed?",
       "angle": "Personal recognition",
       "scores": {
         "specificity": 4,
@@ -26,7 +28,7 @@
       "notes": "Clear in two seconds; the source answers it right away."
     },
     {
-      "text": "Strength isn't what you think.",
+      "text": "You were given what you can carry.",
       "angle": "Curiosity",
       "scores": {
         "specificity": 4,
@@ -38,7 +40,7 @@
       "notes": "Good, slightly less direct."
     },
     {
-      "text": "Strength is self-control.",
+      "text": "One step at a time.",
       "angle": "Reframe",
       "scores": {
         "specificity": 4,
@@ -58,7 +60,7 @@
       "type": "hook",
       "durationInFrames": 90,
       "purpose": "Recognition: meet the viewer where they are.",
-      "onScreen": "Who's the strongest person you know? / The answer isn't about muscle.",
+      "onScreen": "Feeling overwhelmed? / This ayah is for you.",
       "storyboard": {
         "visual": "Headline, highlighted last line; sub-line.",
         "animation": "Readable on frame 0; underline sweep."
@@ -66,72 +68,67 @@
       "kicker": "DAILY REMINDER",
       "lines": [
         {
-          "text": "Who's the"
+          "text": "Feeling"
         },
         {
-          "text": "strongest"
-        },
-        {
-          "text": "person you"
-        },
-        {
-          "text": "know?",
+          "text": "overwhelmed?",
           "highlight": true
         }
       ],
-      "sub": "The answer isn't about muscle."
+      "sub": "This ayah is for you."
     },
     {
-      "id": "hadith",
+      "id": "ayah",
       "type": "source",
-      "durationInFrames": 300,
+      "durationInFrames": 210,
       "purpose": "The source itself, verbatim, with its reference.",
-      "onScreen": "bukhari:6114 (text pulled from the verified dataset)",
+      "onScreen": "quran:2:286 (text pulled from the verified dataset)",
       "storyboard": {
         "visual": "Framed panel: Arabic (if any), translation; citation pill.",
         "animation": "Arabic, then translation, then citation."
       },
       "transitionIn": "fade-up",
-      "kicker": "THE PROPHET ﷺ SAID",
-      "ref": "bukhari:6114",
-      "excerpt": "The strong is not the one who overcomes the people by his strength, but the strong is the one who controls himself while in anger"
+      "kicker": "THE QUR'AN · AL-BAQARAH",
+      "ref": "quran:2:286",
+      "excerpt": "Allah does not charge a soul except [with that within] its capacity",
+      "arabicExcerpt": "لَا يُكَلِّفُ ٱللَّهُ نَفۡسًا إِلَّا وُسۡعَهَاۚ"
     },
     {
       "id": "practice",
       "type": "checklist",
       "durationInFrames": 255,
       "purpose": "Our reflection: small, concrete actions (our words, not attributed).",
-      "onScreen": "TRY THIS TODAY / When anger rises, pause first. / Notice it early: tight jaw, fast words · Delay your reply until you are calm · Say less than you planned to say",
+      "onScreen": "REFLECTION / Take the next small step. / Write down what is weighing on you · Do the next small step, not all of it · Ask Allah for help with the rest",
       "storyboard": {
         "visual": "Numbered list, rule box.",
         "animation": "Items every 34 frames from 24."
       },
       "transitionIn": "fade-up",
-      "kicker": "TRY THIS TODAY",
+      "kicker": "REFLECTION",
       "headline": [
         {
-          "text": "When anger rises,"
+          "text": "Take the next"
         },
         {
-          "text": "pause first.",
+          "text": "small step.",
           "highlight": true
         }
       ],
       "items": [
-        "Notice it early: tight jaw, fast words",
-        "Delay your reply until you are calm",
-        "Say less than you planned to say"
+        "Write down what is weighing on you",
+        "Do the next small step, not all of it",
+        "Ask Allah for help with the rest"
       ],
       "itemStart": 24,
       "itemStagger": 34,
-      "rule": "Control in that moment is the strength this hadith describes."
+      "rule": "Capacity is part of the promise. One step at a time."
     },
     {
       "id": "takeaway",
       "type": "takeaway",
       "durationInFrames": 150,
       "purpose": "One line to remember + one CTA.",
-      "onScreen": "Strength is self-control. / Save this for your next hard moment",
+      "onScreen": "One step at a time. / Send this to someone who needs it",
       "storyboard": {
         "visual": "Takeaway lines, CTA pill, end card.",
         "animation": "Lines rise; CTA at 40; end card at 70."
@@ -139,65 +136,60 @@
       "transitionIn": "fade-up",
       "lines": [
         {
-          "text": "Strength is"
+          "text": "One step"
         },
         {
-          "text": "self-control.",
+          "text": "at a time.",
           "highlight": true
         }
       ],
-      "cta": "Save this for your next hard moment",
+      "cta": "Send this to someone who needs it",
       "ctaAt": 40,
       "endCardAt": 70
     }
   ],
   "cover": {
-    "kicker": "ON ANGER",
+    "kicker": "QUR'AN 2:286",
     "headline": [
       {
-        "text": "Real strength"
+        "text": "Not more than"
       },
       {
-        "text": "looks like"
-      },
-      {
-        "text": "this.",
+        "text": "you can carry",
         "highlight": true
       }
     ]
   },
   "caption": {
-    "opening": "Real strength isn't winning the argument.",
+    "opening": "If everything feels like too much right now, start with the first line of Qur'an 2:286.",
     "body": [
-      "Sahih al-Bukhari 6114 measures strength by something most of us don't expect: controlling yourself when you are angry.",
-      "Try this today:\n→ notice anger early\n→ delay your reply until you are calm\n→ say less than you planned"
+      "A reflection for today:\n→ write down what is weighing on you\n→ do the next small step, not all of it\n→ ask Allah for help with the rest"
     ],
-    "cta": "Save this for your next hard moment.",
+    "cta": "Send this to someone who needs it today.",
     "hashtags": [
       "#IslamicReminder",
-      "#Akhlaq",
-      "#Anger",
-      "#Hadith",
-      "#DailyReminder"
+      "#Sabr",
+      "#Quran",
+      "#Tawakkul"
     ]
   },
   "primaryCta": {
-    "type": "save",
-    "text": "Save this for your next hard moment"
+    "type": "share",
+    "text": "Send this to someone who needs it"
   },
   "claims": [
     {
-      "text": "What bukhari:6114 says, quoted verbatim on screen.",
+      "text": "What quran:2:286 says, quoted verbatim on screen.",
       "kind": "source",
-      "ref": "bukhari:6114"
+      "ref": "quran:2:286"
     },
     {
-      "text": "Noticing anger early, delaying a reply and saying less are practical ways to act on the hadith.",
+      "text": "Writing it down, taking the next step and asking for help are ways to act on the ayah.",
       "kind": "reflection"
     }
   ],
   "publish": {
-    "suggestedDate": "2026-10-24",
+    "suggestedDate": "2026-10-29",
     "notes": "Evergreen."
   },
   "repurposing": {
@@ -206,6 +198,6 @@
     "linkedin": ""
   },
   "recitation": {
-    "ref": "quran:3:134"
+    "ref": "quran:94:5-6"
   }
 }

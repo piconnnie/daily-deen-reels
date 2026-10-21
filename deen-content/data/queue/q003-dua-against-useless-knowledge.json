@@ -1,0 +1,222 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "A prophetic du'a about knowledge",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "D: Dua & Dhikr",
+    "series": "dua-of-the-day",
+    "objective": "saves",
+    "format": "dua",
+    "targetDurationSec": 28,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "In Sahih Muslim 2722 the Prophet ﷺ sought refuge from knowledge that does not benefit, a du'a to begin a day of learning with intention.",
+  "hooks": [
+    {
+      "text": "A du'a to begin your day",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the teaching answers it."
+    },
+    {
+      "text": "Not all knowledge benefits.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, less direct."
+    },
+    {
+      "text": "Ask for what benefits.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "A du'a to begin your day with intention. / For students and workers alike.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "A du'a to"
+        },
+        {
+          "text": "begin your"
+        },
+        {
+          "text": "day with"
+        },
+        {
+          "text": "intention.",
+          "highlight": true
+        }
+      ],
+      "sub": "For students and workers alike."
+    },
+    {
+      "id": "dua",
+      "type": "source",
+      "durationInFrames": 435,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "muslim:2722 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "HE ﷺ USED TO SUPPLICATE",
+      "ref": "muslim:2722",
+      "excerpt": "O Allah, I seek refuge in Thee from the knowledge which does not benefit, from the heart that does not entertain the fear (of Allah), from the soul that does not feel contented and the supplication that is not responded",
+      "arabicExcerpt": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عِلْمٍ لاَ يَنْفَعُ وَمِنْ قَلْبٍ لاَ يَخْشَعُ وَمِنْ نَفْسٍ لاَ تَشْبَعُ وَمِنْ دَعْوَةٍ لاَ يُسْتَجَابُ لَهَا"
+    },
+    {
+      "id": "moments",
+      "type": "cards",
+      "durationInFrames": 180,
+      "purpose": "Practical examples (our suggestions).",
+      "onScreen": "WHEN TO SAY IT / Before studying · Before work begins · After Fajr",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "WHEN TO SAY IT",
+      "headline": [
+        {
+          "text": "Begin with"
+        },
+        {
+          "text": "this du'a.",
+          "highlight": true
+        }
+      ],
+      "enter": "pop",
+      "popStart": 12,
+      "popStagger": 16,
+      "cards": [
+        {
+          "text": "Before studying",
+          "status": "pass",
+          "tag": "STUDY"
+        },
+        {
+          "text": "Before work begins",
+          "status": "pass",
+          "tag": "WORK"
+        },
+        {
+          "text": "After Fajr",
+          "status": "pass",
+          "tag": "MORNING"
+        }
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Ask for what benefits. / Save this du'a",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Ask for what"
+        },
+        {
+          "text": "benefits.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this du'a",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "DUA OF THE DAY",
+    "headline": [
+      {
+        "text": "A du'a for"
+      },
+      {
+        "text": "knowledge",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "A short du'a to begin your day with intention.",
+    "body": [
+      "From Sahih Muslim 2722: the Prophet ﷺ used to seek refuge from knowledge that does not benefit.",
+      "Say it before studying, before work, or after Fajr."
+    ],
+    "cta": "Save this du'a.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Dua",
+      "#DuaOfTheDay",
+      "#Hadith"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this du'a"
+  },
+  "claims": [
+    {
+      "text": "What muslim:2722 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "muslim:2722"
+    },
+    {
+      "text": "Suggested moments to say the du'a are our own suggestions.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Launch calendar day 3."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:20:114"
+  }
+}

@@ -24,10 +24,17 @@ const check = (name, cond, detail = '') => {
 // --- temp copy (only what the publisher needs)
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'deen-pub-'));
 for (const p of ['scripts', 'archive', 'package.json', 'src/content/reels']) fs.cpSync(path.join(ROOT, p), path.join(tmp, p), {recursive: true});
-fs.mkdirSync(path.join(tmp, 'output/reels'), {recursive: true});
-fs.mkdirSync(path.join(tmp, 'output/covers'), {recursive: true});
-fs.copyFileSync(path.join(ROOT, `output/reels/${id}.mp4`), path.join(tmp, `output/reels/${id}.mp4`));
-fs.copyFileSync(path.join(ROOT, `output/covers/${id}.jpg`), path.join(tmp, `output/covers/${id}.jpg`));
+// What `gh release download` would put in output/publish/<id>/.
+const archived = JSON.parse(fs.readFileSync(path.join(ROOT, 'archive', id, 'state.json'), 'utf8'));
+const kind = archived.kind ?? 'reel';
+const pubDir = path.join(tmp, 'output/publish', id);
+fs.mkdirSync(pubDir, {recursive: true});
+if (kind === 'reel') {
+  fs.copyFileSync(path.join(ROOT, `output/reels/${id}.mp4`), path.join(pubDir, `${id}.mp4`));
+  fs.copyFileSync(path.join(ROOT, `output/covers/${id}.jpg`), path.join(pubDir, `${id}.jpg`));
+} else {
+  for (const n of archived.release.slides) fs.copyFileSync(path.join(ROOT, 'output/qa', id, n), path.join(pubDir, n));
+}
 const statePath = path.join(tmp, 'archive', id, 'state.json');
 const readState = () => JSON.parse(fs.readFileSync(statePath, 'utf8'));
 
@@ -49,9 +56,12 @@ const server = http.createServer((req, res) => {
     if (url.pathname === '/v26.0/me') return json({user_id: 'IGID', username: 'dailydeenreminders', account_type: 'MEDIA_CREATOR'});
     if (url.pathname === '/v26.0/IGID/content_publishing_limit') return json({data: [{quota_usage: 0, config: {quota_total: 100}}]});
     if (url.pathname === '/v26.0/IGID/media' && req.method === 'POST') {
+      // Carousel items and story images get their own ids; the final container is always c1.
+      if (params.is_carousel_item) return json({id: `item${calls.filter((c) => c.params.is_carousel_item).length}`});
       return params.upload_type === 'resumable' ? json({id: 'c1', uri: `http://127.0.0.1:${server.address().port}/upload/c1`}) : json({id: 'c1'});
     }
     if (url.pathname === '/upload/c1') return json({success: true, message: 'Upload successful.'});
+    if (/^\/v26\.0\/item\d+$/.test(url.pathname)) return json({status_code: 'FINISHED'});
     if (url.pathname === '/v26.0/c1') return json({status_code: ++polls < 2 ? 'IN_PROGRESS' : 'FINISHED'});
     if (url.pathname === '/v26.0/IGID/media_publish') return json({id: 'm1'});
     if (url.pathname === '/v26.0/m1') return json({permalink: 'https://www.instagram.com/reel/TEST/'});
@@ -100,7 +110,7 @@ r = await run('scripts/daily/publish-due.mjs', [], baseEnv);
 check('Due after the post time', r.out.trim() === id, r.err.trim());
 
 // 4. Tampered file is refused.
-const mp4 = path.join(tmp, `output/reels/${id}.mp4`);
+const mp4 = path.join(pubDir, kind === 'reel' ? `${id}.mp4` : archived.release.slides[0]);
 const original = fs.readFileSync(mp4);
 fs.appendFileSync(mp4, Buffer.from('x'));
 r = await run('scripts/daily/publish-instagram.mjs', [id], baseEnv);
@@ -114,11 +124,17 @@ check('Without Instagram credentials it asks for a manual post', r.code === 0 &&
 // 6. URL-mode publish.
 r = await run('scripts/daily/publish-instagram.mjs', [id], baseEnv);
 const st = readState();
-const create = calls.find((c) => c.path === '/v26.0/IGID/media');
+const creates = calls.filter((c) => c.path === '/v26.0/IGID/media');
+const create = creates.at(-1);
 check('Publishes in URL mode', r.code === 0 && st.publish.status === 'published', r.err.trim().slice(-200));
-check('Container uses REELS + caption + cover + video URL', create && create.params.media_type === 'REELS' && create.params.caption?.length > 50 && create.params.cover_url?.endsWith('.jpg') && create.params.video_url?.endsWith('.mp4'));
+if (kind === 'reel') check('Container uses REELS + caption + cover + video URL', create && create.params.media_type === 'REELS' && create.params.caption?.length > 50 && create.params.cover_url?.endsWith('.jpg') && create.params.video_url?.endsWith('.mp4'));
+if (kind === 'carousel') {
+  const items = creates.filter((c) => c.params.is_carousel_item === 'true');
+  check('Carousel: one item container per slide, in order, then a CAROUSEL container with caption', items.length === archived.release.slides.length && items.every((c, i) => c.params.image_url.endsWith(archived.release.slides[i])) && create.params.media_type === 'CAROUSEL' && create.params.children.split(',').length === items.length && create.params.caption?.length > 50);
+}
+if (kind === 'story') check('Story: one STORIES image container, no caption', creates.length === 1 && create.params.media_type === 'STORIES' && create.params.image_url.endsWith('.jpg') && !create.params.caption);
 check('Waits for FINISHED before publishing', polls >= 2);
-check('Records media id and permalink', st.publish.mediaId === 'm1' && st.publish.permalink?.includes('/reel/'));
+check('Records media id and permalink', st.publish.mediaId === 'm1' && !!st.publish.permalink);
 check('Token never appears in output', !(r.out + r.err).includes('TEST_TOKEN_SECRET'));
 
 // 7. Second run: already published, nothing posted twice; daily cap respected.
@@ -128,7 +144,8 @@ check('Does not post the same reel twice', r.code === 0 && calls.filter((c) => c
 r = await run('scripts/daily/publish-due.mjs', [], baseEnv);
 check('Daily cap: nothing else due today', r.out.trim() === '', r.err.trim());
 
-// 8. Resumable mode uploads the file bytes.
+// 8. Resumable mode uploads the file bytes (reels only).
+if (kind === 'reel') {
 const s2 = readState();
 s2.publish = {status: 'pending', attempts: 0};
 fs.writeFileSync(statePath, JSON.stringify(s2, null, 2));
@@ -137,6 +154,7 @@ polls = 0;
 r = await run('scripts/daily/publish-instagram.mjs', [id], {...baseEnv, IG_LOGIN: 'facebook', IG_UPLOAD_MODE: 'resumable'});
 const upload = calls.find((c) => c.path === '/upload/c1');
 check('Resumable mode uploads the video with OAuth + offset headers', r.code === 0 && upload && upload.headers.authorization?.startsWith('OAuth ') && upload.headers.offset === '0' && Number(upload.headers.file_size) === original.length, r.err.trim().slice(-200));
+}
 
 // 9. Instagram Login without IG_USER_ID: the account id is looked up from the token.
 const s3 = readState();

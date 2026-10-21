@@ -1,0 +1,203 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "Friday reminder",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "F: Islamic Calendar & Occasions",
+    "series": null,
+    "objective": "shares",
+    "format": "heart-reminder",
+    "targetDurationSec": 22,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Sahih Muslim 854a calls Friday the best day on which the sun has risen.",
+  "hooks": [
+    {
+      "text": "It's Friday",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the teaching answers it."
+    },
+    {
+      "text": "The best day of the week",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, less direct."
+    },
+    {
+      "text": "Make today count.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "It's Friday. / Read this before Jumu'ah.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "It's"
+        },
+        {
+          "text": "Friday.",
+          "highlight": true
+        }
+      ],
+      "sub": "Read this before Jumu'ah."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 180,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "muslim:854a (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ SAID",
+      "ref": "muslim:854a",
+      "excerpt": "The best day on which the sun has risen is Friday"
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 255,
+      "purpose": "Takeaway in practice (our suggestions).",
+      "onScreen": "TODAY / Go early to Jumu'ah, if you can · Make extra du'a today · Read Surah Al-Kahf if it's your habit",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "TODAY",
+      "headline": [
+        {
+          "text": "Make Friday"
+        },
+        {
+          "text": "count.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Go early to Jumu'ah, if you can",
+        "Make extra du'a today",
+        "Read Surah Al-Kahf if it's your habit"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34,
+      "rule": "Small deeds, on the best day."
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Jumu'ah Mubarak. / Share it with your family",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Jumu'ah"
+        },
+        {
+          "text": "Mubarak.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with your family",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "FRIDAY REMINDER",
+    "headline": [
+      {
+        "text": "The best day"
+      },
+      {
+        "text": "of the week",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Jumu'ah Mubarak.",
+    "body": [
+      "Sahih Muslim 854a: the best day on which the sun has risen is Friday."
+    ],
+    "cta": "Share it with your family.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#IslamicCalendar",
+      "#JumuahMubarak",
+      "#Friday"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with your family"
+  },
+  "claims": [
+    {
+      "text": "What muslim:854a says, quoted verbatim.",
+      "kind": "source",
+      "ref": "muslim:854a"
+    },
+    {
+      "text": "The suggestions for Friday are our own.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen.",
+    "occasion": "friday"
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:62:9"
+  }
+}

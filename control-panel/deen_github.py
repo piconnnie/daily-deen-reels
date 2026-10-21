@@ -50,7 +50,8 @@ VARIABLES = {
     "IG_LOGIN": ("instagram", "instagram or facebook (which Instagram API login you set up)."),
 }
 WRITERS = ["queue", "subscription", "api"]
-FORMATS = ["", "ayah-reflection", "hadith-practice", "dua", "habit-checklist", "heart-check"]
+FORMATS = ["", "heart-reminder", "before-you-scroll", "ayah-reflection", "hadith-practice", "dua", "habit-checklist", "heart-check",
+           "ayah-lesson", "hadith-explained", "check-in", "dua-card", "story-check-in", "story-question"]
 PILLARS = ["", "A", "B", "C", "D", "E", "F"]
 
 # Which fine-grained token permission each action needs (for error hints).
@@ -123,9 +124,17 @@ def validate_draft(text: str) -> list[str]:
         if key not in d:
             problems.append(f"Missing '{key}'.")
     scenes = d.get("scenes") or []
-    if scenes and scenes[0].get("type") != "hook":
+    kind = d.get("kind") or "reel"
+    if kind not in ("reel", "carousel", "story"):
+        problems.append("'kind' must be reel, carousel or story.")
+    if kind == "story":
+        if len(scenes) != 1:
+            problems.append("A story has exactly one scene.")
+        if not d.get("replyPrompt"):
+            problems.append("A story needs a 'replyPrompt'.")
+    elif scenes and scenes[0].get("type") != "hook":
         problems.append("The first scene must be the hook.")
-    if scenes and scenes[-1].get("type") != "takeaway":
+    if kind != "story" and scenes and scenes[-1].get("type") != "takeaway":
         problems.append("The last scene must be the takeaway.")
     tags = (d.get("caption") or {}).get("hashtags") or []
     if tags and not 3 <= len(tags) <= 8:

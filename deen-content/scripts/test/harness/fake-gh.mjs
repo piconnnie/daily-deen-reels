@@ -121,7 +121,11 @@ if (group === 'release') {
     const pattern = flag('pattern');
     const out = flag('dir') ?? '.';
     fs.mkdirSync(out, {recursive: true});
-    fs.copyFileSync(path.join(dir, pattern), path.join(out, pattern));
+    // gh supports glob patterns; the workflows only use exact names or a trailing "*".
+    const match = (n) => (pattern.endsWith('*') ? n.startsWith(pattern.slice(0, -1)) : n === pattern);
+    const hits = fs.readdirSync(dir).filter(match);
+    if (!hits.length) done(`no assets match ${pattern}`, 1);
+    for (const n of hits) fs.copyFileSync(path.join(dir, n), path.join(out, n));
     done();
   }
   if (cmd === 'edit') {

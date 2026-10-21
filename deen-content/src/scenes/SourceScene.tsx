@@ -41,7 +41,7 @@ const forHafsFont = (s: string) =>
     .replace(/\u08F2/g, '\u0656');
 
 const englishSize = (n: number) => (n <= 90 ? 58 : n <= 150 ? 50 : n <= 210 ? 44 : 40);
-const arabicSize = (n: number) => (n <= 60 ? 84 : n <= 110 ? 72 : n <= 170 ? 62 : 54);
+const arabicSize = (n: number) => (n <= 60 ? 84 : n <= 110 ? 72 : n <= 170 ? 62 : n <= 230 ? 54 : 46);
 
 // Three layouts rotate with the reel's style:
 //   framed     the quote in a quiet bordered panel, centred
@@ -91,6 +91,25 @@ export const SourceScene: React.FC<{scene: SourceSceneConfig; recitedBy?: string
       } as React.CSSProperties}
     >
       {isQuran ? forHafsFont(arabic) : arabic}
+    </div>
+  ) : null;
+
+  // Verified transliteration (Qur'an only, Tanzil). Tanzil writes ʿayn as "AA".
+  const translit = scene.showTransliteration && r.transliteration ? r.transliteration.replace(/AA/g, 'ʿ') : null;
+  const translitBlock = translit ? (
+    <div
+      style={{
+        ...riseStyle(enter(frame, fps, arabicAt + 8), 14),
+        fontFamily: fonts.serif,
+        fontStyle: 'italic',
+        fontSize: 34,
+        lineHeight: 1.35,
+        color: c.slate,
+        textAlign: editorial ? 'left' : 'center',
+        textWrap: 'balance',
+      } as React.CSSProperties}
+    >
+      {translit}
     </div>
   ) : null;
 
@@ -153,12 +172,14 @@ export const SourceScene: React.FC<{scene: SourceSceneConfig; recitedBy?: string
         <div style={{position: 'relative', display: 'flex', flexDirection: 'column', gap: 30}}>
           <div style={{fontFamily: fonts.serif, fontSize: 200, lineHeight: 0.6, height: 70, color: alpha(c.indigo, 0.9), opacity: enter(frame, fps, 2)}}>“</div>
           {arabicBlock}
+          {translitBlock}
           {rule}
           {englishBlock}
         </div>
       ) : minimal ? (
         <div style={{display: 'flex', flexDirection: 'column', gap: 34}}>
           {arabicBlock}
+          {translitBlock}
           {rule}
           {englishBlock}
         </div>
@@ -175,6 +196,7 @@ export const SourceScene: React.FC<{scene: SourceSceneConfig; recitedBy?: string
           }}
         >
           {arabicBlock}
+          {translitBlock}
           {rule}
           {englishBlock}
         </div>

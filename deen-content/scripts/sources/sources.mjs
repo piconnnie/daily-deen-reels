@@ -141,6 +141,7 @@ export function resolveRef(ref) {
     const missing = keys.filter((k) => !en.has(k) || !ar.has(k));
     if (missing.length) throw new Error(`"${ref}": no such ayah ${missing.join(', ')}`);
     const range = p.from === p.to ? `${p.from}` : `${p.from}-${p.to}`;
+    const tr = c.transliteration ? dataset(c.transliteration) : null;
     return {
       ref,
       collection: p.collection,
@@ -154,6 +155,7 @@ export function resolveRef(ref) {
       english: keys.length === 1 ? normalize(en.get(keys[0])) : keys.map((k) => `${normalize(en.get(k))} (${k.split(':')[1]})`).join(' '),
       translation: c.translation,
       grade: null,
+      transliteration: tr ? keys.map((k) => normalize(tr.get(k))).join(' … ') : null,
     };
   }
   const text = en.get(p.number);

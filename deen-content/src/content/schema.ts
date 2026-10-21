@@ -143,6 +143,17 @@ export interface ResolvedSource {
   translation: string;
   grade: string | null;
   narrator?: string | null;
+  transliteration?: string | null;
+}
+
+/** Our own reflection, clearly labelled as such (never attributed). */
+export interface ReflectionScene extends SceneBase {
+  type: 'reflection';
+  kicker: string;
+  headline: HeadlineLine[];
+  body: string[];
+  bodyStart?: number;
+  bodyStagger?: number;
 }
 
 /**
@@ -161,6 +172,8 @@ export interface SourceScene extends SceneBase {
   arabicExcerpt?: string;
   /** Default: true for the Qur'an, false for hadith. */
   showArabic?: boolean;
+  /** Show the verified transliteration (Qur'an only; Tanzil). */
+  showTransliteration?: boolean;
   /** Frames at which the Arabic, the English and the citation appear. */
   arabicAt?: number;
   englishAt?: number;
@@ -170,6 +183,7 @@ export interface SourceScene extends SceneBase {
 
 export type Scene =
   | SourceScene
+  | ReflectionScene
   | HookScene
   | CardsScene
   | TableScene
@@ -180,14 +194,23 @@ export type Scene =
   | TakeawayScene;
 
 export type Pillar =
-  | "A: Qur'an Reflections"
-  | 'B: Prophetic Guidance'
-  | 'C: Character and Manners'
-  | 'D: Worship and Daily Habits'
-  | 'E: Family and Community'
-  | 'F: Hope, Patience and Trust';
+  | "A: Qur'an & Hadith"
+  | 'B: Heart-Softening Reminders'
+  | 'C: Daily Deen & Practical Islam'
+  | 'D: Dua & Dhikr'
+  | 'E: Islam in Everyday Life'
+  | 'F: Islamic Calendar & Occasions';
 
-export type FormatId = 'ayah-reflection' | 'hadith-practice' | 'dua' | 'habit-checklist' | 'heart-check';
+/** reel = video · carousel = 2–10 image slides (4:5) · story = one 9:16 image. */
+export type Kind = 'reel' | 'carousel' | 'story';
+
+/** Recurring series (src/templates/series.json); each has a fixed opening kicker. */
+export type SeriesId = 'one-ayah-one-lesson' | 'heart-reminder' | 'dua-of-the-day' | 'daily-check-in' | 'before-you-scroll';
+
+/** Calendar occasions: a draft with one is only published on/inside it (scripts/daily/occasions.mjs). */
+export type Occasion = 'friday' | 'ramadan' | 'last-ten-nights' | 'dhul-hijjah-10' | 'arafah' | 'eid-al-fitr' | 'eid-al-adha' | 'muharram' | 'ashura';
+
+export type FormatId = string;
 
 export interface HookOption {
   text: string;
@@ -200,11 +223,14 @@ export interface ReelConfig {
   id: string;
   version: number;
   status: 'draft' | 'rendered' | 'qa-passed' | 'approved' | 'published';
+  /** Default 'reel'. */
+  kind?: Kind;
   brief: {
     topic: string;
     audience: string;
     pillar: Pillar;
-    objective: 'reach' | 'saves' | 'shares' | 'follows' | 'authority';
+    series?: SeriesId | null;
+    objective: 'reach' | 'saves' | 'shares' | 'replies' | 'follows' | 'authority';
     format: FormatId;
     targetDurationSec: number;
     technicalDepth: 'beginner' | 'intermediate' | 'advanced';
@@ -258,6 +284,8 @@ export interface ReelConfig {
       };
   /** Filled by the pipeline from the source scenes (citation + link for the caption). */
   sources?: {ref: string; citation: string; url: string; translation: string; grade: string | null; english: string}[];
-  publish: {suggestedDate: string; notes: string};
+  publish: {suggestedDate: string; notes: string; occasion?: Occasion | null};
+  /** Story only: an invitation to reply, shown at the bottom of the story image. */
+  replyPrompt?: string;
   repurposing: {carousel: string[]; followUpReel: string; linkedin: string};
 }

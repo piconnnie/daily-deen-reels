@@ -2,13 +2,21 @@
 
 **It runs completely free by default:** a public GitHub repo (free Actions minutes), reels from a pre-written content queue (no AI model at run time), public verified-source datasets, and Instagram's free Graph API. Paid writers are off unless you opt in.
 
-Every morning a GitHub Actions workflow takes a new reel, **pulls every verse and hadith word for word from the pinned datasets** (Qur'an, Sahih al-Bukhari, Sahih Muslim — see [sources/README.md](sources/README.md)), renders it with Remotion, runs every quality gate, and opens a **review pull request** with the cover, a frame contact sheet, the MP4 and a checklist of source links. **Merging the PR approves it.** The approved reel is posted to Instagram at the daily slot (default 19:00 IST). Closing the PR rejects it; nothing is posted. **There is no auto-approve on this page:** every reel waits for a person to check its sources.
+Every morning a GitHub Actions workflow takes the next post from the queue — a **reel**, a **carousel** or a **story**, following the content strategy in [`../docs/CONTENT_STRATEGY.md`](../docs/CONTENT_STRATEGY.md) — **pulls every verse and hadith word for word from the pinned datasets** (Qur'an, Sahih al-Bukhari, Sahih Muslim — see [sources/README.md](sources/README.md)), renders it, runs every quality gate, and opens a **review pull request** with previews (the MP4 for reels, every slide for carousels and stories) and a checklist of source links. **Merging the PR approves it.** It is posted to Instagram at the daily slot (default 19:00 IST). Closing the PR rejects it; nothing is posted. **There is no auto-approve on this page:** every post waits for a person to check its sources.
+
+| Kind | Posted as | Notes |
+|---|---|---|
+| Reel | Instagram reel (REELS) | Qur'an recitation as the only sound |
+| Carousel | Instagram carousel (2–10 images, 4:5) | caption + sources block as usual |
+| Story | Instagram story (one 9:16 image) | posted without a caption (Instagram stories have none); the reply prompt is in the image; polls/quiz stickers can't be added through the API — add them by hand in the app if you want them; gone after 24 h, and their insights aren't imported |
+
+**Occasions:** drafts marked `friday`, `ramadan`, `dhul-hijjah-10`, `eid-al-adha`… wait in the queue and jump ahead on their day (Umm al-Qura calendar; check `node scripts/daily/occasions.mjs`). Local moon sightings can differ by a day — you review every occasion post anyway. `node scripts/daily/dequeue.mjs --status` shows what's waiting.
 
 ```
-06:00 IST  DEEN · Daily reel
+06:00 IST  DEEN · Daily reel   (makes reels, carousels and stories)
            plan topic (pillar mix, format rotation, no repeats, performance-weighted; used by opt-in writers)
            → writer:
-               default   content queue: next pre-written draft  (data/queue, no model, free)
+               default   content queue: next draft for today (occasion drafts first on their day)  (data/queue, no model, free)
                opt-in    Claude Code on a Claude subscription   (DEEN_WRITER=subscription)
                opt-in    Claude API, pay per token               (DEEN_WRITER=api)
              quotes resolved from the pinned datasets (refs only, never typed text);
@@ -24,7 +32,8 @@ hourly     DEEN · Approve & publish   (also runs the moment you merge)
            records approval for every merged reel PR (so none is lost)
            oldest approved reel, max 1/day, once the local time passes DEEN_POST_TIME
            → verifies the file hashes match what passed QA and what you approved
-           → Instagram Graph API: create REELS container → wait FINISHED → publish
+           → Instagram Graph API: REELS container, or one image container per slide + CAROUSEL,
+             or a STORIES image → wait FINISHED → publish
            → comments the permalink on the PR
 
 Sunday     DEEN · Weekly insights
@@ -95,7 +104,7 @@ Choose one login type. Meta's dashboards change often, so follow the current scr
 1. Create a Business app with Facebook Login for Business; permissions `instagram_basic`, `instagram_content_publish`, `pages_read_engagement`.
 2. Use a Page access token derived from a long-lived user token (these don't expire on the 60-day cycle).
 3. Secrets `IG_ACCESS_TOKEN`, `IG_USER_ID`; variable `IG_LOGIN` = `facebook`.
-4. This option uploads the MP4 bytes directly to Meta (`IG_UPLOAD_MODE` defaults to `resumable`), so no public video URL is involved.
+4. This option uploads the MP4 bytes directly to Meta (`IG_UPLOAD_MODE` defaults to `resumable`), so no public video URL is involved. Carousel and story images are always fetched by Meta from the public release URL (or `DEEN_PUBLIC_BASE_URL`), with either login type.
 
 Then run **DEEN · Check Instagram setup**. It lists anything missing (token, permissions, account type, publishing quota) without printing secrets.
 

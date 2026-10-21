@@ -1,20 +1,22 @@
 {
+  "kind": "reel",
   "brief": {
-    "topic": "Consistent small deeds are most loved",
+    "topic": "Show mercy to receive mercy",
     "audience": "Muslims looking for a short, authentic reminder they can act on today",
-    "pillar": "D: Worship and Daily Habits",
-    "objective": "saves",
-    "format": "habit-checklist",
-    "targetDurationSec": 26,
+    "pillar": "A: Qur'an & Hadith",
+    "objective": "shares",
+    "format": "hadith-practice",
+    "targetDurationSec": 23,
     "technicalDepth": "beginner",
     "voiceover": false,
     "research": "not-required",
-    "constraints": []
+    "constraints": [],
+    "series": null
   },
-  "coreInsight": "In Sahih al-Bukhari 6465 the deeds loved most by Allah are the regular, constant ones even if few.",
+  "coreInsight": "Sahih al-Bukhari 6013 ties being treated mercifully to being merciful to others.",
   "hooks": [
     {
-      "text": "Small but daily beats big but rare.",
+      "text": "Want mercy? Start here.",
       "angle": "Personal recognition",
       "scores": {
         "specificity": 4,
@@ -26,7 +28,7 @@
       "notes": "Clear in two seconds; the source answers it right away."
     },
     {
-      "text": "What's the deed you can keep?",
+      "text": "A short hadith with a big ask.",
       "angle": "Curiosity",
       "scores": {
         "specificity": 4,
@@ -38,7 +40,7 @@
       "notes": "Good, slightly less direct."
     },
     {
-      "text": "Small. Daily. Kept.",
+      "text": "Be merciful, first.",
       "angle": "Reframe",
       "scores": {
         "specificity": 4,
@@ -58,7 +60,7 @@
       "type": "hook",
       "durationInFrames": 90,
       "purpose": "Recognition: meet the viewer where they are.",
-      "onScreen": "Small but daily beats big but rare. / Especially in worship.",
+      "onScreen": "Want mercy? Start here. / A short hadith with a big ask.",
       "storyboard": {
         "visual": "Headline, highlighted last line; sub-line.",
         "animation": "Readable on frame 0; underline sweep."
@@ -66,72 +68,66 @@
       "kicker": "DAILY REMINDER",
       "lines": [
         {
-          "text": "Small"
+          "text": "Want mercy?"
         },
         {
-          "text": "but daily"
-        },
-        {
-          "text": "beats big"
-        },
-        {
-          "text": "but rare.",
+          "text": "Start here.",
           "highlight": true
         }
       ],
-      "sub": "Especially in worship."
+      "sub": "A short hadith with a big ask."
     },
     {
       "id": "hadith",
       "type": "source",
-      "durationInFrames": 270,
+      "durationInFrames": 195,
       "purpose": "The source itself, verbatim, with its reference.",
-      "onScreen": "bukhari:6465 (text pulled from the verified dataset)",
+      "onScreen": "bukhari:6013 (text pulled from the verified dataset)",
       "storyboard": {
         "visual": "Framed panel: Arabic (if any), translation; citation pill.",
         "animation": "Arabic, then translation, then citation."
       },
       "transitionIn": "fade-up",
-      "kicker": "THE PROPHET ﷺ WAS ASKED",
-      "ref": "bukhari:6465",
-      "excerpt": "\"What deeds are loved most by Allah?\" He said, \"The most regular constant deeds even though they may be few.\""
+      "kicker": "THE PROPHET ﷺ SAID",
+      "ref": "bukhari:6013",
+      "excerpt": "He who is not merciful to others, will not be treated mercifully"
     },
     {
       "id": "practice",
       "type": "checklist",
       "durationInFrames": 255,
       "purpose": "Our reflection: small, concrete actions (our words, not attributed).",
-      "onScreen": "START THIS WEEK / Pick one small deed. Keep it. / Two rak'ah of sunnah you can keep every day · One page of Qur'an after Fajr · A daily sadaqah, even a small one",
+      "onScreen": "TRY THIS TODAY / Show mercy first. / Be patient with someone who is slow · Forgive one small wrong without mentioning it · Be gentle with children and animals",
       "storyboard": {
         "visual": "Numbered list, rule box.",
         "animation": "Items every 34 frames from 24."
       },
       "transitionIn": "fade-up",
-      "kicker": "START THIS WEEK",
+      "kicker": "TRY THIS TODAY",
       "headline": [
         {
-          "text": "Pick one small"
+          "text": "Show mercy"
         },
         {
-          "text": "deed. Keep it.",
+          "text": "first.",
           "highlight": true
         }
       ],
       "items": [
-        "Two rak'ah of sunnah you can keep every day",
-        "One page of Qur'an after Fajr",
-        "A daily sadaqah, even a small one"
+        "Be patient with someone who is slow",
+        "Forgive one small wrong without mentioning it",
+        "Be gentle with children and animals"
       ],
       "itemStart": 24,
       "itemStagger": 34,
-      "rule": "Choose what you can keep. Keep what you choose."
+      "rule": "The mercy we hope for, we can start showing today."
     },
     {
       "id": "takeaway",
       "type": "takeaway",
       "durationInFrames": 150,
       "purpose": "One line to remember + one CTA.",
-      "onScreen": "Small. Daily. Kept. / Save this and pick your deed today",
+      "onScreen": "Be merciful, first. / Share this with your family",
       "storyboard": {
         "visual": "Takeaway lines, CTA pill, end card.",
         "animation": "Lines rise; CTA at 40; end card at 70."
@@ -139,65 +135,61 @@
       "transitionIn": "fade-up",
       "lines": [
         {
-          "text": "Small."
+          "text": "Be merciful,"
         },
         {
-          "text": "Daily."
-        },
-        {
-          "text": "Kept.",
+          "text": "first.",
           "highlight": true
         }
       ],
-      "cta": "Save this and pick your deed today",
+      "cta": "Share this with your family",
       "ctaAt": 40,
       "endCardAt": 70
     }
   ],
   "cover": {
-    "kicker": "SMALL HABITS",
+    "kicker": "ON MERCY",
     "headline": [
       {
-        "text": "Small deeds,"
+        "text": "Mercy starts"
       },
       {
-        "text": "done daily",
+        "text": "with you",
         "highlight": true
       }
     ]
   },
   "caption": {
-    "opening": "Big bursts of worship feel great. Small daily ones last.",
+    "opening": "We all hope for mercy. This hadith asks us to start giving it.",
     "body": [
-      "The deeds loved most by Allah are the regular ones, even if few (Sahih al-Bukhari 6465).",
-      "Pick one this week:\n→ two rak'ah of sunnah you can keep every day\n→ one page of Qur'an after Fajr\n→ a daily sadaqah, even a small one"
+      "Sahih al-Bukhari 6013 is one line long and asks a lot of us.",
+      "Try this today:\n→ be patient with someone who is slow\n→ forgive one small wrong without mentioning it\n→ be gentle with children and animals"
     ],
-    "cta": "Save this and pick your deed today.",
+    "cta": "Share this with your family.",
     "hashtags": [
       "#IslamicReminder",
-      "#Ibadah",
-      "#Habits",
-      "#Hadith",
-      "#DailyReminder"
+      "#Sunnah",
+      "#Mercy",
+      "#Hadith"
     ]
   },
   "primaryCta": {
-    "type": "save",
-    "text": "Save this and pick your deed today"
+    "type": "share",
+    "text": "Share this with your family"
   },
   "claims": [
     {
-      "text": "What bukhari:6465 says, quoted verbatim on screen.",
+      "text": "What bukhari:6013 says, quoted verbatim on screen.",
       "kind": "source",
-      "ref": "bukhari:6465"
+      "ref": "bukhari:6013"
     },
     {
-      "text": "The three example deeds are our suggestions for acting on the hadith.",
+      "text": "Patience, quiet forgiveness and gentleness are ways to act on the hadith.",
       "kind": "reflection"
     }
   ],
   "publish": {
-    "suggestedDate": "2026-10-31",
+    "suggestedDate": "2026-11-03",
     "notes": "Evergreen."
   },
   "repurposing": {
@@ -206,6 +198,6 @@
     "linkedin": ""
   },
   "recitation": {
-    "ref": "quran:99:7"
+    "ref": "quran:21:107"
   }
 }

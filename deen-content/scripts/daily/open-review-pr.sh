@@ -8,6 +8,7 @@ BRANCH="reel/$ID"
 BODY="output/daily/$ID.pr.md"
 HOOK=$(node -e "const r=require('./src/content/reels/$ID.json');process.stdout.write(r.hooks[r.selectedHook].text)")
 ATTN=$(node -e "const s=require('./archive/$ID/state.json');process.stdout.write(s.needsAttention?'yes':'no')")
+ICON=$(node -e "const s=require('./archive/$ID/state.json');process.stdout.write({carousel:'🖼️',story:'📱'}[s.kind]||'🎬')")
 
 git config user.name "deen-bot"
 git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -28,5 +29,5 @@ if [ -n "$EXISTING" ]; then
 else
   LABELS="daily-reel"
   [ "$ATTN" = "yes" ] && LABELS="daily-reel,needs-attention"
-  gh pr create --head "$BRANCH" --title "🎬 $HOOK" --body-file "$BODY" --label "$LABELS"
+  gh pr create --head "$BRANCH" --title "$ICON $HOOK" --body-file "$BODY" --label "$LABELS"
 fi

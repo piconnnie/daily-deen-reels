@@ -1,82 +1,98 @@
 # Daily Deen Reminders — content system
 
-The brand brief for every reel on the page, whoever writes it (you, a queue refill in a Claude chat, or an opt-in paid writer). The pipeline injects this file into the writer prompt, so keep it current.
+The editorial brief for every post on the page, whoever writes it (you, a queue refill in a Claude chat, or an opt-in paid writer). The pipeline injects this file into the writer prompt, so keep it current. The full content strategy is in [`../docs/CONTENT_STRATEGY.md`](../docs/CONTENT_STRATEGY.md); this file turns it into rules a draft must follow.
 
 ## 1. What the page is
 
-**Daily Deen Reminders** posts one short Instagram reel a day: a verse of the Qur'an or an authentic hadith, shown word for word with its reference, and one small thing to do or reflect on today.
+A page Muslims return to daily for reminders, share with family and friends, and trust for authentic Islamic knowledge — a trusted daily companion, not a content factory. Every post does at least one of three things: **teach something, touch the heart, or inspire an action.**
 
-- **Promise:** authentic, short, usable. Every reel can be checked in one tap (quran.com / sunnah.com link in the caption).
-- **Audience:** Muslims of any background who want a sincere daily reminder, in English, without arguments or noise. Many are busy, some are returning to practice; nobody should feel talked down to.
+- **Promise:** authentic, short, usable. Every quote can be checked in one tap (quran.com / sunnah.com link in the caption).
+- **Audience:** Muslims of any background who want a sincere daily reminder in English. Many are busy, some are returning to practice; nobody should feel talked down to.
 - **What we are not:** a fatwa page, a debate page, a news page, or a motivational-quotes page.
 
 ## 2. The source rule (non-negotiable)
 
-Everything the reel attributes to Allah or the Prophet ﷺ comes from a **source scene**, and source scenes take only a reference. The pipeline pulls the exact text from pinned, hash-checked datasets (`sources/sources.json`):
+Everything attributed to Allah or the Prophet ﷺ comes from a **source scene**, and source scenes take only a reference. The pipeline pulls the exact text from pinned, hash-checked datasets (`sources/sources.json`):
 
 | Collection | What is shown | Reference format |
 |---|---|---|
-| The Qur'an | Arabic (King Fahd Complex, Hafs) + Saheeh International | `quran:94:5-6` (max 3 consecutive ayat) |
+| The Qur'an | Arabic (King Fahd Complex, Hafs) + Saheeh International; transliteration (Tanzil) on request | `quran:94:5-6` (max 3 consecutive ayat) |
 | Sahih al-Bukhari | English (Muhsin Khan); Arabic only via a verbatim `arabicExcerpt` | `bukhari:6114` |
 | Sahih Muslim | English (Abdul Hamid Siddiqui); Arabic only via `arabicExcerpt` | `muslim:2564c` |
 
 - No other collections, websites, apps, quote images or "a scholar said". If it isn't in these datasets, it doesn't go on the page.
 - `excerpt` / `arabicExcerpt` must be verbatim, contiguous parts of the source (≥40 characters for English) and must not change the meaning of the full text. The caption prints the full text when an excerpt is used.
-- Find references with `node scripts/sources/cli.mjs search "<words>"` and read them in full with `node scripts/sources/cli.mjs show <ref>`.
-- Pick a source because it genuinely says what the reel is about. Read the whole ayah or hadith (and, for an ayah, the ones around it) before building a reel on it.
+- **Transliteration** (`"showTransliteration": true`) exists only for the Qur'an, for whole ayat (not with excerpts). For a hadith du'a, show the transliteration only when the source's own translation contains it (e.g. Sahih al-Bukhari 6306), as a verbatim `excerpt`.
+- **Context** for an ayah means the neighbouring ayat, quoted as another source scene — never tafsir in our own words.
+- Find references with `node scripts/sources/cli.mjs search "<words>"`; read them in full with `node scripts/sources/cli.mjs show <ref>`. Pick a source because it genuinely says what the post is about; read the whole ayah or hadith (and, for an ayah, the ones around it) first.
 
 ## 3. Our own words
 
-Hooks, reflection scenes, checklists, takeaways and captions are **our** words, and the viewer must be able to tell.
+Hooks, reflection scenes, checklists, takeaways, story prompts and captions are **our** words, and the viewer must be able to tell.
 
 - Never write "Allah says…", "the Prophet ﷺ said…", or put anything in quotation marks that isn't verbatim from a quoted source. Describe instead: "This ayah…", "In this hadith…".
+- Reflections go in `reflection` scenes (kicker "REFLECTION", "THE LESSON", "THE CONTEXT"…) or checklists, so they are visibly ours. Don't invent religious interpretations.
 - Use ﷺ after the Prophet's name.
-- Reflections are suggestions ("Try this today"), not rulings. No halal/haram verdicts, no fiqh positions, no "obligatory", no fatwas. If a topic needs a scholar, it isn't a topic for this page.
+- Reminders, not rulings: no halal/haram verdicts, no fiqh positions, no "obligatory", no fatwas. Disputed matters and sensitive theological topics need qualified review — they are not topics for the automated queue.
 - No sectarian, political or current-events content. No criticism of groups of Muslims.
 - No promises of specific rewards, punishments or outcomes beyond what the quoted text states.
-- No chain-message tactics: "share or…", "type Ameen", "send this to 10 people", "Satan doesn't want you to read this", fear or guilt hooks.
+- No exploiting fear, grief or guilt, and no chain-message tactics ("share or…", "type Ameen", "send this to 10 people").
 
-## 4. Pillars
+## 4. Pillars (starting mix — adjust from results)
 
-| Pillar | What it covers | Target share |
+| Pillar | What it covers | Share |
 |---|---|---|
-| A: Qur'an Reflections | One ayah, what it asks of us today | 22% |
-| B: Prophetic Guidance | A hadith on how to live | 22% |
-| C: Character and Manners | Anger, speech, honesty, humility | 18% |
-| D: Worship and Daily Habits | Dhikr, du'a, small consistent deeds | 16% |
-| E: Family and Community | Parents, neighbours, friends, mercy | 10% |
-| F: Hope, Patience and Trust | Hard days, tawakkul, gratitude | 12% |
+| A: Qur'an & Hadith | One Ayah, One Lesson · authentic hadith explained simply · Qur'anic lessons for everyday problems · misunderstood verses with their context | 30% |
+| B: Heart-Softening Reminders | Hard days · sabr without losing hope · tawakkul · repentance and returning to Allah | 20% |
+| C: Daily Deen & Practical Islam | Small acts of worship · adab, honesty, kindness, patience · salah and daily habits · deen at work and home | 15% |
+| D: Dua & Dhikr | Morning/evening remembrance · prophetic du'as with meanings · dhikr · du'as for everyday situations | 15% |
+| E: Islam in Everyday Life | Parents and family · guarding the tongue · envy, anger, pride, sincerity · integrity and compassion | 10% |
+| F: Islamic Calendar & Occasions | Friday reminders · Ramadan · Dhul Hijjah and Eid · seasonal worship | 10% |
 
-## 5. Formats
+## 5. Series — the page's recognisable posts
 
-Defined in `src/templates/formats.json`:
+Set `brief.series`; the pipeline gives every post in a series the same opening (its kicker on the hook and cover). Keep the first three the most frequent.
 
-- **Ayah Reflection** — hook → the ayah → reflection checklist → takeaway.
-- **Hadith in Practice** — hook → the hadith → "try this today" → takeaway.
-- **A Du'a for…** — hook → the du'a as it appears in the Qur'an → moments to say it → takeaway.
-- **Small Habit, Big Reward** — hook → source behind the habit → how to start → takeaway.
-- **Heart Check** — hook naming a feeling → two sources in conversation → a question to sit with.
+| Series (`id`) | Concept | Default kind |
+|---|---|---|
+| One Ayah. One Lesson. (`one-ayah-one-lesson`) | An ayah, its context (neighbouring ayat), one takeaway | carousel |
+| A Reminder Your Heart Needs (`heart-reminder`) | A real-life struggle met with a verse or hadith | reel |
+| Dua of the Day (`dua-of-the-day`) | Arabic, transliteration where verified, meaning, source | reel or carousel |
+| A Muslim's Daily Check-In (`daily-check-in`) | One habit or trait to reflect on, with a short checklist | carousel |
+| Before You Scroll (`before-you-scroll`) | A short pause: one source, one action (15–20 s) | reel |
 
-## 6. Quality bar
+## 6. Kinds and formats
 
-- **One reminder per reel.** A viewer can repeat the core insight in one sentence and act on it today.
-- **Hook:** readable on frame 0, honest, relevant to real life ("Having a hard week?"). Curiosity is fine; bait is not.
-- **The source is the centre.** Give it enough time to be read (the validator enforces a minimum), Arabic first for the Qur'an.
+| Kind | Share | What it is | Formats (`src/templates/formats.json`) |
+|---|---|---|---|
+| `reel` | 50% | 15–30 s (up to 60) video, Qur'an recitation as the only sound | `heart-reminder`, `before-you-scroll`, `ayah-reflection`, `hadith-practice`, `dua`, `habit-checklist`, `heart-check` |
+| `carousel` | 35% | 5–7 still slides (4:5), one idea per slide | `ayah-lesson`, `hadith-explained`, `check-in`, `dua-card` |
+| `story` | 15% | one 9:16 image + `replyPrompt`; posted without caption, gone after 24 h | `story-check-in`, `story-question` |
+
+Every post follows the formula where it fits: **hook → teaching (source) → reflection → takeaway → gentle CTA**. A dua card may need only the du'a, its meaning, source and a short caption. Stories don't need a source, but any quote still follows the source rule.
+
+**Occasions:** set `publish.occasion` (`friday`, `ramadan`, `last-ten-nights`, `dhul-hijjah-10`, `arafah`, `eid-al-fitr`, `eid-al-adha`, `muharram`, `ashura`) and the draft waits for its day (Umm al-Qura calendar) and goes first on it. Keep one Friday reminder queued per week.
+
+## 7. Quality bar
+
+- **One message per post.** A viewer can repeat the core insight in one sentence and act on it today.
+- **Hook:** readable at a glance, honest, relevant to real life ("When life feels uncertain…"). Curiosity is fine; bait is not.
+- **The source is the centre.** On reels it gets enough time to be read (the validator enforces a minimum), Arabic first for the Qur'an.
 - **Practical reflection:** small, concrete, kind steps. Avoid vague advice ("be better").
-- **Takeaway:** a short line worth remembering + one call to action (save or share).
+- **Gentle CTA**, one per post: "Save this reminder for a difficult day", "Share it with someone who may find it helpful", or a reply prompt on stories.
+- **Goal:** set `brief.objective` to what the post is built for — `reach`, `shares`, `saves`, `replies` or `follows`. The weekly report judges each post by its own goal.
 - **Tone:** warm, humble, plain English. Speak to one person. Transliterations: Qur'an, du'a, Sunnah, sadaqah, dhikr, salah.
-- **Sound is Qur'an recitation, nothing else:** no music, no sound effects. By default the first ayah on screen is recited (the scene is lengthened so the recitation is never cut). A reel without an ayah (e.g. a hadith reel) names a short, genuinely related ayah in `"recitation": {"ref": "quran:…"}`; it is labelled on screen and in the caption. Reciters rotate among six approved reciters (`sources/sources.json` → `recitations`).
+- **Sound (reels):** Qur'an recitation only — no music or effects. By default the first ayah on screen is recited (never cut). A reel without an ayah names a short, genuinely related ayah in `"recitation": {"ref": "quran:…"}`; it is labelled on screen and in the caption.
 
-## 7. Look
+## 8. Look
 
-Clean and quiet: lots of space, one accent colour, no busy textures or light sweeps. The look rotates automatically (10 palettes × 3 layouts × 4 backdrops × 2 headline typefaces × 3 transitions, repeating every 60 reels), so writers don't set `style` unless a reel needs a specific look.
+Clean and quiet: lots of space, one accent colour, no busy textures. The look rotates automatically (10 palettes × 3 layouts × 4 backdrops × 2 headline typefaces × 3 transitions, repeating every 60 posts), so writers don't set `style` unless a post needs a specific look.
 
-## 8. Packaging
+## 9. Packaging
 
-- **Cover:** kicker + 3–7 words inside the 1080×1350 feed crop. Our words, not a paraphrased quote presented as the source.
-- **Caption:** a specific first line, a little context, the reflection steps, one CTA, 3–6 hashtags. The pipeline appends the sources block (citation, translator, grade, link; the recited ayah and reciter) and, for excerpts, the full text.
-- **CTA:** "Save" for du'as, habits and checklists; "Send this to someone who needs it" for comfort reminders. One per reel.
+- **Cover / first slide:** kicker + 3–7 words. Our words, not a paraphrased quote presented as the source.
+- **Caption:** a specific first line, a little context, the reflection steps, one CTA, 3–6 hashtags. The pipeline appends the sources block (citation, translator, grade, link; recited ayah and reciter) and, for excerpts, the full text.
 
-## 9. Review before posting
+## 10. Review before posting
 
-Automated QA checks the references, the verbatim text, attributions, layout and the video file. A person still approves every reel by merging its pull request, after opening each source link and reading the reel once on a phone.
+Automated QA checks the references, verbatim text, attributions, layout and the files. A person still approves every post by merging its pull request, after opening each source link and looking at the post on a phone.

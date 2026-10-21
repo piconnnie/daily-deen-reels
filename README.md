@@ -1,6 +1,6 @@
 # Daily Deen Reels
 
-Daily Instagram reels for the **Daily Deen Reminders** page: one verse of the Qur'an or one authentic hadith a day, shown word for word with its reference, plus one small thing to do today.
+Daily Instagram posts for the **Daily Deen Reminders** page — reels, carousels and stories — following the page's content strategy ([`docs/CONTENT_STRATEGY.md`](docs/CONTENT_STRATEGY.md)): six pillars, five recurring series (One Ayah. One Lesson. · A Reminder Your Heart Needs · Dua of the Day · A Muslim's Daily Check-In · Before You Scroll), Friday and seasonal reminders on their dates, and every verse or hadith shown word for word with its reference.
 
 **Verified sources only.** Reels quote only the Qur'an (King Fahd Complex Hafs text + Saheeh International), Sahih al-Bukhari and Sahih Muslim. Drafts contain references, never typed quotes: the pipeline pulls the exact text from pinned, hash-checked datasets, and QA blocks anything that doesn't match, isn't from an approved collection, or attributes words to Allah or the Prophet ﷺ outside a quoted source. See [`deen-content/sources/README.md`](deen-content/sources/README.md).
 

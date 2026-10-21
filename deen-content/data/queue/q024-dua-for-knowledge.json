@@ -1,20 +1,22 @@
 {
+  "kind": "reel",
   "brief": {
-    "topic": "Gratitude and increase",
+    "topic": "A du'a for anyone learning",
     "audience": "Muslims looking for a short, authentic reminder they can act on today",
-    "pillar": "A: Qur'an Reflections",
+    "pillar": "D: Dua & Dhikr",
     "objective": "saves",
-    "format": "ayah-reflection",
-    "targetDurationSec": 28,
+    "format": "dua",
+    "targetDurationSec": 20,
     "technicalDepth": "beginner",
     "voiceover": false,
     "research": "not-required",
-    "constraints": []
+    "constraints": [],
+    "series": "dua-of-the-day"
   },
-  "coreInsight": "In Qur'an 14:7 gratitude is met with increase, so noticing and using blessings well is worth practising daily.",
+  "coreInsight": "Qur'an 20:114 contains a short du'a asking for more knowledge, useful before any study or work.",
   "hooks": [
     {
-      "text": "Feeling like it's never enough?",
+      "text": "A du'a for anyone learning",
       "angle": "Personal recognition",
       "scores": {
         "specificity": 4,
@@ -26,7 +28,7 @@
       "notes": "Clear in two seconds; the source answers it right away."
     },
     {
-      "text": "Notice it. Say it. Use it well.",
+      "text": "Before you open the book.",
       "angle": "Curiosity",
       "scores": {
         "specificity": 4,
@@ -38,7 +40,7 @@
       "notes": "Good, slightly less direct."
     },
     {
-      "text": "Gratitude brings more.",
+      "text": "Ask for more.",
       "angle": "Reframe",
       "scores": {
         "specificity": 4,
@@ -58,7 +60,7 @@
       "type": "hook",
       "durationInFrames": 90,
       "purpose": "Recognition: meet the viewer where they are.",
-      "onScreen": "Feeling like it's never enough? / Read this ayah slowly.",
+      "onScreen": "A du'a for anyone learning / Before class, work or study.",
       "storyboard": {
         "visual": "Headline, highlighted last line; sub-line.",
         "animation": "Readable on frame 0; underline sweep."
@@ -66,68 +68,82 @@
       "kicker": "DAILY REMINDER",
       "lines": [
         {
-          "text": "Feeling like"
+          "text": "A du'a"
         },
         {
-          "text": "it's never"
+          "text": "for anyone"
         },
         {
-          "text": "enough?",
+          "text": "learning",
           "highlight": true
         }
       ],
-      "sub": "Read this ayah slowly."
+      "sub": "Before class, work or study."
     },
     {
       "id": "ayah",
       "type": "source",
-      "durationInFrames": 330,
+      "durationInFrames": 165,
       "purpose": "The source itself, verbatim, with its reference.",
-      "onScreen": "quran:14:7 (text pulled from the verified dataset)",
+      "onScreen": "quran:20:114 (text pulled from the verified dataset)",
       "storyboard": {
         "visual": "Framed panel: Arabic (if any), translation; citation pill.",
         "animation": "Arabic, then translation, then citation."
       },
       "transitionIn": "fade-up",
-      "kicker": "THE QUR'AN · IBRAHIM",
-      "ref": "quran:14:7"
+      "kicker": "THE QUR'AN · TA-HA",
+      "ref": "quran:20:114",
+      "excerpt": "and say, \"My Lord, increase me in knowledge",
+      "arabicExcerpt": "وَقُل رَّبِّ زِدۡنِي عِلۡمࣰ ا"
     },
     {
-      "id": "practice",
-      "type": "checklist",
-      "durationInFrames": 255,
-      "purpose": "Our reflection: small, concrete actions (our words, not attributed).",
-      "onScreen": "REFLECTION / Gratitude opens doors. / Name three blessings before you sleep · Thank one person who helped you this week · Use a blessing well: time, health, money",
+      "id": "moments",
+      "type": "cards",
+      "durationInFrames": 180,
+      "purpose": "Moments to use it (our suggestions).",
+      "onScreen": "WHEN TO SAY IT / Before studying · Before a hard meeting · When something confuses you",
       "storyboard": {
-        "visual": "Numbered list, rule box.",
-        "animation": "Items every 34 frames from 24."
+        "visual": "Kicker + headline; cards pop in.",
+        "animation": "Cards every 16 frames from 12."
       },
       "transitionIn": "fade-up",
-      "kicker": "REFLECTION",
+      "kicker": "WHEN TO SAY IT",
       "headline": [
         {
-          "text": "Gratitude"
+          "text": "Before you"
         },
         {
-          "text": "opens doors.",
+          "text": "open the book.",
           "highlight": true
         }
       ],
-      "items": [
-        "Name three blessings before you sleep",
-        "Thank one person who helped you this week",
-        "Use a blessing well: time, health, money"
-      ],
-      "itemStart": 24,
-      "itemStagger": 34,
-      "rule": "Gratitude shows in our words and in how we use what we have."
+      "enter": "pop",
+      "popStart": 12,
+      "popStagger": 16,
+      "cards": [
+        {
+          "text": "Before studying",
+          "status": "pass",
+          "tag": "STUDY"
+        },
+        {
+          "text": "Before a hard meeting",
+          "status": "pass",
+          "tag": "WORK"
+        },
+        {
+          "text": "When something confuses you",
+          "status": "pass",
+          "tag": "STUCK"
+        }
+      ]
     },
     {
       "id": "takeaway",
       "type": "takeaway",
       "durationInFrames": 150,
       "purpose": "One line to remember + one CTA.",
-      "onScreen": "Notice it. Say it. Use it well. / Save this for tonight",
+      "onScreen": "Ask for more. / Save this du'a",
       "storyboard": {
         "visual": "Takeaway lines, CTA pill, end card.",
         "animation": "Lines rise; CTA at 40; end card at 70."
@@ -135,64 +151,61 @@
       "transitionIn": "fade-up",
       "lines": [
         {
-          "text": "Notice it."
+          "text": "Ask for"
         },
         {
-          "text": "Say it."
-        },
-        {
-          "text": "Use it well.",
+          "text": "more.",
           "highlight": true
         }
       ],
-      "cta": "Save this for tonight",
+      "cta": "Save this du'a",
       "ctaAt": 40,
       "endCardAt": 70
     }
   ],
   "cover": {
-    "kicker": "QUR'AN 14:7",
+    "kicker": "QUR'AN 20:114",
     "headline": [
       {
-        "text": "Gratitude"
+        "text": "A du'a for"
       },
       {
-        "text": "brings more",
+        "text": "learning",
         "highlight": true
       }
     ]
   },
   "caption": {
-    "opening": "When it feels like it's never enough, start by counting what's already here.",
+    "opening": "A short du'a to say before you study, work or try to understand something new.",
     "body": [
-      "A reflection for tonight:\n→ name three blessings before you sleep\n→ thank one person who helped you this week\n→ use a blessing well: time, health, money"
+      "It's the end of Surah Ta-Ha, ayah 114.",
+      "Moments to say it:\n→ before studying\n→ before a hard meeting\n→ when something confuses you"
     ],
-    "cta": "Save this for tonight.",
+    "cta": "Save this du'a.",
     "hashtags": [
       "#IslamicReminder",
-      "#Quran",
-      "#Shukr",
-      "#Quran",
-      "#DailyReminder"
+      "#Ibadah",
+      "#Dua",
+      "#Knowledge"
     ]
   },
   "primaryCta": {
     "type": "save",
-    "text": "Save this for tonight"
+    "text": "Save this du'a"
   },
   "claims": [
     {
-      "text": "What quran:14:7 says, quoted verbatim on screen.",
+      "text": "What quran:20:114 says, quoted verbatim on screen.",
       "kind": "source",
-      "ref": "quran:14:7"
+      "ref": "quran:20:114"
     },
     {
-      "text": "Naming blessings, thanking people and using blessings well are ways to act on the ayah.",
+      "text": "Suggested moments to say the du'a are our own suggestions.",
       "kind": "reflection"
     }
   ],
   "publish": {
-    "suggestedDate": "2026-11-04",
+    "suggestedDate": "2026-10-28",
     "notes": "Evergreen."
   },
   "repurposing": {

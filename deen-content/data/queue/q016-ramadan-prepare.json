@@ -1,0 +1,198 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "Preparing for Ramadan",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "F: Islamic Calendar & Occasions",
+    "series": null,
+    "objective": "shares",
+    "format": "heart-reminder",
+    "targetDurationSec": 26,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Qur'an 2:183 explains that fasting was decreed so that we may become righteous.",
+  "hooks": [
+    {
+      "text": "Ramadan is here",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the teaching answers it."
+    },
+    {
+      "text": "Why do we fast?",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, less direct."
+    },
+    {
+      "text": "Fast for taqwa.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Why do we fast? / A Ramadan reminder.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Why do"
+        },
+        {
+          "text": "we fast?",
+          "highlight": true
+        }
+      ],
+      "sub": "A Ramadan reminder."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 285,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:2:183 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · AL-BAQARAH",
+      "ref": "quran:2:183"
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 255,
+      "purpose": "Takeaway in practice (our suggestions).",
+      "onScreen": "THIS RAMADAN / Pick one habit to leave this month · Set a daily Qur'an portion you can keep · Plan one act of charity each week",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THIS RAMADAN",
+      "headline": [
+        {
+          "text": "Aim for"
+        },
+        {
+          "text": "taqwa.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Pick one habit to leave this month",
+        "Set a daily Qur'an portion you can keep",
+        "Plan one act of charity each week"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Fast for taqwa. / Share it with your family",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Fast for"
+        },
+        {
+          "text": "taqwa.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with your family",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "RAMADAN",
+    "headline": [
+      {
+        "text": "Why we"
+      },
+      {
+        "text": "fast",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Ramadan Mubarak.",
+    "body": [
+      "Qur'an 2:183: fasting was decreed so that you may become righteous."
+    ],
+    "cta": "Share it with your family.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#IslamicCalendar",
+      "#Ramadan",
+      "#Quran"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with your family"
+  },
+  "claims": [
+    {
+      "text": "What quran:2:183 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:2:183"
+    },
+    {
+      "text": "The goals for the month are our suggestions.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen.",
+    "occasion": "ramadan"
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

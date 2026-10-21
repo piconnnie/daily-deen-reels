@@ -17,6 +17,14 @@
       "label": "Saheeh International English translation (Umm Muhammad et al.), via Tanzil",
       "upstream": "https://tanzil.net/trans/en.sahih"
     },
+    "quran-tr": {
+      "repo": "fawazahmed0/quran-api",
+      "commit": "93e6f64925ae76273520d636fcaaf061129f2316",
+      "path": "editions/ara-quran-la.min.json",
+      "sha256": "43bce6164dcbee24614cb2ecbd8d48a70c0efecfdafc1325dd5a12628999214b",
+      "label": "Qur'an transliteration (Tanzil); 'AA' marks the letter ʿayn and is displayed as ʿ",
+      "upstream": "https://tanzil.net/trans/en.transliteration"
+    },
     "bukhari-en": {
       "repo": "fawazahmed0/hadith-api",
       "commit": "df57907be35291c91ad6a6691180e22ca9920784",
@@ -58,7 +66,8 @@
       "english": "quran-en",
       "translation": "Saheeh International",
       "refFormat": "quran:<surah>:<ayah> or quran:<surah>:<first>-<last> (max 3 ayat)",
-      "maxAyat": 3
+      "maxAyat": 3,
+      "transliteration": "quran-tr"
     },
     "bukhari": {
       "name": "Sahih al-Bukhari",

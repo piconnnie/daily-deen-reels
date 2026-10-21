@@ -1,6 +1,7 @@
 import React from 'react';
 import {interpolate, useCurrentFrame} from 'remotion';
-import {fonts, safe, safeBox} from '../brand/tokens';
+import {fonts} from '../brand/tokens';
+import {CANVASES} from '../brand/canvas';
 import {useColors} from '../brand/theme';
 import type {ReelConfig} from '../content/schema';
 
@@ -22,8 +23,8 @@ export const RecitationLabel: React.FC<{config: ReelConfig}> = ({config}) => {
     <div
       style={{
         position: 'absolute',
-        top: safe.top - 2,
-        right: 1080 - (safeBox.x + safeBox.width),
+        top: CANVASES.reel.brandTop - 2,
+        right: 1080 - CANVASES.reel.brandRight,
         display: 'flex',
         alignItems: 'center',
         gap: 10,

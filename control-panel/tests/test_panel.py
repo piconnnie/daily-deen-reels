@@ -32,8 +32,8 @@ def repo_files():
     main = {}
     for p in sorted((ROOT / A / "data" / "queue").glob("*.json"))[:6]:
         main[f"{gh.QUEUE_DIR}/{p.name}"] = p.read_text()
-    q1 = json.loads(main[f"{gh.QUEUE_DIR}/q002-strength-in-anger.json"])
-    q1["brief"]["queueId"] = "q002-strength-in-anger"
+    q1 = json.loads(main[f"{gh.QUEUE_DIR}/q002-one-ayah-ash-sharh.json"])
+    q1["brief"]["queueId"] = "q002-one-ayah-ash-sharh"
     main[f"{gh.REELS_DIR}/deen-003-do-you-need-an-agent.json"] = json.dumps(q1)
     for p in (ROOT / A / "src" / "content" / "reels").glob("*.json"):
         main[f"{gh.REELS_DIR}/{p.name}"] = p.read_text()
@@ -46,8 +46,8 @@ def repo_files():
     main[f"{gh.ARCHIVE_DIR}/deen-006-y/state.json"] = json.dumps({
         "id": "deen-006-y", "approval": {"status": "approved", "approvedAt": "2026-10-18T11:00:00Z"},
         "publish": {"status": "failed", "attempts": 1, "lastError": "media download failed"}})
-    q2 = json.loads(main[f"{gh.QUEUE_DIR}/q003-what-allah-looks-at.json"])
-    q2["brief"]["queueId"] = "q003-what-allah-looks-at"
+    q2 = json.loads(main[f"{gh.QUEUE_DIR}/q003-dua-against-useless-knowledge.json"])
+    q2["brief"]["queueId"] = "q003-dua-against-useless-knowledge"
     branch = {
         f"{gh.REELS_DIR}/deen-005-rag.json": json.dumps(q2),
         f"{gh.ARCHIVE_DIR}/deen-005-rag/state.json": json.dumps({"id": "deen-005-rag", "durationSec": 22.4,
@@ -77,12 +77,12 @@ class ClientTests(unittest.TestCase):
         s = self.c.snapshot()
         self.assertEqual(len(s["queue"]), 6)
         used = {q["file"]: q["usedBy"] for q in s["queue"]}
-        self.assertEqual(used["q002-strength-in-anger.json"], "deen-003-do-you-need-an-agent")  # used on main
-        self.assertEqual(used["q003-what-allah-looks-at.json"], "deen-005-rag")                 # used by an open PR
-        self.assertEqual(s["queueLeft"], 3)  # q001 (sample reel), q002 (main), q003 (open PR) used
+        self.assertEqual(used["q002-one-ayah-ash-sharh.json"], "deen-003-do-you-need-an-agent")  # used on main
+        self.assertEqual(used["q003-dua-against-useless-knowledge.json"], "deen-005-rag")                 # used by an open PR
+        self.assertEqual(s["queueLeft"], 4)  # q002 (main) and q003 (open PR) used
         self.assertEqual([p["number"] for p in s["prs"]], [5])  # only daily-reel PRs
         self.assertEqual(s["prs"][0]["state"]["critic"]["verdict"], "pass")
-        self.assertEqual(gh.hook_of(s["prs"][0]["reel"]), gh.hook_of(json.loads(self.state.files["main"][f"{gh.QUEUE_DIR}/q003-what-allah-looks-at.json"])))
+        self.assertEqual(gh.hook_of(s["prs"][0]["reel"]), gh.hook_of(json.loads(self.state.files["main"][f"{gh.QUEUE_DIR}/q003-dua-against-useless-knowledge.json"])))
         self.assertEqual([x["id"] for x in s["byStatus"]["published"]], ["deen-003-do-you-need-an-agent"])
         self.assertEqual([x["id"] for x in s["byStatus"]["approved"]], ["deen-004-x"])
         self.assertEqual([x["id"] for x in s["byStatus"]["failed"]], ["deen-006-y"])
@@ -137,7 +137,7 @@ class ClientTests(unittest.TestCase):
     def test_helpers(self):
         self.assertEqual(gh.next_queue_name(["q001-a.json", "q014-b.json"], "My New Draft!"), "q015-my-new-draft.json")
         self.assertEqual(gh.next_queue_name([], ""), "q001-draft.json")
-        real = (ROOT / A / "data/queue/q005-dua-for-parents.json").read_text()
+        real = (ROOT / A / "data/queue/q005-before-you-scroll-intention.json").read_text()
         self.assertEqual(gh.validate_draft(real), [])
         self.assertEqual(gh.validate_draft("nope"), ["Not valid JSON."])
         self.assertTrue(any("hook" in p for p in gh.validate_draft(json.dumps({**json.loads(real), "scenes": [{"type": "cards"}, {"type": "takeaway"}]}))))
@@ -178,11 +178,11 @@ class AppTests(unittest.TestCase):
     def test_overview_and_tabs_render(self):
         self.connect()
         metrics = {a[0]: a[1] for n, a, k in ST.calls if n == "metric"}
-        self.assertEqual(metrics["Drafts in queue"], 3)
+        self.assertEqual(metrics["Drafts in queue"], 4)
         self.assertEqual(metrics["Waiting for your review"], 1)
         self.assertEqual(metrics["Approved, not yet posted"], 2)
         self.assertEqual(metrics["Posted"], 1)
-        self.assertIn(["Overview", "Review (1)", "Make a reel", "Queue (3)", "Settings"], [a[0] for n, a, k in ST.calls if n == "tabs"])
+        self.assertIn(["Overview", "Review (1)", "Make a reel", "Queue (4)", "Settings"], [a[0] for n, a, k in ST.calls if n == "tabs"])
         self.assertIn("approve-5", ST.buttons_seen)
         self.assertTrue(any("media download failed" in t for t in ST.texts("markdown")))
 
@@ -269,13 +269,15 @@ class AppTests(unittest.TestCase):
 
     def test_upload_drafts(self):
         self.connect()
-        good = (ROOT / A / "data/queue/q007-not-more-than-you-can-carry.json").read_text()
+        good = (ROOT / A / "data/queue/q005-before-you-scroll-intention.json").read_text()
         ups = [fake_streamlit.Upload("q123-monitor-after-launch.json", good), fake_streamlit.Upload("broken.json", "{")]
         self.run_app(**{"Upload draft JSON files": ups})
         self.assertTrue(any("broken.json" in e for e in self.errors()))
         self.run_app(press={"Add 1 draft(s) to the queue"}, **{"Upload draft JSON files": ups})
         self.assertIn(f"{gh.QUEUE_DIR}/q007-monitor-after-launch.json", self.state.files["main"])  # renumbered after the highest existing draft (q006 in the mock)
         self.assertNotIn(f"{gh.QUEUE_DIR}/broken.json", self.state.files["main"])
+        story = (ROOT / A / "data/queue/q007-story-weekly-self-check.json").read_text()
+        self.assertEqual(gh.validate_draft(story), [])
 
     def test_demo_mode_every_button(self):
         self.run_app(press={"Explore with sample data (no token)"})

@@ -77,6 +77,9 @@ const posts = rows.map((r) => {
     format: r.format || reel?.brief.format || 'unknown',
     hookAngle: r.hook_angle || (reel ? reel.hooks[reel.selectedHook].angle : 'unknown'),
     cta: r.cta_type || reel?.primaryCta.type || 'unknown',
+    kind: r.kind || reel?.kind || 'reel',
+    series: r.series || reel?.brief.series || '(none)',
+    goal: r.goal || reel?.brief.objective || 'unknown',
     durationBucket: dur === null ? 'unknown' : dur < 20 ? '<20s' : dur <= 30 ? '20–30s' : '>30s',
     reach,
     nonFollowerShare: per('non_follower_reach'),
@@ -125,7 +128,16 @@ md.push('## Posts ranked by index', '', '| Content | Index | Reach | Watch % | S
 for (const p of [...posts].sort((a, b) => (b.index ?? 0) - (a.index ?? 0))) {
   md.push(`| ${p.id} | ${ratio(p.index)} | ${p.reach ?? '—'} | ${pct(p.watchPct)} | ${pct(p.shareRate)} | ${pct(p.saveRate)} | ${pct(p.followRate)} | ${p.format} | ${p.hookAngle} |`);
 }
-for (const [key, label] of [['pillar', 'Pillar'], ['format', 'Format'], ['hookAngle', 'Hook angle'], ['cta', 'CTA'], ['durationBucket', 'Duration']]) {
+// Judge each post by its intended purpose (docs/CONTENT_STRATEGY.md §7).
+const GOAL_METRIC = {reach: ['nonFollowerShare', 'Non-follower reach', 'watchPct', 'Watch %'], shares: ['shareRate', 'Shares/reach'], saves: ['saveRate', 'Saves/reach'], replies: ['commentRate', 'Meaningful comments/reach'], follows: ['followRate', 'Follows/reach', 'profileRate', 'Profile visits/reach']};
+md.push('', '## By goal (each post judged by what it was made for)', '', '| Goal | Posts | Metric | Median | Account baseline |', '|---|---|---|---|---|');
+for (const [goal, spec] of Object.entries(GOAL_METRIC)) {
+  const ps = posts.filter((p) => p.goal === goal);
+  if (!ps.length) continue;
+  for (let i = 0; i < spec.length; i += 2) md.push(`| ${goal} | ${ps.length}${ps.length < MIN_GROUP ? ' (insufficient)' : ''} | ${spec[i + 1]} | ${pct(median(ps.map((p) => p[spec[i]])))} | ${pct(median(posts.map((p) => p[spec[i]])))} |`);
+}
+md.push('', 'Story replies and poll results are not available through the API after 24 hours; review them in the Instagram app.');
+for (const [key, label] of [['kind', 'Kind'], ['series', 'Series'], ['pillar', 'Pillar'], ['format', 'Format'], ['hookAngle', 'Hook angle'], ['cta', 'CTA'], ['durationBucket', 'Duration']]) {
   md.push('', `## By ${label.toLowerCase()}`, '', `| ${label} | Posts | Median index | Save rate | Share rate | Watch % |`, '|---|---|---|---|---|---|');
   for (const g of group(key)) md.push(`| ${g.k} | ${g.n}${g.n < MIN_GROUP ? ' (insufficient)' : ''} | ${ratio(g.index)} | ${pct(g.save)} | ${pct(g.share)} | ${pct(g.watch)} |`);
 }

@@ -1,0 +1,203 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "When life feels uncertain: trust in Allah",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "B: Heart-Softening Reminders",
+    "series": "heart-reminder",
+    "objective": "shares",
+    "format": "heart-reminder",
+    "targetDurationSec": 23,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Qur'an 65:3 says whoever relies on Allah, He is sufficient for him, so we can keep moving without seeing every step.",
+  "hooks": [
+    {
+      "text": "When life feels uncertain…",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the teaching answers it."
+    },
+    {
+      "text": "You don't need every step.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, less direct."
+    },
+    {
+      "text": "He is sufficient.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "When life feels uncertain… / You don't need to see every step.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "When life"
+        },
+        {
+          "text": "feels"
+        },
+        {
+          "text": "uncertain…",
+          "highlight": true
+        }
+      ],
+      "sub": "You don't need to see every step."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 195,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:65:3 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · AT-TALAQ",
+      "ref": "quran:65:3",
+      "excerpt": "And whoever relies upon Allah - then He is sufficient for him",
+      "arabicExcerpt": "وَمَن يَتَوَكَّلۡ عَلَى ٱللَّهِ فَهُوَ حَسۡبُهُۥٓۚ"
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "durationInFrames": 255,
+      "purpose": "Reflection: our words, clearly labelled.",
+      "onScreen": "REFLECTION / Trust, then take the next step. / Tawakkul isn't waiting with folded hands. It is doing what you can today and leaving what you can't see to Allah. You don't have to know every step ahead to keep moving forward.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "Trust, then take"
+        },
+        {
+          "text": "the next step.",
+          "highlight": true
+        }
+      ],
+      "body": [
+        "Tawakkul isn't waiting with folded hands. It is doing what you can today and leaving what you can't see to Allah.",
+        "You don't have to know every step ahead to keep moving forward."
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "He is enough. Take the next small step. / Share it with someone who needs it",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "He is enough."
+        },
+        {
+          "text": "Take the next"
+        },
+        {
+          "text": "small step.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with someone who needs it",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "A REMINDER YOUR HEART NEEDS",
+    "headline": [
+      {
+        "text": "When the path"
+      },
+      {
+        "text": "isn't clear",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "You don't have to know every step ahead to keep moving forward.",
+    "body": [
+      "Qur'an 65:3 is a reminder that whoever relies on Allah, He is sufficient for him.",
+      "Tawakkul isn't waiting with folded hands: do what you can today, and leave what you can't see to Allah."
+    ],
+    "cta": "Share it with someone who may find it helpful.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#IslamicReminder",
+      "#Tawakkul",
+      "#Sabr"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with someone who needs it"
+  },
+  "claims": [
+    {
+      "text": "What quran:65:3 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:65:3"
+    },
+    {
+      "text": "Doing what we can and trusting Allah with the rest is our reflection on the ayah.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Launch calendar day 1."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

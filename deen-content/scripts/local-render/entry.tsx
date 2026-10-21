@@ -9,6 +9,7 @@ import {REELS} from '../../src/content';
 import type {ReelConfig} from '../../src/content/schema';
 import {ReelTemplate, sceneStarts} from '../../src/templates/ReelTemplate';
 import {GalleryStill} from './gallery';
+import {StillTemplate, stillSize} from '../../src/templates/StillTemplate';
 
 const params = new URLSearchParams(window.location.search);
 const reelId = params.get('reel');
@@ -20,10 +21,12 @@ const durationInFrames = config ? sceneStarts(config.scenes).total : 1;
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
+const slideIndex = Number(params.get('slide') ?? 0);
+const size = mode === 'still' ? stillSize(config) : {width: 1080, height: 1920};
 const render = (frame: number) => {
   const videoConfig = {
-    width: 1080,
-    height: 1920,
+    width: size.width,
+    height: size.height,
     fps: config?.fps ?? 30,
     durationInFrames: mode === 'reel' ? durationInFrames : 1,
     id: mode,
@@ -36,6 +39,8 @@ const render = (frame: number) => {
             <ReelTemplate config={config} />
           ) : mode === 'cover' ? (
             <Cover config={config} />
+          ) : mode === 'still' ? (
+            <StillTemplate config={config} index={slideIndex} />
           ) : (
             <GalleryStill which={params.get('scene') ?? 'checklist'} />
           )}

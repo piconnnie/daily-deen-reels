@@ -1,0 +1,205 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "The first ten days of Dhul Hijjah",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "F: Islamic Calendar & Occasions",
+    "series": null,
+    "objective": "shares",
+    "format": "heart-reminder",
+    "targetDurationSec": 25,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Sahih al-Bukhari 969 says no good deeds on other days are superior to those done in the first ten days of Dhul Hijjah.",
+  "hooks": [
+    {
+      "text": "The best days of the year",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the teaching answers it."
+    },
+    {
+      "text": "Don't let these days pass",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, less direct."
+    },
+    {
+      "text": "Fill them with good.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "The best ten days are here. / First ten days of Dhul Hijjah.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "The best"
+        },
+        {
+          "text": "ten days"
+        },
+        {
+          "text": "are here.",
+          "highlight": true
+        }
+      ],
+      "sub": "First ten days of Dhul Hijjah."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 255,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "bukhari:969 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ SAID",
+      "ref": "bukhari:969",
+      "excerpt": "No good deeds done on other days are superior to those done on these (first ten days of Dhul Hijja)"
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 255,
+      "purpose": "Takeaway in practice (our suggestions).",
+      "onScreen": "THESE TEN DAYS / Increase dhikr through the day · Give charity, even a little · Fast on the day of Arafah if you can",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THESE TEN DAYS",
+      "headline": [
+        {
+          "text": "Fill them"
+        },
+        {
+          "text": "with good.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Increase dhikr through the day",
+        "Give charity, even a little",
+        "Fast on the day of Arafah if you can"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Don't let them pass. / Share it with your family",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Don't let"
+        },
+        {
+          "text": "them pass.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with your family",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "DHUL HIJJAH",
+    "headline": [
+      {
+        "text": "The best"
+      },
+      {
+        "text": "ten days",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "The first ten days of Dhul Hijjah have begun.",
+    "body": [
+      "Sahih al-Bukhari 969 on the virtue of these days."
+    ],
+    "cta": "Share it with your family.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#IslamicCalendar",
+      "#DhulHijjah",
+      "#Hadith"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with your family"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:969 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:969"
+    },
+    {
+      "text": "The suggested deeds are our own reminders.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen.",
+    "occasion": "dhul-hijjah-10"
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:2:203"
+  }
+}

@@ -18,6 +18,8 @@ import {TableScene} from '../scenes/TableScene';
 import {TakeawayScene} from '../scenes/TakeawayScene';
 import {TerminalScene} from '../scenes/TerminalScene';
 import {SourceScene} from '../scenes/SourceScene';
+import {ReflectionScene} from '../scenes/ReflectionScene';
+import {CanvasProvider} from '../brand/canvas';
 
 loadBrandFonts();
 
@@ -34,13 +36,15 @@ export const sceneStarts = (scenes: Scene[]) => {
   return {starts, total: t};
 };
 
-const renderScene = (scene: Scene, config: ReelConfig) => {
+export const renderScene = (scene: Scene, config: ReelConfig) => {
   switch (scene.type) {
     case 'source': {
       const r = config.recitation;
       const recitedBy = r && r !== false && !r.off && r.mode === 'scene' && r.sceneId === scene.id ? r.reciterName ?? null : null;
       return <SourceScene scene={scene} recitedBy={recitedBy} />;
     }
+    case 'reflection':
+      return <ReflectionScene scene={scene} />;
     case 'hook':
       return <HookScene scene={scene} />;
     case 'cards':
@@ -101,7 +105,9 @@ export const buildSubtitleCues = (config: ReelConfig): SubtitleCue[] => {
 
 export const ReelTemplate: React.FC<{config: ReelConfig}> = ({config}) => (
   <ThemeProvider style={pickStyle(config.id, config.style)}>
-    <ReelBody config={config} />
+    <CanvasProvider kind="reel">
+      <ReelBody config={config} />
+    </CanvasProvider>
   </ThemeProvider>
 );
 

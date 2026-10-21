@@ -1,20 +1,22 @@
 {
+  "kind": "reel",
   "brief": {
-    "topic": "Speak good or stay quiet",
+    "topic": "Allah looks at hearts and deeds",
     "audience": "Muslims looking for a short, authentic reminder they can act on today",
-    "pillar": "C: Character and Manners",
+    "pillar": "B: Heart-Softening Reminders",
     "objective": "saves",
-    "format": "hadith-practice",
-    "targetDurationSec": 24,
+    "format": "heart-check",
+    "targetDurationSec": 26,
     "technicalDepth": "beginner",
     "voiceover": false,
     "research": "not-required",
-    "constraints": []
+    "constraints": [],
+    "series": "heart-reminder"
   },
-  "coreInsight": "Sahih al-Bukhari 6018 gives one test for speech: say what is good or keep quiet.",
+  "coreInsight": "A hadith in Sahih Muslim and an ayah in Ash-Shu'ara together point to the heart, not appearance or wealth.",
   "hooks": [
     {
-      "text": "Before you post that comment…",
+      "text": "Does it matter how it looks?",
       "angle": "Personal recognition",
       "scores": {
         "specificity": 4,
@@ -26,7 +28,7 @@
       "notes": "Clear in two seconds; the source answers it right away."
     },
     {
-      "text": "One test for everything you say.",
+      "text": "Your heart is being looked at.",
       "angle": "Curiosity",
       "scores": {
         "specificity": 4,
@@ -38,7 +40,7 @@
       "notes": "Good, slightly less direct."
     },
     {
-      "text": "Say good, or stay quiet.",
+      "text": "Look after your heart.",
       "angle": "Reframe",
       "scores": {
         "specificity": 4,
@@ -58,7 +60,7 @@
       "type": "hook",
       "durationInFrames": 90,
       "purpose": "Recognition: meet the viewer where they are.",
-      "onScreen": "Before you post that comment… / One test for everything you say.",
+      "onScreen": "Does it matter how it looks? / Two reminders, side by side.",
       "storyboard": {
         "visual": "Headline, highlighted last line; sub-line.",
         "animation": "Readable on frame 0; underline sweep."
@@ -66,69 +68,53 @@
       "kicker": "DAILY REMINDER",
       "lines": [
         {
-          "text": "Before you"
+          "text": "Does it"
         },
         {
-          "text": "post that"
+          "text": "matter how"
         },
         {
-          "text": "comment…",
+          "text": "it looks?",
           "highlight": true
         }
       ],
-      "sub": "One test for everything you say."
+      "sub": "Two reminders, side by side."
     },
     {
       "id": "hadith",
       "type": "source",
-      "durationInFrames": 240,
+      "durationInFrames": 255,
       "purpose": "The source itself, verbatim, with its reference.",
-      "onScreen": "bukhari:6018 (text pulled from the verified dataset)",
+      "onScreen": "muslim:2564c (text pulled from the verified dataset)",
       "storyboard": {
         "visual": "Framed panel: Arabic (if any), translation; citation pill.",
         "animation": "Arabic, then translation, then citation."
       },
       "transitionIn": "fade-up",
       "kicker": "THE PROPHET ﷺ SAID",
-      "ref": "bukhari:6018",
-      "excerpt": "anybody who believes in Allah and the Last Day should talk what is good or keep quiet"
+      "ref": "muslim:2564c",
+      "excerpt": "Verily Allah does not look to your faces and your wealth but He looks to your heart and to your deeds"
     },
     {
-      "id": "practice",
-      "type": "checklist",
-      "durationInFrames": 255,
-      "purpose": "Our reflection: small, concrete actions (our words, not attributed).",
-      "onScreen": "TRY THIS TODAY / Good words, or silence. / Before you speak, ask: is this good? · Leave one argument unanswered today · Replace one complaint with a kind word",
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 285,
+      "purpose": "The ayah that completes the picture.",
+      "onScreen": "quran:26:88-89 (text pulled from the verified dataset)",
       "storyboard": {
-        "visual": "Numbered list, rule box.",
-        "animation": "Items every 34 frames from 24."
+        "visual": "Framed panel: Arabic (if any), translation; citation pill.",
+        "animation": "Arabic, then translation, then citation."
       },
       "transitionIn": "fade-up",
-      "kicker": "TRY THIS TODAY",
-      "headline": [
-        {
-          "text": "Good words,"
-        },
-        {
-          "text": "or silence.",
-          "highlight": true
-        }
-      ],
-      "items": [
-        "Before you speak, ask: is this good?",
-        "Leave one argument unanswered today",
-        "Replace one complaint with a kind word"
-      ],
-      "itemStart": 24,
-      "itemStagger": 34,
-      "rule": "If it isn't good, it can wait. Or it can stay unsaid."
+      "kicker": "THE QUR'AN · ASH-SHU'ARA",
+      "ref": "quran:26:88-89"
     },
     {
       "id": "takeaway",
       "type": "takeaway",
       "durationInFrames": 150,
       "purpose": "One line to remember + one CTA.",
-      "onScreen": "Say good, or stay quiet. / Save this before you reply next",
+      "onScreen": "What does my heart need today? / Save this and come back to it",
       "storyboard": {
         "visual": "Takeaway lines, CTA pill, end card.",
         "animation": "Lines rise; CTA at 40; end card at 70."
@@ -136,73 +122,74 @@
       "transitionIn": "fade-up",
       "lines": [
         {
-          "text": "Say good,"
+          "text": "What does"
         },
         {
-          "text": "or stay"
+          "text": "my heart"
         },
         {
-          "text": "quiet.",
+          "text": "need today?",
           "highlight": true
         }
       ],
-      "cta": "Save this before you reply next",
+      "cta": "Save this and come back to it",
       "ctaAt": 40,
       "endCardAt": 70
     }
   ],
   "cover": {
-    "kicker": "ON SPEECH",
+    "kicker": "HEART CHECK",
     "headline": [
       {
-        "text": "Speak good"
+        "text": "What Allah"
       },
       {
-        "text": "or stay quiet",
+        "text": "looks at",
         "highlight": true
       }
     ]
   },
   "caption": {
-    "opening": "The comment section would look very different with this one rule.",
+    "opening": "Appearances are easy to polish. Hearts take work.",
     "body": [
-      "Sahih al-Bukhari 6018 gives a simple test for speech: is it good? If not, keep quiet.",
-      "Try this today:\n→ before you speak, ask: is this good?\n→ leave one argument unanswered\n→ replace one complaint with a kind word"
+      "Sahih Muslim 2564c and Qur'an 26:88-89, read together: faces and wealth are not what is looked at — the heart and its deeds are.",
+      "A question to sit with today: what does my heart need?"
     ],
-    "cta": "Save this before you reply next.",
+    "cta": "Save this and come back to it.",
     "hashtags": [
       "#IslamicReminder",
       "#Akhlaq",
-      "#Akhlaq",
-      "#Hadith",
-      "#DailyReminder"
+      "#Quran",
+      "#Hadith"
     ]
   },
   "primaryCta": {
     "type": "save",
-    "text": "Save this before you reply next"
+    "text": "Save this and come back to it"
   },
   "claims": [
     {
-      "text": "What bukhari:6018 says, quoted verbatim on screen.",
+      "text": "What muslim:2564c says, quoted verbatim on screen.",
       "kind": "source",
-      "ref": "bukhari:6018"
+      "ref": "muslim:2564c"
     },
     {
-      "text": "Pausing before speaking and leaving arguments are ways to act on the hadith.",
+      "text": "What quran:26:88-89 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "quran:26:88-89"
+    },
+    {
+      "text": "Reading the two sources together as a prompt to look after one's heart.",
       "kind": "reflection"
     }
   ],
   "publish": {
-    "suggestedDate": "2026-11-02",
+    "suggestedDate": "2026-10-25",
     "notes": "Evergreen."
   },
   "repurposing": {
     "carousel": [],
     "followUpReel": "",
     "linkedin": ""
-  },
-  "recitation": {
-    "ref": "quran:33:70"
   }
 }

@@ -1,20 +1,22 @@
 {
+  "kind": "reel",
   "brief": {
-    "topic": "A du'a for anyone learning",
+    "topic": "Consistent small deeds are most loved",
     "audience": "Muslims looking for a short, authentic reminder they can act on today",
-    "pillar": "D: Worship and Daily Habits",
+    "pillar": "C: Daily Deen & Practical Islam",
     "objective": "saves",
-    "format": "dua",
-    "targetDurationSec": 20,
+    "format": "habit-checklist",
+    "targetDurationSec": 26,
     "technicalDepth": "beginner",
     "voiceover": false,
     "research": "not-required",
-    "constraints": []
+    "constraints": [],
+    "series": null
   },
-  "coreInsight": "Qur'an 20:114 contains a short du'a asking for more knowledge, useful before any study or work.",
+  "coreInsight": "In Sahih al-Bukhari 6465 the deeds loved most by Allah are the regular, constant ones even if few.",
   "hooks": [
     {
-      "text": "A du'a for anyone learning",
+      "text": "Small but daily beats big but rare.",
       "angle": "Personal recognition",
       "scores": {
         "specificity": 4,
@@ -26,7 +28,7 @@
       "notes": "Clear in two seconds; the source answers it right away."
     },
     {
-      "text": "Before you open the book.",
+      "text": "What's the deed you can keep?",
       "angle": "Curiosity",
       "scores": {
         "specificity": 4,
@@ -38,7 +40,7 @@
       "notes": "Good, slightly less direct."
     },
     {
-      "text": "Ask for more.",
+      "text": "Small. Daily. Kept.",
       "angle": "Reframe",
       "scores": {
         "specificity": 4,
@@ -58,7 +60,7 @@
       "type": "hook",
       "durationInFrames": 90,
       "purpose": "Recognition: meet the viewer where they are.",
-      "onScreen": "A du'a for anyone learning / Before class, work or study.",
+      "onScreen": "Small but daily beats big but rare. / Especially in worship.",
       "storyboard": {
         "visual": "Headline, highlighted last line; sub-line.",
         "animation": "Readable on frame 0; underline sweep."
@@ -66,82 +68,72 @@
       "kicker": "DAILY REMINDER",
       "lines": [
         {
-          "text": "A du'a"
+          "text": "Small"
         },
         {
-          "text": "for anyone"
+          "text": "but daily"
         },
         {
-          "text": "learning",
+          "text": "beats big"
+        },
+        {
+          "text": "but rare.",
           "highlight": true
         }
       ],
-      "sub": "Before class, work or study."
+      "sub": "Especially in worship."
     },
     {
-      "id": "ayah",
+      "id": "hadith",
       "type": "source",
-      "durationInFrames": 165,
+      "durationInFrames": 270,
       "purpose": "The source itself, verbatim, with its reference.",
-      "onScreen": "quran:20:114 (text pulled from the verified dataset)",
+      "onScreen": "bukhari:6465 (text pulled from the verified dataset)",
       "storyboard": {
         "visual": "Framed panel: Arabic (if any), translation; citation pill.",
         "animation": "Arabic, then translation, then citation."
       },
       "transitionIn": "fade-up",
-      "kicker": "THE QUR'AN · TA-HA",
-      "ref": "quran:20:114",
-      "excerpt": "and say, \"My Lord, increase me in knowledge",
-      "arabicExcerpt": "وَقُل رَّبِّ زِدۡنِي عِلۡمࣰ ا"
+      "kicker": "THE PROPHET ﷺ WAS ASKED",
+      "ref": "bukhari:6465",
+      "excerpt": "\"What deeds are loved most by Allah?\" He said, \"The most regular constant deeds even though they may be few.\""
     },
     {
-      "id": "moments",
-      "type": "cards",
-      "durationInFrames": 180,
-      "purpose": "Moments to use it (our suggestions).",
-      "onScreen": "WHEN TO SAY IT / Before studying · Before a hard meeting · When something confuses you",
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 255,
+      "purpose": "Our reflection: small, concrete actions (our words, not attributed).",
+      "onScreen": "START THIS WEEK / Pick one small deed. Keep it. / Two rak'ah of sunnah you can keep every day · One page of Qur'an after Fajr · A daily sadaqah, even a small one",
       "storyboard": {
-        "visual": "Kicker + headline; cards pop in.",
-        "animation": "Cards every 16 frames from 12."
+        "visual": "Numbered list, rule box.",
+        "animation": "Items every 34 frames from 24."
       },
       "transitionIn": "fade-up",
-      "kicker": "WHEN TO SAY IT",
+      "kicker": "START THIS WEEK",
       "headline": [
         {
-          "text": "Before you"
+          "text": "Pick one small"
         },
         {
-          "text": "open the book.",
+          "text": "deed. Keep it.",
           "highlight": true
         }
       ],
-      "enter": "pop",
-      "popStart": 12,
-      "popStagger": 16,
-      "cards": [
-        {
-          "text": "Before studying",
-          "status": "pass",
-          "tag": "STUDY"
-        },
-        {
-          "text": "Before a hard meeting",
-          "status": "pass",
-          "tag": "WORK"
-        },
-        {
-          "text": "When something confuses you",
-          "status": "pass",
-          "tag": "STUCK"
-        }
-      ]
+      "items": [
+        "Two rak'ah of sunnah you can keep every day",
+        "One page of Qur'an after Fajr",
+        "A daily sadaqah, even a small one"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34,
+      "rule": "Choose what you can keep. Keep what you choose."
     },
     {
       "id": "takeaway",
       "type": "takeaway",
       "durationInFrames": 150,
       "purpose": "One line to remember + one CTA.",
-      "onScreen": "Ask for more. / Save this du'a",
+      "onScreen": "Small. Daily. Kept. / Save this and pick your deed today",
       "storyboard": {
         "visual": "Takeaway lines, CTA pill, end card.",
         "animation": "Lines rise; CTA at 40; end card at 70."
@@ -149,67 +141,72 @@
       "transitionIn": "fade-up",
       "lines": [
         {
-          "text": "Ask for"
+          "text": "Small."
         },
         {
-          "text": "more.",
+          "text": "Daily."
+        },
+        {
+          "text": "Kept.",
           "highlight": true
         }
       ],
-      "cta": "Save this du'a",
+      "cta": "Save this and pick your deed today",
       "ctaAt": 40,
       "endCardAt": 70
     }
   ],
   "cover": {
-    "kicker": "QUR'AN 20:114",
+    "kicker": "SMALL HABITS",
     "headline": [
       {
-        "text": "A du'a for"
+        "text": "Small deeds,"
       },
       {
-        "text": "learning",
+        "text": "done daily",
         "highlight": true
       }
     ]
   },
   "caption": {
-    "opening": "A short du'a to say before you study, work or try to understand something new.",
+    "opening": "Big bursts of worship feel great. Small daily ones last.",
     "body": [
-      "It's the end of Surah Ta-Ha, ayah 114.",
-      "Moments to say it:\n→ before studying\n→ before a hard meeting\n→ when something confuses you"
+      "The deeds loved most by Allah are the regular ones, even if few (Sahih al-Bukhari 6465).",
+      "Pick one this week:\n→ two rak'ah of sunnah you can keep every day\n→ one page of Qur'an after Fajr\n→ a daily sadaqah, even a small one"
     ],
-    "cta": "Save this du'a.",
+    "cta": "Save this and pick your deed today.",
     "hashtags": [
       "#IslamicReminder",
       "#Ibadah",
-      "#Dua",
-      "#Knowledge",
-      "#DailyReminder"
+      "#Habits",
+      "#Hadith"
     ]
   },
   "primaryCta": {
     "type": "save",
-    "text": "Save this du'a"
+    "text": "Save this and pick your deed today"
   },
   "claims": [
     {
-      "text": "What quran:20:114 says, quoted verbatim on screen.",
+      "text": "What bukhari:6465 says, quoted verbatim on screen.",
       "kind": "source",
-      "ref": "quran:20:114"
+      "ref": "bukhari:6465"
     },
     {
-      "text": "Suggested moments to say the du'a are our own suggestions.",
+      "text": "The three example deeds are our suggestions for acting on the hadith.",
       "kind": "reflection"
     }
   ],
   "publish": {
-    "suggestedDate": "2026-10-28",
+    "suggestedDate": "2026-10-31",
     "notes": "Evergreen."
   },
   "repurposing": {
     "carousel": [],
     "followUpReel": "",
     "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:99:7"
   }
 }

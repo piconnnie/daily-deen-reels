@@ -1,20 +1,22 @@
 {
+  "kind": "reel",
   "brief": {
-    "topic": "Hearts find rest in the remembrance of Allah",
+    "topic": "Wishing for others what you wish for yourself",
     "audience": "Muslims looking for a short, authentic reminder they can act on today",
-    "pillar": "A: Qur'an Reflections",
-    "objective": "saves",
-    "format": "ayah-reflection",
-    "targetDurationSec": 27,
+    "pillar": "E: Islam in Everyday Life",
+    "objective": "shares",
+    "format": "hadith-practice",
+    "targetDurationSec": 24,
     "technicalDepth": "beginner",
     "voiceover": false,
     "research": "not-required",
-    "constraints": []
+    "constraints": [],
+    "series": null
   },
-  "coreInsight": "Qur'an 13:28 says hearts are assured by the remembrance of Allah, so small daily dhikr is worth building in.",
+  "coreInsight": "Sahih al-Bukhari 13 links faith to wishing for your brother what you like for yourself.",
   "hooks": [
     {
-      "text": "Restless lately?",
+      "text": "Happy for them, or jealous?",
       "angle": "Personal recognition",
       "scores": {
         "specificity": 4,
@@ -26,7 +28,7 @@
       "notes": "Clear in two seconds; the source answers it right away."
     },
     {
-      "text": "Before you reach for your phone.",
+      "text": "Their good isn't your loss.",
       "angle": "Curiosity",
       "scores": {
         "specificity": 4,
@@ -38,7 +40,7 @@
       "notes": "Good, slightly less direct."
     },
     {
-      "text": "Remember Allah, find rest.",
+      "text": "Wish them what you wish for you.",
       "angle": "Reframe",
       "scores": {
         "specificity": 4,
@@ -58,7 +60,7 @@
       "type": "hook",
       "durationInFrames": 90,
       "purpose": "Recognition: meet the viewer where they are.",
-      "onScreen": "Restless lately? / Before you reach for your phone.",
+      "onScreen": "Happy for them, or jealous? / A quick heart check.",
       "storyboard": {
         "visual": "Headline, highlighted last line; sub-line.",
         "animation": "Readable on frame 0; underline sweep."
@@ -66,35 +68,39 @@
       "kicker": "DAILY REMINDER",
       "lines": [
         {
-          "text": "Restless"
+          "text": "Happy for"
         },
         {
-          "text": "lately?",
+          "text": "them, or"
+        },
+        {
+          "text": "jealous?",
           "highlight": true
         }
       ],
-      "sub": "Before you reach for your phone."
+      "sub": "A quick heart check."
     },
     {
-      "id": "ayah",
+      "id": "hadith",
       "type": "source",
-      "durationInFrames": 315,
+      "durationInFrames": 240,
       "purpose": "The source itself, verbatim, with its reference.",
-      "onScreen": "quran:13:28 (text pulled from the verified dataset)",
+      "onScreen": "bukhari:13 (text pulled from the verified dataset)",
       "storyboard": {
         "visual": "Framed panel: Arabic (if any), translation; citation pill.",
         "animation": "Arabic, then translation, then citation."
       },
       "transitionIn": "fade-up",
-      "kicker": "THE QUR'AN · AR-RA'D",
-      "ref": "quran:13:28"
+      "kicker": "THE PROPHET ﷺ SAID",
+      "ref": "bukhari:13",
+      "excerpt": "None of you will have faith till he wishes for his (Muslim) brother what he likes for himself"
     },
     {
       "id": "practice",
       "type": "checklist",
       "durationInFrames": 255,
       "purpose": "Our reflection: small, concrete actions (our words, not attributed).",
-      "onScreen": "TRY THIS TODAY / Make space for remembrance. / Sit for two quiet minutes after each prayer · Swap one scroll break for dhikr · Say Alhamdulillah when you notice a blessing",
+      "onScreen": "TRY THIS TODAY / Wish them what you wish for you. / Congratulate someone sincerely today · Make du'a for a friend by name · Pass on a good opportunity you found",
       "storyboard": {
         "visual": "Numbered list, rule box.",
         "animation": "Items every 34 frames from 24."
@@ -103,28 +109,28 @@
       "kicker": "TRY THIS TODAY",
       "headline": [
         {
-          "text": "Make space for"
+          "text": "Wish them what"
         },
         {
-          "text": "remembrance.",
+          "text": "you wish for you.",
           "highlight": true
         }
       ],
       "items": [
-        "Sit for two quiet minutes after each prayer",
-        "Swap one scroll break for dhikr",
-        "Say Alhamdulillah when you notice a blessing"
+        "Congratulate someone sincerely today",
+        "Make du'a for a friend by name",
+        "Pass on a good opportunity you found"
       ],
       "itemStart": 24,
       "itemStagger": 34,
-      "rule": "Small, regular remembrance, wherever your day takes you."
+      "rule": "When their good news stings, make du'a for them."
     },
     {
       "id": "takeaway",
       "type": "takeaway",
       "durationInFrames": 150,
       "purpose": "One line to remember + one CTA.",
-      "onScreen": "Remember Allah, find rest. / Save this for a restless day",
+      "onScreen": "Their good is not your loss. / Send this to a friend",
       "storyboard": {
         "visual": "Takeaway lines, CTA pill, end card.",
         "animation": "Lines rise; CTA at 40; end card at 70."
@@ -132,69 +138,72 @@
       "transitionIn": "fade-up",
       "lines": [
         {
-          "text": "Remember"
+          "text": "Their good"
         },
         {
-          "text": "Allah, find"
+          "text": "is not your"
         },
         {
-          "text": "rest.",
+          "text": "loss.",
           "highlight": true
         }
       ],
-      "cta": "Save this for a restless day",
+      "cta": "Send this to a friend",
       "ctaAt": 40,
       "endCardAt": 70
     }
   ],
   "cover": {
-    "kicker": "QUR'AN 13:28",
+    "kicker": "HEART CHECK",
     "headline": [
       {
-        "text": "Where hearts"
+        "text": "Wish for them"
       },
       {
-        "text": "find rest",
+        "text": "what you want",
         "highlight": true
       }
     ]
   },
   "caption": {
-    "opening": "Restless, even when nothing is wrong? Read Qur'an 13:28 slowly.",
+    "opening": "When a friend gets the thing you wanted, what's your first feeling?",
     "body": [
-      "Try this today:\n→ two quiet minutes after each prayer\n→ swap one scroll break for dhikr\n→ say Alhamdulillah when you notice a blessing"
+      "Sahih al-Bukhari 13 ties faith to wishing for your brother what you like for yourself.",
+      "Try this today:\n→ congratulate someone sincerely\n→ make du'a for a friend by name\n→ pass on a good opportunity you found"
     ],
-    "cta": "Save this for a restless day.",
+    "cta": "Send this to a friend.",
     "hashtags": [
       "#IslamicReminder",
-      "#Quran",
-      "#Dhikr",
-      "#Quran",
-      "#DailyReminder"
+      "#Family",
+      "#Brotherhood",
+      "#Hadith"
     ]
   },
   "primaryCta": {
-    "type": "save",
-    "text": "Save this for a restless day"
+    "type": "share",
+    "text": "Send this to a friend"
   },
   "claims": [
     {
-      "text": "What quran:13:28 says, quoted verbatim on screen.",
+      "text": "What bukhari:13 says, quoted verbatim on screen.",
       "kind": "source",
-      "ref": "quran:13:28"
+      "ref": "bukhari:13"
     },
     {
-      "text": "Short, regular dhikr during the day is a way to act on the ayah.",
+      "text": "Congratulating, making du'a and sharing opportunities are ways to act on the hadith.",
       "kind": "reflection"
     }
   ],
   "publish": {
-    "suggestedDate": "2026-10-30",
+    "suggestedDate": "2026-11-01",
     "notes": "Evergreen."
   },
   "repurposing": {
     "carousel": [],
     "followUpReel": "",
     "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:49:10"
   }
 }

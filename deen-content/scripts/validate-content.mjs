@@ -7,7 +7,7 @@
 import {spawnSync} from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
-import {OUT, ROOT, captionText, ensureDir, loadReel, readJsonIfExists, reelIdArg, saveReel, sceneTimings, totalFrames} from './lib.mjs';
+import {OUT, ROOT, captionText, kindOf, slideFiles, ensureDir, loadReel, readJsonIfExists, reelIdArg, saveReel, sceneTimings, totalFrames} from './lib.mjs';
 import {syncRegistry} from './sync-registry.mjs';
 import {checkLimits, sourceDisplay} from './content-limits.mjs';
 import {compareKey, isVerbatimExcerpt, resolveRef} from './sources/sources.mjs';
@@ -39,11 +39,20 @@ const limitIssues = checkLimits(reel);
 add('content', 'Copy and structure fit the layout limits', limitIssues.length === 0, limitIssues.join(' | '));
 add('content', 'Three hook variants generated', reel.hooks.length >= 3, `${reel.hooks.length} variants`);
 add('content', 'Selected hook is short enough to read in ~2s', hookWords <= 10, `${hookWords} words`);
-add('content', 'First scene is the hook', reel.scenes[0]?.type === 'hook');
+const kind = kindOf(reel);
+const isReel = kind === 'reel';
+if (kind !== 'story') add('content', `First ${isReel ? 'scene' : 'slide'} is the hook`, reel.scenes[0]?.type === 'hook');
 add('content', 'Core insight stated in one sentence', reel.coreInsight && reel.coreInsight.split(/[.!?](\s|$)/).filter((s) => s && s.trim()).length <= 1, reel.coreInsight);
-add('content', 'Duration within 15–60s', expectedSec >= 15 && expectedSec <= 60, `${expectedSec.toFixed(1)}s`, 'warning');
-const shortScenes = reel.scenes.filter((s) => s.durationInFrames < reel.fps * 1.5);
-add('content', 'No scene shorter than 1.5s', shortScenes.length === 0, shortScenes.map((s) => s.id).join(', '));
+if (isReel) {
+  add('content', 'Duration within 15–60s', expectedSec >= 15 && expectedSec <= 60, `${expectedSec.toFixed(1)}s`, 'warning');
+  const shortScenes = reel.scenes.filter((s) => s.durationInFrames < reel.fps * 1.5);
+  add('content', 'No scene shorter than 1.5s', shortScenes.length === 0, shortScenes.map((s) => s.id).join(', '));
+}
+if (kind === 'carousel') {
+  const n = reel.scenes.length;
+  add('content', 'Carousel has 5–7 slides (strategy)', n >= 5 && n <= 7, `${n} slides`, 'warning');
+}
+if (kind === 'story') add('content', 'Story invites a reply (replyPrompt)', !!reel.replyPrompt, reel.replyPrompt ?? 'missing', 'warning');
 
 const takeaway = reel.scenes.find((s) => s.type === 'takeaway');
 {
@@ -58,7 +67,7 @@ const takeaway = reel.scenes.find((s) => s.type === 'takeaway');
   ].filter(Boolean);
   add('content', 'Style names are valid', bad.length === 0, bad.join('; '));
 }
-add('content', 'Exactly one on-screen CTA, matching primaryCta', takeaway && takeaway.cta === reel.primaryCta.text, takeaway?.cta ?? 'no takeaway scene');
+if (kind !== 'story') add('content', 'Exactly one on-screen CTA, matching primaryCta', takeaway && takeaway.cta === reel.primaryCta.text, takeaway?.cta ?? 'no takeaway scene');
 const ctaVerbs = ['save', 'share', 'follow', 'comment'];
 const ctaHits = ctaVerbs.filter((v) => new RegExp(`\\b${v}\\b`, 'i').test(reel.caption.cta));
 add('content', 'Caption asks for one action only', ctaHits.length <= 1, `CTA verbs found: ${ctaHits.join(', ') || 'none'}`);
@@ -79,7 +88,7 @@ add('content', 'Cover headline 3–7 words', coverWords >= 3 && coverWords <= 7,
 // never put speech in the mouth of Allah or the Prophet ﷺ.
 {
   const sourceScenes = reel.scenes.filter((s) => s.type === 'source');
-  add('source', 'Quotes at least one verse or authentic hadith', sourceScenes.length >= 1, `${sourceScenes.length} source scene(s)`);
+  if (kind !== 'story') add('source', 'Quotes at least one verse or authentic hadith', sourceScenes.length >= 1, `${sourceScenes.length} source scene(s)`);
   const refProblems = [];
   const textProblems = [];
   const fresh = new Map();
@@ -93,7 +102,7 @@ add('content', 'Cover headline 3–7 words', coverWords >= 3 && coverWords <= 7,
       continue;
     }
     const got = s.resolved ?? {};
-    for (const f of ['citation', 'url', 'arabic', 'english', 'translation', 'grade']) {
+    for (const f of ['citation', 'url', 'arabic', 'english', 'translation', 'grade', 'transliteration']) {
       if ((got[f] ?? null) !== (r[f] ?? null)) textProblems.push(`${s.id}: ${f} differs from ${r.citation} in the dataset`);
     }
     if (s.excerpt && !isVerbatimExcerpt(s.excerpt, r.english)) textProblems.push(`${s.id}: excerpt is not a word-for-word part of ${r.citation}`);
@@ -135,7 +144,9 @@ add('content', 'Cover headline 3–7 words', coverWords >= 3 && coverWords <= 7,
 
   // Recitation: approved reciter, recorded files unchanged, never cut mid-ayah.
   const rec = reel.recitation;
-  if (rec && !rec.off) {
+  if (!isReel) {
+    // carousels and stories are images: no audio
+  } else if (rec && !rec.off) {
     const rp = checkRecitation(reel);
     add('source', `Recitation (${rec.citation ?? rec.ref}, ${rec.reciterName ?? rec.reciter}) is verified and plays in full`, rp.length === 0, rp.join(' | '));
   } else {
@@ -157,7 +168,26 @@ add('content', 'Cover headline 3–7 words', coverWords >= 3 && coverWords <= 7,
 // ------------------------------------------------------- Visual layout QA
 const run = (cmd, args, opts = {}) => spawnSync(cmd, args, {cwd: ROOT, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, ...opts});
 
-if (!contentOnly) {
+if (!contentOnly && !isReel) {
+  // Each slide/story image at its settled state, against its canvas box.
+  const issues = [];
+  let ran = true;
+  for (let i = 0; i < reel.scenes.length; i++) {
+    const out = path.join(qaDir, `layout-slide-${i + 1}.json`);
+    const r = run('node', ['scripts/local-render/render.mjs', 'layout-check', id, out, '--frames', '0', '--slide', String(i)]);
+    if (r.status !== 0) {
+      ran = false;
+      add('visual', `Layout check ran (slide ${i + 1})`, false, (r.stderr || r.stdout).slice(-400));
+      continue;
+    }
+    for (const x of JSON.parse(fs.readFileSync(out, 'utf8')).results[0].issues) issues.push({slide: i + 1, ...x});
+  }
+  if (ran) {
+    add('visual', `All text inside the ${kind} safe area`, !issues.some((i) => i.type === 'outside-safe-zone'), issues.filter((i) => i.type === 'outside-safe-zone').map((i) => `slide ${i.slide} "${i.text}"`).join('; '));
+    add('visual', 'No truncated/clipped text', !issues.some((i) => i.type === 'truncated-text'), issues.filter((i) => i.type === 'truncated-text').map((i) => `slide ${i.slide} "${i.text}"`).join('; '));
+  }
+}
+if (!contentOnly && isReel) {
   // Frames where each scene is fully revealed (8 frames before its end) and mid-scene.
   const sample = [...new Set(timings.flatMap((t) => [Math.floor((t.startFrame + t.endFrame) / 2), t.endFrame - 8]))];
   const layoutOut = path.join(qaDir, 'layout.json');
@@ -181,7 +211,26 @@ if (!contentOnly) {
 // ---------------------------------------------------------- Technical QA
 const mp4 = path.join(OUT.reels, `${id}.mp4`);
 const cover = path.join(OUT.covers, `${id}.png`);
-if (!contentOnly && !preRender) {
+if (!contentOnly && !preRender && !isReel) {
+  const jpgs = slideFiles(id, 'jpg');
+  const want = kind === 'story' ? [1080, 1920] : [1080, 1350];
+  add('technical', `${reel.scenes.length} ${kind === 'story' ? 'story image' : 'slide'}(s) rendered as JPEG`, jpgs.length === reel.scenes.length, `${jpgs.length} file(s)`);
+  const bad = jpgs
+    .map((f) => {
+      const st = JSON.parse(run('ffprobe', ['-v', 'error', '-print_format', 'json', '-show_streams', f]).stdout).streams[0];
+      const size = fs.statSync(f).size;
+      return st.width !== want[0] || st.height !== want[1] || size > 8 * 1024 * 1024 ? `${path.basename(f)} ${st.width}×${st.height} ${(size / 1024).toFixed(0)} KB` : null;
+    })
+    .filter(Boolean);
+  add('technical', `IG: every image ${want[0]}×${want[1]} JPEG ≤ 8 MB`, bad.length === 0, bad.join('; '));
+  add('technical', 'IG: carousel has 2–10 images', kind === 'story' || (jpgs.length >= 2 && jpgs.length <= 10), `${jpgs.length}`);
+  if (jpgs.length) {
+    const cols = Math.min(jpgs.length, 4);
+    const sheet = run('ffmpeg', ['-v', 'error', '-y', '-pattern_type', 'glob', '-i', path.join(OUT.slides, id, 'slide-*.png'), '-vf', `scale=${kind === 'story' ? '270:480' : '324:405'},tile=${cols}x${Math.ceil(jpgs.length / cols)}:padding=6:color=0x222222`, '-frames:v', '1', path.join(qaDir, 'contact-sheet.png')]);
+    add('technical', 'Contact sheet built', sheet.status === 0, path.relative(ROOT, path.join(qaDir, 'contact-sheet.png')));
+  }
+}
+if (!contentOnly && !preRender && isReel) {
   if (!fs.existsSync(mp4)) {
     add('technical', 'Reel MP4 exists', false, path.relative(ROOT, mp4));
   } else {

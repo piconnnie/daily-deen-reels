@@ -75,6 +75,14 @@ ${limitsForPrompt()}
 - transitionIn: "fade-up" by default.
 </timing_rules>
 
+<series_and_kinds>
+Series (src/templates/series.json) give the page recognisable recurring posts; set brief.series to one of them when it fits (the pipeline sets its opening kicker):
+${read('src/templates/series.json')}
+Kinds: "reel" (video with recitation), "carousel" (3–10 still slides, aim for 5–7: cover hook → teaching → context/reflection → practice → takeaway), "story" (exactly one scene + "replyPrompt"; no source required, but any quote still follows the source rules).
+Calendar occasions: set publish.occasion ("friday", "ramadan", "dhul-hijjah-10", …) to hold a draft until its day.
+Goals (brief.objective): reach, shares, saves, replies, follows — choose the one the post is built for.
+</series_and_kinds>
+
 <tone>
 Warm, humble, practical. Speak to one person. No hype, no guilt-tripping, no clickbait. Use typographic apostrophes (’) in on-screen copy. Transliterations: Qur'an, du'a, Sunnah, sadaqah, dhikr.
 </tone>
@@ -88,7 +96,7 @@ export function briefText(plan, format, date = isoDate()) {
   return `Write today's reel (${date}).
 
 Pillar: ${plan.pillarName}
-Format: ${format.name} — arc: ${format.arc}
+Format: ${format.name} (${format.kind ?? 'reel'}) — arc: ${format.arc}. Set "kind": "${format.kind ?? 'reel'}".
 Default scene plan for this format (adapt if needed; keep 4–6 scenes, at least one source scene, last = takeaway):
 ${format.scenes.map((s, i) => `  ${i + 1}. ${s.type} (~${s.seconds}s) — ${s.purpose}`).join('\n')}
 ${plan.topic ? `Topic: ${plan.topic}\nAngle to develop: ${plan.angle ?? '(choose the most practical angle)'}` : `Topic: none assigned. Propose an evergreen reminder for this pillar that is clearly different from everything listed below, and put it in brief.topic.`}
@@ -142,12 +150,39 @@ const slugify = (s) =>
  */
 export function normalizeDraft(draft, plan, opts = {}) {
   const reel = buildReel(draft, plan, opts);
+  applySeriesAndKind(reel);
   try {
     applySources(reel);
   } catch (e) {
-    Object.defineProperty(reel, 'sourceErrors', {value: e.message.split('\n'), enumerable: false});
+    Object.defineProperty(reel, 'sourceErrors', {value: [...(reel.sourceErrors ?? []), ...e.message.split('\n')], enumerable: false, configurable: true});
   }
   return reel;
+}
+
+const SERIES = JSON.parse(read('src/templates/series.json'));
+export const seriesById = (id) => SERIES.find((x) => x.id === id) ?? null;
+
+/**
+ * Kind and series conventions: a series reel/carousel always opens with its
+ * series kicker (the consistent opening); carousels and stories are silent
+ * stills, so they carry no audio or recitation; slides get a default length
+ * (it only stages the reveal before the still is taken).
+ */
+function applySeriesAndKind(reel) {
+  const fmtKind = loadFormats().find((f) => f.id === reel.brief?.format)?.kind;
+  reel.kind = ['reel', 'carousel', 'story'].includes(reel.kind) ? reel.kind : fmtKind ?? 'reel';
+  const series = seriesById(reel.brief?.series);
+  if (reel.brief?.series && !series) Object.defineProperty(reel, 'sourceErrors', {value: [`unknown series "${reel.brief.series}" (see src/templates/series.json)`], enumerable: false, configurable: true});
+  if (series && reel.kind !== 'story') {
+    const first = reel.scenes?.[0];
+    if (first?.type === 'hook') first.kicker = series.kicker;
+    if (reel.cover) reel.cover.kicker = series.kicker;
+  }
+  if (reel.kind !== 'reel') {
+    reel.audio = {bed: null, bedVolume: 1, voiceover: null, voiceoverVolume: 1};
+    reel.recitation = false;
+    for (const s of reel.scenes ?? []) if (!s.durationInFrames) s.durationInFrames = 150;
+  }
 }
 
 function buildReel(draft, plan, {reelId = null, source = 'unknown', date = isoDate()} = {}) {
@@ -197,7 +232,8 @@ const jaccard = (a, b) => {
 export function validateReel(reel, hist) {
   if (reel.sourceErrors?.length) return reel.sourceErrors.map((e) => `source reference: ${e}`);
   const errors = [];
-  if (!Array.isArray(reel.scenes) || reel.scenes.length < 3) errors.push('scenes: need at least 3 scenes');
+  const minScenes = reel.kind === 'story' ? 1 : 3;
+  if (!Array.isArray(reel.scenes) || reel.scenes.length < minScenes) errors.push(`scenes: need at least ${minScenes} scene(s)`);
   if (!Array.isArray(reel.hooks) || reel.hooks.length !== 3) errors.push('hooks: need exactly 3 options');
   if (!(reel.selectedHook >= 0 && reel.selectedHook < (reel.hooks?.length ?? 0))) errors.push('selectedHook out of range');
   for (const h of hist) {

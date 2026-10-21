@@ -24,7 +24,8 @@
         "purpose": "One line to remember + one CTA",
         "seconds": 5
       }
-    ]
+    ],
+    "kind": "reel"
   },
   {
     "id": "hadith-practice",
@@ -51,7 +52,8 @@
         "purpose": "One line to remember + one CTA",
         "seconds": 5
       }
-    ]
+    ],
+    "kind": "reel"
   },
   {
     "id": "dua",
@@ -78,7 +80,8 @@
         "purpose": "Save-worthy line + save CTA",
         "seconds": 5
       }
-    ]
+    ],
+    "kind": "reel"
   },
   {
     "id": "habit-checklist",
@@ -105,7 +108,8 @@
         "purpose": "One line + one CTA",
         "seconds": 5
       }
-    ]
+    ],
+    "kind": "reel"
   },
   {
     "id": "heart-check",
@@ -130,6 +134,216 @@
       {
         "type": "takeaway",
         "purpose": "A question to reflect on + one CTA",
+        "seconds": 5
+      }
+    ],
+    "kind": "reel"
+  },
+  {
+    "id": "heart-reminder",
+    "kind": "reel",
+    "name": "A Reminder Your Heart Needs",
+    "arc": "Hook (a real struggle) → the source → reflection → takeaway",
+    "scenes": [
+      {
+        "type": "hook",
+        "purpose": "Name the struggle honestly",
+        "seconds": 3
+      },
+      {
+        "type": "source",
+        "purpose": "The verse or hadith",
+        "seconds": 10
+      },
+      {
+        "type": "reflection",
+        "purpose": "Our reflection: what it means on a day like this",
+        "seconds": 8
+      },
+      {
+        "type": "takeaway",
+        "purpose": "One line + gentle CTA",
+        "seconds": 5
+      }
+    ]
+  },
+  {
+    "id": "before-you-scroll",
+    "kind": "reel",
+    "name": "Before You Scroll",
+    "arc": "Pause → one source → one action (15–20 s)",
+    "scenes": [
+      {
+        "type": "hook",
+        "purpose": "A one-line pause",
+        "seconds": 3
+      },
+      {
+        "type": "source",
+        "purpose": "One short verse or hadith",
+        "seconds": 9
+      },
+      {
+        "type": "takeaway",
+        "purpose": "One action today + CTA",
+        "seconds": 5
+      }
+    ]
+  },
+  {
+    "id": "ayah-lesson",
+    "kind": "carousel",
+    "name": "One Ayah. One Lesson. (carousel)",
+    "arc": "Cover → the ayah → context (neighbouring ayat) → lesson → takeaway → CTA",
+    "scenes": [
+      {
+        "type": "hook",
+        "purpose": "Cover slide: the question this ayah answers",
+        "seconds": 4
+      },
+      {
+        "type": "source",
+        "purpose": "The ayah (Arabic + translation)",
+        "seconds": 4
+      },
+      {
+        "type": "source",
+        "purpose": "Context: the ayat around it, quoted",
+        "seconds": 4
+      },
+      {
+        "type": "reflection",
+        "purpose": "The lesson, in our words",
+        "seconds": 4
+      },
+      {
+        "type": "checklist",
+        "purpose": "Live it today",
+        "seconds": 4
+      },
+      {
+        "type": "takeaway",
+        "purpose": "Takeaway + gentle CTA",
+        "seconds": 4
+      }
+    ]
+  },
+  {
+    "id": "hadith-explained",
+    "kind": "carousel",
+    "name": "Hadith explained (carousel)",
+    "arc": "Cover → the hadith → what it teaches → practical examples → takeaway",
+    "scenes": [
+      {
+        "type": "hook",
+        "purpose": "Cover slide",
+        "seconds": 4
+      },
+      {
+        "type": "source",
+        "purpose": "The hadith",
+        "seconds": 4
+      },
+      {
+        "type": "reflection",
+        "purpose": "What it teaches (our words)",
+        "seconds": 4
+      },
+      {
+        "type": "cards",
+        "purpose": "Practical examples",
+        "seconds": 4
+      },
+      {
+        "type": "takeaway",
+        "purpose": "Takeaway + CTA",
+        "seconds": 4
+      }
+    ]
+  },
+  {
+    "id": "check-in",
+    "kind": "carousel",
+    "name": "Daily check-in (carousel)",
+    "arc": "Cover → source → check-in questions → reflection → takeaway",
+    "scenes": [
+      {
+        "type": "hook",
+        "purpose": "Cover slide: the habit or trait",
+        "seconds": 4
+      },
+      {
+        "type": "source",
+        "purpose": "The source behind it",
+        "seconds": 4
+      },
+      {
+        "type": "checklist",
+        "purpose": "Check-in questions",
+        "seconds": 4
+      },
+      {
+        "type": "reflection",
+        "purpose": "A gentle reflection",
+        "seconds": 4
+      },
+      {
+        "type": "takeaway",
+        "purpose": "One action + CTA",
+        "seconds": 4
+      }
+    ]
+  },
+  {
+    "id": "dua-card",
+    "kind": "carousel",
+    "name": "Dua card (carousel)",
+    "arc": "Cover → the du'a (Arabic, transliteration, meaning, source) → when to say it → takeaway",
+    "scenes": [
+      {
+        "type": "hook",
+        "purpose": "Cover slide",
+        "seconds": 4
+      },
+      {
+        "type": "source",
+        "purpose": "The du'a",
+        "seconds": 4
+      },
+      {
+        "type": "cards",
+        "purpose": "When to say it (our suggestions)",
+        "seconds": 4
+      },
+      {
+        "type": "takeaway",
+        "purpose": "Save it + CTA",
+        "seconds": 4
+      }
+    ]
+  },
+  {
+    "id": "story-check-in",
+    "kind": "story",
+    "name": "Story: self-check",
+    "arc": "One image: a short checklist + reply prompt",
+    "scenes": [
+      {
+        "type": "checklist",
+        "purpose": "The check-in",
+        "seconds": 5
+      }
+    ]
+  },
+  {
+    "id": "story-question",
+    "kind": "story",
+    "name": "Story: question",
+    "arc": "One image: a question to followers + reply prompt",
+    "scenes": [
+      {
+        "type": "hook",
+        "purpose": "The question",
         "seconds": 5
       }
     ]

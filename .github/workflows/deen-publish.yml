@@ -89,9 +89,8 @@ jobs:
         env:
           ID: ${{ steps.due.outputs.id }}
         run: |
-          mkdir -p output/reels output/covers
-          gh release download "reel-$ID" --pattern "$ID.mp4" --dir output/reels --clobber
-          gh release download "reel-$ID" --pattern "$ID.jpg" --dir output/covers --clobber
+          mkdir -p "output/publish/$ID"
+          gh release download "reel-$ID" --pattern "$ID*" --dir "output/publish/$ID" --clobber
 
       - name: Post to Instagram
         if: steps.due.outputs.id != ''
@@ -107,11 +106,11 @@ jobs:
           case "$(echo "$result" | node -e 'let d="";process.stdin.on("data",c=>d+=c).on("end",()=>console.log(JSON.parse(d).status))')" in
             published)
               link=$(echo "$result" | node -e 'let d="";process.stdin.on("data",c=>d+=c).on("end",()=>{const s=JSON.parse(d);console.log(s.permalink||s.mediaId)})')
-              gh release edit "reel-$ID" --prerelease=false --title "Reel $ID (posted)" || true
+              gh release edit "reel-$ID" --prerelease=false --title "$ID (posted)" || true
               [ -n "$pr" ] && gh pr comment "$pr" --body "📣 Posted to Instagram: $link"
               echo "### Posted $ID → $link" >> "$GITHUB_STEP_SUMMARY" ;;
             manual-required)
-              [ -n "$pr" ] && gh pr comment "$pr" --body "📌 Instagram isn't connected yet, so this reel wasn't auto-posted. Download the MP4 and cover from release \`reel-$ID\`, paste \`archive/$ID/caption.txt\`, and post manually. See AUTOMATION.md to connect Instagram."
+              [ -n "$pr" ] && gh pr comment "$pr" --body "📌 Instagram isn't connected yet, so this post wasn't auto-posted. Download the files from release \`reel-$ID\`, paste \`archive/$ID/caption.txt\`, and post manually. See AUTOMATION.md to connect Instagram."
               echo "### $ID needs manual posting (Instagram not configured)" >> "$GITHUB_STEP_SUMMARY" ;;
             *)
               [ -n "$pr" ] && gh pr comment "$pr" --body "⚠️ Posting failed: $(echo "$result" | node -e 'let d="";process.stdin.on("data",c=>d+=c).on("end",()=>console.log(JSON.parse(d).lastError))'). It will be retried at the next slot (max 3 attempts)."

@@ -1,0 +1,238 @@
+{
+  "kind": "carousel",
+  "brief": {
+    "topic": "A hadith on kindness",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "A: Qur'an & Hadith",
+    "series": null,
+    "objective": "saves",
+    "format": "hadith-explained",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Sahih Muslim 2593 says Allah is kind and loves kindness, and gives for kindness what He does not give for severity.",
+  "hooks": [
+    {
+      "text": "Small acts of kindness deserve attention",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the teaching answers it."
+    },
+    {
+      "text": "Gentle or harsh?",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, less direct."
+    },
+    {
+      "text": "Choose kindness.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Small acts of kindness matter. / A hadith, with context.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Small acts"
+        },
+        {
+          "text": "of kindness"
+        },
+        {
+          "text": "matter.",
+          "highlight": true
+        }
+      ],
+      "sub": "A hadith, with context."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "muslim:2593 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ SAID",
+      "ref": "muslim:2593",
+      "excerpt": "verily Allah is kind and He loves kindness and confers upon kindness which he does not confer upon severity"
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "durationInFrames": 150,
+      "purpose": "Reflection: our words, clearly labelled.",
+      "onScreen": "REFLECTION / The context / These words were addressed to A'isha. Kindness is not weakness: it is a quality Allah loves and rewards. It applies to how we correct, ask and disagree.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "The context",
+          "highlight": true
+        }
+      ],
+      "body": [
+        "These words were addressed to A'isha. Kindness is not weakness: it is a quality Allah loves and rewards.",
+        "It applies to how we correct, ask and disagree."
+      ]
+    },
+    {
+      "id": "moments",
+      "type": "cards",
+      "durationInFrames": 150,
+      "purpose": "Practical examples (our suggestions).",
+      "onScreen": "IN PRACTICE / Correct in private · Ask, don't order · Be patient with the slow",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "IN PRACTICE",
+      "headline": [
+        {
+          "text": "Kindness looks"
+        },
+        {
+          "text": "like this.",
+          "highlight": true
+        }
+      ],
+      "enter": "pop",
+      "popStart": 12,
+      "popStagger": 16,
+      "cards": [
+        {
+          "text": "Correct in private",
+          "status": "pass",
+          "tag": "ADVICE"
+        },
+        {
+          "text": "Ask, don't order",
+          "status": "pass",
+          "tag": "AT HOME"
+        },
+        {
+          "text": "Be patient with the slow",
+          "status": "pass",
+          "tag": "AT WORK"
+        }
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Choose the gentle way. / Save this reminder",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Choose the"
+        },
+        {
+          "text": "gentle way.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this reminder",
+      "ctaAt": 10,
+      "endCardAt": 20
+    }
+  ],
+  "cover": {
+    "kicker": "ON KINDNESS",
+    "headline": [
+      {
+        "text": "Allah loves"
+      },
+      {
+        "text": "kindness",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Small acts of kindness deserve our attention, too.",
+    "body": [
+      "Sahih Muslim 2593: Allah is kind and loves kindness.",
+      "Swipe for the context and three practical examples."
+    ],
+    "cta": "Save this reminder.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Quran",
+      "#Kindness",
+      "#Hadith"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this reminder"
+  },
+  "claims": [
+    {
+      "text": "What muslim:2593 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "muslim:2593"
+    },
+    {
+      "text": "The context note and examples are our reflection.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Launch calendar day 12."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

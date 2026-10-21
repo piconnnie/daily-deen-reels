@@ -1,20 +1,22 @@
 {
+  "kind": "reel",
   "brief": {
-    "topic": "Show mercy to receive mercy",
+    "topic": "Hearts find rest in the remembrance of Allah",
     "audience": "Muslims looking for a short, authentic reminder they can act on today",
-    "pillar": "B: Prophetic Guidance",
-    "objective": "shares",
-    "format": "hadith-practice",
-    "targetDurationSec": 23,
+    "pillar": "D: Dua & Dhikr",
+    "objective": "saves",
+    "format": "ayah-reflection",
+    "targetDurationSec": 27,
     "technicalDepth": "beginner",
     "voiceover": false,
     "research": "not-required",
-    "constraints": []
+    "constraints": [],
+    "series": null
   },
-  "coreInsight": "Sahih al-Bukhari 6013 ties being treated mercifully to being merciful to others.",
+  "coreInsight": "Qur'an 13:28 says hearts are assured by the remembrance of Allah, so small daily dhikr is worth building in.",
   "hooks": [
     {
-      "text": "Want mercy? Start here.",
+      "text": "Restless lately?",
       "angle": "Personal recognition",
       "scores": {
         "specificity": 4,
@@ -26,7 +28,7 @@
       "notes": "Clear in two seconds; the source answers it right away."
     },
     {
-      "text": "A short hadith with a big ask.",
+      "text": "Before you reach for your phone.",
       "angle": "Curiosity",
       "scores": {
         "specificity": 4,
@@ -38,7 +40,7 @@
       "notes": "Good, slightly less direct."
     },
     {
-      "text": "Be merciful, first.",
+      "text": "Remember Allah, find rest.",
       "angle": "Reframe",
       "scores": {
         "specificity": 4,
@@ -58,7 +60,7 @@
       "type": "hook",
       "durationInFrames": 90,
       "purpose": "Recognition: meet the viewer where they are.",
-      "onScreen": "Want mercy? Start here. / A short hadith with a big ask.",
+      "onScreen": "Restless lately? / Before you reach for your phone.",
       "storyboard": {
         "visual": "Headline, highlighted last line; sub-line.",
         "animation": "Readable on frame 0; underline sweep."
@@ -66,36 +68,35 @@
       "kicker": "DAILY REMINDER",
       "lines": [
         {
-          "text": "Want mercy?"
+          "text": "Restless"
         },
         {
-          "text": "Start here.",
+          "text": "lately?",
           "highlight": true
         }
       ],
-      "sub": "A short hadith with a big ask."
+      "sub": "Before you reach for your phone."
     },
     {
-      "id": "hadith",
+      "id": "ayah",
       "type": "source",
-      "durationInFrames": 195,
+      "durationInFrames": 315,
       "purpose": "The source itself, verbatim, with its reference.",
-      "onScreen": "bukhari:6013 (text pulled from the verified dataset)",
+      "onScreen": "quran:13:28 (text pulled from the verified dataset)",
       "storyboard": {
         "visual": "Framed panel: Arabic (if any), translation; citation pill.",
         "animation": "Arabic, then translation, then citation."
       },
       "transitionIn": "fade-up",
-      "kicker": "THE PROPHET ﷺ SAID",
-      "ref": "bukhari:6013",
-      "excerpt": "He who is not merciful to others, will not be treated mercifully"
+      "kicker": "THE QUR'AN · AR-RA'D",
+      "ref": "quran:13:28"
     },
     {
       "id": "practice",
       "type": "checklist",
       "durationInFrames": 255,
       "purpose": "Our reflection: small, concrete actions (our words, not attributed).",
-      "onScreen": "TRY THIS TODAY / Show mercy first. / Be patient with someone who is slow · Forgive one small wrong without mentioning it · Be gentle with children and animals",
+      "onScreen": "TRY THIS TODAY / Make space for remembrance. / Sit for two quiet minutes after each prayer · Swap one scroll break for dhikr · Say Alhamdulillah when you notice a blessing",
       "storyboard": {
         "visual": "Numbered list, rule box.",
         "animation": "Items every 34 frames from 24."
@@ -104,28 +105,28 @@
       "kicker": "TRY THIS TODAY",
       "headline": [
         {
-          "text": "Show mercy"
+          "text": "Make space for"
         },
         {
-          "text": "first.",
+          "text": "remembrance.",
           "highlight": true
         }
       ],
       "items": [
-        "Be patient with someone who is slow",
-        "Forgive one small wrong without mentioning it",
-        "Be gentle with children and animals"
+        "Sit for two quiet minutes after each prayer",
+        "Swap one scroll break for dhikr",
+        "Say Alhamdulillah when you notice a blessing"
       ],
       "itemStart": 24,
       "itemStagger": 34,
-      "rule": "The mercy we hope for, we can start showing today."
+      "rule": "Small, regular remembrance, wherever your day takes you."
     },
     {
       "id": "takeaway",
       "type": "takeaway",
       "durationInFrames": 150,
       "purpose": "One line to remember + one CTA.",
-      "onScreen": "Be merciful, first. / Share this with your family",
+      "onScreen": "Remember Allah, find rest. / Save this for a restless day",
       "storyboard": {
         "visual": "Takeaway lines, CTA pill, end card.",
         "animation": "Lines rise; CTA at 40; end card at 70."
@@ -133,70 +134,68 @@
       "transitionIn": "fade-up",
       "lines": [
         {
-          "text": "Be merciful,"
+          "text": "Remember"
         },
         {
-          "text": "first.",
+          "text": "Allah, find"
+        },
+        {
+          "text": "rest.",
           "highlight": true
         }
       ],
-      "cta": "Share this with your family",
+      "cta": "Save this for a restless day",
       "ctaAt": 40,
       "endCardAt": 70
     }
   ],
   "cover": {
-    "kicker": "ON MERCY",
+    "kicker": "QUR'AN 13:28",
     "headline": [
       {
-        "text": "Mercy starts"
+        "text": "Where hearts"
       },
       {
-        "text": "with you",
+        "text": "find rest",
         "highlight": true
       }
     ]
   },
   "caption": {
-    "opening": "We all hope for mercy. This hadith asks us to start giving it.",
+    "opening": "Restless, even when nothing is wrong? Read Qur'an 13:28 slowly.",
     "body": [
-      "Sahih al-Bukhari 6013 is one line long and asks a lot of us.",
-      "Try this today:\n→ be patient with someone who is slow\n→ forgive one small wrong without mentioning it\n→ be gentle with children and animals"
+      "Try this today:\n→ two quiet minutes after each prayer\n→ swap one scroll break for dhikr\n→ say Alhamdulillah when you notice a blessing"
     ],
-    "cta": "Share this with your family.",
+    "cta": "Save this for a restless day.",
     "hashtags": [
       "#IslamicReminder",
-      "#Sunnah",
-      "#Mercy",
-      "#Hadith",
-      "#DailyReminder"
+      "#Quran",
+      "#Dhikr",
+      "#Quran"
     ]
   },
   "primaryCta": {
-    "type": "share",
-    "text": "Share this with your family"
+    "type": "save",
+    "text": "Save this for a restless day"
   },
   "claims": [
     {
-      "text": "What bukhari:6013 says, quoted verbatim on screen.",
+      "text": "What quran:13:28 says, quoted verbatim on screen.",
       "kind": "source",
-      "ref": "bukhari:6013"
+      "ref": "quran:13:28"
     },
     {
-      "text": "Patience, quiet forgiveness and gentleness are ways to act on the hadith.",
+      "text": "Short, regular dhikr during the day is a way to act on the ayah.",
       "kind": "reflection"
     }
   ],
   "publish": {
-    "suggestedDate": "2026-11-03",
+    "suggestedDate": "2026-10-30",
     "notes": "Evergreen."
   },
   "repurposing": {
     "carousel": [],
     "followUpReel": "",
     "linkedin": ""
-  },
-  "recitation": {
-    "ref": "quran:21:107"
   }
 }

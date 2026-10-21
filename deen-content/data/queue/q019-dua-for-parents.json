@@ -1,20 +1,22 @@
 {
+  "kind": "reel",
   "brief": {
-    "topic": "Deeds are rewarded by intention",
+    "topic": "A du'a for parents from the Qur'an",
     "audience": "Muslims looking for a short, authentic reminder they can act on today",
-    "pillar": "B: Prophetic Guidance",
+    "pillar": "D: Dua & Dhikr",
     "objective": "saves",
-    "format": "hadith-practice",
-    "targetDurationSec": 26,
+    "format": "dua",
+    "targetDurationSec": 24,
     "technicalDepth": "beginner",
     "voiceover": false,
     "research": "not-required",
-    "constraints": []
+    "constraints": [],
+    "series": "dua-of-the-day"
   },
-  "coreInsight": "The first hadith in Sahih al-Bukhari ties the reward of every deed to its intention, so ordinary tasks can be done for Allah.",
+  "coreInsight": "Qur'an 17:24 teaches a short du'a for parents that can be said every day.",
   "hooks": [
     {
-      "text": "Same action. Different reward?",
+      "text": "A du'a for your parents",
       "angle": "Personal recognition",
       "scores": {
         "specificity": 4,
@@ -26,7 +28,7 @@
       "notes": "Clear in two seconds; the source answers it right away."
     },
     {
-      "text": "It starts before you begin.",
+      "text": "Say this for them today.",
       "angle": "Curiosity",
       "scores": {
         "specificity": 4,
@@ -38,7 +40,7 @@
       "notes": "Good, slightly less direct."
     },
     {
-      "text": "Intend it before you do it.",
+      "text": "They raised you. Pray for them.",
       "angle": "Reframe",
       "scores": {
         "specificity": 4,
@@ -58,7 +60,7 @@
       "type": "hook",
       "durationInFrames": 90,
       "purpose": "Recognition: meet the viewer where they are.",
-      "onScreen": "Same action. Different reward? / It starts before you begin.",
+      "onScreen": "A du'a for your parents / Short enough to say every day.",
       "storyboard": {
         "visual": "Headline, highlighted last line; sub-line.",
         "animation": "Readable on frame 0; underline sweep."
@@ -66,69 +68,81 @@
       "kicker": "DAILY REMINDER",
       "lines": [
         {
-          "text": "Same action."
+          "text": "A du'a"
         },
         {
-          "text": "Different"
+          "text": "for your"
         },
         {
-          "text": "reward?",
+          "text": "parents",
           "highlight": true
         }
       ],
-      "sub": "It starts before you begin."
+      "sub": "Short enough to say every day."
     },
     {
-      "id": "hadith",
+      "id": "ayah",
       "type": "source",
-      "durationInFrames": 285,
+      "durationInFrames": 300,
       "purpose": "The source itself, verbatim, with its reference.",
-      "onScreen": "bukhari:1 (text pulled from the verified dataset)",
+      "onScreen": "quran:17:24 (text pulled from the verified dataset)",
       "storyboard": {
         "visual": "Framed panel: Arabic (if any), translation; citation pill.",
         "animation": "Arabic, then translation, then citation."
       },
       "transitionIn": "fade-up",
-      "kicker": "THE PROPHET ﷺ SAID",
-      "ref": "bukhari:1",
-      "excerpt": "The reward of deeds depends upon the intentions and every person will get the reward according to what he has intended"
+      "kicker": "THE QUR'AN · AL-ISRA'",
+      "ref": "quran:17:24",
+      "showTransliteration": true
     },
     {
-      "id": "practice",
-      "type": "checklist",
-      "durationInFrames": 255,
-      "purpose": "Our reflection: small, concrete actions (our words, not attributed).",
-      "onScreen": "TRY THIS TODAY / Set an intention before you start. / Before work: to provide for your family · Before eating: to have strength for good · Before sleeping: to wake up for Fajr",
+      "id": "moments",
+      "type": "cards",
+      "durationInFrames": 180,
+      "purpose": "Moments to use it (our suggestions).",
+      "onScreen": "WHEN TO SAY IT / After every prayer · When you think of them · On their hard days",
       "storyboard": {
-        "visual": "Numbered list, rule box.",
-        "animation": "Items every 34 frames from 24."
+        "visual": "Kicker + headline; cards pop in.",
+        "animation": "Cards every 16 frames from 12."
       },
       "transitionIn": "fade-up",
-      "kicker": "TRY THIS TODAY",
+      "kicker": "WHEN TO SAY IT",
       "headline": [
         {
-          "text": "Set an intention"
+          "text": "Make it a"
         },
         {
-          "text": "before you start.",
+          "text": "daily habit.",
           "highlight": true
         }
       ],
-      "items": [
-        "Before work: to provide for your family",
-        "Before eating: to have strength for good",
-        "Before sleeping: to wake up for Fajr"
-      ],
-      "itemStart": 24,
-      "itemStagger": 34,
-      "rule": "A short pause, a sincere intention, then begin."
+      "enter": "pop",
+      "popStart": 12,
+      "popStagger": 16,
+      "cards": [
+        {
+          "text": "After every prayer",
+          "status": "pass",
+          "tag": "PRAYER"
+        },
+        {
+          "text": "When you think of them",
+          "status": "pass",
+          "tag": "ANYTIME"
+        },
+        {
+          "text": "On their hard days",
+          "status": "pass",
+          "tag": "SUPPORT"
+        }
+      ]
     },
     {
       "id": "takeaway",
       "type": "takeaway",
       "durationInFrames": 150,
       "purpose": "One line to remember + one CTA.",
-      "onScreen": "Intend it before you do it. / Save this as a daily reminder",
+      "onScreen": "Say it for them today. / Save this du'a",
       "storyboard": {
         "visual": "Takeaway lines, CTA pill, end card.",
         "animation": "Lines rise; CTA at 40; end card at 70."
@@ -136,73 +150,66 @@
       "transitionIn": "fade-up",
       "lines": [
         {
-          "text": "Intend it"
+          "text": "Say it for"
         },
         {
-          "text": "before you"
-        },
-        {
-          "text": "do it.",
+          "text": "them today.",
           "highlight": true
         }
       ],
-      "cta": "Save this as a daily reminder",
+      "cta": "Save this du'a",
       "ctaAt": 40,
       "endCardAt": 70
     }
   ],
   "cover": {
-    "kicker": "FIRST HADITH IN BUKHARI",
+    "kicker": "QUR'AN 17:24",
     "headline": [
       {
-        "text": "It starts with"
+        "text": "A du'a for"
       },
       {
-        "text": "intention.",
+        "text": "your parents",
         "highlight": true
       }
     ]
   },
   "caption": {
-    "opening": "Two people can do the same thing and earn very different rewards.",
+    "opening": "One of the most beautiful du'as in the Qur'an is for our parents.",
     "body": [
-      "The very first hadith in Sahih al-Bukhari is about intention.",
-      "Try this today:\n→ before work: to provide for your family\n→ before eating: to have strength for good\n→ before sleeping: to wake up for Fajr"
+      "It's in Surah Al-Isra', ayah 24, right after the command to be kind to them.",
+      "Moments to say it:\n→ after every prayer\n→ whenever you think of them\n→ on their hard days"
     ],
-    "cta": "Save this as a daily reminder.",
+    "cta": "Save this du'a.",
     "hashtags": [
       "#IslamicReminder",
-      "#Sunnah",
-      "#Niyyah",
-      "#Hadith",
-      "#DailyReminder"
+      "#Family",
+      "#Dua",
+      "#Parents"
     ]
   },
   "primaryCta": {
     "type": "save",
-    "text": "Save this as a daily reminder"
+    "text": "Save this du'a"
   },
   "claims": [
     {
-      "text": "What bukhari:1 says, quoted verbatim on screen.",
+      "text": "What quran:17:24 says, quoted verbatim on screen.",
       "kind": "source",
-      "ref": "bukhari:1"
+      "ref": "quran:17:24"
     },
     {
-      "text": "Setting an intention before everyday tasks is a way to act on the hadith.",
+      "text": "Suggested moments to say the du'a are our own suggestions.",
       "kind": "reflection"
     }
   ],
   "publish": {
-    "suggestedDate": "2026-10-26",
+    "suggestedDate": "2026-10-27",
     "notes": "Evergreen."
   },
   "repurposing": {
     "carousel": [],
     "followUpReel": "",
     "linkedin": ""
-  },
-  "recitation": {
-    "ref": "quran:6:162"
   }
 }

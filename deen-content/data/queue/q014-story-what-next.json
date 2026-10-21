@@ -1,0 +1,131 @@
+{
+  "kind": "story",
+  "brief": {
+    "topic": "Ask followers what to learn next",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "E: Islam in Everyday Life",
+    "series": null,
+    "objective": "replies",
+    "format": "story-question",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Inviting followers to choose next week's reminder topic.",
+  "hooks": [
+    {
+      "text": "What should next week's reminder be?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the teaching answers it."
+    },
+    {
+      "text": "Your choice",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, less direct."
+    },
+    {
+      "text": "Tell us",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "question",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "What should next week's reminder be about? / Patience · Salah · Family · Du'a",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "What should"
+        },
+        {
+          "text": "next week's"
+        },
+        {
+          "text": "reminder be"
+        },
+        {
+          "text": "about?",
+          "highlight": true
+        }
+      ],
+      "sub": "Patience · Salah · Family · Du'a"
+    }
+  ],
+  "cover": {
+    "kicker": "YOUR CHOICE",
+    "headline": [
+      {
+        "text": "Next week's"
+      },
+      {
+        "text": "reminder",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "What would you like your next reminder to be about?",
+    "body": [
+      "Patience, salah, family or du'a — or something else."
+    ],
+    "cta": "Reply with a topic.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Akhlaq",
+      "#DailyReminder"
+    ]
+  },
+  "primaryCta": {
+    "type": "question",
+    "text": "Reply with your topic"
+  },
+  "claims": [
+    {
+      "text": "This is a question to followers, not a teaching.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Launch calendar day 14."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "replyPrompt": "Reply with your topic"
+}

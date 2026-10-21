@@ -19,12 +19,12 @@ const val = (n, d) => {
 
 const formats = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/templates/formats.json'), 'utf8'));
 const PILLARS = {
-  A: "A: Qur'an Reflections",
-  B: 'B: Prophetic Guidance',
-  C: 'C: Character and Manners',
-  D: 'D: Worship and Daily Habits',
-  E: 'E: Family and Community',
-  F: 'F: Hope, Patience and Trust',
+  A: "A: Qur'an & Hadith",
+  B: 'B: Heart-Softening Reminders',
+  C: 'C: Daily Deen & Practical Islam',
+  D: 'D: Dua & Dhikr',
+  E: 'E: Islam in Everyday Life',
+  F: 'F: Islamic Calendar & Occasions',
 };
 // Initial mix from the content strategy; used to suggest an under-served pillar.
 const TARGET_MIX = {A: 0.25, B: 0.25, C: 0.2, D: 0.15, E: 0.1, F: 0.05};

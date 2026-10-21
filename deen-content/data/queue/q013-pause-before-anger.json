@@ -1,0 +1,176 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "Patience at work and home: pause before reacting in anger",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "E: Islam in Everyday Life",
+    "series": "before-you-scroll",
+    "objective": "reach",
+    "format": "before-you-scroll",
+    "targetDurationSec": 18,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "In Sahih al-Bukhari 6114 the strong one is the one who controls himself in anger.",
+  "hooks": [
+    {
+      "text": "Not every feeling needs an immediate reaction",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the teaching answers it."
+    },
+    {
+      "text": "Who's really strong?",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, less direct."
+    },
+    {
+      "text": "Pause first.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Not every feeling needs a reaction. / Pause before you reply.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Not every"
+        },
+        {
+          "text": "feeling needs"
+        },
+        {
+          "text": "a reaction.",
+          "highlight": true
+        }
+      ],
+      "sub": "Pause before you reply."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 300,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "bukhari:6114 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ SAID",
+      "ref": "bukhari:6114",
+      "excerpt": "The strong is not the one who overcomes the people by his strength, but the strong is the one who controls himself while in anger"
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Pause. Then respond. / Save this for your next hard moment",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Pause."
+        },
+        {
+          "text": "Then respond.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this for your next hard moment",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "BEFORE YOU SCROLL",
+    "headline": [
+      {
+        "text": "Pause before"
+      },
+      {
+        "text": "you react",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Not every feeling needs an immediate reaction.",
+    "body": [
+      "Sahih al-Bukhari 6114 redefines strength: controlling yourself when angry.",
+      "At work or at home today: pause before you reply."
+    ],
+    "cta": "Save this for your next hard moment.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Akhlaq",
+      "#Anger",
+      "#Hadith"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this for your next hard moment"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:6114 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:6114"
+    },
+    {
+      "text": "Pausing before replying is our suggestion.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Launch calendar day 13."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:3:134"
+  }
+}

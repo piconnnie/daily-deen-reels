@@ -28,12 +28,13 @@ step "QA" node scripts/validate-content.mjs "$ID"
 step "Archive" node scripts/daily/archive.mjs "$ID" --repo "$GITHUB_REPOSITORY"
 
 TAG="reel-$ID"
-cp "output/qa/$ID/contact-sheet.png" "output/qa/$ID/$ID-contact-sheet.png"
-ASSETS=("output/reels/$ID.mp4" "output/covers/$ID.jpg" "output/qa/$ID/$ID-contact-sheet.png")
+# Asset list written by archive.mjs (reel: MP4 + cover + contact sheet;
+# carousel/story: every slide JPEG + cover + contact sheet).
+mapfile -t ASSETS < "output/daily/$ID.assets.txt"
 if gh release view "$TAG" > /dev/null 2>&1; then
   gh release upload "$TAG" "${ASSETS[@]}" --clobber
 else
   gh release create "$TAG" "${ASSETS[@]}" --prerelease \
-    --title "Reel $ID (awaiting review)" \
+    --title "$ID (awaiting review)" \
     --notes "Preview assets for review. Not posted yet. Approve by merging the review PR."
 fi

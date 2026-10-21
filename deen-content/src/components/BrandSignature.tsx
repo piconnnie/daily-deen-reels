@@ -1,5 +1,6 @@
 import React from 'react';
-import {fonts, safe} from '../brand/tokens';
+import {fonts} from '../brand/tokens';
+import {useCanvas} from '../brand/canvas';
 import {useColors} from '../brand/theme';
 
 // Daily Deen monogram: an eight-pointed star (khatam) framing a "D".
@@ -27,12 +28,13 @@ export const Monogram: React.FC<{size?: number}> = ({size = 56}) => {
 // Small persistent brand label inside the top of the safe area.
 export const BrandSignature: React.FC<{opacity?: number}> = ({opacity = 1}) => {
   const colors = useColors();
+  const canvas = useCanvas();
   return (
   <div
     style={{
       position: 'absolute',
-      top: safe.top,
-      left: safe.left,
+      top: canvas.brandTop,
+      left: canvas.brandLeft,
       display: 'flex',
       alignItems: 'center',
       gap: 14,

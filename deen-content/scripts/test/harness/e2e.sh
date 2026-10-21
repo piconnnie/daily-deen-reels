@@ -38,8 +38,8 @@ export PATH="$E2E/bin:$PATH"
 # --- "GitHub": bare remote seeded from the working tree (tracked + new files)
 mkdir "$E2E/seed"
 ( cd "$SRC" && git ls-files -co --exclude-standard -z | grep -zv '^deen-content/output/' | xargs -0 -I{} cp --parents "{}" "$E2E/seed/" )
-# Tests use the four fixture drafts q001–q004 so numbering stays deterministic.
-find "$E2E/seed/deen-content/data/queue" -name '*.json' ! -name 'q00[1-4]-*' -delete
+# Tests use the three fixture drafts q001–q003 (reel, carousel, reel) so numbering stays deterministic.
+find "$E2E/seed/deen-content/data/queue" -name '*.json' ! -name 'q00[1-3]-*' -delete
 # ...and start from the sample reel, not whatever the live repo has published since.
 find "$E2E/seed/deen-content/src/content/reels" -name 'deen-*.json' ! -name 'deen-001-*' -delete
 rm -rf "$E2E/seed/deen-content/archive" "$E2E/seed/deen-content/data/performance/index.json"
@@ -63,7 +63,7 @@ $RUN "$WF/deen-daily-reel.yml" --repo "$W" --event workflow_dispatch --inputs '{
 check "PR #1 opened for reel 001 with daily-reel label" "[ \"\$(ghq 's.prs[0]?.headRefName')\" = reel/deen-001-hardship-is-never-alone ] && [ \"\$(ghq 's.prs[0].labels.includes(\"daily-reel\")')\" = true ]"
 check "Pre-release with MP4, JPEG cover and contact sheet" "[ \"\$(ghq 's.releases[\"reel-deen-001-hardship-is-never-alone\"].files.length')\" = 3 ] && [ \"\$(ghq 's.releases[\"reel-deen-001-hardship-is-never-alone\"].prerelease')\" = true ]"
 check "Review branch pushed with archive/state.json" "git -C '$W' ls-remote --exit-code origin reel/deen-001-hardship-is-never-alone >/dev/null && git -C '$W' show origin/reel/deen-001-hardship-is-never-alone:deen-content/archive/deen-001-hardship-is-never-alone/state.json >/dev/null 2>&1 || (git -C '$W' fetch -q origin && git -C '$W' show origin/reel/deen-001-hardship-is-never-alone:deen-content/archive/deen-001-hardship-is-never-alone/state.json >/dev/null)"
-check "PR body has preview images, MP4 link and QA" "ghq 's.prs[0].body' | grep -q 'Watch the reel' && ghq 's.prs[0].body' | grep -q 'Automated QA'"
+check "PR body has preview images, MP4 link and QA" "ghq 's.prs[0].body' | grep -q 'Watch and listen to the reel' && ghq 's.prs[0].body' | grep -q 'Automated QA'"
 git -C "$W" checkout -q main
 
 echo "== 2. Scheduled daily run writes a NEW reel (API writer opted in, mock model)"
@@ -91,7 +91,7 @@ reel_json() { git -C "$W" show "origin/reel/$1:deen-content/src/content/reels/$1
 
 echo "== 3b. Writer = Claude subscription (opted in via DEEN_WRITER) (Claude Code action), draft passes"
 git -C "$W" checkout -q main
-HARNESS_CLAUDE_ACTION="$MOCKCC" HARNESS_DRAFT="$Q/q003-what-allah-looks-at.json" \
+HARNESS_CLAUDE_ACTION="$MOCKCC" HARNESS_DRAFT="$Q/q003-dua-against-useless-knowledge.json" \
   $RUN "$WF/deen-daily-reel.yml" --repo "$W" --event schedule --secrets '{"CLAUDE_CODE_OAUTH_TOKEN":"oauth-test"}' --vars "$SUB10" | tee "$E2E/s3b.log" > /dev/null
 git -C "$W" fetch -q origin; SUBID=$(reel_of_pr 2)
 check "Subscription mode chosen when DEEN_WRITER=subscription and the token is set" "grep -q 'Writer: subscription' '$E2E/s3b.log' || grep -q \"Claude Code writes today's reel\" '$E2E/s3b.log'"
@@ -105,7 +105,7 @@ HARNESS_CLAUDE_ACTION="$MOCKCC" HARNESS_CLAUDE_FAIL=1 \
   $RUN "$WF/deen-daily-reel.yml" --repo "$W" --event schedule --secrets '{"CLAUDE_CODE_OAUTH_TOKEN":"oauth-test"}' --vars "$SUB10" | tee "$E2E/s3c.log" > /dev/null
 git -C "$W" fetch -q origin; FBID=$(reel_of_pr 3)
 check "Fallback produced PR #4 ($FBID)" "[[ '$FBID' == deen-004-* ]]"
-check "Queue skipped q001 (used by the sample reel) and used q002" "reel_json '$FBID' | grep -q '\"queueId\": \"q002-strength-in-anger\"'"
+check "Queue used the first draft, q001" "reel_json '$FBID' | grep -q '\"queueId\": \"q001-when-life-feels-uncertain\"'"
 check "Reel records writer = queue" "reel_json '$FBID' | grep -q '\"writer\": \"queue\"'"
 git -C "$W" checkout -q main
 
@@ -113,7 +113,9 @@ echo "== 3d. Default (no DEEN_WRITER) → free queue, even with paid secrets pre
 $RUN "$WF/deen-daily-reel.yml" --repo "$W" --event schedule --secrets '{"ANTHROPIC_API_KEY":"test","CLAUDE_CODE_OAUTH_TOKEN":"oauth-test"}' --vars "$OPEN10" | tee "$E2E/s3d.log" > /dev/null
 git -C "$W" fetch -q origin; QID=$(reel_of_pr 4)
 check "Queue mode produced PR #5 ($QID) without any secrets" "[[ '$QID' == deen-005-* ]]"
-check "Used q004 (q003 already covered by the Claude Code reel)" "reel_json '$QID' | grep -q '\"queueId\": \"q004-it-starts-with-intention\"'"
+check "Used q002, a carousel" "reel_json '$QID' | grep -q '\"queueId\": \"q002-one-ayah-ash-sharh\"' && reel_json '$QID' | grep -q '\"kind\": \"carousel\"'"
+check "Carousel PR shows every slide and its release holds the slide JPEGs" "[ \"\$(ghq 's.prs[4].body.split(\"-slide-\").length - 1')\" -ge 12 ] && [ \"\$(ghq 's.releases[\"reel-$QID\"].files.filter(f=>f.includes(\"-slide-\")).length')\" = 6 ]"
+check "Carousel PR title marks the kind" "ghq 's.prs[4].title' | grep -q '🖼️'"
 check "Paid writers stayed off without the opt-in" "reel_json '$QID' | grep -q '\"writer\": \"queue\"' && ! grep -q 'mock: wrote draft.json' '$E2E/s3d.log'"
 check "One open queue-low issue, updated by later runs" "[ \"\$(ghq 's.issues.filter(i=>i.labels?.includes(\"queue-low\")).length')\" = 1 ] && [ \"\$(ghq 's.issues.find(i=>i.labels?.includes(\"queue-low\")).comments.length')\" -ge 1 ]"
 git -C "$W" checkout -q main
@@ -182,7 +184,7 @@ check "media_publish called exactly once" "[ \"\$(grep -c media_publish '$E2E/ig
 check "Container had REELS, caption, cover_url and video_url" "grep '/IGID/media\"' '$E2E/ig-log.jsonl' | grep -q '\"media_type\":\"REELS\"' && grep '/IGID/media\"' '$E2E/ig-log.jsonl' | grep -q 'cover_url' && grep '/IGID/media\"' '$E2E/ig-log.jsonl' | grep -q 'video_url'"
 check "Published state + permalink committed to main" "git -C '$W' show origin/main:deen-content/archive/$NEWID/state.json | grep -q '\"status\": \"published\"'"
 check "Release promoted from pre-release" "[ \"\$(ghq 's.releases[\"reel-$NEWID\"].prerelease')\" = false ]"
-check "Permalink commented on the PR" "ghq 's.prs[1].comments.join(\"|\")' | grep -q 'instagram.com/reel/'"
+check "Permalink commented on the PR" "ghq 's.prs[1].comments.join(\"|\")' | grep -q 'instagram.com/p/'"
 check "Token never in workflow output or git" "! git -C '$W' log -p origin/main | grep -q SECRET_TEST_TOKEN"
 
 echo "== 7. Second publish run the same day → nothing more is posted"
@@ -204,6 +206,14 @@ echo "== 7c. No auto-approve on this page: open PRs stay open even after the pos
 $RUN "$WF/deen-publish.yml" --repo "$W" --event schedule --secrets "$IGSECRETS" --vars "{\"DEEN_AUTO_APPROVE\":\"true\",\"DEEN_POST_TIME\":\"00:00\",\"DEEN_MAX_PER_DAY\":\"5\",\"DEEN_PUBLIC_BASE_URL\":\"$IG/assets\"}" > /dev/null
 check "Waiting PRs are not merged by the workflow" "[ \"\$(ghq 's.prs[0].state')\" = open ] && [ \"\$(ghq 's.prs[3].state')\" = open ] && [ \"\$(ghq 's.prs[4].state')\" = open ]"
 check "Only the reels a person merged were posted" "[ \"\$(grep -c media_publish '$E2E/ig-log.jsonl')\" = 2 ]"
+
+echo "== 7d. Merge the carousel PR → posted as an Instagram carousel"
+git -C "$U" fetch -q origin && git -C "$U" checkout -q main && git -C "$U" pull -q origin main
+git -C "$U" merge -q --no-ff "origin/reel/$QID" -m "Merge carousel $QID" && git -C "$U" push -q origin main
+node -e "const f='$GH_FAKE_STATE',fs=require('fs');const s=JSON.parse(fs.readFileSync(f));Object.assign(s.prs[4],{state:'merged',mergedBy:{login:'faraz'},mergedAt:new Date().toISOString()});fs.writeFileSync(f,JSON.stringify(s,null,2))"
+$RUN "$WF/deen-publish.yml" --repo "$W" --event schedule --secrets "$IGSECRETS" --vars "{\"DEEN_POST_TIME\":\"00:00\",\"DEEN_MAX_PER_DAY\":\"5\",\"DEEN_PUBLIC_BASE_URL\":\"$IG/assets\"}" > /dev/null
+git -C "$W" fetch -q origin
+check "Carousel posted: 6 item containers + a CAROUSEL container" "[ \"\$(grep -c is_carousel_item '$E2E/ig-log.jsonl')\" = 6 ] && grep -q '\"media_type\":\"CAROUSEL\"' '$E2E/ig-log.jsonl' && git -C '$W' show origin/main:deen-content/archive/$QID/state.json | grep -q '\"status\": \"published\"'"
 
 echo "== 8. A merged PR without the daily-reel label is ignored"
 $RUN "$WF/deen-publish.yml" --repo "$W" --event pull_request --event-json '{"pull_request":{"number":9,"merged":true,"labels":[{"name":"docs"}],"head":{"ref":"feature/x"}}}' --secrets "$IGSECRETS" | tee "$E2E/s8.log" > /dev/null

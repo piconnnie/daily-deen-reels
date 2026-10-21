@@ -130,3 +130,19 @@ export async function publishingQuota(c = igConfig()) {
     return {error: e.message};
   }
 }
+
+/** Image container: a carousel item, or a story (media_type STORIES). Images must be public JPEG URLs. */
+export async function createImageContainer({imageUrl, carouselItem = false, story = false, caption, c = igConfig()}) {
+  if (!imageUrl) throw new Error('imageUrl is required (Instagram fetches images from a public URL).');
+  const params = {image_url: imageUrl};
+  if (carouselItem) params.is_carousel_item = 'true';
+  if (story) params.media_type = 'STORIES';
+  if (caption && !carouselItem && !story) params.caption = caption;
+  return (await graph('POST', `${c.userId}/media`, params, c)).id;
+}
+
+/** Carousel container from 2–10 finished item containers. */
+export async function createCarouselContainer({children, caption, c = igConfig()}) {
+  if (children.length < 2 || children.length > 10) throw new Error(`a carousel needs 2–10 items (got ${children.length})`);
+  return (await graph('POST', `${c.userId}/media`, {media_type: 'CAROUSEL', children: children.join(','), caption}, c)).id;
+}

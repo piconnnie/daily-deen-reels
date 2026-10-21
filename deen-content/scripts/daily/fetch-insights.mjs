@@ -19,12 +19,15 @@ if (missingConfig(c).length) {
 await ensureUserId(c);
 const metrics = (process.env.DEEN_INSIGHT_METRICS || 'reach,saved,shares,views,comments,ig_reels_avg_watch_time,follows,profile_visits').split(',').map((s) => s.trim());
 const csvPath = path.join(ROOT, 'data', 'performance', 'performance.csv');
-const header = 'content_id,posted_date,days_since_post,duration_sec,pillar,format,hook_angle,cta_type,reach,non_follower_reach,plays,avg_watch_time_sec,shares,saves,comments_meaningful,profile_visits,follows,production_time_min,notes';
+const header = 'content_id,posted_date,days_since_post,duration_sec,pillar,format,hook_angle,cta_type,reach,non_follower_reach,plays,avg_watch_time_sec,shares,saves,comments_meaningful,profile_visits,follows,production_time_min,notes,kind,series,goal';
 const lines = fs.existsSync(csvPath) ? fs.readFileSync(csvPath, 'utf8').trim().split('\n') : [header];
+// Older files gain the kind/series/goal columns automatically.
+if (!lines[0].includes(',kind,series,goal')) lines[0] = header;
 const cols = lines[0].split(',');
 const rows = new Map(lines.slice(1).filter(Boolean).map((l) => [l.split(',')[0], l]));
 
-const published = loadStates().filter((s) => s.publish?.status === 'published' && s.publish.mediaId);
+// Story insights expire after 24 hours, before this weekly import runs, so stories are skipped.
+const published = loadStates().filter((s) => s.publish?.status === 'published' && s.publish.mediaId && s.kind !== 'story');
 let updated = 0;
 for (const s of published) {
   const vals = {};
@@ -60,6 +63,9 @@ for (const s of published) {
     profile_visits: vals.profile_visits ?? '',
     follows: vals.follows ?? '',
     production_time_min: '',
+    kind: reel.kind ?? 'reel',
+    series: reel.brief.series ?? '',
+    goal: reel.brief.objective ?? '',
     notes: `auto-imported ${new Date().toISOString().slice(0, 10)}; comments total ${vals.comments ?? 'n/a'}`,
   };
   // Keep manually entered fields (meaningful comments, production time) if present.
@@ -72,4 +78,4 @@ for (const s of published) {
   updated++;
 }
 fs.writeFileSync(csvPath, [lines[0], ...rows.values()].join('\n') + '\n');
-console.log(`Insights: updated ${updated} of ${published.length} published reel(s).`);
+console.log(`Insights: updated ${updated} of ${published.length} published reel(s)/carousel(s) (stories skipped: their insights expire after 24 h).`);

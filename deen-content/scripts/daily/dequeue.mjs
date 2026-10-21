@@ -11,18 +11,30 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {ROOT, listReels, loadReel} from '../lib.mjs';
+import {occasionsOn, postDate} from './occasions.mjs';
 
 const dir = path.join(ROOT, 'data', 'queue');
 const drafts = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort() : [];
 const used = new Set(listReels().map((id) => loadReel(id).brief?.queueId).filter(Boolean));
-const remaining = drafts.filter((f) => !used.has(f.replace(/\.json$/, '')));
+const unusedDrafts = drafts.filter((f) => !used.has(f.replace(/\.json$/, '')));
+// Occasion drafts (Friday, Ramadan, Dhul Hijjah…) wait for their day and jump the
+// queue on it; everything else keeps calendar order.
+const today = occasionsOn(postDate());
+const occasionOf = (f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')).publish?.occasion ?? null;
+const remaining = [
+  ...unusedDrafts.filter((f) => occasionOf(f) && today.has(occasionOf(f))),
+  ...unusedDrafts.filter((f) => !occasionOf(f)),
+];
+const waiting = unusedDrafts.filter((f) => occasionOf(f) && !today.has(occasionOf(f)));
 
 if (process.argv.includes('--count')) {
-  console.log(remaining.length);
+  console.log(unusedDrafts.filter((f) => !occasionOf(f)).length);
   process.exit(0);
 }
 if (process.argv.includes('--status')) {
-  console.log(`${remaining.length} unused draft(s) in data/queue: ${remaining.join(', ') || '(none)'}`);
+  console.log(`${unusedDrafts.filter((f) => !occasionOf(f)).length} everyday draft(s) left: ${unusedDrafts.filter((f) => !occasionOf(f)).join(', ') || '(none)'}`);
+  console.log(`${waiting.length} occasion draft(s) waiting for their day: ${waiting.map((f) => `${f} (${occasionOf(f)})`).join(', ') || '(none)'}`);
+  console.log(`Today's occasions: ${[...today].join(', ') || 'none'}`);
   process.exit(0);
 }
 if (!remaining.length) {

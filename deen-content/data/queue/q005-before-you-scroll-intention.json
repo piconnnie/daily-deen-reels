@@ -1,0 +1,182 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "Why intentions matter in ordinary actions",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "A: Qur'an & Hadith",
+    "series": "before-you-scroll",
+    "objective": "reach",
+    "format": "before-you-scroll",
+    "targetDurationSec": 18,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "The first hadith in Sahih al-Bukhari ties every deed to its intention, so an ordinary action can be done for Allah.",
+  "hooks": [
+    {
+      "text": "Same action. Different intention.",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the teaching answers it."
+    },
+    {
+      "text": "It starts before you begin.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, less direct."
+    },
+    {
+      "text": "Intend it first.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Same action. Different intention. / Pause for one second.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Same"
+        },
+        {
+          "text": "action."
+        },
+        {
+          "text": "Different"
+        },
+        {
+          "text": "intention.",
+          "highlight": true
+        }
+      ],
+      "sub": "Pause for one second."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 285,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "bukhari:1 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ SAID",
+      "ref": "bukhari:1",
+      "excerpt": "The reward of deeds depends upon the intentions and every person will get the reward according to what he has intended"
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Intend it before you do it. / Share it with a friend",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Intend it"
+        },
+        {
+          "text": "before you"
+        },
+        {
+          "text": "do it.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with a friend",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "BEFORE YOU SCROLL",
+    "headline": [
+      {
+        "text": "It starts with"
+      },
+      {
+        "text": "intention",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "The same action can begin with a different intention.",
+    "body": [
+      "The very first hadith in Sahih al-Bukhari is about intention.",
+      "Before your next task today, pause and set it for Allah."
+    ],
+    "cta": "Share it with a friend.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Quran",
+      "#Niyyah",
+      "#Hadith"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with a friend"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:1 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:1"
+    },
+    {
+      "text": "Pausing to set an intention is our suggestion for acting on the hadith.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Launch calendar day 5."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:6:162"
+  }
+}

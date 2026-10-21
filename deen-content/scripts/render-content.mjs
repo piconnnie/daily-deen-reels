@@ -9,7 +9,7 @@
 import {spawnSync} from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
-import {OUT, ROOT, ensureDir, loadReel, reelIdArg, saveReel} from './lib.mjs';
+import {OUT, ROOT, ensureDir, kindOf, loadReel, reelIdArg, saveReel, slideFiles} from './lib.mjs';
 import {syncRegistry} from './sync-registry.mjs';
 
 const id = reelIdArg();
@@ -40,6 +40,27 @@ const run = (cmd, cmdArgs) => {
 
 ensureDir(OUT.reels);
 ensureDir(OUT.covers);
+
+// Carousels and stories are stills: one image per scene, no audio.
+if (kindOf(reel) !== 'reel') {
+  const t0s = Date.now();
+  const dir = path.join(OUT.slides, id);
+  fs.rmSync(dir, {recursive: true, force: true});
+  ensureDir(dir);
+  if (engine === 'remotion') {
+    reel.scenes.forEach((_, i) => run('npx', ['remotion', 'still', 'src/index.ts', `Slide-${id}-${i + 1}`, path.join(dir, `slide-${String(i + 1).padStart(2, '0')}.png`)]));
+  } else {
+    run('node', ['scripts/local-render/render.mjs', 'slides', id, dir]);
+  }
+  for (const png of slideFiles(id, 'png')) run('ffmpeg', ['-v', 'error', '-y', '-i', png, '-q:v', '2', '-pix_fmt', 'yuvj420p', png.replace(/\.png$/, '.jpg')]);
+  const first = slideFiles(id, 'png')[0];
+  fs.copyFileSync(first, path.join(OUT.covers, `${id}.png`));
+  fs.copyFileSync(first.replace(/\.png$/, '.jpg'), path.join(OUT.covers, `${id}.jpg`));
+  reel.status = 'rendered';
+  saveReel(reel);
+  console.log(`\nDone in ${((Date.now() - t0s) / 1000).toFixed(0)}s: ${slideFiles(id).length} ${kindOf(reel)} image(s) in output/slides/${id}/`);
+  process.exit(0);
+}
 
 // 1. Audio bed (deterministic, local).
 if (reel.audio.bed && !flag('skip-audio')) run('python3', ['scripts/synth-audio.py', id]);

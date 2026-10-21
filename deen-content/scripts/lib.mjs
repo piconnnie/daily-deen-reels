@@ -12,6 +12,7 @@ export const OUT = {
   metadata: path.join(ROOT, 'output', 'metadata'),
   storyboards: path.join(ROOT, 'output', 'storyboards'),
   qa: path.join(ROOT, 'output', 'qa'),
+  slides: path.join(ROOT, 'output', 'slides'),
 };
 
 export const reelPath = (id) => path.join(REELS_DIR, `${id}.json`);
@@ -87,4 +88,11 @@ export const captionText = (reel) => {
     lines.length ? `📖 Sources\n${lines.join('\n')}` : '',
     reel.caption.hashtags.join(' '),
   ].filter(Boolean).join('\n\n');
+};
+
+export const kindOf = (reel) => reel.kind ?? 'reel';
+/** Slide images of a carousel/story, in order (after render). */
+export const slideFiles = (id, ext = 'jpg') => {
+  const dir = path.join(OUT.slides, id);
+  return fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.startsWith('slide-') && f.endsWith(`.${ext}`)).sort().map((f) => path.join(dir, f)) : [];
 };

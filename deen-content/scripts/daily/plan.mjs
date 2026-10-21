@@ -10,14 +10,16 @@ import path from 'node:path';
 import {ROOT, listReels, loadReel, readJsonIfExists} from '../lib.mjs';
 
 export const PILLARS = {
-  A: "A: Qur'an Reflections",
-  B: 'B: Prophetic Guidance',
-  C: 'C: Character and Manners',
-  D: 'D: Worship and Daily Habits',
-  E: 'E: Family and Community',
-  F: 'F: Hope, Patience and Trust',
+  A: "A: Qur'an & Hadith",
+  B: 'B: Heart-Softening Reminders',
+  C: 'C: Daily Deen & Practical Islam',
+  D: 'D: Dua & Dhikr',
+  E: 'E: Islam in Everyday Life',
+  F: 'F: Islamic Calendar & Occasions',
 };
-export const TARGET_MIX = {A: 0.22, B: 0.22, C: 0.18, D: 0.16, E: 0.1, F: 0.12};
+// Content strategy (docs/CONTENT_STRATEGY.md): starting allocations, not fixed rules.
+export const TARGET_MIX = {A: 0.3, B: 0.2, C: 0.15, D: 0.15, E: 0.1, F: 0.1};
+export const KIND_MIX = {reel: 0.5, carousel: 0.35, story: 0.15};
 export const BACKLOG_PATH = path.join(ROOT, 'data', 'topics', 'backlog.json');
 
 const reelNumber = (id) => Number((id.match(/^deen-(\d+)/) ?? [])[1] ?? 0);

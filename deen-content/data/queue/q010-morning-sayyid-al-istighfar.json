@@ -1,0 +1,231 @@
+{
+  "kind": "carousel",
+  "brief": {
+    "topic": "Sayyid al-Istighfar: a remembrance for morning and evening",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "D: Dua & Dhikr",
+    "series": "dua-of-the-day",
+    "objective": "saves",
+    "format": "dua-card",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Sahih al-Bukhari 6306 names the most superior way of asking forgiveness, with a virtue for saying it in the day or the night.",
+  "hooks": [
+    {
+      "text": "A remembrance to learn this week",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the teaching answers it."
+    },
+    {
+      "text": "The best way to ask forgiveness",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, less direct."
+    },
+    {
+      "text": "Say it morning and evening.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "A remembrance to learn and revisit. / Morning and evening.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "A remembrance"
+        },
+        {
+          "text": "to learn"
+        },
+        {
+          "text": "and revisit.",
+          "highlight": true
+        }
+      ],
+      "sub": "Morning and evening."
+    },
+    {
+      "id": "dua",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "bukhari:6306 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "SAYYID AL-ISTIGHFAR",
+      "ref": "bukhari:6306",
+      "excerpt": "'Allahumma anta Rabbi la ilaha illa anta, Khalaqtani wa ana `Abduka, wa ana `ala `ahdika wa wa`dika mastata`tu, A`udhu bika min Sharri ma sana`tu, abu'u Laka bini`matika `alaiya, wa abu'u laka bidhanbi faghfir lee fa innahu la yaghfiru adhdhunuba illa anta",
+      "arabicExcerpt": "اللَّهُمَّ أَنْتَ رَبِّي، لاَ إِلَهَ إِلاَّ أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَىَّ وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي، فَإِنَّهُ لاَ يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ"
+    },
+    {
+      "id": "virtue",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "bukhari:6306 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "WHY LEARN IT",
+      "ref": "bukhari:6306",
+      "excerpt": "If somebody recites it during the day with firm faith in it, and dies on the same day before the evening, he will be from the people of Paradise"
+    },
+    {
+      "id": "moments",
+      "type": "cards",
+      "durationInFrames": 150,
+      "purpose": "Practical examples (our suggestions).",
+      "onScreen": "WHEN TO SAY IT / After Fajr · After Maghrib · Learn one line a day",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "WHEN TO SAY IT",
+      "headline": [
+        {
+          "text": "Make it part"
+        },
+        {
+          "text": "of your day.",
+          "highlight": true
+        }
+      ],
+      "enter": "pop",
+      "popStart": 12,
+      "popStagger": 16,
+      "cards": [
+        {
+          "text": "After Fajr",
+          "status": "pass",
+          "tag": "MORNING"
+        },
+        {
+          "text": "After Maghrib",
+          "status": "pass",
+          "tag": "EVENING"
+        },
+        {
+          "text": "Learn one line a day",
+          "status": "pass",
+          "tag": "MEMORISE"
+        }
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Learn it. Say it daily. / Save this to learn it",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Learn it."
+        },
+        {
+          "text": "Say it daily.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this to learn it",
+      "ctaAt": 10,
+      "endCardAt": 20
+    }
+  ],
+  "cover": {
+    "kicker": "DUA OF THE DAY",
+    "headline": [
+      {
+        "text": "The best"
+      },
+      {
+        "text": "istighfar",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "A remembrance to learn and revisit each morning.",
+    "body": [
+      "Sayyid al-Istighfar, from Sahih al-Bukhari 6306: the Arabic, and the words as given in Muhsin Khan's translation.",
+      "Swipe for its virtue and when to say it."
+    ],
+    "cta": "Save this to learn it.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Dua",
+      "#Dhikr",
+      "#Istighfar"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this to learn it"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:6306 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:6306"
+    },
+    {
+      "text": "Suggested moments and memorising tips are our own.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Launch calendar day 10."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

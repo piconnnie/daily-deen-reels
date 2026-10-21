@@ -1,0 +1,178 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "Practising gratitude through one action",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "C: Daily Deen & Practical Islam",
+    "series": "before-you-scroll",
+    "objective": "shares",
+    "format": "before-you-scroll",
+    "targetDurationSec": 19,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Qur'an 14:7 links gratitude with increase, and gratitude can be shown in how we treat people today.",
+  "hooks": [
+    {
+      "text": "What if gratitude changed how you treated people?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the teaching answers it."
+    },
+    {
+      "text": "Gratitude is a verb.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, less direct."
+    },
+    {
+      "text": "Thank someone today.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "What if gratitude changed how you treat people? / Before you scroll on.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "What if"
+        },
+        {
+          "text": "gratitude"
+        },
+        {
+          "text": "changed how"
+        },
+        {
+          "text": "you treat"
+        },
+        {
+          "text": "people?",
+          "highlight": true
+        }
+      ],
+      "sub": "Before you scroll on."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 330,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:14:7 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · IBRAHIM",
+      "ref": "quran:14:7"
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Thank one person today. / Share it with a friend",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Thank one"
+        },
+        {
+          "text": "person today.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with a friend",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "BEFORE YOU SCROLL",
+    "headline": [
+      {
+        "text": "Gratitude you"
+      },
+      {
+        "text": "can see",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "What if gratitude changed how you treated people today?",
+    "body": [
+      "Qur'an 14:7 ties gratitude to increase.",
+      "One action today: thank someone specifically for something they did."
+    ],
+    "cta": "Share it with a friend.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#DailyDeen",
+      "#Shukr",
+      "#Quran"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with a friend"
+  },
+  "claims": [
+    {
+      "text": "What quran:14:7 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:14:7"
+    },
+    {
+      "text": "Thanking someone is our suggestion for acting on the ayah.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Launch calendar day 11."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

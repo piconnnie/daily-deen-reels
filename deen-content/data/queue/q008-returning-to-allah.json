@@ -1,0 +1,201 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "Repentance and returning to Allah after a mistake",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "B: Heart-Softening Reminders",
+    "series": "heart-reminder",
+    "objective": "shares",
+    "format": "heart-reminder",
+    "targetDurationSec": 30,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Qur'an 39:53 tells those who have wronged themselves not to despair of Allah's mercy, so a mistake can be the start of a return.",
+  "hooks": [
+    {
+      "text": "A mistake doesn't have to be the end",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the teaching answers it."
+    },
+    {
+      "text": "Is it too late to come back?",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, less direct."
+    },
+    {
+      "text": "Return. He forgives.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "A mistake is not the end of your return. / Read this if you feel too far.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "A mistake"
+        },
+        {
+          "text": "is not the"
+        },
+        {
+          "text": "end of your"
+        },
+        {
+          "text": "return.",
+          "highlight": true
+        }
+      ],
+      "sub": "Read this if you feel too far."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 405,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:39:53 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · AZ-ZUMAR",
+      "ref": "quran:39:53"
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "durationInFrames": 255,
+      "purpose": "Reflection: our words, clearly labelled.",
+      "onScreen": "REFLECTION / Come back, as you are. / Feeling far is not a reason to stay away. The door this ayah describes is open to the one who returns. Begin with a sincere istighfar today.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "Come back,"
+        },
+        {
+          "text": "as you are.",
+          "highlight": true
+        }
+      ],
+      "body": [
+        "Feeling far is not a reason to stay away. The door this ayah describes is open to the one who returns.",
+        "Begin with a sincere istighfar today."
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Return. He forgives. / Share it with someone who needs it",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Return."
+        },
+        {
+          "text": "He forgives.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with someone who needs it",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "A REMINDER YOUR HEART NEEDS",
+    "headline": [
+      {
+        "text": "Not the end of"
+      },
+      {
+        "text": "your return",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "A mistake does not have to be the end of your return.",
+    "body": [
+      "Qur'an 39:53 speaks to those who have wronged themselves: do not despair of the mercy of Allah.",
+      "Begin with a sincere istighfar today."
+    ],
+    "cta": "Share it with someone who may find it helpful.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#IslamicReminder",
+      "#Tawbah",
+      "#Quran"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with someone who needs it"
+  },
+  "claims": [
+    {
+      "text": "What quran:39:53 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:39:53"
+    },
+    {
+      "text": "Starting with istighfar is our suggestion.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Launch calendar day 8."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

@@ -8,7 +8,7 @@
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
-import {OUT, ROOT, ensureDir, loadReel, readJsonIfExists, sceneTimings, totalFrames} from '../lib.mjs';
+import {OUT, ROOT, ensureDir, kindOf, loadReel, readJsonIfExists, sceneTimings, slideFiles, totalFrames} from '../lib.mjs';
 import {describeStyle, pickStyle, STYLE_OPTIONS} from '../style.mjs';
 import {RECITE} from '../sources/recitation.mjs';
 const RECITE_IDS = RECITE.reciters.map((r) => r.id).join(' | ');
@@ -28,12 +28,26 @@ if (!meta || !qa) throw new Error('Run build-package and validate first.');
 if (qa.status !== 'automated-passed') throw new Error(`QA status is ${qa.status}; refusing to archive for review.`);
 
 const sha = (p) => crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const kind = kindOf(reel);
+const isReel = kind === 'reel';
 const files = {
-  video: path.join(OUT.reels, `${id}.mp4`),
   cover: path.join(OUT.covers, `${id}.jpg`),
   contactSheet: path.join(OUT.qa, id, 'contact-sheet.png'),
+  ...(isReel ? {video: path.join(OUT.reels, `${id}.mp4`)} : {}),
 };
 for (const [k, p] of Object.entries(files)) if (!fs.existsSync(p)) throw new Error(`Missing ${k}: ${p}`);
+const slides = isReel ? [] : slideFiles(id, 'jpg');
+if (!isReel && slides.length !== reel.scenes.length) throw new Error(`Expected ${reel.scenes.length} slide image(s), found ${slides.length}`);
+// Release assets carry the reel id so one release folder can hold them all.
+const slideNames = slides.map((_, i) => `${id}-slide-${String(i + 1).padStart(2, '0')}.jpg`);
+const namedSheet = path.join(OUT.qa, id, `${id}-contact-sheet.png`);
+fs.copyFileSync(files.contactSheet, namedSheet);
+const upload = [files.cover, namedSheet, ...(isReel ? [files.video] : [])];
+slides.forEach((f, i) => {
+  const named = path.join(OUT.qa, id, slideNames[i]);
+  fs.copyFileSync(f, named);
+  upload.push(named);
+});
 
 const dir = path.join(ROOT, 'archive', id);
 ensureDir(dir);
@@ -50,14 +64,15 @@ const asset = (name) => `https://github.com/${repo}/releases/download/${tag}/${n
 const state = {
   id,
   createdAt: new Date().toISOString(),
+  kind,
   release: {
     tag,
-    video: `${id}.mp4`,
     cover: `${id}.jpg`,
     contactSheet: `${id}-contact-sheet.png`,
+    ...(isReel ? {video: `${id}.mp4`} : {slides: slideNames}),
   },
-  sha256: {video: sha(files.video), cover: sha(files.cover)},
-  durationSec: +(totalFrames(reel) / reel.fps).toFixed(2),
+  sha256: isReel ? {video: sha(files.video), cover: sha(files.cover)} : {cover: sha(files.cover), slides: slides.map(sha)},
+  durationSec: isReel ? +(totalFrames(reel) / reel.fps).toFixed(2) : null,
   qa: {status: qa.status, errors: qa.errors, warnings: qa.warnings, checks: qa.checks.length},
   critic: writer?.finalCritic ?? null,
   needsAttention: !!writer?.needsAttention,
@@ -76,15 +91,22 @@ const critic = writer?.finalCritic;
 const lines = [];
 lines.push(`## ${hook.text}`);
 lines.push('');
-lines.push(`**${reel.brief.pillar}** · ${reel.brief.format} · ${state.durationSec}s · objective: ${reel.brief.objective}`);
+const KIND = {reel: '🎬 Reel', carousel: `🖼️ Carousel · ${slides.length} slides`, story: '📱 Story'}[kind];
+const seriesName = reel.brief.series ? JSON.parse(fs.readFileSync(path.join(ROOT, 'src/templates/series.json'), 'utf8')).find((x) => x.id === reel.brief.series)?.name : null;
+lines.push(`**${KIND}**${seriesName ? ` · series: **${seriesName}**` : ''} · ${reel.brief.pillar} · ${reel.brief.format}${isReel ? ` · ${state.durationSec}s` : ''} · goal: ${reel.brief.objective}${reel.publish?.occasion ? ` · occasion: **${reel.publish.occasion}**` : ''}`);
 lines.push(`🎨 ${describeStyle(pickStyle(reel.id, reel.style))}`);
 const recit = reel.recitation?.files ? reel.recitation : null;
-lines.push(recit ? `🎧 Recitation: [${recit.citation}](${recit.url}) — ${recit.reciterName} (${recit.totalSec}s, ${recit.mode === 'scene' ? 'with the ayah on screen' : 'from after the hook, labelled on screen'})` : '🔇 No recitation (silent reel)');
+if (isReel) lines.push(recit ? `🎧 Recitation: [${recit.citation}](${recit.url}) — ${recit.reciterName} (${recit.totalSec}s, ${recit.mode === 'scene' ? 'with the ayah on screen' : 'from after the hook, labelled on screen'})` : '🔇 No recitation (silent reel)');
 lines.push('');
 if (state.needsAttention) lines.push('> ⚠️ **Needs attention:** the editor pass did not fully approve this draft after the maximum revision rounds. Read the notes below before merging.', '');
-lines.push(`<img src="${asset(`${id}.jpg`)}" width="240" alt="cover"> <img src="${asset(`${id}-contact-sheet.png`)}" width="520" alt="frames">`);
-lines.push('');
-lines.push(`▶️ **[Watch the reel (MP4)](${asset(`${id}.mp4`)})**`);
+if (isReel) {
+  lines.push(`<img src="${asset(`${id}.jpg`)}" width="240" alt="cover"> <img src="${asset(`${id}-contact-sheet.png`)}" width="520" alt="frames">`);
+  lines.push('');
+  lines.push(`▶️ **[Watch and listen to the reel (MP4)](${asset(`${id}.mp4`)})**`);
+} else {
+  lines.push(slideNames.map((n, i) => `<a href="${asset(n)}"><img src="${asset(n)}" width="${kind === 'story' ? 220 : 180}" alt="slide ${i + 1}"></a>`).join(' '));
+  if (kind === 'story') lines.push('', '_Stories post without a caption and disappear after 24 hours. Interactive stickers can be added by hand in the app._');
+}
 lines.push('');
 lines.push(`**Core insight:** ${reel.coreInsight}`);
 lines.push('');
@@ -106,9 +128,9 @@ for (const sc of reel.scenes.filter((x) => x.type === 'source' && x.resolved)) {
 }
 lines.push('');
 lines.push('### Script');
-lines.push('| Time | Scene | On screen |');
+lines.push(`| ${isReel ? 'Time' : 'Slide'} | Scene | On screen |`);
 lines.push('|---|---|---|');
-reel.scenes.forEach((s, i) => lines.push(`| ${t[i].startSec}–${t[i].endSec}s | ${s.type} | ${String(s.onScreen).replace(/\|/g, '/').replace(/\n/g, ' ')} |`));
+reel.scenes.forEach((s, i) => lines.push(`| ${isReel ? `${t[i].startSec}–${t[i].endSec}s` : `slide ${i + 1}`} | ${s.type} | ${String(s.onScreen).replace(/\|/g, '/').replace(/\n/g, ' ')} |`));
 lines.push('');
 lines.push('<details><summary>Hook options</summary>', '');
 lines.push('| | Hook | Angle | Score |', '|---|---|---|---|');
@@ -132,4 +154,6 @@ lines.push('', 'Automated checks can’t watch or listen. Merging records you as
 
 ensureDir(path.join(ROOT, 'output', 'daily'));
 fs.writeFileSync(path.join(ROOT, 'output', 'daily', `${id}.pr.md`), lines.join('\n') + '\n');
+// Files to upload to the review release (read by build-for-review.sh).
+fs.writeFileSync(path.join(ROOT, 'output', 'daily', `${id}.assets.txt`), upload.map((f) => path.relative(ROOT, f)).join('\n') + '\n');
 console.log(`Archived ${id} → archive/${id}/ ; PR body → output/daily/${id}.pr.md`);
