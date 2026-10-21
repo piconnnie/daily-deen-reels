@@ -1,0 +1,205 @@
+{
+  "brief": {
+    "topic": "Speak good or stay quiet",
+    "audience": "Muslims looking for a short, authentic reminder they can act on today",
+    "pillar": "C: Character and Manners",
+    "objective": "saves",
+    "format": "hadith-practice",
+    "targetDurationSec": 24,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Sahih al-Bukhari 6018 gives one test for speech: say what is good or keep quiet.",
+  "hooks": [
+    {
+      "text": "Before you post that comment…",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the source answers it right away."
+    },
+    {
+      "text": "One test for everything you say.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, slightly less direct."
+    },
+    {
+      "text": "Say good, or stay quiet.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Works better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the quoted source pays it off immediately.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Recognition: meet the viewer where they are.",
+      "onScreen": "Before you post that comment… / One test for everything you say.",
+      "storyboard": {
+        "visual": "Headline, highlighted last line; sub-line.",
+        "animation": "Readable on frame 0; underline sweep."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Before you"
+        },
+        {
+          "text": "post that"
+        },
+        {
+          "text": "comment…",
+          "highlight": true
+        }
+      ],
+      "sub": "One test for everything you say."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 240,
+      "purpose": "The source itself, verbatim, with its reference.",
+      "onScreen": "bukhari:6018 (text pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Framed panel: Arabic (if any), translation; citation pill.",
+        "animation": "Arabic, then translation, then citation."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ SAID",
+      "ref": "bukhari:6018",
+      "excerpt": "anybody who believes in Allah and the Last Day should talk what is good or keep quiet"
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 255,
+      "purpose": "Our reflection: small, concrete actions (our words, not attributed).",
+      "onScreen": "TRY THIS TODAY / Good words, or silence. / Before you speak, ask: is this good? · Leave one argument unanswered today · Replace one complaint with a kind word",
+      "storyboard": {
+        "visual": "Numbered list, rule box.",
+        "animation": "Items every 34 frames from 24."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "TRY THIS TODAY",
+      "headline": [
+        {
+          "text": "Good words,"
+        },
+        {
+          "text": "or silence.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Before you speak, ask: is this good?",
+        "Leave one argument unanswered today",
+        "Replace one complaint with a kind word"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34,
+      "rule": "If it isn't good, it can wait. Or it can stay unsaid."
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One line to remember + one CTA.",
+      "onScreen": "Say good, or stay quiet. / Save this before you reply next",
+      "storyboard": {
+        "visual": "Takeaway lines, CTA pill, end card.",
+        "animation": "Lines rise; CTA at 40; end card at 70."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Say good,"
+        },
+        {
+          "text": "or stay"
+        },
+        {
+          "text": "quiet.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this before you reply next",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "ON SPEECH",
+    "headline": [
+      {
+        "text": "Speak good"
+      },
+      {
+        "text": "or stay quiet",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "The comment section would look very different with this one rule.",
+    "body": [
+      "Sahih al-Bukhari 6018 gives a simple test for speech: is it good? If not, keep quiet.",
+      "Try this today:\n→ before you speak, ask: is this good?\n→ leave one argument unanswered\n→ replace one complaint with a kind word"
+    ],
+    "cta": "Save this before you reply next.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Akhlaq",
+      "#Akhlaq",
+      "#Hadith",
+      "#DailyReminder"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this before you reply next"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:6018 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "bukhari:6018"
+    },
+    {
+      "text": "Pausing before speaking and leaving arguments are ways to act on the hadith.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "2026-11-02",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

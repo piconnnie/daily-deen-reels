@@ -1,0 +1,26 @@
+name: "DEEN · Check Instagram setup"
+# Run manually after adding secrets. Reports exactly what's missing; never prints tokens.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: deen-content
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      HAS_OAUTH: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN != '' }}
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      IG_LOGIN: ${{ vars.IG_LOGIN || 'instagram' }}
+      IG_API_VERSION: ${{ vars.IG_API_VERSION || 'v26.0' }}
+      IG_UPLOAD_MODE: ${{ vars.IG_UPLOAD_MODE }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/daily/check-instagram.mjs

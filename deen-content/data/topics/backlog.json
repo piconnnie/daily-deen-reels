@@ -1,0 +1,233 @@
+{
+  "_readme": "Topic backlog for opt-in paid writers (the free queue doesn't use it). The planner picks an open topic from the most under-served pillar and rotates formats. Each topic suggests source refs (quran:<s>:<a>, bukhari:<n>, muslim:<n>[a-z]); the writer checks them with scripts/sources/cli.mjs show. Add ideas freely with status 'open'. 'used' items are kept for de-duplication.",
+  "topics": [
+    {
+      "id": "t001",
+      "pillar": "A",
+      "format": "ayah-reflection",
+      "status": "open",
+      "topic": "Allah is near when you call",
+      "angle": "Du'a is a conversation, not a last resort",
+      "research": false,
+      "sources": [
+        "quran:2:186"
+      ]
+    },
+    {
+      "id": "t002",
+      "pillar": "A",
+      "format": "ayah-reflection",
+      "status": "open",
+      "topic": "Never despair of Allah's mercy",
+      "angle": "A reminder for anyone who feels they've gone too far",
+      "research": false,
+      "sources": [
+        "quran:39:53"
+      ]
+    },
+    {
+      "id": "t003",
+      "pillar": "A",
+      "format": "ayah-reflection",
+      "status": "open",
+      "topic": "Remember Me; I will remember you",
+      "angle": "Small moments of dhikr through the day",
+      "research": false,
+      "sources": [
+        "quran:2:152"
+      ]
+    },
+    {
+      "id": "t004",
+      "pillar": "A",
+      "format": "ayah-reflection",
+      "status": "open",
+      "topic": "Change starts within",
+      "angle": "What we can change in ourselves today",
+      "research": false,
+      "sources": [
+        "quran:13:11"
+      ]
+    },
+    {
+      "id": "t005",
+      "pillar": "B",
+      "format": "hadith-practice",
+      "status": "open",
+      "topic": "Make things easy for people",
+      "angle": "Gentleness when teaching or reminding others",
+      "research": false,
+      "sources": [
+        "bukhari:69"
+      ]
+    },
+    {
+      "id": "t006",
+      "pillar": "B",
+      "format": "hadith-practice",
+      "status": "open",
+      "topic": "Allah loves kindness",
+      "angle": "Choosing the gentle response at home and at work",
+      "research": false,
+      "sources": [
+        "muslim:2593"
+      ]
+    },
+    {
+      "id": "t007",
+      "pillar": "B",
+      "format": "hadith-practice",
+      "status": "open",
+      "topic": "Feed people and greet everyone",
+      "angle": "Two simple deeds asked about by name",
+      "research": false,
+      "sources": [
+        "bukhari:12"
+      ]
+    },
+    {
+      "id": "t008",
+      "pillar": "C",
+      "format": "hadith-practice",
+      "status": "open",
+      "topic": "No good deed is too small",
+      "angle": "Even meeting someone with a cheerful face",
+      "research": false,
+      "sources": [
+        "muslim:2626"
+      ]
+    },
+    {
+      "id": "t009",
+      "pillar": "C",
+      "format": "hadith-practice",
+      "status": "open",
+      "topic": "Truthfulness leads to righteousness",
+      "angle": "Honesty as a daily habit, in small things too",
+      "research": false,
+      "sources": [
+        "bukhari:6094"
+      ]
+    },
+    {
+      "id": "t010",
+      "pillar": "C",
+      "format": "hadith-practice",
+      "status": "open",
+      "topic": "Advice in three words: don't get angry",
+      "angle": "The advice repeated to the man who kept asking",
+      "research": false,
+      "sources": [
+        "bukhari:6116"
+      ]
+    },
+    {
+      "id": "t011",
+      "pillar": "D",
+      "format": "habit-checklist",
+      "status": "open",
+      "topic": "Two phrases light on the tongue",
+      "angle": "Building a daily tasbih habit",
+      "research": false,
+      "sources": [
+        "bukhari:6406"
+      ]
+    },
+    {
+      "id": "t012",
+      "pillar": "D",
+      "format": "ayah-reflection",
+      "status": "open",
+      "topic": "Seek help through patience and prayer",
+      "angle": "Turning to salah when the day is heavy",
+      "research": false,
+      "sources": [
+        "quran:2:153"
+      ]
+    },
+    {
+      "id": "t013",
+      "pillar": "D",
+      "format": "dua",
+      "status": "open",
+      "topic": "A du'a for this world and the next",
+      "angle": "When and how to make it part of your day",
+      "research": false,
+      "sources": [
+        "quran:2:201"
+      ]
+    },
+    {
+      "id": "t014",
+      "pillar": "D",
+      "format": "habit-checklist",
+      "status": "open",
+      "topic": "Charity for every joint of the body",
+      "angle": "Everyday good deeds that count as sadaqah",
+      "research": false,
+      "sources": [
+        "bukhari:2989"
+      ]
+    },
+    {
+      "id": "t015",
+      "pillar": "E",
+      "format": "hadith-practice",
+      "status": "open",
+      "topic": "Your neighbour's right",
+      "angle": "Small ways to be a good neighbour this week",
+      "research": false,
+      "sources": [
+        "bukhari:6014"
+      ]
+    },
+    {
+      "id": "t016",
+      "pillar": "E",
+      "format": "ayah-reflection",
+      "status": "open",
+      "topic": "Good treatment of parents",
+      "angle": "Words and tone with parents as they get older",
+      "research": false,
+      "sources": [
+        "quran:17:23"
+      ]
+    },
+    {
+      "id": "t017",
+      "pillar": "F",
+      "format": "ayah-reflection",
+      "status": "open",
+      "topic": "Whoever relies on Allah, He is enough",
+      "angle": "Tawakkul alongside doing your part",
+      "research": false,
+      "sources": [
+        "quran:65:3"
+      ]
+    },
+    {
+      "id": "t018",
+      "pillar": "F",
+      "format": "hadith-practice",
+      "status": "open",
+      "topic": "Good in every affair of the believer",
+      "angle": "Gratitude in ease, patience in hardship",
+      "research": false,
+      "sources": [
+        "muslim:2999"
+      ]
+    },
+    {
+      "id": "t019",
+      "pillar": "F",
+      "format": "ayah-reflection",
+      "status": "open",
+      "topic": "Do not weaken, do not grieve",
+      "angle": "A reminder for low days",
+      "research": false,
+      "sources": [
+        "quran:3:139"
+      ]
+    }
+  ]
+}

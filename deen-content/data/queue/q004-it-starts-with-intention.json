@@ -1,0 +1,205 @@
+{
+  "brief": {
+    "topic": "Deeds are rewarded by intention",
+    "audience": "Muslims looking for a short, authentic reminder they can act on today",
+    "pillar": "B: Prophetic Guidance",
+    "objective": "saves",
+    "format": "hadith-practice",
+    "targetDurationSec": 26,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "The first hadith in Sahih al-Bukhari ties the reward of every deed to its intention, so ordinary tasks can be done for Allah.",
+  "hooks": [
+    {
+      "text": "Same action. Different reward?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the source answers it right away."
+    },
+    {
+      "text": "It starts before you begin.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, slightly less direct."
+    },
+    {
+      "text": "Intend it before you do it.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Works better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the quoted source pays it off immediately.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Recognition: meet the viewer where they are.",
+      "onScreen": "Same action. Different reward? / It starts before you begin.",
+      "storyboard": {
+        "visual": "Headline, highlighted last line; sub-line.",
+        "animation": "Readable on frame 0; underline sweep."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Same action."
+        },
+        {
+          "text": "Different"
+        },
+        {
+          "text": "reward?",
+          "highlight": true
+        }
+      ],
+      "sub": "It starts before you begin."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 285,
+      "purpose": "The source itself, verbatim, with its reference.",
+      "onScreen": "bukhari:1 (text pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Framed panel: Arabic (if any), translation; citation pill.",
+        "animation": "Arabic, then translation, then citation."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ SAID",
+      "ref": "bukhari:1",
+      "excerpt": "The reward of deeds depends upon the intentions and every person will get the reward according to what he has intended"
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 255,
+      "purpose": "Our reflection: small, concrete actions (our words, not attributed).",
+      "onScreen": "TRY THIS TODAY / Set an intention before you start. / Before work: to provide for your family · Before eating: to have strength for good · Before sleeping: to wake up for Fajr",
+      "storyboard": {
+        "visual": "Numbered list, rule box.",
+        "animation": "Items every 34 frames from 24."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "TRY THIS TODAY",
+      "headline": [
+        {
+          "text": "Set an intention"
+        },
+        {
+          "text": "before you start.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Before work: to provide for your family",
+        "Before eating: to have strength for good",
+        "Before sleeping: to wake up for Fajr"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34,
+      "rule": "A short pause, a sincere intention, then begin."
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One line to remember + one CTA.",
+      "onScreen": "Intend it before you do it. / Save this as a daily reminder",
+      "storyboard": {
+        "visual": "Takeaway lines, CTA pill, end card.",
+        "animation": "Lines rise; CTA at 40; end card at 70."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Intend it"
+        },
+        {
+          "text": "before you"
+        },
+        {
+          "text": "do it.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this as a daily reminder",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "FIRST HADITH IN BUKHARI",
+    "headline": [
+      {
+        "text": "It starts with"
+      },
+      {
+        "text": "intention.",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Two people can do the same thing and earn very different rewards.",
+    "body": [
+      "The very first hadith in Sahih al-Bukhari is about intention.",
+      "Try this today:\n→ before work: to provide for your family\n→ before eating: to have strength for good\n→ before sleeping: to wake up for Fajr"
+    ],
+    "cta": "Save this as a daily reminder.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Sunnah",
+      "#Niyyah",
+      "#Hadith",
+      "#DailyReminder"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this as a daily reminder"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:1 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "bukhari:1"
+    },
+    {
+      "text": "Setting an intention before everyday tasks is a way to act on the hadith.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "2026-10-26",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

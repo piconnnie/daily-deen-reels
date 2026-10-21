@@ -1,0 +1,215 @@
+{
+  "brief": {
+    "topic": "A du'a for anyone learning",
+    "audience": "Muslims looking for a short, authentic reminder they can act on today",
+    "pillar": "D: Worship and Daily Habits",
+    "objective": "saves",
+    "format": "dua",
+    "targetDurationSec": 20,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Qur'an 20:114 contains a short du'a asking for more knowledge, useful before any study or work.",
+  "hooks": [
+    {
+      "text": "A du'a for anyone learning",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the source answers it right away."
+    },
+    {
+      "text": "Before you open the book.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, slightly less direct."
+    },
+    {
+      "text": "Ask for more.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Works better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the quoted source pays it off immediately.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Recognition: meet the viewer where they are.",
+      "onScreen": "A du'a for anyone learning / Before class, work or study.",
+      "storyboard": {
+        "visual": "Headline, highlighted last line; sub-line.",
+        "animation": "Readable on frame 0; underline sweep."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "A du'a"
+        },
+        {
+          "text": "for anyone"
+        },
+        {
+          "text": "learning",
+          "highlight": true
+        }
+      ],
+      "sub": "Before class, work or study."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 165,
+      "purpose": "The source itself, verbatim, with its reference.",
+      "onScreen": "quran:20:114 (text pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Framed panel: Arabic (if any), translation; citation pill.",
+        "animation": "Arabic, then translation, then citation."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · TA-HA",
+      "ref": "quran:20:114",
+      "excerpt": "and say, \"My Lord, increase me in knowledge",
+      "arabicExcerpt": "وَقُل رَّبِّ زِدۡنِي عِلۡمࣰ ا"
+    },
+    {
+      "id": "moments",
+      "type": "cards",
+      "durationInFrames": 180,
+      "purpose": "Moments to use it (our suggestions).",
+      "onScreen": "WHEN TO SAY IT / Before studying · Before a hard meeting · When something confuses you",
+      "storyboard": {
+        "visual": "Kicker + headline; cards pop in.",
+        "animation": "Cards every 16 frames from 12."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "WHEN TO SAY IT",
+      "headline": [
+        {
+          "text": "Before you"
+        },
+        {
+          "text": "open the book.",
+          "highlight": true
+        }
+      ],
+      "enter": "pop",
+      "popStart": 12,
+      "popStagger": 16,
+      "cards": [
+        {
+          "text": "Before studying",
+          "status": "pass",
+          "tag": "STUDY"
+        },
+        {
+          "text": "Before a hard meeting",
+          "status": "pass",
+          "tag": "WORK"
+        },
+        {
+          "text": "When something confuses you",
+          "status": "pass",
+          "tag": "STUCK"
+        }
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One line to remember + one CTA.",
+      "onScreen": "Ask for more. / Save this du'a",
+      "storyboard": {
+        "visual": "Takeaway lines, CTA pill, end card.",
+        "animation": "Lines rise; CTA at 40; end card at 70."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Ask for"
+        },
+        {
+          "text": "more.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this du'a",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "QUR'AN 20:114",
+    "headline": [
+      {
+        "text": "A du'a for"
+      },
+      {
+        "text": "learning",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "A short du'a to say before you study, work or try to understand something new.",
+    "body": [
+      "It's the end of Surah Ta-Ha, ayah 114.",
+      "Moments to say it:\n→ before studying\n→ before a hard meeting\n→ when something confuses you"
+    ],
+    "cta": "Save this du'a.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Ibadah",
+      "#Dua",
+      "#Knowledge",
+      "#DailyReminder"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this du'a"
+  },
+  "claims": [
+    {
+      "text": "What quran:20:114 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "quran:20:114"
+    },
+    {
+      "text": "Suggested moments to say the du'a are our own suggestions.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "2026-10-28",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

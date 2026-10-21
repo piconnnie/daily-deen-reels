@@ -1,0 +1,46 @@
+{
+  "name": "deen-content",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Content engine for the Daily Deen Reminders Instagram page: Remotion reels with quotes pulled from verified sources (Qur'an, Sahih al-Bukhari, Sahih Muslim).",
+  "scripts": {
+    "studio": "node scripts/sync-registry.mjs && remotion studio src/index.ts",
+    "new": "node scripts/generate-content.mjs",
+    "package": "node scripts/build-package.mjs",
+    "audio": "python3 scripts/synth-audio.py",
+    "render": "node scripts/render-content.mjs",
+    "validate": "node scripts/validate-content.mjs",
+    "approve": "node scripts/approve.mjs",
+    "publish": "node scripts/publish.mjs",
+    "metrics": "node scripts/analyze-performance.mjs",
+    "typecheck": "node scripts/sync-registry.mjs && tsc --noEmit",
+    "registry": "node scripts/sync-registry.mjs",
+    "daily:plan": "node scripts/daily/plan.mjs",
+    "daily:write": "node scripts/daily/write-reel.mjs",
+    "daily:archive": "node scripts/daily/archive.mjs",
+    "daily:publish-due": "node scripts/daily/publish-due.mjs",
+    "daily:publish": "node scripts/daily/publish-instagram.mjs",
+    "ig:check": "node scripts/daily/check-instagram.mjs",
+    "ig:insights": "node scripts/daily/fetch-insights.mjs",
+    "sources:fetch": "node scripts/sources/cli.mjs fetch",
+    "sources:show": "node scripts/sources/cli.mjs show",
+    "sources:search": "node scripts/sources/cli.mjs search",
+    "sources:apply": "node scripts/sources/cli.mjs apply"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "remotion": "^4.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "typescript": "^5.4.0",
+    "esbuild": "^0.25.0",
+    "playwright": "^1.55.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

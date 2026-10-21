@@ -1,0 +1,137 @@
+[
+  {
+    "id": "ayah-reflection",
+    "name": "Ayah Reflection",
+    "arc": "Hook → the ayah (Arabic + translation) → what it means for today → one action",
+    "scenes": [
+      {
+        "type": "hook",
+        "purpose": "A real-life moment the ayah speaks to",
+        "seconds": 3
+      },
+      {
+        "type": "source",
+        "purpose": "The ayah, Arabic + Saheeh International (quran:<s>:<a>)",
+        "seconds": 9
+      },
+      {
+        "type": "checklist",
+        "purpose": "Reflection: what this asks of us today (our words, not attributed)",
+        "seconds": 9
+      },
+      {
+        "type": "takeaway",
+        "purpose": "One line to remember + one CTA",
+        "seconds": 5
+      }
+    ]
+  },
+  {
+    "id": "hadith-practice",
+    "name": "Hadith in Practice",
+    "arc": "Hook → the hadith (Bukhari/Muslim) → three ways to live it today → takeaway",
+    "scenes": [
+      {
+        "type": "hook",
+        "purpose": "The everyday situation the hadith addresses",
+        "seconds": 3
+      },
+      {
+        "type": "source",
+        "purpose": "The hadith text (verbatim excerpt if long) with its reference",
+        "seconds": 10
+      },
+      {
+        "type": "checklist",
+        "purpose": "Try this today: 3 small, concrete actions",
+        "seconds": 9
+      },
+      {
+        "type": "takeaway",
+        "purpose": "One line to remember + one CTA",
+        "seconds": 5
+      }
+    ]
+  },
+  {
+    "id": "dua",
+    "name": "A Du'a for…",
+    "arc": "Hook (the moment) → the du'a from the Qur'an → when to say it → takeaway",
+    "scenes": [
+      {
+        "type": "hook",
+        "purpose": "The moment you need this du'a",
+        "seconds": 3
+      },
+      {
+        "type": "source",
+        "purpose": "The du'a as it appears in the Qur'an, Arabic + translation",
+        "seconds": 10
+      },
+      {
+        "type": "cards",
+        "purpose": "Moments to say it (our suggestions, clearly ours)",
+        "seconds": 7
+      },
+      {
+        "type": "takeaway",
+        "purpose": "Save-worthy line + save CTA",
+        "seconds": 5
+      }
+    ]
+  },
+  {
+    "id": "habit-checklist",
+    "name": "Small Habit, Big Reward",
+    "arc": "Hook → source that motivates the habit → checklist to start → takeaway",
+    "scenes": [
+      {
+        "type": "hook",
+        "purpose": "The tiny habit and why people skip it",
+        "seconds": 3
+      },
+      {
+        "type": "source",
+        "purpose": "The verse or hadith behind it",
+        "seconds": 9
+      },
+      {
+        "type": "checklist",
+        "purpose": "How to build it this week",
+        "seconds": 9
+      },
+      {
+        "type": "takeaway",
+        "purpose": "One line + one CTA",
+        "seconds": 5
+      }
+    ]
+  },
+  {
+    "id": "heart-check",
+    "name": "Heart Check",
+    "arc": "Hook (a common feeling) → two sources in conversation → a question to sit with",
+    "scenes": [
+      {
+        "type": "hook",
+        "purpose": "Name a feeling honestly (stress, envy, anger, doubt)",
+        "seconds": 3
+      },
+      {
+        "type": "source",
+        "purpose": "First source",
+        "seconds": 8
+      },
+      {
+        "type": "source",
+        "purpose": "Second source that completes the picture",
+        "seconds": 8
+      },
+      {
+        "type": "takeaway",
+        "purpose": "A question to reflect on + one CTA",
+        "seconds": 5
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+node_modules/
+output/
+.env
+*.local.json
+# Regenerated on every render/validate/studio run
+src/content/reels.generated.ts
+# Deterministic audio beds are re-synthesised at render time
+public/audio/*.wav
+.cache/

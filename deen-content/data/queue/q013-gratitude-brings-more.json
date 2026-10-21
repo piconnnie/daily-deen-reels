@@ -1,0 +1,203 @@
+{
+  "brief": {
+    "topic": "Gratitude and increase",
+    "audience": "Muslims looking for a short, authentic reminder they can act on today",
+    "pillar": "A: Qur'an Reflections",
+    "objective": "saves",
+    "format": "ayah-reflection",
+    "targetDurationSec": 28,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "In Qur'an 14:7 gratitude is met with increase, so noticing and using blessings well is worth practising daily.",
+  "hooks": [
+    {
+      "text": "Feeling like it's never enough?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the source answers it right away."
+    },
+    {
+      "text": "Notice it. Say it. Use it well.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, slightly less direct."
+    },
+    {
+      "text": "Gratitude brings more.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Works better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the quoted source pays it off immediately.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Recognition: meet the viewer where they are.",
+      "onScreen": "Feeling like it's never enough? / Read this ayah slowly.",
+      "storyboard": {
+        "visual": "Headline, highlighted last line; sub-line.",
+        "animation": "Readable on frame 0; underline sweep."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Feeling like"
+        },
+        {
+          "text": "it's never"
+        },
+        {
+          "text": "enough?",
+          "highlight": true
+        }
+      ],
+      "sub": "Read this ayah slowly."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 330,
+      "purpose": "The source itself, verbatim, with its reference.",
+      "onScreen": "quran:14:7 (text pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Framed panel: Arabic (if any), translation; citation pill.",
+        "animation": "Arabic, then translation, then citation."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · IBRAHIM",
+      "ref": "quran:14:7"
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 255,
+      "purpose": "Our reflection: small, concrete actions (our words, not attributed).",
+      "onScreen": "REFLECTION / Gratitude opens doors. / Name three blessings before you sleep · Thank one person who helped you this week · Use a blessing well: time, health, money",
+      "storyboard": {
+        "visual": "Numbered list, rule box.",
+        "animation": "Items every 34 frames from 24."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "Gratitude"
+        },
+        {
+          "text": "opens doors.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Name three blessings before you sleep",
+        "Thank one person who helped you this week",
+        "Use a blessing well: time, health, money"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34,
+      "rule": "Gratitude shows in our words and in how we use what we have."
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One line to remember + one CTA.",
+      "onScreen": "Notice it. Say it. Use it well. / Save this for tonight",
+      "storyboard": {
+        "visual": "Takeaway lines, CTA pill, end card.",
+        "animation": "Lines rise; CTA at 40; end card at 70."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Notice it."
+        },
+        {
+          "text": "Say it."
+        },
+        {
+          "text": "Use it well.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this for tonight",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "QUR'AN 14:7",
+    "headline": [
+      {
+        "text": "Gratitude"
+      },
+      {
+        "text": "brings more",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "When it feels like it's never enough, start by counting what's already here.",
+    "body": [
+      "A reflection for tonight:\n→ name three blessings before you sleep\n→ thank one person who helped you this week\n→ use a blessing well: time, health, money"
+    ],
+    "cta": "Save this for tonight.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Quran",
+      "#Shukr",
+      "#Quran",
+      "#DailyReminder"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this for tonight"
+  },
+  "claims": [
+    {
+      "text": "What quran:14:7 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "quran:14:7"
+    },
+    {
+      "text": "Naming blessings, thanking people and using blessings well are ways to act on the ayah.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "2026-11-04",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

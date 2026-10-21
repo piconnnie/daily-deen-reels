@@ -1,0 +1,199 @@
+{
+  "brief": {
+    "topic": "Show mercy to receive mercy",
+    "audience": "Muslims looking for a short, authentic reminder they can act on today",
+    "pillar": "B: Prophetic Guidance",
+    "objective": "shares",
+    "format": "hadith-practice",
+    "targetDurationSec": 23,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Sahih al-Bukhari 6013 ties being treated mercifully to being merciful to others.",
+  "hooks": [
+    {
+      "text": "Want mercy? Start here.",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the source answers it right away."
+    },
+    {
+      "text": "A short hadith with a big ask.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, slightly less direct."
+    },
+    {
+      "text": "Be merciful, first.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Works better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the quoted source pays it off immediately.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Recognition: meet the viewer where they are.",
+      "onScreen": "Want mercy? Start here. / A short hadith with a big ask.",
+      "storyboard": {
+        "visual": "Headline, highlighted last line; sub-line.",
+        "animation": "Readable on frame 0; underline sweep."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Want mercy?"
+        },
+        {
+          "text": "Start here.",
+          "highlight": true
+        }
+      ],
+      "sub": "A short hadith with a big ask."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 195,
+      "purpose": "The source itself, verbatim, with its reference.",
+      "onScreen": "bukhari:6013 (text pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Framed panel: Arabic (if any), translation; citation pill.",
+        "animation": "Arabic, then translation, then citation."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ SAID",
+      "ref": "bukhari:6013",
+      "excerpt": "He who is not merciful to others, will not be treated mercifully"
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 255,
+      "purpose": "Our reflection: small, concrete actions (our words, not attributed).",
+      "onScreen": "TRY THIS TODAY / Show mercy first. / Be patient with someone who is slow · Forgive one small wrong without mentioning it · Be gentle with children and animals",
+      "storyboard": {
+        "visual": "Numbered list, rule box.",
+        "animation": "Items every 34 frames from 24."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "TRY THIS TODAY",
+      "headline": [
+        {
+          "text": "Show mercy"
+        },
+        {
+          "text": "first.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Be patient with someone who is slow",
+        "Forgive one small wrong without mentioning it",
+        "Be gentle with children and animals"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34,
+      "rule": "The mercy we hope for, we can start showing today."
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One line to remember + one CTA.",
+      "onScreen": "Be merciful, first. / Share this with your family",
+      "storyboard": {
+        "visual": "Takeaway lines, CTA pill, end card.",
+        "animation": "Lines rise; CTA at 40; end card at 70."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Be merciful,"
+        },
+        {
+          "text": "first.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share this with your family",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "ON MERCY",
+    "headline": [
+      {
+        "text": "Mercy starts"
+      },
+      {
+        "text": "with you",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "We all hope for mercy. This hadith asks us to start giving it.",
+    "body": [
+      "Sahih al-Bukhari 6013 is one line long and asks a lot of us.",
+      "Try this today:\n→ be patient with someone who is slow\n→ forgive one small wrong without mentioning it\n→ be gentle with children and animals"
+    ],
+    "cta": "Share this with your family.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Sunnah",
+      "#Mercy",
+      "#Hadith",
+      "#DailyReminder"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share this with your family"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:6013 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "bukhari:6013"
+    },
+    {
+      "text": "Patience, quiet forgiveness and gentleness are ways to act on the hadith.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "2026-11-03",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

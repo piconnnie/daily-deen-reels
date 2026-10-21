@@ -1,0 +1,52 @@
+name: "DEEN · Weekly insights"
+# Sundays: (1) Claude scans the web for timely, researched topics and adds them
+# to the backlog with sources; (2) Instagram insights are imported (best effort)
+# and the baseline-relative report is refreshed, which steers the planner.
+
+on:
+  schedule:
+    - cron: "30 3 * * 0" # Sunday 09:00 IST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write # Claude Code GitHub Action authentication
+
+concurrency:
+  group: deen-main-writer
+  cancel-in-progress: false
+
+defaults:
+  run:
+    working-directory: deen-content
+
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      # Topic scans use a paid writer, so they run only when DEEN_WRITER opts in.
+      HAS_OAUTH: ${{ vars.DEEN_WRITER == 'subscription' && secrets.CLAUDE_CODE_OAUTH_TOKEN != '' }}
+      USE_API: ${{ vars.DEEN_WRITER == 'api' }}
+      DEEN_MODEL: ${{ vars.DEEN_MODEL || 'claude-opus-5-5' }}
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      IG_LOGIN: ${{ vars.IG_LOGIN || 'instagram' }}
+      IG_API_VERSION: ${{ vars.IG_API_VERSION || 'v26.0' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # No web topic scan on this page: topics come only from the backlog and the
+      # verified sources, never from trending web content.
+      - name: Import Instagram insights
+        continue-on-error: true
+        run: node scripts/daily/fetch-insights.mjs
+      - name: Refresh performance report
+        run: node scripts/analyze-performance.mjs
+      - name: Commit
+        run: scripts/daily/commit-to-main.sh "deen - weekly topics and insights" data/topics/backlog.json data/performance

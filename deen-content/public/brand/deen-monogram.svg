@@ -1,0 +1,7 @@
+<!-- Daily Deen monogram: eight-pointed star framing a "D". Proposed mark, not a registered trademark. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <polygon points="114,60 60,114 6,60 60,6" fill="#0A1022" stroke="#C8A24A" stroke-width="5" stroke-linejoin="round"/>
+  <polygon points="98.2,98.2 21.8,98.2 21.8,21.8 98.2,21.8" fill="#0A1022" stroke="#C8A24A" stroke-width="5" stroke-linejoin="round"/>
+  <polygon points="114,60 60,114 6,60 60,6" fill="none" stroke="#C8A24A" stroke-width="5" stroke-linejoin="round"/>
+  <text x="60" y="76" text-anchor="middle" font-family="Amiri, serif" font-weight="700" font-size="46" fill="#F2D88B">D</text>
+</svg>

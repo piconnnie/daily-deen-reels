@@ -1,0 +1,61 @@
+name: DEEN · Control panel (GitHub Pages)
+
+# Tests the control panel, boots it in a real browser, then publishes it to
+# GitHub Pages. One-time setup: Settings → Pages → Source: "GitHub Actions".
+on:
+  push:
+    branches: [main]
+    paths:
+      - "control-panel/**"
+      - ".github/workflows/deen-control-panel.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install test tools
+        run: |
+          pip install requests==2.32.3 playwright==1.48.0
+          python -m playwright install --with-deps chromium
+      - name: Logic and flow tests (mock GitHub)
+        run: python control-panel/tests/test_panel.py
+      - name: Build the site
+        run: |
+          mkdir -p _site
+          cp control-panel/index.html control-panel/app.py control-panel/deen_github.py _site/
+          sed -i "s|<meta name=\"robots\"|<meta name=\"build\" content=\"${GITHUB_SHA::12}\" />\n    <meta name=\"robots\"|" _site/index.html
+      - name: Boot the real app in Chromium (sample data)
+        run: python control-panel/tests/smoke_browser.py _site smoke-shots
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: control-panel-screenshots
+          path: smoke-shots
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

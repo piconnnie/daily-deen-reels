@@ -1,0 +1,197 @@
+{
+  "brief": {
+    "topic": "Allah is near when you call",
+    "audience": "Muslims looking for a short, authentic reminder they can act on today",
+    "pillar": "A: Qur'an Reflections",
+    "objective": "saves",
+    "format": "ayah-reflection",
+    "targetDurationSec": 30,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Qur'an 2:186 says Allah is near and responds to the one who calls, so du'a can be the first step rather than the last resort.",
+  "hooks": [
+    {
+      "text": "Is du'a your last resort?",
+      "angle": "Gentle challenge",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Relatable; the ayah answers it."
+    },
+    {
+      "text": "He is closer than you think.",
+      "angle": "Reassurance",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 4,
+        "comprehension": 5
+      },
+      "notes": "Warm but less specific."
+    },
+    {
+      "text": "Ask first, worry later.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 4,
+        "comprehension": 4
+      },
+      "notes": "Better as a takeaway."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Names a common habit honestly; the ayah reframes it immediately.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Recognition.",
+      "onScreen": "Is du'a your last resort? / Read this first.",
+      "storyboard": {
+        "visual": "Headline.",
+        "animation": "Readable on frame 0."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Is du'a your"
+        },
+        {
+          "text": "last resort?",
+          "highlight": true
+        }
+      ],
+      "sub": "Read this first."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 450,
+      "purpose": "The ayah.",
+      "onScreen": "Qur'an 2:186",
+      "storyboard": {
+        "visual": "Framed ayah.",
+        "animation": "Arabic, translation, citation."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · AL-BAQARAH",
+      "ref": "quran:2:186"
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 255,
+      "purpose": "Our reflection.",
+      "onScreen": "TRY THIS TODAY / Call on Him first.",
+      "storyboard": {
+        "visual": "List.",
+        "animation": "Items every 34 frames."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "TRY THIS TODAY",
+      "headline": [
+        {
+          "text": "Make du'a"
+        },
+        {
+          "text": "the first step.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Before a hard task, ask Allah for help",
+        "Make du'a in your own words, any language",
+        "Ask for small things too, not only big ones"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34,
+      "rule": "Then do your part, trusting that He hears."
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "Line + CTA.",
+      "onScreen": "He is near. Ask Him first.",
+      "storyboard": {
+        "visual": "Takeaway.",
+        "animation": "Lines rise."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "He is near."
+        },
+        {
+          "text": "Ask Him first.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this as a reminder",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "QUR'AN 2:186",
+    "headline": [
+      {
+        "text": "He is"
+      },
+      {
+        "text": "near.",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Du'a isn't only for emergencies.",
+    "body": [
+      "Qur'an 2:186 is a reminder that Allah is near and responds to the one who calls on Him.",
+      "Try this today:\n→ before a hard task, ask for help\n→ make du'a in your own words\n→ ask for small things too"
+    ],
+    "cta": "Save this as a reminder.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Dua",
+      "#Quran",
+      "#DailyReminder"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this as a reminder"
+  },
+  "claims": [
+    {
+      "text": "What Qur'an 2:186 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:2:186"
+    },
+    {
+      "text": "Making du'a first is a way to act on the ayah.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "2026-10-22",
+    "notes": "Test fixture."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

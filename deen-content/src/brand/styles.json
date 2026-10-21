@@ -1,0 +1,22 @@
+{
+  "_comment": "Per-reel visual variety. A reel's `style` field picks one of each; without it, the reel number rotates through them (theme n%6, motion n%3). Music defaults to \"none\": reels are silent (no music, no sound effects) — a deliberate choice for this page. Read by src/brand/theme.tsx, scripts/style.mjs and scripts/synth-audio.py.",
+  "themes": [
+    "night",
+    "emerald",
+    "sand",
+    "dusk",
+    "teal",
+    "ink"
+  ],
+  "music": {
+    "none": {
+      "bpm": 40,
+      "label": "Silent — no music or sound effects"
+    }
+  },
+  "motion": [
+    "rise",
+    "slide",
+    "zoom"
+  ]
+}

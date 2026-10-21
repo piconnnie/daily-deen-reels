@@ -1,0 +1,225 @@
+#!/usr/bin/env bash
+# End-to-end test of the DEEN GitHub workflows, run locally:
+#   - a bare git repo plays "GitHub" (seeded from the current working tree)
+#   - fake-gh.mjs plays the gh CLI (PRs, labels, releases, comments)
+#   - mock-instagram.mjs plays the Instagram Graph API
+#   - run-workflow.mjs executes the real workflow YAML step by step
+# Writers are mocked (DEEN_MOCK_DRAFT for the API writer, mock-claude-code.sh
+# for the Claude Code action); the queue writer and everything after the
+# writer run the real code path.
+#
+#   scripts/test/harness/e2e.sh [mock-draft.json]   (default: scripts/test/fixtures/mock-draft.json)
+set -uo pipefail
+HERE="$(cd "$(dirname "$0")" && pwd)"
+SRC="$(cd "$HERE/../../../.." && pwd)"          # repo root (contains .github/)
+DRAFT_ARG="${1:-$HERE/../fixtures/mock-draft.json}"
+DRAFT="$(cd "$(dirname "$DRAFT_ARG")" && pwd)/$(basename "$DRAFT_ARG")"
+# Verified-source datasets: use the local cache (run `npm run sources:fetch` once); never download in tests.
+export DEEN_SOURCES_DIR="${DEEN_SOURCES_DIR:-$SRC/deen-content/.cache/sources}" DEEN_SOURCES_OFFLINE=1
+E2E="${E2E_DIR:-$(mktemp -d)}"
+rm -rf "$E2E" && mkdir -p "$E2E"/{bin,releases}
+export GH_FAKE_STATE="$E2E/gh-state.json" GH_FAKE_RELEASES="$E2E/releases"
+# Each workflow run starts from a clean checkout of main, like a fresh GitHub runner.
+fresh() { git -C "$W" reset -q --hard 2>/dev/null; git -C "$W" clean -qfdx 2>/dev/null; git -C "$W" checkout -q main 2>/dev/null; git -C "$W" pull -q origin main 2>/dev/null; true; }
+run_wf() { fresh; node "$HERE/run-workflow.mjs" "$@"; }
+RUN="run_wf"
+WF="$SRC/.github/workflows"
+PASS=0; FAIL=0
+check() { if eval "$2"; then echo "PASS  $1"; PASS=$((PASS+1)); else echo "FAIL  $1"; FAIL=$((FAIL+1)); fi; }
+ghq() { node -e "const s=require('$GH_FAKE_STATE'); console.log(String($1))"; }
+
+# --- fake gh on PATH
+printf '#!/usr/bin/env bash\nexec node %s "$@"\n' "$HERE/fake-gh.mjs" > "$E2E/bin/gh"; chmod +x "$E2E/bin/gh"
+export PATH="$E2E/bin:$PATH"
+
+# --- "GitHub": bare remote seeded from the working tree (tracked + new files)
+mkdir "$E2E/seed"
+( cd "$SRC" && git ls-files -co --exclude-standard -z | grep -zv '^deen-content/output/' | xargs -0 -I{} cp --parents "{}" "$E2E/seed/" )
+# Tests use the four fixture drafts q001–q004 so numbering stays deterministic.
+find "$E2E/seed/deen-content/data/queue" -name '*.json' ! -name 'q00[1-4]-*' -delete
+# ...and start from the sample reel, not whatever the live repo has published since.
+find "$E2E/seed/deen-content/src/content/reels" -name 'deen-*.json' ! -name 'deen-001-*' -delete
+rm -rf "$E2E/seed/deen-content/archive" "$E2E/seed/deen-content/data/performance/index.json"
+( cd "$E2E/seed" && git init -q -b main && git add -A && git -c user.name=seed -c user.email=s@x commit -qm seed )
+git clone -q --bare "$E2E/seed" "$E2E/remote.git"
+git clone -q "$E2E/remote.git" "$E2E/work"
+git clone -q "$E2E/remote.git" "$E2E/user"   # Faraz's clone, for edits and merges
+for d in work user; do git -C "$E2E/$d" config user.name "faraz"; git -C "$E2E/$d" config user.email "f@x"; done
+W="$E2E/work"
+
+# --- mock Instagram
+node "$HERE/mock-instagram.mjs" "$E2E/ig-port" "$E2E/ig-log.jsonl" & IGPID=$!
+trap 'kill $IGPID 2>/dev/null' EXIT
+for _ in $(seq 1 50); do [ -s "$E2E/ig-port" ] && break; sleep 0.1; done
+IG="http://127.0.0.1:$(cat "$E2E/ig-port")"
+export IG_GRAPH_HOST="$IG" DEEN_IG_POLL_MS=20
+IGSECRETS='{"IG_ACCESS_TOKEN":"SECRET_TEST_TOKEN","IG_USER_ID":"IGID"}'
+
+echo "== 1. Review an existing reel (workflow_dispatch reel_id)"
+$RUN "$WF/deen-daily-reel.yml" --repo "$W" --event workflow_dispatch --inputs '{"reel_id":"deen-001-hardship-is-never-alone"}'
+check "PR #1 opened for reel 001 with daily-reel label" "[ \"\$(ghq 's.prs[0]?.headRefName')\" = reel/deen-001-hardship-is-never-alone ] && [ \"\$(ghq 's.prs[0].labels.includes(\"daily-reel\")')\" = true ]"
+check "Pre-release with MP4, JPEG cover and contact sheet" "[ \"\$(ghq 's.releases[\"reel-deen-001-hardship-is-never-alone\"].files.length')\" = 3 ] && [ \"\$(ghq 's.releases[\"reel-deen-001-hardship-is-never-alone\"].prerelease')\" = true ]"
+check "Review branch pushed with archive/state.json" "git -C '$W' ls-remote --exit-code origin reel/deen-001-hardship-is-never-alone >/dev/null && git -C '$W' show origin/reel/deen-001-hardship-is-never-alone:deen-content/archive/deen-001-hardship-is-never-alone/state.json >/dev/null 2>&1 || (git -C '$W' fetch -q origin && git -C '$W' show origin/reel/deen-001-hardship-is-never-alone:deen-content/archive/deen-001-hardship-is-never-alone/state.json >/dev/null)"
+check "PR body has preview images, MP4 link and QA" "ghq 's.prs[0].body' | grep -q 'Watch the reel' && ghq 's.prs[0].body' | grep -q 'Automated QA'"
+git -C "$W" checkout -q main
+
+echo "== 2. Scheduled daily run writes a NEW reel (API writer opted in, mock model)"
+DEEN_MOCK_DRAFT="$DRAFT" $RUN "$WF/deen-daily-reel.yml" --repo "$W" --event schedule --secrets '{"ANTHROPIC_API_KEY":"test"}' --vars '{"DEEN_WRITER":"api"}'
+NEWID=$(ghq 's.prs[1]?.headRefName?.replace("reel/","") ?? ""')
+check "PR #2 opened for a new reel ($NEWID)" "[ -n '$NEWID' ] && [[ '$NEWID' == deen-002-* ]]"
+check "Planner picked the neediest pillar's first topic (t001)" "git -C '$W' show origin/reel/$NEWID:deen-content/src/content/reels/$NEWID.json | grep -q '\"backlogId\": \"t001\"'"
+check "Quote pulled from the verified dataset (Qur'an 2:186, quran.com link)" "git -C '$W' show origin/reel/$NEWID:deen-content/src/content/reels/$NEWID.json | grep -q 'https://quran.com/2/186' && git -C '$W' show origin/reel/$NEWID:deen-content/src/content/reels/$NEWID.json | grep -q 'indeed I am near'"
+check "PR asks the reviewer to check each source" "ghq 's.prs[1].body' | grep -q 'Check the sources before approving' && ghq 's.prs[1].body' | grep -q 'quran.com/2/186'"
+check "Only the new reel's files are on its branch" "[ \"\$(git -C '$W' diff --name-only origin/main origin/reel/$NEWID | grep -c '/src/content/reels/')\" = 1 ]"
+git -C "$W" checkout -q main
+
+echo "== 3. Review backlog gate"
+$RUN "$WF/deen-daily-reel.yml" --repo "$W" --event schedule --secrets '{"ANTHROPIC_API_KEY":"test"}' --vars '{"DEEN_MAX_OPEN_REVIEWS":"2","DEEN_WRITER":"api"}'
+check "No third PR when 2 reviews are open and the limit is 2" "[ \"\$(ghq 's.prs.length')\" = 2 ]"
+
+MOCKCC="$HERE/mock-claude-code.sh"
+Q="$W/deen-content/data/queue"
+OPEN10='{"DEEN_MAX_OPEN_REVIEWS":"10"}'
+SUB10='{"DEEN_MAX_OPEN_REVIEWS":"10","DEEN_WRITER":"subscription"}'
+reel_of_pr() { ghq "s.prs[$1]?.headRefName?.replace('reel/','') ?? ''"; }
+reel_json() { git -C "$W" show "origin/reel/$1:deen-content/src/content/reels/$1.json"; }
+
+echo "== 3b. Writer = Claude subscription (opted in via DEEN_WRITER) (Claude Code action), draft passes"
+git -C "$W" checkout -q main
+HARNESS_CLAUDE_ACTION="$MOCKCC" HARNESS_DRAFT="$Q/q003-what-allah-looks-at.json" \
+  $RUN "$WF/deen-daily-reel.yml" --repo "$W" --event schedule --secrets '{"CLAUDE_CODE_OAUTH_TOKEN":"oauth-test"}' --vars "$SUB10" | tee "$E2E/s3b.log" > /dev/null
+git -C "$W" fetch -q origin; SUBID=$(reel_of_pr 2)
+check "Subscription mode chosen when DEEN_WRITER=subscription and the token is set" "grep -q 'Writer: subscription' '$E2E/s3b.log' || grep -q \"Claude Code writes today's reel\" '$E2E/s3b.log'"
+check "PR #3 opened for the Claude Code reel ($SUBID)" "[[ '$SUBID' == deen-003-* ]]"
+check "Reel records writer = claude-code and the planner's topic" "reel_json '$SUBID' | grep -q '\"writer\": \"claude-code:' && reel_json '$SUBID' | grep -q '\"backlogId\": \"t'"
+check "Editor verdict from review.json shown in the PR" "ghq 's.prs[2].body' | grep -q 'Verdict: \*\*pass\*\*'"
+git -C "$W" checkout -q main
+
+echo "== 3c. Claude Code fails (e.g. plan limit) → falls back to the queue"
+HARNESS_CLAUDE_ACTION="$MOCKCC" HARNESS_CLAUDE_FAIL=1 \
+  $RUN "$WF/deen-daily-reel.yml" --repo "$W" --event schedule --secrets '{"CLAUDE_CODE_OAUTH_TOKEN":"oauth-test"}' --vars "$SUB10" | tee "$E2E/s3c.log" > /dev/null
+git -C "$W" fetch -q origin; FBID=$(reel_of_pr 3)
+check "Fallback produced PR #4 ($FBID)" "[[ '$FBID' == deen-004-* ]]"
+check "Queue skipped q001 (used by the sample reel) and used q002" "reel_json '$FBID' | grep -q '\"queueId\": \"q002-strength-in-anger\"'"
+check "Reel records writer = queue" "reel_json '$FBID' | grep -q '\"writer\": \"queue\"'"
+git -C "$W" checkout -q main
+
+echo "== 3d. Default (no DEEN_WRITER) → free queue, even with paid secrets present"
+$RUN "$WF/deen-daily-reel.yml" --repo "$W" --event schedule --secrets '{"ANTHROPIC_API_KEY":"test","CLAUDE_CODE_OAUTH_TOKEN":"oauth-test"}' --vars "$OPEN10" | tee "$E2E/s3d.log" > /dev/null
+git -C "$W" fetch -q origin; QID=$(reel_of_pr 4)
+check "Queue mode produced PR #5 ($QID) without any secrets" "[[ '$QID' == deen-005-* ]]"
+check "Used q004 (q003 already covered by the Claude Code reel)" "reel_json '$QID' | grep -q '\"queueId\": \"q004-it-starts-with-intention\"'"
+check "Paid writers stayed off without the opt-in" "reel_json '$QID' | grep -q '\"writer\": \"queue\"' && ! grep -q 'mock: wrote draft.json' '$E2E/s3d.log'"
+check "One open queue-low issue, updated by later runs" "[ \"\$(ghq 's.issues.filter(i=>i.labels?.includes(\"queue-low\")).length')\" = 1 ] && [ \"\$(ghq 's.issues.find(i=>i.labels?.includes(\"queue-low\")).comments.length')\" -ge 1 ]"
+git -C "$W" checkout -q main
+
+echo "== 3e. Queue empty and no writer → clear failure, no PR"
+$RUN "$WF/deen-daily-reel.yml" --repo "$W" --event schedule --vars "$OPEN10" | tee "$E2E/s3e.log" > /dev/null
+check "Run fails with a clear 'queue exhausted' message and opens no PR" "grep -qE 'content queue is empty|No queued draft passed' '$E2E/s3e.log' && [ \"\$(ghq 's.prs.length')\" = 5 ]"
+git -C "$W" checkout -q main
+
+echo "== 4. Edit copy inside the PR → automatic re-render"
+U="$E2E/user"; git -C "$U" fetch -q origin
+git -C "$U" checkout -q -b "reel/$NEWID" "origin/reel/$NEWID"
+sed -i 's/Ask Him first\./Call on Him./' "$U/deen-content/src/content/reels/$NEWID.json"
+git -C "$U" commit -qam "Tweak takeaway wording" && git -C "$U" push -q origin "reel/$NEWID"
+git -C "$W" fetch -q origin
+$RUN "$WF/deen-reel-edit.yml" --repo "$W" --event pull_request --event-json "{\"actor\":\"faraz\",\"pull_request\":{\"number\":2,\"head\":{\"ref\":\"reel/$NEWID\",\"repo\":{\"full_name\":\"fake/AI-projects\"}}}}"
+check "Release assets replaced after the edit" "[ \"\$(ghq 's.releases[\"reel-$NEWID\"].uploads ?? 0')\" -ge 1 ]"
+check "PR description refreshed and comment posted" "[ \"\$(ghq 's.prs[1].edits ?? 0')\" -ge 1 ] && ghq 's.prs[1].comments.join(\"|\")' | grep -q 'Re-rendered'"
+check "Edited copy re-rendered (takeaway line updated on the branch)" "git -C '$W' fetch -q origin && git -C '$W' show origin/reel/$NEWID:deen-content/src/content/reels/$NEWID.json | grep -q 'Call on Him.'"
+git -C "$W" checkout -q main
+
+echo "== 4b. An edit that breaks a layout limit is rejected with a PR comment"
+git -C "$U" pull -q origin "reel/$NEWID"
+sed -i 's/Call on Him\./Call on Him for everything./' "$U/deen-content/src/content/reels/$NEWID.json"
+git -C "$U" commit -qam "Too-long line" && git -C "$U" push -q origin "reel/$NEWID"
+git -C "$W" fetch -q origin
+$RUN "$WF/deen-reel-edit.yml" --repo "$W" --event pull_request --event-json "{\"actor\":\"faraz\",\"pull_request\":{\"number\":2,\"head\":{\"ref\":\"reel/$NEWID\",\"repo\":{\"full_name\":\"fake/AI-projects\"}}}}"
+check "Over-long copy fails QA and the PR is told why" "ghq 's.prs[1].comments.join(\"|\")' | grep -q 'failed QA'"
+# fix it again
+sed -i 's/Call on Him for everything\./Call on Him./' "$U/deen-content/src/content/reels/$NEWID.json"
+git -C "$U" commit -qam "Fix length" && git -C "$U" push -q origin "reel/$NEWID"
+git -C "$W" fetch -q origin
+$RUN "$WF/deen-reel-edit.yml" --repo "$W" --event pull_request --event-json "{\"actor\":\"faraz\",\"pull_request\":{\"number\":2,\"head\":{\"ref\":\"reel/$NEWID\",\"repo\":{\"full_name\":\"fake/AI-projects\"}}}}" > /dev/null
+git -C "$W" checkout -q main
+
+echo "== 4c. Edits to sources: unapproved collection rejected; hand-typed quote text overwritten"
+git -C "$U" pull -q origin "reel/$NEWID"
+sed -i 's/"ref": "quran:2:186"/"ref": "tirmidhi:3479"/' "$U/deen-content/src/content/reels/$NEWID.json"
+git -C "$U" commit -qam "Use a Tirmidhi hadith" && git -C "$U" push -q origin "reel/$NEWID"
+git -C "$W" fetch -q origin
+$RUN "$WF/deen-reel-edit.yml" --repo "$W" --event pull_request --event-json "{\"actor\":\"faraz\",\"pull_request\":{\"number\":2,\"head\":{\"ref\":\"reel/$NEWID\",\"repo\":{\"full_name\":\"fake/AI-projects\"}}}}" | tee "$E2E/s4c.log" > /dev/null
+check "A ref outside the approved collections fails before rendering" "grep -q 'not an approved collection' '$E2E/s4c.log' && [ \"\$(ghq 's.prs[1].comments.filter(c=>c.includes(\"failed QA\")).length')\" = 2 ]"
+sed -i 's/"ref": "tirmidhi:3479"/"ref": "quran:2:186"/; s/indeed I am near/indeed I am always near/' "$U/deen-content/src/content/reels/$NEWID.json"
+git -C "$U" commit -qam "Restore ref, tamper with quote text" && git -C "$U" push -q origin "reel/$NEWID"
+git -C "$W" fetch -q origin
+$RUN "$WF/deen-reel-edit.yml" --repo "$W" --event pull_request --event-json "{\"actor\":\"faraz\",\"pull_request\":{\"number\":2,\"head\":{\"ref\":\"reel/$NEWID\",\"repo\":{\"full_name\":\"fake/AI-projects\"}}}}" > /dev/null
+git -C "$W" fetch -q origin
+check "Hand-typed quote text replaced by the dataset text" "! git -C '$W' show origin/reel/$NEWID:deen-content/src/content/reels/$NEWID.json | grep -q 'always near' && git -C '$W' show origin/reel/$NEWID:deen-content/src/content/reels/$NEWID.json | grep -q 'indeed I am near'"
+git -C "$W" checkout -q main
+
+echo "== 5. Merge PR #2 → approval recorded, not yet posted (before slot)"
+git -C "$U" fetch -q origin && git -C "$U" checkout -q main && git -C "$U" pull -q origin main
+git -C "$U" merge -q --no-ff "origin/reel/$NEWID" -m "Merge reel $NEWID" && git -C "$U" push -q origin main
+node -e "const f='$GH_FAKE_STATE',fs=require('fs');const s=JSON.parse(fs.readFileSync(f));s.prs[1].state='merged';s.prs[1].mergedBy={login:'faraz'};s.prs[1].mergedAt=new Date().toISOString();fs.writeFileSync(f,JSON.stringify(s,null,2))"
+MERGE_EVENT="{\"pull_request\":{\"number\":2,\"merged\":true,\"merged_at\":\"$(date -u +%FT%TZ)\",\"merged_by\":{\"login\":\"faraz\"},\"labels\":[{\"name\":\"daily-reel\"}],\"head\":{\"ref\":\"reel/$NEWID\"}}}"
+$RUN "$WF/deen-publish.yml" --repo "$W" --event pull_request --event-json "$MERGE_EVENT" --secrets "$IGSECRETS" --vars '{"DEEN_POST_TIME":"23:59"}'
+git -C "$W" fetch -q origin
+check "Approval (by faraz) committed to main" "git -C '$W' show origin/main:deen-content/archive/$NEWID/state.json | grep -q '\"approvedBy\": \"faraz\"'"
+check "Not posted before the slot" "[ ! -s '$E2E/ig-log.jsonl' ] || ! grep -q media_publish '$E2E/ig-log.jsonl'"
+check "PR told when it will post" "ghq 's.prs[1].comments.join(\"|\")' | grep -q 'Approved by @faraz'"
+
+echo "== 6. Scheduled publish after the slot → posted to Instagram"
+$RUN "$WF/deen-publish.yml" --repo "$W" --event schedule --secrets "$IGSECRETS" --vars "{\"DEEN_POST_TIME\":\"00:00\",\"DEEN_PUBLIC_BASE_URL\":\"$IG/assets\"}"
+git -C "$W" fetch -q origin
+check "media_publish called exactly once" "[ \"\$(grep -c media_publish '$E2E/ig-log.jsonl')\" = 1 ]"
+check "Container had REELS, caption, cover_url and video_url" "grep '/IGID/media\"' '$E2E/ig-log.jsonl' | grep -q '\"media_type\":\"REELS\"' && grep '/IGID/media\"' '$E2E/ig-log.jsonl' | grep -q 'cover_url' && grep '/IGID/media\"' '$E2E/ig-log.jsonl' | grep -q 'video_url'"
+check "Published state + permalink committed to main" "git -C '$W' show origin/main:deen-content/archive/$NEWID/state.json | grep -q '\"status\": \"published\"'"
+check "Release promoted from pre-release" "[ \"\$(ghq 's.releases[\"reel-$NEWID\"].prerelease')\" = false ]"
+check "Permalink commented on the PR" "ghq 's.prs[1].comments.join(\"|\")' | grep -q 'instagram.com/reel/'"
+check "Token never in workflow output or git" "! git -C '$W' log -p origin/main | grep -q SECRET_TEST_TOKEN"
+
+echo "== 7. Second publish run the same day → nothing more is posted"
+$RUN "$WF/deen-publish.yml" --repo "$W" --event schedule --secrets "$IGSECRETS" --vars '{"DEEN_POST_TIME":"00:00"}'
+check "Still exactly one post" "[ \"\$(grep -c media_publish '$E2E/ig-log.jsonl')\" = 1 ]"
+
+echo "== 7b. A merge whose own run was cancelled is still recorded by the next hourly run"
+SUBREEL=$(reel_of_pr 2)
+git -C "$U" fetch -q origin && git -C "$U" checkout -q main && git -C "$U" pull -q origin main
+git -C "$U" merge -q --no-ff "origin/reel/$SUBREEL" -m "Merge reel $SUBREEL" && git -C "$U" push -q origin main
+node -e "const f='$GH_FAKE_STATE',fs=require('fs');const s=JSON.parse(fs.readFileSync(f));Object.assign(s.prs[2],{state:'merged',mergedBy:{login:'faraz'},mergedAt:new Date().toISOString()});fs.writeFileSync(f,JSON.stringify(s,null,2))"
+$RUN "$WF/deen-publish.yml" --repo "$W" --event schedule --secrets "$IGSECRETS" --vars '{"DEEN_POST_TIME":"23:59"}' > /dev/null
+git -C "$W" fetch -q origin
+check "Approval for $SUBREEL recorded without its merge run" "git -C '$W' show origin/main:deen-content/archive/$SUBREEL/state.json | grep -q '\"approvedBy\": \"faraz\"'"
+check "PR #3 told it is scheduled" "ghq 's.prs[2].comments.join(\"|\")' | grep -q 'Approved by @faraz'"
+check "Already-recorded approvals are not re-commented" "[ \"\$(ghq 's.prs[1].comments.filter(c=>c.includes(\"Approved by\")).length')\" = 1 ]"
+
+echo "== 7c. No auto-approve on this page: open PRs stay open even after the posting time"
+$RUN "$WF/deen-publish.yml" --repo "$W" --event schedule --secrets "$IGSECRETS" --vars "{\"DEEN_AUTO_APPROVE\":\"true\",\"DEEN_POST_TIME\":\"00:00\",\"DEEN_MAX_PER_DAY\":\"5\",\"DEEN_PUBLIC_BASE_URL\":\"$IG/assets\"}" > /dev/null
+check "Waiting PRs are not merged by the workflow" "[ \"\$(ghq 's.prs[0].state')\" = open ] && [ \"\$(ghq 's.prs[3].state')\" = open ] && [ \"\$(ghq 's.prs[4].state')\" = open ]"
+check "Only the reels a person merged were posted" "[ \"\$(grep -c media_publish '$E2E/ig-log.jsonl')\" = 2 ]"
+
+echo "== 8. A merged PR without the daily-reel label is ignored"
+$RUN "$WF/deen-publish.yml" --repo "$W" --event pull_request --event-json '{"pull_request":{"number":9,"merged":true,"labels":[{"name":"docs"}],"head":{"ref":"feature/x"}}}' --secrets "$IGSECRETS" | tee "$E2E/s8.log" > /dev/null
+check "Publish job skipped" "grep -q 'skipped by if' '$E2E/s8.log'"
+
+echo "== 9. Weekly: insights import + report (no web topic scan)"
+HARNESS_CLAUDE_ACTION="$MOCKCC" $RUN "$WF/deen-weekly.yml" --repo "$W" --event schedule --secrets "{\"IG_ACCESS_TOKEN\":\"SECRET_TEST_TOKEN\",\"IG_USER_ID\":\"IGID\",\"CLAUDE_CODE_OAUTH_TOKEN\":\"oauth-test\"}" --vars '{"DEEN_WRITER":"subscription"}' | tee "$E2E/s9.log" > /dev/null
+git -C "$W" fetch -q origin
+check "Insights row written for the posted reel" "git -C '$W' show origin/main:deen-content/data/performance/performance.csv | grep -q '^$NEWID,'"
+check "Unsupported metrics skipped, not invented" "git -C '$W' show origin/main:deen-content/data/performance/performance.csv | grep '^$NEWID,' | grep -q ',1840,'"
+check "Planner index file committed" "git -C '$W' show origin/main:deen-content/data/performance/index.json | grep -q '$NEWID'"
+check "No topic scan ran, even with a paid writer opted in" "! grep -q 'mock: wrote scan.json' '$E2E/s9.log'"
+
+echo "== 10. Setup check and token refresh"
+$RUN "$WF/deen-check-instagram.yml" --repo "$W" --event workflow_dispatch --secrets "{\"ANTHROPIC_API_KEY\":\"x\",\"IG_ACCESS_TOKEN\":\"SECRET_TEST_TOKEN\",\"IG_USER_ID\":\"IGID\"}" | tee "$E2E/s10.log" > /dev/null
+check "Instagram check passes against the mock" "grep -q '\[job check\] success' '$E2E/s10.log'"
+$RUN "$WF/deen-token-refresh.yml" --repo "$W" --event schedule --secrets '{"IG_ACCESS_TOKEN":"SECRET_TEST_TOKEN","GH_SECRETS_PAT":"pat"}' > /dev/null
+check "Refreshed token stored via gh secret set" "[ \"\$(ghq 's.secrets.IG_ACCESS_TOKEN ?? 0')\" -gt 0 ]"
+$RUN "$WF/deen-token-refresh.yml" --repo "$W" --event schedule --secrets '{"IG_ACCESS_TOKEN":"SECRET_TEST_TOKEN"}' > /dev/null
+check "Without a PAT a reminder issue is opened" "ghq 's.issues.map(i=>i.title).join(\"|\")' | grep -q 'Instagram token needs renewing'"
+
+echo
+echo "E2E: $PASS passed, $FAIL failed  (workspace: $E2E)"
+[ "$FAIL" -eq 0 ]

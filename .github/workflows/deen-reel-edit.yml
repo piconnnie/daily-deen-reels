@@ -1,0 +1,57 @@
+name: "DEEN · Re-render edited reel"
+# When you edit a reel's content JSON inside its review PR (e.g. fix a word in
+# GitHub's web or mobile editor), this re-runs QA, re-renders the video,
+# replaces the preview assets and updates the PR description.
+
+on:
+  pull_request:
+    types: [synchronize]
+    paths:
+      - "deen-content/src/content/reels/**"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: deen-edit-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: deen-content
+
+jobs:
+  rerender:
+    # Skip the bot's own pushes (those already ran QA) and non-reel branches.
+    if: github.actor != 'github-actions[bot]' && startsWith(github.event.pull_request.head.ref, 'reel/') && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GH_TOKEN: ${{ github.token }}
+      HEAD_REF: ${{ github.event.pull_request.head.ref }}
+      PR_NUMBER: ${{ github.event.pull_request.number }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: ./.github/actions/deen-setup
+      - name: Validate edited copy before rendering
+        run: |
+          ID="${HEAD_REF#reel/}"
+          # Quotes are always re-pulled from the pinned datasets: editing a ref
+          # changes the quote; hand-editing quoted text is overwritten.
+          node scripts/sources/cli.mjs apply "$ID"
+          node scripts/validate-content.mjs "$ID" --pre-render
+      - name: Re-render, check and replace previews
+        run: |
+          ID="${HEAD_REF#reel/}"
+          # Keep the writer log (editor scores) from the original run.
+          mkdir -p output/daily
+          [ -f "archive/$ID/writer.json" ] && cp "archive/$ID/writer.json" "output/daily/$ID.writer.json"
+          scripts/daily/build-for-review.sh "$ID"
+          scripts/daily/open-review-pr.sh "$ID"
+          gh pr comment "$PR_NUMBER" --body "🔁 Re-rendered after your edit. Previews and QA in the description are up to date."
+      - name: Explain failure on the PR
+        if: failure()
+        run: gh pr comment "$PR_NUMBER" --body "❌ The edited reel failed QA or rendering. Open the failed run in the Actions tab for the exact check (usually copy too long for a layout slot, or a source reference that isn't in an approved collection)."

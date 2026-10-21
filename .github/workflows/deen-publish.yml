@@ -1,0 +1,119 @@
+name: "DEEN · Approve & publish"
+# 1. When a reel review PR is merged, record the approval (who, when).
+# 2. Post the oldest approved reel once per day after DEEN_POST_TIME
+#    (default 19:00 Asia/Kolkata): at merge time if that time has passed,
+#    otherwise at the scheduled run below.
+# Publishing refuses any file whose hash differs from the one that passed QA.
+
+on:
+  pull_request:
+    types: [closed]
+  schedule:
+    - cron: "5 * * * *" # hourly: posts once the local time passes DEEN_POST_TIME (no-op otherwise)
+  workflow_dispatch:
+    inputs:
+      reel_id:
+        description: "Post this approved reel now (ignores the time slot, not the approval)"
+        required: false
+      dry_run:
+        description: "Check everything but don't post"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: deen-main-writer
+  cancel-in-progress: false
+
+defaults:
+  run:
+    working-directory: deen-content
+
+jobs:
+  publish:
+    if: >-
+      github.event_name != 'pull_request' ||
+      (github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'daily-reel'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      IG_LOGIN: ${{ vars.IG_LOGIN || 'instagram' }}
+      IG_API_VERSION: ${{ vars.IG_API_VERSION || 'v26.0' }}
+      IG_UPLOAD_MODE: ${{ vars.IG_UPLOAD_MODE }}
+      DEEN_PUBLIC_BASE_URL: ${{ vars.DEEN_PUBLIC_BASE_URL }}
+      DEEN_POST_TIME: ${{ vars.DEEN_POST_TIME || '19:00' }}
+      DEEN_TZ: ${{ vars.DEEN_TZ || 'Asia/Kolkata' }}
+      DEEN_MAX_PER_DAY: ${{ vars.DEEN_MAX_PER_DAY || '1' }}
+      HEAD_REF: ${{ github.event.pull_request.head.ref }}
+      MERGED_BY: ${{ github.event.pull_request.merged_by.login }}
+      MERGED_AT: ${{ github.event.pull_request.merged_at }}
+      PR_NUMBER: ${{ github.event.pull_request.number }}
+      FORCE_ID: ${{ inputs.reel_id }}
+      DRY_RUN: ${{ inputs.dry_run }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # No auto-approve on this page: every reel waits for a person to check its
+      # sources and merge the PR.
+      # Every run (merge, hourly, manual) records approvals for all merged reel PRs,
+      # so an approval survives even if the run started by the merge was cancelled.
+      - name: Record approvals from merged PRs
+        run: |
+          node scripts/daily/sync-approvals.mjs > /tmp/approved.tsv
+          [ -s /tmp/approved.tsv ] || exit 0
+          ids=$(cut -f1 /tmp/approved.tsv | tr '\n' ' ')
+          scripts/daily/commit-to-main.sh "reel: approve ${ids% }" $(cut -f1 /tmp/approved.tsv | sed 's|^\(.*\)$|archive/\1/state.json|')
+          while IFS=$'\t' read -r id pr by; do
+            gh pr comment "$pr" --body "✅ Approved by @$by. Scheduled for the next slot ($DEEN_POST_TIME $DEEN_TZ, max $DEEN_MAX_PER_DAY/day)." || true
+          done < /tmp/approved.tsv
+
+      - name: Pick the reel that is due
+        id: due
+        run: |
+          if [ -n "$FORCE_ID" ]; then node scripts/daily/publish-due.mjs --force "$FORCE_ID"; else node scripts/daily/publish-due.mjs; fi
+
+      - name: Download the approved files
+        if: steps.due.outputs.id != ''
+        env:
+          ID: ${{ steps.due.outputs.id }}
+        run: |
+          mkdir -p output/reels output/covers
+          gh release download "reel-$ID" --pattern "$ID.mp4" --dir output/reels --clobber
+          gh release download "reel-$ID" --pattern "$ID.jpg" --dir output/covers --clobber
+
+      - name: Post to Instagram
+        if: steps.due.outputs.id != ''
+        env:
+          ID: ${{ steps.due.outputs.id }}
+        run: |
+          if [ "$DRY_RUN" = "true" ]; then node scripts/daily/publish-instagram.mjs "$ID" --dry-run; exit 0; fi
+          status=0
+          node scripts/daily/publish-instagram.mjs "$ID" || status=$?
+          scripts/daily/commit-to-main.sh "reel: publish state for $ID" "archive/$ID/state.json"
+          result=$(node -e 'const s=require(`./archive/${process.argv[1]}/state.json`).publish; console.log(JSON.stringify(s))' "$ID")
+          pr=$(gh pr list --state merged --head "reel/$ID" --json number --jq '.[0].number // empty')
+          case "$(echo "$result" | node -e 'let d="";process.stdin.on("data",c=>d+=c).on("end",()=>console.log(JSON.parse(d).status))')" in
+            published)
+              link=$(echo "$result" | node -e 'let d="";process.stdin.on("data",c=>d+=c).on("end",()=>{const s=JSON.parse(d);console.log(s.permalink||s.mediaId)})')
+              gh release edit "reel-$ID" --prerelease=false --title "Reel $ID (posted)" || true
+              [ -n "$pr" ] && gh pr comment "$pr" --body "📣 Posted to Instagram: $link"
+              echo "### Posted $ID → $link" >> "$GITHUB_STEP_SUMMARY" ;;
+            manual-required)
+              [ -n "$pr" ] && gh pr comment "$pr" --body "📌 Instagram isn't connected yet, so this reel wasn't auto-posted. Download the MP4 and cover from release \`reel-$ID\`, paste \`archive/$ID/caption.txt\`, and post manually. See AUTOMATION.md to connect Instagram."
+              echo "### $ID needs manual posting (Instagram not configured)" >> "$GITHUB_STEP_SUMMARY" ;;
+            *)
+              [ -n "$pr" ] && gh pr comment "$pr" --body "⚠️ Posting failed: $(echo "$result" | node -e 'let d="";process.stdin.on("data",c=>d+=c).on("end",()=>console.log(JSON.parse(d).lastError))'). It will be retried at the next slot (max 3 attempts)."
+              exit $status ;;
+          esac

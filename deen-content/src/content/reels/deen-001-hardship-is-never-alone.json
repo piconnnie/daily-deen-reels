@@ -1,0 +1,250 @@
+{
+  "id": "deen-001-hardship-is-never-alone",
+  "version": 1,
+  "status": "qa-passed",
+  "brief": {
+    "topic": "With hardship comes ease",
+    "audience": "Muslims going through a hard week who need a grounded reminder",
+    "pillar": "F: Hope, Patience and Trust",
+    "objective": "shares",
+    "format": "ayah-reflection",
+    "targetDurationSec": 27,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "queueId": "q001-with-hardship-ease",
+    "backlogId": null,
+    "writer": "queue"
+  },
+  "coreInsight": "The Qur'an pairs hardship with ease twice in a row, so a hard season is not the whole story.",
+  "hooks": [
+    {
+      "text": "Having a hard week?",
+      "angle": "Direct, personal recognition",
+      "scores": {
+        "specificity": 3,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Simple and true for most viewers; the ayah answers it immediately."
+    },
+    {
+      "text": "Read this twice. It's written twice.",
+      "angle": "Curiosity about the repetition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 5,
+        "credibility": 4,
+        "comprehension": 3
+      },
+      "notes": "Intriguing but unclear until the ayah appears."
+    },
+    {
+      "text": "Hardship is never alone.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 4,
+        "comprehension": 4
+      },
+      "notes": "Good line, better as the takeaway."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Highest relevance and comprehension; it meets the viewer where they are and the next scene is the answer.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Recognition: name the feeling.",
+      "onScreen": "Having a hard week? / Read this slowly.",
+      "storyboard": {
+        "visual": "Three-line headline, 'hard week?' highlighted; sub-line.",
+        "animation": "Readable on frame 0; underline sweep."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Having a"
+        },
+        {
+          "text": "hard week?",
+          "highlight": true
+        }
+      ],
+      "sub": "Read this slowly."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 270,
+      "purpose": "The ayah itself, Arabic and translation, with its reference.",
+      "onScreen": "Qur'an 94:5-6, Arabic + Saheeh International",
+      "storyboard": {
+        "visual": "Framed panel: Arabic, divider, translation; citation pill below.",
+        "animation": "Arabic at 6, English at 26, citation at 40."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · ASH-SHARH",
+      "ref": "quran:94:5-6",
+      "englishAt": 26,
+      "resolved": {
+        "ref": "quran:94:5-6",
+        "collection": "quran",
+        "collectionName": "The Qur'an",
+        "kind": "quran",
+        "citation": "Qur'an 94:5-6",
+        "url": "https://quran.com/94/5-6",
+        "arabic": "فَإِنَّ مَعَ ٱلۡعُسۡرِ يُسۡرًا ٥ إِنَّ مَعَ ٱلۡعُسۡرِ يُسۡرࣰ ا ٦",
+        "english": "For indeed, with hardship [will be] ease (5) Indeed, with hardship [will be] ease (6)",
+        "translation": "Saheeh International",
+        "grade": null
+      }
+    },
+    {
+      "id": "reflection",
+      "type": "checklist",
+      "durationInFrames": 240,
+      "purpose": "Our reflection: three ways to hold the ayah today (our words, not attributed).",
+      "onScreen": "REFLECTION / Hold on to both halves. / Name what is hard, honestly · Look for the ease already beside it · Ask Allah for patience and for relief",
+      "storyboard": {
+        "visual": "Numbered list, rule box.",
+        "animation": "Items every 34 frames from 24."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "Hold on to"
+        },
+        {
+          "text": "both halves.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Name what is hard, honestly",
+        "Look for the ease already beside it",
+        "Ask Allah for patience and for relief"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34,
+      "rule": "The ayah says it twice. Read it twice today."
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "Memorable line + share CTA.",
+      "onScreen": "This hard part is not the whole story. / Send this to someone who needs it",
+      "storyboard": {
+        "visual": "Three-line takeaway, last line highlighted; CTA pill; end card.",
+        "animation": "Lines rise; CTA at 40; end card at 70."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "This hard part"
+        },
+        {
+          "text": "is not the"
+        },
+        {
+          "text": "whole story.",
+          "highlight": true
+        }
+      ],
+      "cta": "Send this to someone who needs it",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "FOR THE HARD DAYS",
+    "headline": [
+      {
+        "text": "Hardship is"
+      },
+      {
+        "text": "never alone.",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "If this week is heavy, sit with these two ayat for a minute.",
+    "body": [
+      "In Surah Ash-Sharh the same promise appears twice, one ayah after the other: with hardship, ease.",
+      "A reflection for today:\n→ name what is hard, honestly\n→ look for the ease that is already beside it\n→ ask Allah for patience and for relief"
+    ],
+    "cta": "Send this to someone who needs it today.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Quran",
+      "#Sabr",
+      "#Tawakkul",
+      "#DailyReminder"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Send this to someone who needs it"
+  },
+  "claims": [
+    {
+      "text": "Qur'an 94:5-6 pairs hardship with ease in two consecutive ayat.",
+      "kind": "source",
+      "ref": "quran:94:5-6"
+    },
+    {
+      "text": "Naming the difficulty, looking for ease and asking for patience and relief are ways to act on the ayah.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "2026-10-23",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [
+      "1/ Having a hard week?",
+      "2/ Qur'an 94:5-6 (Arabic + translation)",
+      "3/ It's said twice",
+      "4/ Three reflections",
+      "5/ Send it to someone"
+    ],
+    "followUpReel": "Heart Check: Qur'an 2:286 (Allah does not burden a soul beyond its capacity).",
+    "linkedin": ""
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "style": {
+    "theme": "emerald",
+    "music": "none",
+    "motion": "slide"
+  },
+  "audio": {
+    "bed": "audio/deen-001-hardship-is-never-alone-bed.wav",
+    "bedVolume": 1,
+    "voiceover": null,
+    "voiceoverVolume": 1
+  },
+  "sources": [
+    {
+      "ref": "quran:94:5-6",
+      "citation": "Qur'an 94:5-6",
+      "url": "https://quran.com/94/5-6",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "For indeed, with hardship [will be] ease (5) Indeed, with hardship [will be] ease (6)"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+name: "DEEN · Refresh Instagram token"
+# Instagram-Login user tokens last ~60 days. This refreshes it monthly and
+# stores the new value in the IG_ACCESS_TOKEN secret. Needs a GH_SECRETS_PAT
+# secret: a fine-grained token for this repo with "Secrets: Read and write".
+# Without it, the workflow opens a reminder issue instead.
+on:
+  schedule:
+    - cron: "0 4 1 * *" # 1st of each month
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  refresh:
+    if: vars.IG_LOGIN != 'facebook'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: deen-content
+    env:
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      IG_LOGIN: instagram
+      HAS_PAT: ${{ secrets.GH_SECRETS_PAT != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Refresh
+        id: refresh
+        run: |
+          if [ -z "$IG_ACCESS_TOKEN" ]; then echo "No IG token configured; nothing to do."; exit 0; fi
+          node scripts/daily/refresh-token.mjs /tmp/ig-token
+          echo "::add-mask::$(cat /tmp/ig-token)"
+      - name: Store new token
+        if: env.HAS_PAT == 'true' && env.IG_ACCESS_TOKEN != ''
+        env:
+          GH_TOKEN: ${{ secrets.GH_SECRETS_PAT }}
+        run: gh secret set IG_ACCESS_TOKEN --repo "$GITHUB_REPOSITORY" < /tmp/ig-token && rm -f /tmp/ig-token
+      - name: Remind to store it manually
+        if: env.HAS_PAT != 'true' && env.IG_ACCESS_TOKEN != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -f /tmp/ig-token
+          gh issue create --repo "$GITHUB_REPOSITORY" --title "Instagram token needs renewing" \
+            --body "The Instagram access token expires about 60 days after it was issued. Generate a new long-lived token (see deen-content/AUTOMATION.md) and update the IG_ACCESS_TOKEN secret, or add a GH_SECRETS_PAT secret so this workflow can renew it automatically."

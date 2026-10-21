@@ -1,0 +1,214 @@
+name: "DEEN · Daily reel"
+# Writes, renders and QA-checks one new reel every morning and opens a review
+# PR with previews. Writer: the free pre-written queue in data/queue by default;
+# Claude Code (subscription) or the Claude API only if DEEN_WRITER opts in.
+# Merging the PR approves it for posting (see deen-publish.yml).
+
+on:
+  schedule:
+    - cron: "30 0 * * *" # 06:00 IST (GitHub may start scheduled runs late)
+  workflow_dispatch:
+    inputs:
+      reel_id:
+        description: "Build an existing content file for review instead of writing a new one (e.g. deen-001-hardship-is-never-alone)"
+        required: false
+      topic:
+        description: "Optional topic override"
+        required: false
+      format:
+        description: "Optional format id (ayah-reflection, hadith-practice, dua, habit-checklist, heart-check)"
+        required: false
+      pillar:
+        description: "Optional pillar letter A–F (A Qur'an, B Prophetic guidance, C Character, D Worship, E Family, F Hope)"
+        required: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  id-token: write # Claude Code GitHub Action authentication
+
+concurrency:
+  group: deen-daily-reel
+  cancel-in-progress: false
+
+defaults:
+  run:
+    working-directory: deen-content
+
+jobs:
+  reel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      DEEN_MODEL: ${{ vars.DEEN_MODEL || 'claude-opus-5-5' }}
+      DEEN_MAX_OPEN_REVIEWS: ${{ vars.DEEN_MAX_OPEN_REVIEWS || '3' }}
+      INPUT_REEL_ID: ${{ inputs.reel_id }}
+      INPUT_TOPIC: ${{ inputs.topic }}
+      INPUT_FORMAT: ${{ inputs.format }}
+      INPUT_PILLAR: ${{ inputs.pillar }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pause if reviews are piling up
+        id: gate
+        run: |
+          open=$(gh pr list --label daily-reel --state open --json number --jq 'length')
+          echo "Open reel reviews: $open (limit $DEEN_MAX_OPEN_REVIEWS)"
+          if [ -z "$INPUT_REEL_ID" ] && [ "$open" -ge "$DEEN_MAX_OPEN_REVIEWS" ]; then
+            echo "::notice::$open reels are already waiting for review — skipping today's generation."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: ./.github/actions/deen-setup
+        if: steps.gate.outputs.skip != 'true'
+
+      - name: Make reels awaiting review visible to the planner
+        if: steps.gate.outputs.skip != 'true'
+        # Copies content files from open review branches into the working tree
+        # (not committed) so numbering and topic de-duplication see them.
+        run: |
+          : > /tmp/planner-copies.txt
+          for b in $(gh pr list --label daily-reel --state open --json headRefName --jq '.[].headRefName'); do
+            git fetch --quiet --depth 1 origin "$b"
+            for f in $(git diff --name-only --relative HEAD FETCH_HEAD -- src/content/reels/); do
+              if [ ! -e "$f" ]; then git show "FETCH_HEAD:./$f" > "$f" && echo "$f" >> /tmp/planner-copies.txt; fi
+            done
+          done
+          echo "Reels visible to the planner:"; ls src/content/reels
+
+      - name: Choose the writer
+        if: steps.gate.outputs.skip != 'true'
+        id: mode
+        env:
+          WRITER: ${{ vars.DEEN_WRITER || 'queue' }}
+          HAS_OAUTH: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN != '' }}
+        # Free by default: reels come from the pre-written queue in data/queue.
+        # A paid writer runs ONLY if the repository variable DEEN_WRITER is set to
+        # "subscription" (Claude Code on a Claude plan) or "api" (Claude API) —
+        # having a token or key in secrets is not enough on its own.
+        run: |
+          if [ -n "$INPUT_REEL_ID" ]; then mode=existing
+          else
+            case "$WRITER" in
+              subscription) [ "$HAS_OAUTH" = "true" ] && mode=subscription || { echo "::warning::DEEN_WRITER=subscription but CLAUDE_CODE_OAUTH_TOKEN is missing; using the free queue."; mode=queue; } ;;
+              api) [ -n "$ANTHROPIC_API_KEY" ] && mode=api || { echo "::warning::DEEN_WRITER=api but ANTHROPIC_API_KEY is missing; using the free queue."; mode=queue; } ;;
+              *) mode=queue ;;
+            esac
+          fi
+          echo "Writer: $mode"; echo "mode=$mode" >> "$GITHUB_OUTPUT"
+          node scripts/daily/dequeue.mjs --status || true
+
+      - name: Prepare the writing brief
+        if: steps.gate.outputs.skip != 'true' && steps.mode.outputs.mode == 'subscription'
+        run: |
+          args=()
+          [ -n "$INPUT_TOPIC" ] && args+=(--topic "$INPUT_TOPIC")
+          [ -n "$INPUT_FORMAT" ] && args+=(--format "$INPUT_FORMAT")
+          [ -n "$INPUT_PILLAR" ] && args+=(--pillar "$INPUT_PILLAR")
+          node scripts/daily/prepare-brief.mjs "${args[@]}"
+
+      - name: Claude Code writes today's reel (Claude subscription)
+        if: steps.gate.outputs.skip != 'true' && steps.mode.outputs.mode == 'subscription'
+        id: claude
+        continue-on-error: true
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Scheduled runs are attributed to whoever last edited the cron line,
+          # which can be a bot account when the file was pushed by an app.
+          allowed_bots: "claude[bot],claude,github-actions[bot]"
+          prompt: "Read deen-content/output/daily/brief.md and follow its steps exactly. Write only draft.json and review.json in deen-content/output/daily/."
+          claude_args: >-
+            --model ${{ vars.DEEN_MODEL || 'claude-opus-5-5' }}
+            --max-turns 40
+            --allowedTools "Read,Write,Edit,Glob,Grep,Bash(node deen-content/scripts/daily/finalize-draft.mjs:*),Bash(node deen-content/scripts/sources/cli.mjs:*)"
+
+      - name: Finalize today's reel
+        if: steps.gate.outputs.skip != 'true'
+        id: write
+        env:
+          MODE: ${{ steps.mode.outputs.mode }}
+          CLAUDE_OUTCOME: ${{ steps.claude.outcome }}
+        run: |
+          set -o pipefail
+          if [ "$MODE" = existing ]; then
+            if ! [[ "$INPUT_REEL_ID" =~ ^deen-[a-z0-9-]+$ ]] || [ ! -f "src/content/reels/$INPUT_REEL_ID.json" ]; then
+              echo "::error::No content file src/content/reels/$INPUT_REEL_ID.json"; exit 1
+            fi
+            echo "id=$INPUT_REEL_ID" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          id=""
+          if [ "$MODE" = subscription ]; then
+            if [ "$CLAUDE_OUTCOME" = success ] && [ -f output/daily/draft.json ] && \
+               node scripts/daily/finalize-draft.mjs output/daily/draft.json --source "claude-code:$DEEN_MODEL" --review output/daily/review.json | tee /tmp/writer.log; then
+              id=$(tail -n1 /tmp/writer.log)
+            else
+              echo "::warning::Claude Code did not produce a valid draft (outcome: $CLAUDE_OUTCOME). Falling back to the content queue."
+            fi
+          elif [ "$MODE" = api ]; then
+            args=()
+            [ -n "$INPUT_TOPIC" ] && args+=(--topic "$INPUT_TOPIC")
+            [ -n "$INPUT_FORMAT" ] && args+=(--format "$INPUT_FORMAT")
+            [ -n "$INPUT_PILLAR" ] && args+=(--pillar "$INPUT_PILLAR")
+            if node scripts/daily/write-reel.mjs "${args[@]}" | tee /tmp/writer.log; then id=$(tail -n1 /tmp/writer.log)
+            else echo "::warning::API writer failed. Falling back to the content queue."; fi
+          fi
+          if [ -z "$id" ]; then
+            node scripts/daily/dequeue.mjs | tee /tmp/writer.log
+            id=$(tail -n1 /tmp/writer.log)
+          fi
+          echo "Today's reel: $id"
+          echo "id=$id" >> "$GITHUB_OUTPUT"
+
+      - name: Render, check and upload previews
+        if: steps.gate.outputs.skip != 'true'
+        env:
+          ID: ${{ steps.write.outputs.id }}
+        run: scripts/daily/build-for-review.sh "$ID"
+
+      - name: Open review PR
+        if: steps.gate.outputs.skip != 'true'
+        env:
+          ID: ${{ steps.write.outputs.id }}
+        run: |
+          # Remove planner-only copies of other branches' reels before committing.
+          xargs -r rm -f < /tmp/planner-copies.txt
+          scripts/daily/open-review-pr.sh "$ID"
+
+      - name: Warn when the content queue is running low
+        if: steps.gate.outputs.skip != 'true'
+        env:
+          LOW: ${{ vars.DEEN_QUEUE_LOW || '5' }}
+        run: |
+          left=$(node scripts/daily/dequeue.mjs --count)
+          echo "Queue drafts left: $left"
+          if [ "$left" -le "$LOW" ]; then
+            gh label create queue-low --color FFC66D --description "Content queue needs a refill" --force > /dev/null
+            existing=$(gh issue list --label queue-low --state open --json number --jq '.[0].number // empty')
+            body="Only $left pre-written reel draft(s) left in deen-content/data/queue (about $left day(s) of posts). The weekly scheduled refill (Mondays) should top it up automatically; if this issue stays open, check that scheduled task, or ask Claude in chat: \"write the next batch of queue drafts for daily-deen-reels\"."
+            if [ -n "$existing" ]; then gh issue comment "$existing" --body "$body"; else gh issue create --title "Content queue running low ($left left)" --body "$body" --label queue-low; fi
+          fi
+
+      - name: Summary
+        if: steps.gate.outputs.skip != 'true'
+        env:
+          ID: ${{ steps.write.outputs.id }}
+        run: |
+          {
+            echo "### Reel ready for review: $ID"
+            echo
+            head -20 "output/daily/$ID.pr.md"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Keep debugging output
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: deen-daily-failure
+          path: |
+            deen-content/output/daily
+            deen-content/output/qa
+          retention-days: 7

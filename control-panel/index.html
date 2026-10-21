@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>DEEN Control</title>
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@stlite/browser@1.9.2/build/stlite.css" />
+    <style>
+      body { margin: 0; background: #0b1020; color: #f5f7fb; font-family: system-ui, sans-serif; }
+      #boot { padding: 48px 16px; text-align: center; color: #8b95a7; }
+    </style>
+  </head>
+  <body>
+    <div id="root"><p id="boot">Loading the control panel… the first visit takes about 20 seconds while Python starts in your browser.</p></div>
+    <script type="module">
+      // Streamlit running entirely in the browser (stlite / Pyodide). The app talks
+      // only to api.github.com with the token you paste in; there is no server.
+      import { mount } from "https://cdn.jsdelivr.net/npm/@stlite/browser@1.9.2/build/stlite.js";
+      const v = document.querySelector('meta[name="build"]')?.content ?? Date.now();
+      document.getElementById("root").innerHTML = "";
+      mount(
+        {
+          requirements: ["requests", "pyodide-http"],
+          entrypoint: "app.py",
+          files: {
+            "app.py": { url: `./app.py?v=${v}` },
+            "deen_github.py": { url: `./deen_github.py?v=${v}` },
+          },
+          streamlitConfig: {
+            "theme.base": "dark",
+            "theme.primaryColor": "#55D6FF",
+            "theme.backgroundColor": "#0B1020",
+            "theme.secondaryBackgroundColor": "#131A30",
+            "theme.textColor": "#F5F7FB",
+            "client.toolbarMode": "viewer",
+          },
+        },
+        document.getElementById("root"),
+      );
+    </script>
+  </body>
+</html>

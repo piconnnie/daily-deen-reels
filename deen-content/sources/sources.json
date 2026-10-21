@@ -1,0 +1,82 @@
+{
+  "$comment": "The ONLY places reel quotes may come from. Every dataset is pinned to a commit and a SHA-256; a changed file fails the build until someone reviews the change and updates the hash (npm run sources:lock). Collections not listed here cannot be cited. See sources/README.md.",
+  "datasets": {
+    "quran-ar": {
+      "repo": "fawazahmed0/quran-api",
+      "commit": "93e6f64925ae76273520d636fcaaf061129f2316",
+      "path": "editions/ara-quranuthmanihaf.min.json",
+      "sha256": "13a4668ca04e60898ee3922affa62a8a1d1a76d60f6e6f8431718eaa8a0e776d",
+      "label": "Qur'an, Uthmani script (Hafs), King Fahd Glorious Qur'an Printing Complex",
+      "upstream": "https://qurancomplex.gov.sa/"
+    },
+    "quran-en": {
+      "repo": "fawazahmed0/quran-api",
+      "commit": "93e6f64925ae76273520d636fcaaf061129f2316",
+      "path": "editions/eng-ummmuhammad.min.json",
+      "sha256": "2b151ae6829e1edff538189a5ec8b102e00eaae820bbc343df53a605ec5f463f",
+      "label": "Saheeh International English translation (Umm Muhammad et al.), via Tanzil",
+      "upstream": "https://tanzil.net/trans/en.sahih"
+    },
+    "bukhari-en": {
+      "repo": "fawazahmed0/hadith-api",
+      "commit": "df57907be35291c91ad6a6691180e22ca9920784",
+      "path": "editions/eng-bukhari.min.json",
+      "sha256": "60f8dfcf2cb8bcd2c8e281be68d912ee153e0fc4d02ad317d33c532d3814a04f",
+      "label": "Sahih al-Bukhari, English (Muhsin Khan)",
+      "upstream": "https://sunnah.com/bukhari"
+    },
+    "bukhari-ar": {
+      "repo": "fawazahmed0/hadith-api",
+      "commit": "df57907be35291c91ad6a6691180e22ca9920784",
+      "path": "editions/ara-bukhari.min.json",
+      "sha256": "f887d8724f75fb6e1d5d29342a173af5346ad9b933173c85e6e3cb570063ea33",
+      "label": "Sahih al-Bukhari, Arabic",
+      "upstream": "https://sunnah.com/bukhari"
+    },
+    "muslim-en": {
+      "repo": "fawazahmed0/hadith-api",
+      "commit": "df57907be35291c91ad6a6691180e22ca9920784",
+      "path": "editions/eng-muslim.min.json",
+      "sha256": "b5a04a66206b2cfaab18e2439ed2efeb824c6e179627e36a883dc060c03d4960",
+      "label": "Sahih Muslim, English (Abdul Hamid Siddiqui)",
+      "upstream": "https://sunnah.com/muslim"
+    },
+    "muslim-ar": {
+      "repo": "fawazahmed0/hadith-api",
+      "commit": "df57907be35291c91ad6a6691180e22ca9920784",
+      "path": "editions/ara-muslim.min.json",
+      "sha256": "2cb296f3455ff8a3da9f6a0ca3de75da675788b2fb446ad316df297838e48217",
+      "label": "Sahih Muslim, Arabic",
+      "upstream": "https://sunnah.com/muslim"
+    }
+  },
+  "collections": {
+    "quran": {
+      "name": "The Qur'an",
+      "kind": "quran",
+      "arabic": "quran-ar",
+      "english": "quran-en",
+      "translation": "Saheeh International",
+      "refFormat": "quran:<surah>:<ayah> or quran:<surah>:<first>-<last> (max 3 ayat)",
+      "maxAyat": 3
+    },
+    "bukhari": {
+      "name": "Sahih al-Bukhari",
+      "kind": "hadith",
+      "grade": "Sahih",
+      "arabic": "bukhari-ar",
+      "english": "bukhari-en",
+      "translation": "Muhsin Khan",
+      "refFormat": "bukhari:<number> (sunnah.com numbering)"
+    },
+    "muslim": {
+      "name": "Sahih Muslim",
+      "kind": "hadith",
+      "grade": "Sahih",
+      "arabic": "muslim-ar",
+      "english": "muslim-en",
+      "translation": "Abdul Hamid Siddiqui",
+      "refFormat": "muslim:<number>[a-z] (sunnah.com numbering, e.g. muslim:2564c)"
+    }
+  }
+}

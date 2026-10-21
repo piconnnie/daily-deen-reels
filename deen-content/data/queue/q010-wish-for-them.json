@@ -1,0 +1,205 @@
+{
+  "brief": {
+    "topic": "Wishing for others what you wish for yourself",
+    "audience": "Muslims looking for a short, authentic reminder they can act on today",
+    "pillar": "E: Family and Community",
+    "objective": "shares",
+    "format": "hadith-practice",
+    "targetDurationSec": 24,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Sahih al-Bukhari 13 links faith to wishing for your brother what you like for yourself.",
+  "hooks": [
+    {
+      "text": "Happy for them, or jealous?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the source answers it right away."
+    },
+    {
+      "text": "Their good isn't your loss.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, slightly less direct."
+    },
+    {
+      "text": "Wish them what you wish for you.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Works better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the quoted source pays it off immediately.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Recognition: meet the viewer where they are.",
+      "onScreen": "Happy for them, or jealous? / A quick heart check.",
+      "storyboard": {
+        "visual": "Headline, highlighted last line; sub-line.",
+        "animation": "Readable on frame 0; underline sweep."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Happy for"
+        },
+        {
+          "text": "them, or"
+        },
+        {
+          "text": "jealous?",
+          "highlight": true
+        }
+      ],
+      "sub": "A quick heart check."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 240,
+      "purpose": "The source itself, verbatim, with its reference.",
+      "onScreen": "bukhari:13 (text pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Framed panel: Arabic (if any), translation; citation pill.",
+        "animation": "Arabic, then translation, then citation."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ SAID",
+      "ref": "bukhari:13",
+      "excerpt": "None of you will have faith till he wishes for his (Muslim) brother what he likes for himself"
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 255,
+      "purpose": "Our reflection: small, concrete actions (our words, not attributed).",
+      "onScreen": "TRY THIS TODAY / Wish them what you wish for you. / Congratulate someone sincerely today · Make du'a for a friend by name · Pass on a good opportunity you found",
+      "storyboard": {
+        "visual": "Numbered list, rule box.",
+        "animation": "Items every 34 frames from 24."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "TRY THIS TODAY",
+      "headline": [
+        {
+          "text": "Wish them what"
+        },
+        {
+          "text": "you wish for you.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Congratulate someone sincerely today",
+        "Make du'a for a friend by name",
+        "Pass on a good opportunity you found"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34,
+      "rule": "When their good news stings, make du'a for them."
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One line to remember + one CTA.",
+      "onScreen": "Their good is not your loss. / Send this to a friend",
+      "storyboard": {
+        "visual": "Takeaway lines, CTA pill, end card.",
+        "animation": "Lines rise; CTA at 40; end card at 70."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Their good"
+        },
+        {
+          "text": "is not your"
+        },
+        {
+          "text": "loss.",
+          "highlight": true
+        }
+      ],
+      "cta": "Send this to a friend",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "HEART CHECK",
+    "headline": [
+      {
+        "text": "Wish for them"
+      },
+      {
+        "text": "what you want",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "When a friend gets the thing you wanted, what's your first feeling?",
+    "body": [
+      "Sahih al-Bukhari 13 ties faith to wishing for your brother what you like for yourself.",
+      "Try this today:\n→ congratulate someone sincerely\n→ make du'a for a friend by name\n→ pass on a good opportunity you found"
+    ],
+    "cta": "Send this to a friend.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Family",
+      "#Brotherhood",
+      "#Hadith",
+      "#DailyReminder"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Send this to a friend"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:13 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "bukhari:13"
+    },
+    {
+      "text": "Congratulating, making du'a and sharing opportunities are ways to act on the hadith.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "2026-11-01",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

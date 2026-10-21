@@ -1,0 +1,199 @@
+{
+  "brief": {
+    "topic": "Allah does not burden a soul beyond its capacity",
+    "audience": "Muslims looking for a short, authentic reminder they can act on today",
+    "pillar": "F: Hope, Patience and Trust",
+    "objective": "shares",
+    "format": "ayah-reflection",
+    "targetDurationSec": 24,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Qur'an 2:286 opens with the reassurance that no soul is charged beyond its capacity.",
+  "hooks": [
+    {
+      "text": "Feeling overwhelmed?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the source answers it right away."
+    },
+    {
+      "text": "You were given what you can carry.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, slightly less direct."
+    },
+    {
+      "text": "One step at a time.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Works better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the quoted source pays it off immediately.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Recognition: meet the viewer where they are.",
+      "onScreen": "Feeling overwhelmed? / This ayah is for you.",
+      "storyboard": {
+        "visual": "Headline, highlighted last line; sub-line.",
+        "animation": "Readable on frame 0; underline sweep."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Feeling"
+        },
+        {
+          "text": "overwhelmed?",
+          "highlight": true
+        }
+      ],
+      "sub": "This ayah is for you."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 210,
+      "purpose": "The source itself, verbatim, with its reference.",
+      "onScreen": "quran:2:286 (text pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Framed panel: Arabic (if any), translation; citation pill.",
+        "animation": "Arabic, then translation, then citation."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · AL-BAQARAH",
+      "ref": "quran:2:286",
+      "excerpt": "Allah does not charge a soul except [with that within] its capacity",
+      "arabicExcerpt": "لَا يُكَلِّفُ ٱللَّهُ نَفۡسًا إِلَّا وُسۡعَهَاۚ"
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 255,
+      "purpose": "Our reflection: small, concrete actions (our words, not attributed).",
+      "onScreen": "REFLECTION / Take the next small step. / Write down what is weighing on you · Do the next small step, not all of it · Ask Allah for help with the rest",
+      "storyboard": {
+        "visual": "Numbered list, rule box.",
+        "animation": "Items every 34 frames from 24."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "Take the next"
+        },
+        {
+          "text": "small step.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Write down what is weighing on you",
+        "Do the next small step, not all of it",
+        "Ask Allah for help with the rest"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34,
+      "rule": "Capacity is part of the promise. One step at a time."
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One line to remember + one CTA.",
+      "onScreen": "One step at a time. / Send this to someone who needs it",
+      "storyboard": {
+        "visual": "Takeaway lines, CTA pill, end card.",
+        "animation": "Lines rise; CTA at 40; end card at 70."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "One step"
+        },
+        {
+          "text": "at a time.",
+          "highlight": true
+        }
+      ],
+      "cta": "Send this to someone who needs it",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "QUR'AN 2:286",
+    "headline": [
+      {
+        "text": "Not more than"
+      },
+      {
+        "text": "you can carry",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "If everything feels like too much right now, start with the first line of Qur'an 2:286.",
+    "body": [
+      "A reflection for today:\n→ write down what is weighing on you\n→ do the next small step, not all of it\n→ ask Allah for help with the rest"
+    ],
+    "cta": "Send this to someone who needs it today.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Sabr",
+      "#Quran",
+      "#Tawakkul",
+      "#DailyReminder"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Send this to someone who needs it"
+  },
+  "claims": [
+    {
+      "text": "What quran:2:286 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "quran:2:286"
+    },
+    {
+      "text": "Writing it down, taking the next step and asking for help are ways to act on the ayah.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "2026-10-29",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

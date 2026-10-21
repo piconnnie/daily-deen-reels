@@ -1,0 +1,4 @@
+KFGQPC HAFS Uthmanic Script (v13) — King Fahd Glorious Qur'an Printing Complex, Madinah.
+Distributed free of charge by the Complex for displaying the Qur'anic text (https://fonts.qurancomplex.gov.sa/).
+Copy obtained from https://github.com/fawazahmed0/quran-api/tree/1/fonts (uthmanic-hafs1-ver13.ttf).
+Used here only to display Qur'anic text taken unaltered from the Complex's Hafs edition.
