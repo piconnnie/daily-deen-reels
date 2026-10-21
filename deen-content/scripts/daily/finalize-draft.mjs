@@ -12,6 +12,7 @@ import {syncRegistry} from '../sync-registry.mjs';
 import {PILLARS} from './plan.mjs';
 import {history, isoDate, normalizeDraft, validateReel, writeLog} from './writer-core.mjs';
 import {ensureDatasets} from '../sources/sources.mjs';
+import {applyRecitation} from '../sources/recitation.mjs';
 
 const args = process.argv.slice(2);
 const draftPath = args[0];
@@ -55,6 +56,13 @@ if (fetchProblems.length) {
 }
 // normalizeDraft pulls every quote's exact text from the pinned datasets.
 const reel = normalizeDraft(draft, plan, {source});
+// Download the recitation (verified reciter, per-ayah files) and fit the reel to it.
+const recitationProblems = await applyRecitation(reel);
+if (recitationProblems.length) {
+  console.log(`NOT OK — ${recitationProblems.length} problem(s):`);
+  for (const e of recitationProblems) console.log(`- ${e}`);
+  process.exit(1);
+}
 const errors = validateReel(reel, hist);
 if (errors.length) {
   console.log(`NOT OK — ${errors.length} problem(s):`);

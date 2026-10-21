@@ -65,14 +65,18 @@ Defined in `src/templates/formats.json`:
 - **Practical reflection:** small, concrete, kind steps. Avoid vague advice ("be better").
 - **Takeaway:** a short line worth remembering + one call to action (save or share).
 - **Tone:** warm, humble, plain English. Speak to one person. Transliterations: Qur'an, du'a, Sunnah, sadaqah, dhikr, salah.
-- **Reels are silent:** no music, no sound effects. Viewers can read at their own pace.
+- **Sound is Qur'an recitation, nothing else:** no music, no sound effects. By default the first ayah on screen is recited (the scene is lengthened so the recitation is never cut). A reel without an ayah (e.g. a hadith reel) names a short, genuinely related ayah in `"recitation": {"ref": "quran:…"}`; it is labelled on screen and in the caption. Reciters rotate among six approved reciters (`sources/sources.json` → `recitations`).
 
-## 7. Packaging
+## 7. Look
+
+Clean and quiet: lots of space, one accent colour, no busy textures or light sweeps. The look rotates automatically (10 palettes × 3 layouts × 4 backdrops × 2 headline typefaces × 3 transitions, repeating every 60 reels), so writers don't set `style` unless a reel needs a specific look.
+
+## 8. Packaging
 
 - **Cover:** kicker + 3–7 words inside the 1080×1350 feed crop. Our words, not a paraphrased quote presented as the source.
-- **Caption:** a specific first line, a little context, the reflection steps, one CTA, 3–6 hashtags. The pipeline appends the sources block (citation, translator, grade, link) and, for excerpts, the full text.
+- **Caption:** a specific first line, a little context, the reflection steps, one CTA, 3–6 hashtags. The pipeline appends the sources block (citation, translator, grade, link; the recited ayah and reciter) and, for excerpts, the full text.
 - **CTA:** "Save" for du'as, habits and checklists; "Send this to someone who needs it" for comfort reminders. One per reel.
 
-## 8. Review before posting
+## 9. Review before posting
 
 Automated QA checks the references, the verbatim text, attributions, layout and the video file. A person still approves every reel by merging its pull request, after opening each source link and reading the reel once on a phone.

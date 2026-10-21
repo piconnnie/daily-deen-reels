@@ -15,9 +15,9 @@ export const LIMITS = {
   takeaway: {lineChars: 15, lines: [2, 3], cta: 38},
   cover: {lineChars: 14, lines: [2, 4]},
   // Quotes need reading time: at least base + perChar frames for the English shown.
-  source: {english: 260, arabic: 220, excerptMin: 40, baseFrames: 75, perChar: 1.5, maxFrames: 480},
+  source: {english: 260, arabic: 220, excerptMin: 40, baseFrames: 75, perChar: 1.5, maxFrames: 1500},
   scene: {minFrames: 45, maxFrames: 330},
-  totalSec: [15, 50],
+  totalSec: [15, 60],
 };
 
 const len = (s) => [...(s ?? '')].length;

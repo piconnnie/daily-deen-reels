@@ -2,7 +2,8 @@ import React from 'react';
 import {AbsoluteFill, interpolate, Sequence, useCurrentFrame} from 'remotion';
 import {loadBrandFonts} from '../brand/fonts';
 import {SoundDesignTrack, SubtitleTrack, VoiceoverTrack, type SubtitleCue} from '../components/AudioTracks';
-import {BrandBackground, SceneSweep} from '../components/BrandBackground';
+import {BrandBackground} from '../components/BrandBackground';
+import {RecitationLabel} from '../components/RecitationLabel';
 import {pickStyle, ThemeProvider, useColors, useReelStyle} from '../brand/theme';
 import {BrandSignature} from '../components/BrandSignature';
 import {easeOut} from '../components/motion';
@@ -20,8 +21,8 @@ import {SourceScene} from '../scenes/SourceScene';
 
 loadBrandFonts();
 
-const ENTER = 7;
-const EXIT = 5;
+const ENTER = 10;
+const EXIT = 7;
 
 export const sceneStarts = (scenes: Scene[]) => {
   const starts: number[] = [];
@@ -35,8 +36,11 @@ export const sceneStarts = (scenes: Scene[]) => {
 
 const renderScene = (scene: Scene, config: ReelConfig) => {
   switch (scene.type) {
-    case 'source':
-      return <SourceScene scene={scene} />;
+    case 'source': {
+      const r = config.recitation;
+      const recitedBy = r && r !== false && !r.off && r.mode === 'scene' && r.sceneId === scene.id ? r.reciterName ?? null : null;
+      return <SourceScene scene={scene} recitedBy={recitedBy} />;
+    }
     case 'hook':
       return <HookScene scene={scene} />;
     case 'cards':
@@ -73,12 +77,13 @@ const SceneFrame: React.FC<{
   const inP = cutIn ? 1 : interpolate(frame, [0, ENTER], [0, 1], {easing: easeOut, extrapolateRight: 'clamp'});
   const outP = cutOut ? 1 : interpolate(frame, [d - EXIT, d], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const {motion} = useReelStyle();
+  // Calm transitions: a plain fade, a short rise, or a short slide.
   const transform =
     motion === 'slide'
-      ? `translateX(${(1 - inP) * 90 - (1 - outP) * 70}px)`
-      : motion === 'zoom'
-        ? `scale(${(0.9 + 0.1 * inP) * (1 + 0.05 * (1 - outP))})`
-        : `translateY(${(1 - inP) * 28}px)`;
+      ? `translateX(${(1 - inP) * 40 - (1 - outP) * 30}px)`
+      : motion === 'rise'
+        ? `translateY(${(1 - inP) * 18}px)`
+        : 'none';
   return (
     <AbsoluteFill style={{opacity: Math.min(inP, outP), transform}}>
       {children}
@@ -107,7 +112,6 @@ const ReelBody: React.FC<{config: ReelConfig}> = ({config}) => {
   return (
     <AbsoluteFill style={{backgroundColor: colors.navy}}>
       <BrandBackground />
-      <SceneSweep starts={starts} />
       {config.scenes.map((scene, i) => (
         <Sequence key={scene.id} from={starts[i]} durationInFrames={scene.durationInFrames} name={`${i + 1}-${scene.id}`}>
           <SceneFrame scene={scene} next={config.scenes[i + 1]} isFirst={i === 0} isLast={i === config.scenes.length - 1}>
@@ -118,6 +122,7 @@ const ReelBody: React.FC<{config: ReelConfig}> = ({config}) => {
       <BrandSignature />
       <ProgressIndicator sceneDurations={durations} />
       <SubtitleTrack cues={buildSubtitleCues(config)} />
+      <RecitationLabel config={config} />
       <SoundDesignTrack src={config.audio.bed} volume={config.audio.bedVolume} />
       <VoiceoverTrack src={config.audio.voiceover} volume={config.audio.voiceoverVolume} />
     </AbsoluteFill>

@@ -123,19 +123,23 @@ Every irreversible button asks for confirmation. The first load takes ~20 second
 
 ## Look (variety) and sound
 
-Every reel gets a `style`, chosen automatically so consecutive reels look different:
+Every reel gets a `style`, chosen automatically so consecutive reels look different (the full combination repeats only every 60 reels):
 
 | Part | Options |
 |---|---|
-| `theme` | `night` (navy + gold), `emerald` (green + gold), `sand` (light: sand + teal/amber), `dusk` (plum + rose/apricot), `teal` (teal + mint), `ink` (charcoal + brass) — with eight-pointed-star, arch or dot textures |
-| `motion` | `rise`, `slide`, `zoom` scene transitions |
-| `music` | `none` only: reels are **silent** (no music, no sound effects); a silent AAC track keeps the file standard |
+| `theme` | dark: `night`, `emerald`, `dusk`, `teal`, `ink`, `olive` · light: `ivory`, `mist`, `sand`, `rose` |
+| `layout` | `framed` (quote in a quiet panel), `minimal` (centred, no panel), `editorial` (left-aligned, large quote mark) |
+| `backdrop` | `plain`, `gradient`, `motif` (one faint eight-pointed star), `border` (thin inset frame) |
+| `type` | `sans` or `serif` headlines |
+| `motion` | `fade`, `rise`, `slide` (all short and calm) |
 
-The rotation follows the reel number (theme n mod 6, motion n mod 3). To choose yourself, edit `"style": {"theme": "sand", "motion": "rise"}` in the reel's JSON in its review PR; it re-renders automatically.
+To choose yourself, edit e.g. `"style": {"theme": "ivory", "layout": "minimal"}` in the reel's JSON in its review PR; it re-renders automatically.
+
+**Sound: Qur'an recitation only** — no music or effects. The ayah on screen is recited by one of six approved reciters (rotating); hadith reels recite a related ayah named in the draft, labelled on screen. Recitations are never cut: scenes stretch to fit. Details: [sources/README.md → Recitation](sources/README.md). To change it in a PR: `"recitation": {"ref": "quran:3:134", "reciter": "alafasy"}` (or `false` for a silent reel).
 
 ## Day to day
 
-- **Morning:** open the PR. Tick through **Check the sources before approving** (each link opens quran.com / sunnah.com), watch the MP4 (the "Watch the reel" link), and skim the script table.
+- **Morning:** open the PR. Tick through **Check the sources before approving** (each link opens quran.com / sunnah.com), watch and listen to the MP4 (the "Watch the reel" link), and skim the script table.
 - **Approve:** merge. It posts at the next slot (or right away if the slot has passed and nothing was posted today).
 - **Fix a word:** edit `src/content/reels/<id>.json` in the PR (GitHub web or mobile). The reel re-renders, QA re-runs and the preview updates. If the edit breaks a layout limit, the PR gets a comment explaining which check failed.
 - **Swap a quote:** change the scene's `ref` (e.g. `quran:2:153`). The text is re-pulled from the datasets; hand-edited quote text is always overwritten.
@@ -169,7 +173,7 @@ The daily generation time is the cron in `deen-daily-reel.yml` (`30 0 * * *` = 0
 
 - **GitHub Actions:** free for public repositories. (Private repos get a monthly free allowance; a daily render fits in it, but keep the repo public to stay at $0 with headroom.)
 - **Content queue (default):** free. Refilling it happens in a normal Claude chat, with no API key or GitHub secret involved.
-- **Verified sources:** free (public datasets on GitHub via jsDelivr, cached between runs).
+- **Verified sources and recitation:** free (public datasets via jsDelivr, recitation files from EveryAyah).
 - **Instagram Graph API:** free.
 - **Claude subscription (opt-in):** no extra charge on a paid plan; runs count toward its usage limits.
 - **Claude API (opt-in):** each PR shows the estimated cost of writing that reel. With `claude-opus-5-5` ($4 / $20 per million input/output tokens) expect very roughly **$0.40–$1.20 per reel**, depending on revision rounds. 
@@ -179,7 +183,7 @@ The daily generation time is the cron in `deen-daily-reel.yml` (`30 0 * * *` = 0
 
 - It can't judge whether a source fits the point the way a person can. QA guarantees the quote is real, exact and from an approved collection, and that our own words don't put speech in anyone's mouth; **your merge is the real quality gate** for meaning and context.
 - GitHub Models' free tier isn't used: its per-request limits (about 8k tokens in, 4k out) are too small for the brand brief plus a full reel.
-- It has no voiceover or recitation. Reels are silent text-on-screen.
+- It has no voiceover. The only audio is the recitation; listen to it in the PR's MP4 before approving.
 - Instagram insight metric names change between Graph API versions. Unsupported metrics are skipped, never estimated; the CSV can always be filled in by hand.
 
 ## Troubleshooting
@@ -187,6 +191,8 @@ The daily generation time is the cron in `deen-daily-reel.yml` (`30 0 * * *` = 0
 | Symptom | Fix |
 |---|---|
 | A run fails at "Fetch + hash-check verified sources" | jsDelivr and GitHub were both unreachable, or an upstream file changed (SHA-256 mismatch). Re-run later; for a mismatch, review the upstream change before updating `sources/sources.json`. |
+| A run fails with "could not download recitation" | EveryAyah and its mirror were both unreachable. Re-run later. |
+| A draft fails with "recitation … is NN s (max 45 s)" | The chosen ayah is too long to recite in a reel. Pick a shorter related ayah in `recitation.ref`. |
 | A draft fails with "not an approved collection" or "excerpt is not a word-for-word part" | Expected: only the Qur'an, Bukhari and Muslim are allowed, and excerpts must be verbatim. Fix the `ref` / `excerpt` in the draft. |
 | Daily run fails at "Finalize today's reel" with "queue is empty" | The queue ran out. Ask Claude in chat for the next batch of queue drafts and commit them to `data/queue/`. Nothing is posted on days without a reel. |
 | A paid secret is set but reels still come from the queue | Expected: paid writers need the `DEEN_WRITER` variable too. |

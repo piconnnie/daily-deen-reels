@@ -5,9 +5,10 @@ Reads scene durations and sfx cues from the reel's content JSON, so every
 whoosh/tick lands on the exact frame of its visual reveal. No stock music,
 no network, deterministic output (fixed RNG seed).
 
-Music styles (src/brand/styles.json): this page ships only "none" (silent: no
-music, no SFX). The other synthesizers are kept in this file in case a style is
-ever added back to styles.json; nothing selects them by default.
+On this page the audio is Qur'an recitation: when the reel has a verified
+`recitation` (scripts/sources/recitation.mjs), the per-ayah files are placed on
+the timeline unchanged (one overall gain, click-free edges). Otherwise the reel
+is silent. The music/SFX synthesizers below are kept but nothing selects them.
 The reel's style.music picks one; otherwise the reel number rotates through
 them (same rule as src/brand/theme.tsx), so consecutive reels sound different.
 
@@ -405,6 +406,45 @@ def master(stereo, target_rms_db=-19.0):
     return np.clip(stereo, -0.999, 0.999)
 
 
+def decode(path):
+    """Any audio file → float32 stereo at SR (via ffmpeg)."""
+    import subprocess
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(path), "-f", "f32le", "-ac", "2", "-ar", str(SR), "-"],
+                         check=True, capture_output=True).stdout
+    return np.frombuffer(raw, dtype=np.float32).reshape(-1, 2).astype(np.float64)
+
+
+def recitation_track(rec, n):
+    """Place the verified per-ayah recitation files on the timeline, unchanged
+    except for one overall gain: no effects, no music, nothing mixed under it.
+    The pipeline sized the reel so the last ayah ends before the video does."""
+    import os
+    cache = Path(os.environ.get("DEEN_RECITATION_DIR") or (ROOT / ".cache" / "recitations"))
+    out = np.zeros((n, 2))
+    t = int(round(rec["startFrame"] / 30 * SR))
+    active = []
+    for f in rec["files"]:
+        clip = decode(cache / rec["folder"] / f["file"])
+        end = min(n, t + len(clip))
+        if end - t < len(clip):
+            raise SystemExit(f"recitation {f['file']} would be cut at the end of the reel; re-run the sources apply step")
+        out[t:end] += clip[: end - t]
+        active.append((t, end))
+        t = end + int(rec.get("gapSec", 0.25) * SR)
+    # Loudness: match the voiced part to ~-18 dBFS RMS, then a gentle peak limiter.
+    voiced = np.concatenate([out[a:b] for a, b in active])
+    level = np.abs(voiced).max(axis=1)
+    voiced = voiced[level > 10 ** (-45 / 20)] if np.any(level > 10 ** (-45 / 20)) else voiced
+    rms = np.sqrt(np.mean(voiced ** 2)) + 1e-12
+    out *= 10 ** (-18 / 20) / rms
+    # 15 ms fades at each clip edge only, to avoid clicks (never inside an ayah).
+    k = int(0.015 * SR)
+    for a, b in active:
+        out[a:a + k] *= np.linspace(0, 1, k)[:, None]
+        out[b - k:b] *= np.linspace(1, 0, k)[:, None]
+    return np.clip(limiter(out, ceiling_db=-1.5), -0.999, 0.999)
+
+
 def write_wav(reel_id, stereo):
     out = ROOT / "public" / "audio" / f"{reel_id}-bed.wav"
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -428,6 +468,12 @@ def main():
     duration = total_frames / fps
     n = int(round(duration * SR))
 
+    rec = reel.get("recitation") or {}
+    if rec.get("files") and not rec.get("off"):
+        stereo = recitation_track(rec, n)
+        write_wav(reel_id, stereo)
+        print(f"Wrote public/audio/{reel_id}-bed.wav ({duration:.2f}s, recitation {rec['citation']} by {rec['reciterName']}, {rec['totalSec']}s from {rec['startFrame'] / fps:.2f}s)")
+        return
     music_style = sys.argv[sys.argv.index("--music") + 1] if "--music" in sys.argv else pick_music(reel)
     if music_style == "none":
         # Silent reel: no music and no sound effects. A silent stereo AAC track is

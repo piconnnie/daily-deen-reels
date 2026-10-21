@@ -1,7 +1,7 @@
 import React from 'react';
 import {useCurrentFrame, useVideoConfig} from 'remotion';
 import {alpha, fonts, radius, type} from '../brand/tokens';
-import {useColors} from '../brand/theme';
+import {useColors, useReelStyle} from '../brand/theme';
 import {EndCard} from '../components/EndCard';
 import {Kicker, KineticHeadline} from '../components/KineticHeadline';
 import {enter, riseStyle} from '../components/motion';
@@ -14,11 +14,12 @@ export const TakeawayScene: React.FC<{scene: TakeawaySceneConfig; ctaType?: 'sav
   const {fps} = useVideoConfig();
   const colors = useColors();
   const cta = enter(frame, fps, scene.ctaAt);
+  const centered = useReelStyle().layout === 'minimal';
   return (
     <SceneShell justify="space-between">
-      <div style={{marginTop: 60}}>
-        <Kicker text="THE TAKEAWAY" />
-        <KineticHeadline lines={scene.lines} size={type.hook - 8} start={2} stagger={6} />
+      <div style={{marginTop: 60, display: 'flex', flexDirection: 'column', alignItems: centered ? 'center' : 'flex-start', textAlign: centered ? 'center' : 'left'}}>
+        <Kicker text="TODAY'S REMINDER" />
+        <KineticHeadline lines={scene.lines} size={type.hook - 8} start={2} stagger={6} align={centered ? 'center' : 'left'} />
         <div
           style={{
             ...riseStyle(cta, 24),
@@ -36,7 +37,7 @@ export const TakeawayScene: React.FC<{scene: TakeawaySceneConfig; ctaType?: 'sav
           <span style={{fontFamily: fonts.body, fontWeight: 600, fontSize: 38, color: colors.offWhite}}>{scene.cta}</span>
         </div>
       </div>
-      <div style={{marginBottom: 20}}>
+      <div style={{marginBottom: 20, display: 'flex', justifyContent: centered ? 'center' : 'flex-start'}}>
         <EndCard start={scene.endCardAt} />
       </div>
     </SceneShell>

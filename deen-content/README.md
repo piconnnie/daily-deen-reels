@@ -26,7 +26,7 @@ deen-content/
   scripts/
     generate-content.mjs   scaffold a new reel from a brief + format
     build-package.mjs      caption, storyboard (.md), narration timing (.srt), metadata (.json)
-    synth-audio.py         silent audio track (music/SFX synthesisers kept but unused)
+    synth-audio.py         places the verified recitation on the timeline (music/SFX synthesisers kept but unused)
     sources/               verified-source resolver + CLI (fetch, search, show, apply)
     render-content.mjs     render MP4 + cover (Remotion CLI, or local fallback engine)
     validate-content.mjs   content, visual-layout and technical QA gates + review frames
@@ -111,7 +111,7 @@ The five formats (Ayah Reflection, Hadith in Practice, A Du'a for…, Small Habi
 
 ## Brand system
 
-Palettes, type scale and safe zones are in `src/brand/tokens.ts`: six themes (night, emerald, sand, dusk, teal, ink) with eight-pointed-star, arch or dot textures, rotating by reel number.
+Palettes, type scale and safe zones are in `src/brand/tokens.ts`; the rotation is in `src/brand/styles.json`: 10 palettes (6 dark, 4 light) × 3 layouts (framed, minimal, editorial) × 4 backdrops (plain, gradient, motif, border) × sans/serif headlines × 3 calm transitions, repeating every 60 reels. Backgrounds are quiet: no textures, sweeps or beat pulses.
 
 **Fonts** (all in `public/fonts`, no network at render time): **KFGQPC HAFS Uthmanic Script** (King Fahd Complex) for Qur'anic Arabic, **Amiri** (SIL OFL) for hadith Arabic, ﷺ and the serif translation text, **Inter Display / Inter** for headlines and body, **DejaVu Sans Mono** for labels.
 
@@ -121,7 +121,7 @@ Palettes, type scale and safe zones are in `src/brand/tokens.ts`: six themes (ni
 
 ## Sound
 
-Reels are **silent**: no music and no sound effects (`styles.json` ships only `music: "none"`). A silent stereo AAC track is muxed so the file is standard for every player and the Instagram API. No voiceover or recitation is generated.
+The only audio is **Qur'an recitation** (EveryAyah per-ayah files, six approved reciters, rotating): the quoted ayah, or a related ayah named in the draft for hadith reels. `scripts/sources/recitation.mjs` downloads, hashes and times the files and lengthens scenes so no ayah is cut; `scripts/synth-audio.py` places them unchanged on the timeline (one overall gain). No music, no effects, no voiceover. See [sources/README.md](sources/README.md#recitation-the-reels-audio).
 
 ## Quality gates
 
@@ -130,7 +130,7 @@ Reels are **silent**: no music and no sound effects (`styles.json` ships only `m
 - **Source:** at least one quote; every `ref` in an approved collection and present in the pinned dataset; on-screen text, citation and link identical to the dataset; excerpts verbatim; caption sources block complete; claims are `source` (with a quoted ref) or `reflection`; our own words never attribute speech to Allah or the Prophet ﷺ and never put non-verbatim text in quotes; hadith only from Sahih collections. Warnings for ruling-type words and a missing ﷺ.
 - **Content:** three hooks, hook ≤10 words, one-sentence insight, 15–50s, enough frames to read each quote, exactly one CTA (on-screen = caption), no hype or chain-message bait, 3–8 hashtags, caption ≤2,200 chars, cover headline 3–7 words.
 - **Visual:** all visible text inside the safe zone and not truncated (DOM measurement on sampled frames); cover inside the feed crop.
-- **Technical:** 1080×1920, 30/1 fps, H.264 yuv420p, exact frame count and duration, AAC 48 kHz stereo (silent track), full decode with zero errors, no black frames, review frames (first, last, every scene mid-point, both sides of every cut) and a contact sheet.
+- **Technical:** 1080×1920, 30/1 fps, H.264 yuv420p, exact frame count and duration, AAC 48 kHz stereo, loudness −20…−12 LUFS and true peak ≤ −1 dBTP when recitation is present, full decode with zero errors, no black frames, review frames (first, last, every scene mid-point, both sides of every cut) and a contact sheet.
 
 Automated gates can't judge whether a source fits the point. The source and viewing checks stay **pending** until a person approves; `publish` refuses anything unapproved or modified after approval.
 

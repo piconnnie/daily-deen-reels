@@ -1,22 +1,45 @@
 {
-  "_comment": "Per-reel visual variety. A reel's `style` field picks one of each; without it, the reel number rotates through them (theme n%6, motion n%3). Music defaults to \"none\": reels are silent (no music, no sound effects) — a deliberate choice for this page. Read by src/brand/theme.tsx, scripts/style.mjs and scripts/synth-audio.py.",
+  "_comment": "Per-reel look. A reel's `style` field picks any of these; omitted parts rotate by reel number (theme n%10, layout n%3, backdrop (n+1)%4, type floor(n/2)%2, motion (n+1)%3), so the full combination repeats only every 60 reels. Audio is Qur'an recitation (see scripts/sources/recitation.mjs), not part of the style. Read by src/brand/theme.tsx, scripts/style.mjs and scripts/synth-audio.py.",
   "themes": [
     "night",
+    "ivory",
     "emerald",
-    "sand",
+    "mist",
     "dusk",
+    "sand",
     "teal",
-    "ink"
+    "rose",
+    "ink",
+    "olive"
+  ],
+  "layouts": [
+    "framed",
+    "minimal",
+    "editorial"
+  ],
+  "backdrops": [
+    "plain",
+    "gradient",
+    "motif",
+    "border"
+  ],
+  "type": [
+    "sans",
+    "serif"
+  ],
+  "motion": [
+    "fade",
+    "rise",
+    "slide"
   ],
   "music": {
+    "recitation": {
+      "bpm": 60,
+      "label": "Qur'an recitation"
+    },
     "none": {
-      "bpm": 40,
-      "label": "Silent — no music or sound effects"
+      "bpm": 60,
+      "label": "Silent"
     }
-  },
-  "motion": [
-    "rise",
-    "slide",
-    "zoom"
-  ]
+  }
 }

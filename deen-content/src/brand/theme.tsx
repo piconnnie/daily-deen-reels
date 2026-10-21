@@ -3,17 +3,26 @@ import styles from './styles.json';
 import {themes, toneColors, type Palette, type ThemeId, type Tone} from './tokens';
 
 export type MusicId = keyof typeof styles.music;
-export type MotionId = 'rise' | 'slide' | 'zoom';
+export type MotionId = 'fade' | 'rise' | 'slide';
+export type LayoutId = 'framed' | 'minimal' | 'editorial';
+export type BackdropId = 'plain' | 'gradient' | 'motif' | 'border';
+export type TypeId = 'sans' | 'serif';
 
 export interface ReelStyle {
   theme: ThemeId;
-  music: MusicId;
+  layout: LayoutId;
+  backdrop: BackdropId;
+  type: TypeId;
   motion: MotionId;
+  music: MusicId;
 }
 
 const THEME_IDS = styles.themes as ThemeId[];
-const MUSIC_IDS = Object.keys(styles.music) as MusicId[];
+const LAYOUT_IDS = styles.layouts as LayoutId[];
+const BACKDROP_IDS = styles.backdrops as BackdropId[];
+const TYPE_IDS = styles.type as TypeId[];
 const MOTION_IDS = styles.motion as MotionId[];
+const MUSIC_IDS = Object.keys(styles.music) as MusicId[];
 
 /** The reel number in "deen-012-…", or a stable hash of the id. */
 export const reelNumber = (id: string) => {
@@ -24,24 +33,29 @@ export const reelNumber = (id: string) => {
   return h;
 };
 
+const pick = <T extends string>(ids: T[], wanted: unknown, i: number): T => (ids.includes(wanted as T) ? (wanted as T) : ids[i % ids.length]);
+
 /**
- * The reel's style: its own `style` field where set (and valid), otherwise a
- * rotation by reel number so consecutive reels never look or sound the same.
- * Keep in sync with scripts/style.mjs and scripts/synth-audio.py.
+ * The reel's look: its own `style` field where set (and valid), otherwise a
+ * rotation by reel number, so the full combination repeats only every 60 reels.
+ * Keep in sync with scripts/style.mjs.
  */
 export const pickStyle = (id: string, style?: Partial<ReelStyle> | null): ReelStyle => {
   const n = reelNumber(id);
   return {
-    theme: style?.theme && THEME_IDS.includes(style.theme) ? style.theme : THEME_IDS[n % THEME_IDS.length],
-    music: style?.music && MUSIC_IDS.includes(style.music) ? style.music : MUSIC_IDS[(n + 2) % MUSIC_IDS.length],
-    motion: style?.motion && MOTION_IDS.includes(style.motion) ? style.motion : MOTION_IDS[n % MOTION_IDS.length],
+    theme: pick(THEME_IDS, style?.theme, n),
+    layout: pick(LAYOUT_IDS, style?.layout, n),
+    backdrop: pick(BACKDROP_IDS, style?.backdrop, n + 1),
+    type: pick(TYPE_IDS, style?.type, Math.floor(n / 2)),
+    motion: pick(MOTION_IDS, style?.motion, n + 1),
+    music: pick(MUSIC_IDS, style?.music, 0),
   };
 };
 
 export const musicBpm = (music: MusicId) => styles.music[music]?.bpm ?? 100;
 
 type ThemeValue = {palette: Palette; style: ReelStyle};
-const DEFAULT: ThemeValue = {palette: themes.night, style: {theme: 'night', music: 'none', motion: 'rise'}};
+const DEFAULT: ThemeValue = {palette: themes.night, style: {theme: 'night', layout: 'framed', backdrop: 'plain', type: 'sans', motion: 'fade', music: 'recitation'}};
 const ThemeContext = createContext<ThemeValue>(DEFAULT);
 
 export const ThemeProvider: React.FC<{style: ReelStyle; children: React.ReactNode}> = ({style, children}) => (

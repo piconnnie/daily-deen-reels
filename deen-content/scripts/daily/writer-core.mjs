@@ -60,6 +60,7 @@ These are the most important rules. The validator enforces them and fails the bu
 - claims: one entry of kind "source" (with its ref) for each quoted source, and entries of kind "reflection" for our own suggestions. No other kinds.
 - Caption: write the opening, body and CTA only. The sources block (citation, translator, grade, link) is generated from the source scenes; don't add one. Text in quotation marks in the caption must be verbatim from a quoted source.
 - No chain-message bait ("share or…", "type Ameen", "send to 10 people"), no fear-mongering, no promises of specific rewards that the quoted source doesn't state.
+- Audio is Qur'an recitation, nothing else. By default the first ayah quoted on screen is recited. For a reel without an ayah (e.g. hadith only), set "recitation": {"ref": "quran:<s>:<a>"} to a short ayah (≤3 ayat, under ~40 s) that genuinely relates to the reminder; it is named on screen and in the caption. Never set the rest of the recitation object; the pipeline fills it. Use "recitation": false only for a deliberate silent reel.
 </source_rules>
 
 <layout_limits>
@@ -70,7 +71,7 @@ ${limitsForPrompt()}
 <timing_rules>
 - 30 fps. Hook scene 75–90 frames and fully readable on frame 0. Give viewers ~0.35 s per word of on-screen copy plus 1 s; quote scenes need at least the frames the source limit above requires.
 - Stage reveals with popStart/popStagger, itemStart/itemStagger, ctaAt and endCardAt (frames relative to the scene start). Leave ≥1.5 s after the final reveal of each scene.
-- Reels are silent (no music, no sound effects): don't add sfx cues.
+- No music or sound effects: don't add sfx cues. Quote scenes are lengthened automatically so the recitation is never cut.
 - transitionIn: "fade-up" by default.
 </timing_rules>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
 import {fonts, radius, type} from '../brand/tokens';
-import {useColors} from '../brand/theme';
+import {useColors, useReelStyle} from '../brand/theme';
 import {Kicker, KineticHeadline} from '../components/KineticHeadline';
 import {enter, pop, riseStyle} from '../components/motion';
 import type {ChecklistScene as ChecklistSceneConfig} from '../content/schema';
@@ -12,6 +12,7 @@ import {SceneShell} from './SceneShell';
 export const ChecklistScene: React.FC<{scene: ChecklistSceneConfig}> = ({scene}) => {
   const frame = useCurrentFrame();
   const colors = useColors();
+  const solid = useReelStyle().layout === 'framed';
   const {fps} = useVideoConfig();
   const ruleAt = scene.itemStart + scene.items.length * scene.itemStagger + 6;
   const rule = enter(frame, fps, ruleAt);
@@ -32,15 +33,16 @@ export const ChecklistScene: React.FC<{scene: ChecklistSceneConfig}> = ({scene})
                 style={{
                   width: 64,
                   height: 64,
-                  borderRadius: 16,
-                  background: colors.indigo,
+                  borderRadius: solid ? 16 : 32,
+                  background: solid ? colors.indigo : 'transparent',
+                  border: solid ? 'none' : `2px solid ${colors.indigo}`,
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   fontFamily: fonts.mono,
                   fontWeight: 700,
                   fontSize: 30,
-                  color: colors.offWhite,
+                  color: solid ? (colors.light ? colors.navy : colors.offWhite) : colors.indigo,
                   transform: `scale(${interpolate(n, [0, 1], [0.6, 1])})`,
                   flexShrink: 0,
                 }}

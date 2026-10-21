@@ -5,9 +5,6 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 const styles = JSON.parse(fs.readFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'src', 'brand', 'styles.json'), 'utf8'));
-const THEMES = styles.themes;
-const MUSIC = Object.keys(styles.music);
-const MOTION = styles.motion;
 
 export const reelNumber = (id) => {
   const m = /^deen-(\d+)/.exec(id);
@@ -17,14 +14,19 @@ export const reelNumber = (id) => {
   return h;
 };
 
+const pick = (ids, wanted, i) => (ids.includes(wanted) ? wanted : ids[i % ids.length]);
+
 export function pickStyle(id, style = {}) {
   const n = reelNumber(id);
   return {
-    theme: THEMES.includes(style?.theme) ? style.theme : THEMES[n % THEMES.length],
-    music: MUSIC.includes(style?.music) ? style.music : MUSIC[(n + 2) % MUSIC.length],
-    motion: MOTION.includes(style?.motion) ? style.motion : MOTION[n % MOTION.length],
+    theme: pick(styles.themes, style?.theme, n),
+    layout: pick(styles.layouts, style?.layout, n),
+    backdrop: pick(styles.backdrops, style?.backdrop, n + 1),
+    type: pick(styles.type, style?.type, Math.floor(n / 2)),
+    motion: pick(styles.motion, style?.motion, n + 1),
+    music: pick(Object.keys(styles.music), style?.music, 0),
   };
 }
 
-export const describeStyle = (s) => `${s.theme} theme · ${styles.music[s.music]?.label ?? s.music} · ${s.motion} transitions`;
-export const STYLE_OPTIONS = {themes: THEMES, music: MUSIC, motion: MOTION};
+export const describeStyle = (s) => `${s.theme} theme · ${s.layout} layout · ${s.backdrop} backdrop · ${s.type} headlines · ${s.motion} transitions`;
+export const STYLE_OPTIONS = {themes: styles.themes, layouts: styles.layouts, backdrops: styles.backdrops, type: styles.type, motion: styles.motion, music: Object.keys(styles.music)};

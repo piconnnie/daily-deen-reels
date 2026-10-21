@@ -3,11 +3,12 @@
 //   node scripts/sources/cli.mjs fetch                 download + hash-check every pinned dataset
 //   node scripts/sources/cli.mjs show <ref> [<ref>…]   print the exact text, citation and link
 //   node scripts/sources/cli.mjs search "<words>" [--in quran|bukhari|muslim] [--limit 10]
-//   node scripts/sources/cli.mjs apply <reelId|draft.json>   fill resolved text into a reel or draft
+//   node scripts/sources/cli.mjs apply <reelId|draft.json>   fill resolved text + recitation into a reel or draft
 import fs from 'node:fs';
 import path from 'node:path';
 import {loadReel, saveReel} from '../lib.mjs';
 import {CONFIG, applySources, ensureDatasets, normalize, resolveRef} from './sources.mjs';
+import {applyRecitation} from './recitation.mjs';
 
 const [cmd, ...rest] = process.argv.slice(2);
 const opt = (n, d) => {
@@ -58,13 +59,17 @@ if (cmd === 'fetch') {
 } else if (cmd === 'apply') {
   await ensureDatasets();
   const target = rest[0];
-  if (target?.endsWith('.json')) {
-    const draft = JSON.parse(fs.readFileSync(target, 'utf8'));
-    fs.writeFileSync(target, JSON.stringify(applySources(draft), null, 2) + '\n');
-  } else {
-    saveReel(applySources(loadReel(target)));
+  const isFile = target?.endsWith('.json');
+  const reel = applySources(isFile ? JSON.parse(fs.readFileSync(target, 'utf8')) : loadReel(target));
+  const problems = await applyRecitation(reel);
+  if (problems.length) {
+    for (const p of problems) console.error(`✗ ${p}`);
+    process.exit(1);
   }
-  console.log(`✓ sources resolved for ${target}`);
+  if (isFile) fs.writeFileSync(target, JSON.stringify(reel, null, 2) + '\n');
+  else saveReel(reel);
+  const r = reel.recitation;
+  console.log(`✓ sources resolved for ${target}${r?.files ? ` · recitation ${r.citation} by ${r.reciterName} (${r.totalSec}s, ${r.mode})` : ' · no recitation (silent)'}`);
 } else {
   console.log('Usage: cli.mjs fetch | show <ref…> | search "<words>" [--in quran|bukhari|muslim] | apply <reelId|draft.json>');
   process.exit(2);

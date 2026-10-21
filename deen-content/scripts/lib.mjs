@@ -78,6 +78,8 @@ export const captionText = (reel) => {
     const full = excerpted.has(x.ref) ? `\nFull text: ${x.english}` : '';
     return `• ${x.citation} (${tag}) — ${x.url.replace(/^https:\/\//, '')}${full}`;
   });
+  const rec = reel.recitation?.files ? reel.recitation : null;
+  if (rec) lines.push(`• Recitation: ${rec.citation} — ${rec.reciterName} (${rec.source}) — ${rec.url.replace(/^https:\/\//, '')}`);
   return [
     reel.caption.opening,
     ...reel.caption.body,

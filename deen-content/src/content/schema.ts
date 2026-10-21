@@ -232,6 +232,30 @@ export interface ReelConfig {
    * attributed to Allah or the Prophet ﷺ.
    */
   claims: {text: string; kind: 'source' | 'reflection'; ref?: string}[];
+  /**
+   * Qur'an recitation used as the reel's audio. Writers may set only
+   * {ref, reciter} (a related ayah, e.g. for a hadith reel) or false (silent);
+   * by default the first quoted ayah is recited. The pipeline fills the rest.
+   */
+  recitation?:
+    | false
+    | {
+        ref: string;
+        reciter?: string;
+        off?: boolean;
+        chosen?: 'default' | 'writer';
+        citation?: string;
+        url?: string;
+        reciterName?: string;
+        folder?: string;
+        source?: string;
+        mode?: 'scene' | 'background';
+        sceneId?: string | null;
+        startFrame?: number;
+        gapSec?: number;
+        totalSec?: number;
+        files?: {file: string; url: string; sha256: string; durationSec: number}[];
+      };
   /** Filled by the pipeline from the source scenes (citation + link for the caption). */
   sources?: {ref: string; citation: string; url: string; translation: string; grade: string | null; english: string}[];
   publish: {suggestedDate: string; notes: string};

@@ -17,7 +17,10 @@ DRAFT="$(cd "$(dirname "$DRAFT_ARG")" && pwd)/$(basename "$DRAFT_ARG")"
 # Verified-source datasets: use the local cache (run `npm run sources:fetch` once); never download in tests.
 export DEEN_SOURCES_DIR="${DEEN_SOURCES_DIR:-$SRC/deen-content/.cache/sources}" DEEN_SOURCES_OFFLINE=1
 E2E="${E2E_DIR:-$(mktemp -d)}"
+# Recitation audio: stand-in tones (test only), generated per referenced ayah.
+export DEEN_RECITATION_DIR="$E2E/recitations"
 rm -rf "$E2E" && mkdir -p "$E2E"/{bin,releases}
+node "$SRC/deen-content/scripts/test/make-recitation-fixtures.mjs" "$E2E/recitations" > /dev/null
 export GH_FAKE_STATE="$E2E/gh-state.json" GH_FAKE_RELEASES="$E2E/releases"
 # Each workflow run starts from a clean checkout of main, like a fresh GitHub runner.
 fresh() { git -C "$W" reset -q --hard 2>/dev/null; git -C "$W" clean -qfdx 2>/dev/null; git -C "$W" checkout -q main 2>/dev/null; git -C "$W" pull -q origin main 2>/dev/null; true; }
@@ -69,6 +72,8 @@ NEWID=$(ghq 's.prs[1]?.headRefName?.replace("reel/","") ?? ""')
 check "PR #2 opened for a new reel ($NEWID)" "[ -n '$NEWID' ] && [[ '$NEWID' == deen-002-* ]]"
 check "Planner picked the neediest pillar's first topic (t001)" "git -C '$W' show origin/reel/$NEWID:deen-content/src/content/reels/$NEWID.json | grep -q '\"backlogId\": \"t001\"'"
 check "Quote pulled from the verified dataset (Qur'an 2:186, quran.com link)" "git -C '$W' show origin/reel/$NEWID:deen-content/src/content/reels/$NEWID.json | grep -q 'https://quran.com/2/186' && git -C '$W' show origin/reel/$NEWID:deen-content/src/content/reels/$NEWID.json | grep -q 'indeed I am near'"
+check "Recitation of the quoted ayah recorded with reciter and SHA-256" "git -C '$W' show origin/reel/$NEWID:deen-content/src/content/reels/$NEWID.json | node -e 'const r=JSON.parse(require(\"fs\").readFileSync(0)).recitation; process.exit(r.ref===\"quran:2:186\" && r.mode===\"scene\" && /^[0-9a-f]{64}$/.test(r.files[0].sha256) ? 0 : 1)'"
+check "PR names the recitation and the caption credits the reciter" "ghq 's.prs[1].body' | grep -q 'Recitation: \[Qur.an 2:186' && ghq 's.prs[1].body' | grep -q '• Recitation: Qur.an 2:186'"
 check "PR asks the reviewer to check each source" "ghq 's.prs[1].body' | grep -q 'Check the sources before approving' && ghq 's.prs[1].body' | grep -q 'quran.com/2/186'"
 check "Only the new reel's files are on its branch" "[ \"\$(git -C '$W' diff --name-only origin/main origin/reel/$NEWID | grep -c '/src/content/reels/')\" = 1 ]"
 git -C "$W" checkout -q main

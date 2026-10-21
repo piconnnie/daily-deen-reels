@@ -1,7 +1,7 @@
 import React from 'react';
 import {useCurrentFrame, useVideoConfig} from 'remotion';
 import {fonts} from '../brand/tokens';
-import {useColors} from '../brand/theme';
+import {useColors, useReelStyle} from '../brand/theme';
 import type {HeadlineLine} from '../content/schema';
 import {enter, progress, riseStyle} from './motion';
 
@@ -21,6 +21,7 @@ export const KineticHeadline: React.FC<{
   staticUnderline?: boolean;
 }> = ({lines, size, start = 0, stagger = 5, instant = false, align = 'left', color, lineHeight = 1.06, staticUnderline = false}) => {
   const colors = useColors();
+  const serif = useReelStyle().type === 'serif';
   color = color ?? colors.offWhite;
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
@@ -35,11 +36,11 @@ export const KineticHeadline: React.FC<{
             key={i}
             style={{
               ...riseStyle(p, 30),
-              fontFamily: fonts.display,
+              fontFamily: serif ? fonts.serif : fonts.display,
               fontWeight: 700,
-              fontSize: size,
-              lineHeight,
-              letterSpacing: -size * 0.025,
+              fontSize: serif ? size * 1.04 : size,
+              lineHeight: serif ? lineHeight * 1.12 : lineHeight,
+              letterSpacing: serif ? 0 : -size * 0.025,
               color: line.highlight ? colors.cyan : color,
               textAlign: align,
               position: 'relative',

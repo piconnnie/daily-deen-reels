@@ -8,6 +8,7 @@
 import {DEFAULT_MODEL, ask, estimateCost, parseJsonObject} from './claude.mjs';
 import {briefText, criticText, isoDate, makePlan, normalizeDraft, systemText, validateReel, writeLog} from './writer-core.mjs';
 import {ensureDatasets} from '../sources/sources.mjs';
+import {applyRecitation} from '../sources/recitation.mjs';
 
 const sourceProblems = await ensureDatasets();
 if (sourceProblems.length) {
@@ -36,7 +37,7 @@ const critique = async (reel) => {
 };
 
 const messages = [{role: 'user', content: briefText(plan, format)}];
-const first = await ask({system, messages, webSearch: plan.research, maxSearches: 8, maxTokens: 32000, effort: 'high'});
+const first = await ask({system, messages, webSearch: false, maxSearches: 0, maxTokens: 32000, effort: 'high'});
 addUsage(first.usage);
 let rawText = first.text;
 let reel;
@@ -53,7 +54,8 @@ for (let round = 1; round <= MAX_ROUNDS + 1; round++) {
   } catch (e) {
     parseError = `Output was not valid JSON: ${e.message}`;
   }
-  lastErrors = parseError ? [parseError] : validateReel(reel, plan.history);
+  const recitationErrors = parseError ? [] : await applyRecitation(reel);
+  lastErrors = parseError ? [parseError] : recitationErrors.length ? recitationErrors : validateReel(reel, plan.history);
   lastCritic = null;
   if (!lastErrors.length) {
     lastCritic = await critique(reel);

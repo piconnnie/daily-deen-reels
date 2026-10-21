@@ -78,5 +78,53 @@
       "translation": "Abdul Hamid Siddiqui",
       "refFormat": "muslim:<number>[a-z] (sunnah.com numbering, e.g. muslim:2564c)"
     }
+  },
+  "recitations": {
+    "$comment": "Per-ayah Qur'an recitation audio (EveryAyah.com, the recordings quran.com also uses). File names are SSSAAA.mp3. Each downloaded file's SHA-256 and duration are recorded in the reel; a re-render refuses a file that changed.",
+    "urls": [
+      "https://everyayah.com/data/{folder}/{file}",
+      "https://mirrors.quranicaudio.com/everyayah/{folder}/{file}"
+    ],
+    "maxSeconds": 45,
+    "reciters": [
+      {
+        "id": "alafasy",
+        "name": "Mishary Rashid Alafasy",
+        "folder": "Alafasy_128kbps"
+      },
+      {
+        "id": "abdulbasit",
+        "name": "Abdul Basit Abdus Samad (Murattal)",
+        "folder": "Abdul_Basit_Murattal_192kbps"
+      },
+      {
+        "id": "husary",
+        "name": "Mahmoud Khalil Al-Husary",
+        "folder": "Husary_128kbps"
+      },
+      {
+        "id": "muaiqly",
+        "name": "Maher Al-Muaiqly",
+        "folder": "MaherAlMuaiqly128kbps"
+      },
+      {
+        "id": "minshawi",
+        "name": "Mohamed Siddiq Al-Minshawi (Murattal)",
+        "folder": "Minshawy_Murattal_128kbps"
+      },
+      {
+        "id": "sudais",
+        "name": "Abdur-Rahman As-Sudais",
+        "folder": "Abdurrahmaan_As-Sudais_192kbps"
+      }
+    ],
+    "fallbackOrder": [
+      "sudais",
+      "alafasy",
+      "muaiqly",
+      "husary",
+      "minshawi",
+      "abdulbasit"
+    ]
   }
 }

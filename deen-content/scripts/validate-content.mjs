@@ -11,6 +11,7 @@ import {OUT, ROOT, captionText, ensureDir, loadReel, readJsonIfExists, reelIdArg
 import {syncRegistry} from './sync-registry.mjs';
 import {checkLimits, sourceDisplay} from './content-limits.mjs';
 import {compareKey, isVerbatimExcerpt, resolveRef} from './sources/sources.mjs';
+import {checkRecitation} from './sources/recitation.mjs';
 import {STYLE_OPTIONS, pickStyle} from './style.mjs';
 
 syncRegistry();
@@ -40,7 +41,7 @@ add('content', 'Three hook variants generated', reel.hooks.length >= 3, `${reel.
 add('content', 'Selected hook is short enough to read in ~2s', hookWords <= 10, `${hookWords} words`);
 add('content', 'First scene is the hook', reel.scenes[0]?.type === 'hook');
 add('content', 'Core insight stated in one sentence', reel.coreInsight && reel.coreInsight.split(/[.!?](\s|$)/).filter((s) => s && s.trim()).length <= 1, reel.coreInsight);
-add('content', 'Duration within 15–50s', expectedSec >= 15 && expectedSec <= 50, `${expectedSec.toFixed(1)}s`, 'warning');
+add('content', 'Duration within 15–60s', expectedSec >= 15 && expectedSec <= 60, `${expectedSec.toFixed(1)}s`, 'warning');
 const shortScenes = reel.scenes.filter((s) => s.durationInFrames < reel.fps * 1.5);
 add('content', 'No scene shorter than 1.5s', shortScenes.length === 0, shortScenes.map((s) => s.id).join(', '));
 
@@ -51,6 +52,9 @@ const takeaway = reel.scenes.find((s) => s.type === 'takeaway');
     st.theme && !STYLE_OPTIONS.themes.includes(st.theme) && `theme "${st.theme}" (use ${STYLE_OPTIONS.themes.join('/')})`,
     st.music && !STYLE_OPTIONS.music.includes(st.music) && `music "${st.music}" (use ${STYLE_OPTIONS.music.join('/')})`,
     st.motion && !STYLE_OPTIONS.motion.includes(st.motion) && `motion "${st.motion}" (use ${STYLE_OPTIONS.motion.join('/')})`,
+    st.layout && !STYLE_OPTIONS.layouts.includes(st.layout) && `layout "${st.layout}" (use ${STYLE_OPTIONS.layouts.join('/')})`,
+    st.backdrop && !STYLE_OPTIONS.backdrops.includes(st.backdrop) && `backdrop "${st.backdrop}" (use ${STYLE_OPTIONS.backdrops.join('/')})`,
+    st.type && !STYLE_OPTIONS.type.includes(st.type) && `type "${st.type}" (use ${STYLE_OPTIONS.type.join('/')})`,
   ].filter(Boolean);
   add('content', 'Style names are valid', bad.length === 0, bad.join('; '));
 }
@@ -129,6 +133,15 @@ add('content', 'Cover headline 3–7 words', coverWords >= 3 && coverWords <= 7,
   const stray = [...ownCaption.matchAll(quoteRe)].map((m) => m[1]).filter((q) => !compareKey(allSourceText).includes(compareKey(q)));
   add('source', 'Quoted text in the caption is verbatim from a cited source', stray.length === 0, stray.map((q) => `"${q.slice(0, 60)}"`).join(' | '));
 
+  // Recitation: approved reciter, recorded files unchanged, never cut mid-ayah.
+  const rec = reel.recitation;
+  if (rec && !rec.off) {
+    const rp = checkRecitation(reel);
+    add('source', `Recitation (${rec.citation ?? rec.ref}, ${rec.reciterName ?? rec.reciter}) is verified and plays in full`, rp.length === 0, rp.join(' | '));
+  } else {
+    add('source', 'Recitation present', false, rec?.off ? 'turned off for this reel' : 'no Qur\'an reference to recite — add "recitation": {"ref": "quran:…"} for a related ayah', 'warning');
+  }
+
   // Hadith grading: only collections marked Sahih in sources/sources.json.
   const ungraded = [...fresh.values()].filter((r) => r.kind === 'hadith' && r.grade !== 'Sahih');
   add('source', 'Every hadith is from a Sahih collection', ungraded.length === 0, ungraded.map((r) => r.citation).join(', '));
@@ -182,7 +195,7 @@ if (!contentOnly && !preRender) {
     add('technical', 'Video codec H.264, yuv420p', v.codec_name === 'h264' && v.pix_fmt === 'yuv420p', `${v.codec_name} ${v.pix_fmt} ${v.profile}`);
     add('technical', 'Frame count matches composition', Number(v.nb_frames) === frames, `${v.nb_frames} vs ${frames}`);
     add('technical', 'Duration matches composition (±0.1s)', Math.abs(dur - expectedSec) <= 0.1, `${dur.toFixed(2)}s vs ${expectedSec.toFixed(2)}s`);
-    const silent = pickStyle(reel.id, reel.style).music === 'none' && !reel.audio.voiceover;
+    const silent = !(reel.recitation && !reel.recitation.off) && !reel.audio.voiceover;
     if (silent) add('technical', 'Silent reel: AAC 48 kHz stereo track present', a && a.codec_name === 'aac' && a.sample_rate === '48000' && a.channels === 2, a ? `${a.codec_name} ${a.sample_rate} ${a.channels}ch` : 'no audio stream');
     if (!silent && (reel.audio.bed || reel.audio.voiceover)) {
       add('technical', 'Audio AAC 48 kHz stereo', a && a.codec_name === 'aac' && a.sample_rate === '48000' && a.channels === 2, a ? `${a.codec_name} ${a.sample_rate} ${a.channels}ch` : 'no audio stream');
@@ -254,7 +267,7 @@ const warnings = checks.filter((c) => !c.pass && c.severity === 'warning');
 const manualPending = [
   'Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.',
   'Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.',
-  'Watch the full MP4 at normal speed on a phone (pacing, readability, transitions).',
+  'Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.',
   'Read the caption once more in Instagram\'s composer before posting.',
 ];
 const status = errors.length ? 'failed' : contentOnly ? 'content-passed' : preRender ? 'pre-render-passed' : 'automated-passed';
