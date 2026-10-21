@@ -1,0 +1,36 @@
+{
+  "id": "deen-001-hardship-is-never-alone",
+  "createdAt": "2026-10-21T11:07:17.043Z",
+  "release": {
+    "tag": "reel-deen-001-hardship-is-never-alone",
+    "video": "deen-001-hardship-is-never-alone.mp4",
+    "cover": "deen-001-hardship-is-never-alone.jpg",
+    "contactSheet": "deen-001-hardship-is-never-alone-contact-sheet.png"
+  },
+  "sha256": {
+    "video": "26feff586caabbbf7837e5990729b06355660221fd8c95eb1a46232e75869a97",
+    "cover": "ebb43d93686d126dd308c0406555c017ebc89a856aa7ce57e53b95e7c3f0d50a"
+  },
+  "durationSec": 31,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 49
+  },
+  "critic": null,
+  "needsAttention": false,
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}

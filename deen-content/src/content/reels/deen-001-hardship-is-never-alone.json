@@ -84,7 +84,7 @@
     {
       "id": "ayah",
       "type": "source",
-      "durationInFrames": 270,
+      "durationInFrames": 450,
       "purpose": "The ayah itself, Arabic and translation, with its reference.",
       "onScreen": "Qur'an 94:5-6, Arabic + Saheeh International",
       "storyboard": {
@@ -246,5 +246,34 @@
       "grade": null,
       "english": "For indeed, with hardship [will be] ease (5) Indeed, with hardship [will be] ease (6)"
     }
-  ]
+  ],
+  "recitation": {
+    "ref": "quran:94:5-6",
+    "chosen": "default",
+    "citation": "Qur'an 94:5-6",
+    "url": "https://quran.com/94/5-6",
+    "reciter": "husary",
+    "reciterName": "Mahmoud Khalil Al-Husary",
+    "folder": "Husary_128kbps",
+    "source": "EveryAyah.com",
+    "mode": "scene",
+    "sceneId": "ayah",
+    "startFrame": 102,
+    "gapSec": 0.25,
+    "totalSec": 13.876,
+    "files": [
+      {
+        "file": "094005.mp3",
+        "url": "https://everyayah.com/data/Husary_128kbps/094005.mp3",
+        "sha256": "e5d0eada93592f7ec46e5894e8d1caf3f5adb309071de34fe656c87c649f63f2",
+        "durationSec": 7.27
+      },
+      {
+        "file": "094006.mp3",
+        "url": "https://everyayah.com/data/Husary_128kbps/094006.mp3",
+        "sha256": "d0028329677c3c2d8c1bcc7a0dc379ceffb7875f89cbe796a65029dbb5638614",
+        "durationSec": 6.356
+      }
+    ]
+  }
 }
