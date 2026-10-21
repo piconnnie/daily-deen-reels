@@ -1,2 +1,2 @@
 # daily-deen-reels
-Instagram automation for faily deen reels
+Instagram automation for daily deen reels
