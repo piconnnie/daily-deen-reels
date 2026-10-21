@@ -202,18 +202,27 @@ check "Approval for $SUBREEL recorded without its merge run" "git -C '$W' show o
 check "PR #3 told it is scheduled" "ghq 's.prs[2].comments.join(\"|\")' | grep -q 'Approved by @faraz'"
 check "Already-recorded approvals are not re-commented" "[ \"\$(ghq 's.prs[1].comments.filter(c=>c.includes(\"Approved by\")).length')\" = 1 ]"
 
-echo "== 7c. No auto-approve on this page: open PRs stay open even after the posting time"
-$RUN "$WF/deen-publish.yml" --repo "$W" --event schedule --secrets "$IGSECRETS" --vars "{\"DEEN_AUTO_APPROVE\":\"true\",\"DEEN_POST_TIME\":\"00:00\",\"DEEN_MAX_PER_DAY\":\"5\",\"DEEN_PUBLIC_BASE_URL\":\"$IG/assets\"}" > /dev/null
-check "Waiting PRs are not merged by the workflow" "[ \"\$(ghq 's.prs[0].state')\" = open ] && [ \"\$(ghq 's.prs[3].state')\" = open ] && [ \"\$(ghq 's.prs[4].state')\" = open ]"
-check "Only the reels a person merged were posted" "[ \"\$(grep -c media_publish '$E2E/ig-log.jsonl')\" = 2 ]"
+echo "== 7c. DEEN_AUTO_APPROVE=false → nothing is merged by the workflow"
+AUTOVARS="{\"DEEN_POST_TIME\":\"00:00\",\"DEEN_MAX_PER_DAY\":\"5\",\"DEEN_PUBLIC_BASE_URL\":\"$IG/assets\"}"
+$RUN "$WF/deen-publish.yml" --repo "$W" --event schedule --secrets "$IGSECRETS" --vars "{\"DEEN_AUTO_APPROVE\":\"false\",\"DEEN_POST_TIME\":\"00:00\",\"DEEN_MAX_PER_DAY\":\"5\",\"DEEN_PUBLIC_BASE_URL\":\"$IG/assets\"}" > /dev/null
+check "With auto-approve off, waiting PRs stay open; only the merged reel posts" "[ \"\$(ghq 's.prs[0].state')\" = open ] && [ \"\$(ghq 's.prs[3].state')\" = open ] && [ \"\$(ghq 's.prs[4].state')\" = open ] && [ \"\$(grep -c media_publish '$E2E/ig-log.jsonl')\" = 2 ]"
 
-echo "== 7d. Merge the carousel PR → posted as an Instagram carousel"
-git -C "$U" fetch -q origin && git -C "$U" checkout -q main && git -C "$U" pull -q origin main
-git -C "$U" merge -q --no-ff "origin/reel/$QID" -m "Merge carousel $QID" && git -C "$U" push -q origin main
-node -e "const f='$GH_FAKE_STATE',fs=require('fs');const s=JSON.parse(fs.readFileSync(f));Object.assign(s.prs[4],{state:'merged',mergedBy:{login:'faraz'},mergedAt:new Date().toISOString()});fs.writeFileSync(f,JSON.stringify(s,null,2))"
-$RUN "$WF/deen-publish.yml" --repo "$W" --event schedule --secrets "$IGSECRETS" --vars "{\"DEEN_POST_TIME\":\"00:00\",\"DEEN_MAX_PER_DAY\":\"5\",\"DEEN_PUBLIC_BASE_URL\":\"$IG/assets\"}" > /dev/null
+echo "== 7d. Fully automated (default): veto window, hold and needs-attention respected"
+$RUN "$WF/deen-publish.yml" --repo "$W" --event schedule --secrets "$IGSECRETS" --vars '{"DEEN_POST_TIME":"23:59","DEEN_MAX_PER_DAY":"5"}' > /dev/null
+check "Nothing auto-approved before the posting time (veto window)" "[ \"\$(ghq 's.prs[0].state')\" = open ] && [ \"\$(ghq 's.prs[3].state')\" = open ]"
+node -e "const f='$GH_FAKE_STATE',fs=require('fs');const s=JSON.parse(fs.readFileSync(f));s.prs[0].labels.push('hold');s.prs[4].labels.push('needs-attention');fs.writeFileSync(f,JSON.stringify(s,null,2))"
+$RUN "$WF/deen-publish.yml" --repo "$W" --event schedule --secrets "$IGSECRETS" --vars "$AUTOVARS" > /dev/null
 git -C "$W" fetch -q origin
-check "Carousel posted: 6 item containers + a CAROUSEL container" "[ \"\$(grep -c is_carousel_item '$E2E/ig-log.jsonl')\" = 6 ] && grep -q '\"media_type\":\"CAROUSEL\"' '$E2E/ig-log.jsonl' && git -C '$W' show origin/main:deen-content/archive/$QID/state.json | grep -q '\"status\": \"published\"'"
+check "Oldest eligible PR (#4) auto-approved and posted; held PR #1 skipped" "[ \"\$(ghq 's.prs[3].state')\" = merged ] && [ \"\$(ghq 's.prs[0].state')\" = open ] && git -C '$W' show origin/main:deen-content/archive/$FBID/state.json | grep -q '\"status\": \"published\"'"
+check "PR told it was auto-approved" "ghq 's.prs[3].comments.join(\"|\")' | grep -q 'Auto-approved'"
+$RUN "$WF/deen-publish.yml" --repo "$W" --event schedule --secrets "$IGSECRETS" --vars "$AUTOVARS" > /dev/null
+check "A needs-attention post is never auto-approved" "[ \"\$(ghq 's.prs[4].state')\" = open ] && [ \"\$(grep -c media_publish '$E2E/ig-log.jsonl')\" = 3 ]"
+node -e "const f='$GH_FAKE_STATE',fs=require('fs');const s=JSON.parse(fs.readFileSync(f));s.prs[4].labels=s.prs[4].labels.filter(l=>l!=='needs-attention');fs.writeFileSync(f,JSON.stringify(s,null,2))"
+$RUN "$WF/deen-publish.yml" --repo "$W" --event schedule --secrets "$IGSECRETS" --vars "$AUTOVARS" > /dev/null
+git -C "$W" fetch -q origin
+check "Carousel auto-approved and posted: 6 item containers + a CAROUSEL container" "[ \"\$(ghq 's.prs[4].state')\" = merged ] && [ \"\$(grep -c is_carousel_item '$E2E/ig-log.jsonl')\" = 6 ] && grep -q '\"media_type\":\"CAROUSEL\"' '$E2E/ig-log.jsonl' && git -C '$W' show origin/main:deen-content/archive/$QID/state.json | grep -q '\"status\": \"published\"'"
+$RUN "$WF/deen-publish.yml" --repo "$W" --event schedule --secrets "$IGSECRETS" --vars "$AUTOVARS" > /dev/null
+check "A PR on hold is never auto-approved" "[ \"\$(ghq 's.prs[0].state')\" = open ] && [ \"\$(grep -c media_publish '$E2E/ig-log.jsonl')\" = 4 ]"
 
 echo "== 8. A merged PR without the daily-reel label is ignored"
 $RUN "$WF/deen-publish.yml" --repo "$W" --event pull_request --event-json '{"pull_request":{"number":9,"merged":true,"labels":[{"name":"docs"}],"head":{"ref":"feature/x"}}}' --secrets "$IGSECRETS" | tee "$E2E/s8.log" > /dev/null

@@ -2,7 +2,11 @@
 
 **It runs completely free by default:** a public GitHub repo (free Actions minutes), reels from a pre-written content queue (no AI model at run time), public verified-source datasets, and Instagram's free Graph API. Paid writers are off unless you opt in.
 
-Every morning a GitHub Actions workflow takes the next post from the queue — a **reel**, a **carousel** or a **story**, following the content strategy in [`../docs/CONTENT_STRATEGY.md`](../docs/CONTENT_STRATEGY.md) — **pulls every verse and hadith word for word from the pinned datasets** (Qur'an, Sahih al-Bukhari, Sahih Muslim — see [sources/README.md](sources/README.md)), renders it, runs every quality gate, and opens a **review pull request** with previews (the MP4 for reels, every slide for carousels and stories) and a checklist of source links. **Merging the PR approves it.** It is posted to Instagram at the daily slot (default 19:00 IST). Closing the PR rejects it; nothing is posted. **There is no auto-approve on this page:** every post waits for a person to check its sources.
+Every morning a GitHub Actions workflow takes the next post from the queue — a **reel**, a **carousel** or a **story**, following the content strategy in [`../docs/CONTENT_STRATEGY.md`](../docs/CONTENT_STRATEGY.md) — **pulls every verse and hadith word for word from the pinned datasets** (Qur'an, Sahih al-Bukhari, Sahih Muslim — see [sources/README.md](sources/README.md)), renders it, runs every quality gate, and opens a **review pull request** with previews (the MP4 for reels, every slide for carousels and stories) and a checklist of source links. **It runs fully automated by default:** at the daily slot (default 19:00 IST) the oldest waiting post approves itself and is posted to Instagram. The time between the PR opening (06:00) and the slot is your veto window: **close** the PR to reject a post, add the **`hold`** label to keep it waiting, or merge it yourself to approve early. Posts where QA was unsure (ruling-type words, a missing ﷺ in our own words, or an editor flag) are labelled **needs-attention** and always wait for a person. To approve every post by hand instead, set the repo variable `DEEN_AUTO_APPROVE` to `false`.
+
+## Auto-approve (on by default)
+
+Every post has already passed the source gate before its PR exists: verbatim text from the pinned datasets, approved collections only, no words attributed to Allah or the Prophet ﷺ outside a quote, verified recitation that is never cut. With auto-approve on, the hourly publish run (after `DEEN_POST_TIME`) merges the oldest open review PR that isn't on `hold` or `needs-attention`, records the approval and posts it — one at a time, within `DEEN_MAX_PER_DAY`. Each auto-approved PR gets a comment saying so.
 
 | Kind | Posted as | Notes |
 |---|---|---|
@@ -65,7 +69,7 @@ Repo → **Settings → Actions → General → Workflow permissions**:
 
 - `node scripts/daily/dequeue.mjs --status` lists what's left (`--count` prints just the number).
 - When 5 or fewer drafts remain, the daily run opens (or comments on) an issue labelled **queue-low**. Turn on GitHub notifications to see it.
-- **Automatic refill (optional):** a weekly scheduled Claude task can run `scripts/daily/refill-plan.mjs` and top the queue back up to ~21 drafts, following [`data/queue/REFILL.md`](data/queue/REFILL.md). It runs on your Claude plan; there's no API bill. Ask Claude in chat to set it up once the repo exists.
+- **Automatic refill (on):** a scheduled Claude task, **"Daily Deen queue refill"** (Mondays 10:38 IST), runs `scripts/daily/refill-plan.mjs` and tops the queue back up to ~21 drafts following [`data/queue/REFILL.md`](data/queue/REFILL.md) and the content strategy, validates every draft and pushes them to `main`. It runs on your Claude plan; there's no API bill. Manage it from your Claude scheduled tasks.
 - **To refill by hand:** in a Claude chat, ask: *"write the next batch of queue drafts for daily-deen-reels"* (Claude follows [`data/queue/REFILL.md`](data/queue/REFILL.md) and uses only the source tools). Claude writes and validates them; commit them to `data/queue/` or let Claude push them. Ten drafts = ten days.
 - Drafts are never deleted; a draft counts as used once a reel carries its `queueId`. A draft that has become too similar to a newer reel is skipped automatically.
 
@@ -165,6 +169,7 @@ To choose yourself, edit e.g. `"style": {"theme": "ivory", "layout": "minimal"}`
 | `DEEN_TZ` | `Asia/Kolkata` | Time zone for the slot and the daily cap |
 | `DEEN_MAX_PER_DAY` | `1` | Posts per day |
 | `DEEN_MAX_OPEN_REVIEWS` | `3` | Skip generation when this many PRs await review |
+| `DEEN_AUTO_APPROVE` | `true` | Fully automated: each post approves itself at the posting time unless closed, on `hold` or `needs-attention`. `false` = merge every PR yourself |
 | `DEEN_WRITER` | `queue` | `queue` (free), or opt into a paid writer: `subscription` or `api` |
 | `DEEN_QUEUE_LOW` | `5` | Open a queue-low issue when this many drafts or fewer are left |
 | `DEEN_MODEL` | `claude-opus-5-5` | Paid writers only: writer/editor model (`claude-sonnet-5-5` is cheaper; `claude-fable-5-1` is stronger and pricier) |

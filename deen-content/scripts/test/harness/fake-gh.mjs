@@ -65,6 +65,10 @@ if (group === 'pr') {
       pr.labels = [...new Set([...pr.labels, ...flag('add-label').split(',')])];
       done();
     }
+    if (flag('remove-label')) {
+      pr.labels = pr.labels.filter((l) => !flag('remove-label').split(',').includes(l));
+      done();
+    }
     pr.body = fs.readFileSync(flag('body-file'), 'utf8');
     pr.edits = (pr.edits ?? 0) + 1;
     done();

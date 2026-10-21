@@ -151,7 +151,7 @@ def overview(snap):
     c[1].metric("Waiting for your review", len(snap["prs"]))
     c[2].metric("Approved, not yet posted", len(snap["byStatus"]["approved"]) + len(snap["byStatus"]["failed"]))
     c[3].metric("Posted", len(snap["byStatus"]["published"]))
-    st.caption(f"New reel every day at 06:00 IST · posts after **{v['DEEN_POST_TIME']} {v['DEEN_TZ']}**, max {v['DEEN_MAX_PER_DAY']}/day · writer: **{v['DEEN_WRITER']}** · every reel needs your approval")
+    st.caption(f"New reel every day at 06:00 IST · posts after **{v['DEEN_POST_TIME']} {v['DEEN_TZ']}**, max {v['DEEN_MAX_PER_DAY']}/day · writer: **{v['DEEN_WRITER']}** · {'fully automated (auto-approve on)' if v['DEEN_AUTO_APPROVE'] != 'false' else 'every post needs your approval'}")
 
     left, right = st.columns(2)
     with left:
@@ -190,7 +190,11 @@ def review(snap):
         st.info("No reels waiting for review. A new one is made every morning, or start one in **Make a reel**.")
         return
     repo = snap["repo"]["fullName"]
-    st.info("Every reel waits for you. Before approving, open each source link (quran.com / sunnah.com) and check the quote, reference and translation.")
+    if snap["variables"]["DEEN_AUTO_APPROVE"] != "false":
+        st.info(f"Fully automated: the oldest post here approves itself at {snap['variables']['DEEN_POST_TIME']} unless you reject it or put it on hold. "
+                "Posts flagged ⚠️ needs attention (QA warnings) always wait for you.")
+    else:
+        st.info("Every post waits for you. Before approving, open each source link (quran.com / sunnah.com) and check the quote, reference and translation.")
     for pr in prs:
         rid, state, reel = pr["id"], pr.get("state") or {}, pr.get("reel") or {}
         with st.container(border=True):
@@ -227,7 +231,7 @@ def review(snap):
             with h:
                 held = "hold" in pr["labels"]
                 if st.button("▶ Release hold" if held else "⏸ Hold", key=f"hold-{pr['number']}", width="stretch",
-                             help="Marks the reel as 'not yet' (e.g. while you check a source). You can still approve it yourself."):
+                             help="A post on hold is never auto-approved. You can still approve it yourself."):
                     do(ss.client.set_hold, pr["number"], not held)
             with a:
                 confirm_button("✅ Approve", f"approve-{pr['number']}",
@@ -361,6 +365,9 @@ def settings(snap):
         writer = v["DEEN_WRITER"] if v["DEEN_WRITER"] in gh.WRITERS else "queue"
         new["DEEN_WRITER"] = c1.selectbox("Writer", gh.WRITERS, gh.WRITERS.index(writer),
                                           format_func=lambda w: {"queue": "queue (free)", "subscription": "Claude subscription (paid plan)", "api": "Claude API (pay per token)"}[w])
+        auto = c1.selectbox("Auto-approve", ["true", "false"], ["true", "false"].index("false" if v["DEEN_AUTO_APPROVE"] == "false" else "true"),
+                            format_func=lambda x: {"true": "on — fully automated (I can still reject or hold)", "false": "off — I approve every post"}[x])
+        new["DEEN_AUTO_APPROVE"] = auto
         login = v["IG_LOGIN"] if v["IG_LOGIN"] in ("instagram", "facebook") else "instagram"
         new["IG_LOGIN"] = c2.selectbox("Instagram login type", ["instagram", "facebook"], ["instagram", "facebook"].index(login))
         saved = st.form_submit_button("Save settings", type="primary")

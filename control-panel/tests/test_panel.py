@@ -247,15 +247,20 @@ class AppTests(unittest.TestCase):
         self.run_app(press={"↻ Refresh"})
         self.assertTrue(any("ANTHROPIC_API_KEY" in w for w in ST.texts("warning")))
 
-    def test_no_auto_approve_and_hold(self):
+    def test_auto_approve_setting_and_hold(self):
         self.connect()
         self.run_app(press={"↻ Refresh"})
-        self.assertTrue(any("Every reel waits for you" in t for t in ST.texts("info")))
+        self.assertTrue(any("Fully automated" in t for t in ST.texts("info")))  # on by default
+        self.run_app(press={"Save settings"}, **{"Auto-approve": "false"})
+        self.assertEqual(self.state.variables.get("DEEN_AUTO_APPROVE"), "false")
+        self.run_app(press={"↻ Refresh"})
+        self.assertTrue(any("Every post waits for you" in t for t in ST.texts("info")))
         self.run_app(press={"hold-5"})
         self.assertIn("hold", self.state.prs[0]["labels"])
         self.run_app(press={"hold-5"})
         self.assertNotIn("hold", self.state.prs[0]["labels"])
-        self.assertNotIn("DEEN_AUTO_APPROVE", self.state.variables)
+        self.run_app(press={"Save settings"}, **{"Auto-approve": "true"})
+        self.assertNotIn("DEEN_AUTO_APPROVE", self.state.variables)  # back to default removes it
 
     def test_pause_resume(self):
         self.connect()

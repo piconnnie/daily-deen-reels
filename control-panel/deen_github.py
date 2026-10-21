@@ -46,6 +46,7 @@ VARIABLES = {
     "DEEN_MAX_PER_DAY": ("1", "Maximum posts per day."),
     "DEEN_MAX_OPEN_REVIEWS": ("3", "Skip making a new reel while this many wait for review."),
     "DEEN_QUEUE_LOW": ("5", "Open a 'queue-low' issue at this many drafts left."),
+    "DEEN_AUTO_APPROVE": ("true", "true = fully automated: each post approves itself at the posting time unless closed, on hold or flagged needs-attention. false = merge every PR yourself."),
     "DEEN_WRITER": ("queue", "queue = free. subscription / api = paid writers (need their secret)."),
     "IG_LOGIN": ("instagram", "instagram or facebook (which Instagram API login you set up)."),
 }

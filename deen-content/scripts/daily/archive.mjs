@@ -61,6 +61,13 @@ if (writer) fs.writeFileSync(path.join(dir, 'writer.json'), JSON.stringify(write
 
 const tag = `reel-${id}`;
 const asset = (name) => `https://github.com/${repo}/releases/download/${tag}/${name}`;
+// In fully automated mode, a person still sees anything QA was unsure about:
+// ruling-type words or a missing ﷺ in our own words hold the post for review.
+const HOLD_WARNINGS = [/ruling-type language/i, /Honorific ﷺ/];
+const attentionReasons = [
+  ...(writer?.needsAttention ? ['the editor pass did not fully approve this draft'] : []),
+  ...qa.checks.filter((c) => !c.pass && c.severity === 'warning' && HOLD_WARNINGS.some((r) => r.test(c.name))).map((c) => `${c.name}${c.detail ? ` (${c.detail})` : ''}`),
+];
 const state = {
   id,
   createdAt: new Date().toISOString(),
@@ -75,7 +82,8 @@ const state = {
   durationSec: isReel ? +(totalFrames(reel) / reel.fps).toFixed(2) : null,
   qa: {status: qa.status, errors: qa.errors, warnings: qa.warnings, checks: qa.checks.length},
   critic: writer?.finalCritic ?? null,
-  needsAttention: !!writer?.needsAttention,
+  needsAttention: attentionReasons.length > 0,
+  attentionReasons,
   approval: {status: 'pending', approvedBy: null, approvedAt: null},
   publish: {status: 'pending', mediaId: null, permalink: null, publishedAt: null, attempts: 0, lastError: null},
 };
@@ -98,7 +106,7 @@ lines.push(`🎨 ${describeStyle(pickStyle(reel.id, reel.style))}`);
 const recit = reel.recitation?.files ? reel.recitation : null;
 if (isReel) lines.push(recit ? `🎧 Recitation: [${recit.citation}](${recit.url}) — ${recit.reciterName} (${recit.totalSec}s, ${recit.mode === 'scene' ? 'with the ayah on screen' : 'from after the hook, labelled on screen'})` : '🔇 No recitation (silent reel)');
 lines.push('');
-if (state.needsAttention) lines.push('> ⚠️ **Needs attention:** the editor pass did not fully approve this draft after the maximum revision rounds. Read the notes below before merging.', '');
+if (state.needsAttention) lines.push(`> ⚠️ **Needs attention — this post will not be auto-approved.** ${attentionReasons.join('; ')}. Merge it yourself if it's fine, or edit/close it.`, '');
 if (isReel) {
   lines.push(`<img src="${asset(`${id}.jpg`)}" width="240" alt="cover"> <img src="${asset(`${id}-contact-sheet.png`)}" width="520" alt="frames">`);
   lines.push('');

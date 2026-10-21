@@ -95,4 +95,4 @@ Clean and quiet: lots of space, one accent colour, no busy textures. The look ro
 
 ## 10. Review before posting
 
-Automated QA checks the references, verbatim text, attributions, layout and the files. A person still approves every post by merging its pull request, after opening each source link and looking at the post on a phone.
+Automated QA checks the references, verbatim text, attributions, layout and the files. Posts then approve themselves at the posting time (fully automated mode), so every draft must meet this bar on its own; posts QA is unsure about (ruling-type words, a missing ﷺ) wait for a person. You can still close or hold any post before it goes out.

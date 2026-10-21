@@ -65,8 +65,17 @@ jobs:
         with:
           node-version: 22
 
-      # No auto-approve on this page: every reel waits for a person to check its
-      # sources and merge the PR.
+      # Fully automated (default): after the posting time, merge the oldest waiting
+      # review PR unless it's closed, on hold or flagged needs-attention (QA warnings).
+      # Set the repo variable DEEN_AUTO_APPROVE=false to approve every post by hand.
+      - name: Auto-approve the next post
+        if: github.event_name != 'pull_request'
+        env:
+          DEEN_AUTO_APPROVE: ${{ vars.DEEN_AUTO_APPROVE || 'true' }}
+        run: |
+          pr=$(node scripts/daily/auto-approve.mjs)
+          if [ -n "$pr" ]; then git pull --quiet --ff-only origin "$DEFAULT_BRANCH"; fi
+
       # Every run (merge, hourly, manual) records approvals for all merged reel PRs,
       # so an approval survives even if the run started by the merge was cancelled.
       - name: Record approvals from merged PRs
