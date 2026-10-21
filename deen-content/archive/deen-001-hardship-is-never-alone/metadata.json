@@ -1,0 +1,219 @@
+{
+  "contentId": "deen-001-hardship-is-never-alone",
+  "version": 1,
+  "generatedAt": "2026-10-21T11:07:10.340Z",
+  "pillar": "F: Hope, Patience and Trust",
+  "format": "ayah-reflection",
+  "objective": "shares",
+  "targetAudience": "Muslims going through a hard week who need a grounded reminder",
+  "topic": "With hardship comes ease",
+  "coreInsight": "The Qur'an pairs hardship with ease twice in a row, so a hard season is not the whole story.",
+  "hookVariants": [
+    {
+      "text": "Having a hard week?",
+      "angle": "Direct, personal recognition",
+      "scores": {
+        "specificity": 3,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 22
+    },
+    {
+      "text": "Read this twice. It's written twice.",
+      "angle": "Curiosity about the repetition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 5,
+        "credibility": 4,
+        "comprehension": 3
+      },
+      "total": 20
+    },
+    {
+      "text": "Hardship is never alone.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 4,
+        "comprehension": 4
+      },
+      "total": 19
+    }
+  ],
+  "selectedHook": "Having a hard week?",
+  "selectionRationale": "Highest relevance and comprehension; it meets the viewer where they are and the next scene is the answer.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "Having a hard week? / Read this slowly.",
+      "voiceover": null
+    },
+    {
+      "scene": "ayah",
+      "onScreen": "Qur'an 94:5-6, Arabic + Saheeh International",
+      "voiceover": null
+    },
+    {
+      "scene": "reflection",
+      "onScreen": "REFLECTION / Hold on to both halves. / Name what is hard, honestly · Look for the ease already beside it · Ask Allah for patience and for relief",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "This hard part is not the whole story. / Send this to someone who needs it",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 540,
+      "startSec": 3,
+      "endSec": 18
+    },
+    {
+      "id": "reflection",
+      "type": "checklist",
+      "startFrame": 540,
+      "endFrame": 780,
+      "startSec": 18,
+      "endSec": 26
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 780,
+      "endFrame": 930,
+      "startSec": 26,
+      "endSec": 31
+    }
+  ],
+  "caption": "If this week is heavy, sit with these two ayat for a minute.\n\nIn Surah Ash-Sharh the same promise appears twice, one ayah after the other: with hardship, ease.\n\nA reflection for today:\n→ name what is hard, honestly\n→ look for the ease that is already beside it\n→ ask Allah for patience and for relief\n\nSend this to someone who needs it today.\n\n📖 Sources\n• Qur'an 94:5-6 (tr. Saheeh International) — quran.com/94/5-6\n• Recitation: Qur'an 94:5-6 — Mahmoud Khalil Al-Husary (EveryAyah.com) — quran.com/94/5-6\n\n#IslamicReminder #Quran #Sabr #Tawakkul #DailyReminder",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Quran",
+    "#Sabr",
+    "#Tawakkul",
+    "#DailyReminder"
+  ],
+  "primaryCta": {
+    "type": "share",
+    "text": "Send this to someone who needs it"
+  },
+  "coverHeadline": "Hardship is never alone.",
+  "sources": [
+    {
+      "ref": "quran:94:5-6",
+      "citation": "Qur'an 94:5-6",
+      "url": "https://quran.com/94/5-6",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "For indeed, with hardship [will be] ease (5) Indeed, with hardship [will be] ease (6)"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "Qur'an 94:5-6 pairs hardship with ease in two consecutive ayat.",
+      "kind": "source",
+      "ref": "quran:94:5-6"
+    },
+    {
+      "text": "Naming the difficulty, looking for ease and asking for patience and relief are ways to act on the ayah.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 31,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [
+      "public/audio/deen-001-hardship-is-never-alone-bed.wav"
+    ],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-001-hardship-is-never-alone.mp4",
+    "cover": "output/covers/deen-001-hardship-is-never-alone.png",
+    "caption": "output/captions/deen-001-hardship-is-never-alone.txt",
+    "storyboard": "output/storyboards/deen-001-hardship-is-never-alone.md",
+    "subtitles": "output/storyboards/deen-001-hardship-is-never-alone.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-10-21T11:07:16.993Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-001-hardship-is-never-alone/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "2026-10-23",
+  "publishNotes": "Evergreen.",
+  "repurposing": {
+    "carousel": [
+      "1/ Having a hard week?",
+      "2/ Qur'an 94:5-6 (Arabic + translation)",
+      "3/ It's said twice",
+      "4/ Three reflections",
+      "5/ Send it to someone"
+    ],
+    "followUpReel": "Heart Check: Qur'an 2:286 (Allah does not burden a soul beyond its capacity).",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
