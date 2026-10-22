@@ -1,0 +1,212 @@
+{
+  "contentId": "deen-002-when-the-path-isnt-clear",
+  "version": 1,
+  "generatedAt": "2026-10-22T05:13:48.082Z",
+  "pillar": "B: Heart-Softening Reminders",
+  "format": "heart-reminder",
+  "objective": "shares",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "When life feels uncertain: trust in Allah",
+  "coreInsight": "Qur'an 65:3 says whoever relies on Allah, He is sufficient for him, so we can keep moving without seeing every step.",
+  "hookVariants": [
+    {
+      "text": "When life feels uncertain…",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "You don't need every step.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "He is sufficient.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "When life feels uncertain…",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "When life feels uncertain… / You don't need to see every step.",
+      "voiceover": null
+    },
+    {
+      "scene": "ayah",
+      "onScreen": "quran:65:3 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "reflection",
+      "onScreen": "REFLECTION / Trust, then take the next step. / Tawakkul isn't waiting with folded hands. It is doing what you can today and leaving what you can't see to Allah. You don't have to know every step ahead to keep moving forward.",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "He is enough. Take the next small step. / Share it with someone who needs it",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 522,
+      "startSec": 3,
+      "endSec": 17.4
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "startFrame": 522,
+      "endFrame": 777,
+      "startSec": 17.4,
+      "endSec": 25.9
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 777,
+      "endFrame": 927,
+      "startSec": 25.9,
+      "endSec": 30.9
+    }
+  ],
+  "caption": "You don't have to know every step ahead to keep moving forward.\n\nQur'an 65:3 is a reminder that whoever relies on Allah, He is sufficient for him.\n\nTawakkul isn't waiting with folded hands: do what you can today, and leave what you can't see to Allah.\n\nShare it with someone who may find it helpful.\n\n📖 Sources\n• Qur'an 65:3 (tr. Saheeh International) — quran.com/65/3\nFull text: And will provide for him from where he does not expect. And whoever relies upon Allah - then He is sufficient for him. Indeed, Allah will accomplish His purpose. Allah has already set for everything a [decreed] extent\n• Recitation: Qur'an 65:3 — Maher Al-Muaiqly (EveryAyah.com) — quran.com/65/3\n\n#IslamicReminder #IslamicReminder #Tawakkul #Sabr",
+  "hashtags": [
+    "#IslamicReminder",
+    "#IslamicReminder",
+    "#Tawakkul",
+    "#Sabr"
+  ],
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with someone who needs it"
+  },
+  "coverHeadline": "When the path isn't clear",
+  "sources": [
+    {
+      "ref": "quran:65:3",
+      "citation": "Qur'an 65:3",
+      "url": "https://quran.com/65/3",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "And will provide for him from where he does not expect. And whoever relies upon Allah - then He is sufficient for him. Indeed, Allah will accomplish His purpose. Allah has already set for everything a [decreed] extent"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What quran:65:3 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:65:3"
+    },
+    {
+      "text": "Doing what we can and trusting Allah with the rest is our reflection on the ayah.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 30.9,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [
+      "public/audio/deen-002-when-the-path-isnt-clear-bed.wav"
+    ],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-002-when-the-path-isnt-clear.mp4",
+    "cover": "output/covers/deen-002-when-the-path-isnt-clear.png",
+    "caption": "output/captions/deen-002-when-the-path-isnt-clear.txt",
+    "storyboard": "output/storyboards/deen-002-when-the-path-isnt-clear.md",
+    "subtitles": "output/storyboards/deen-002-when-the-path-isnt-clear.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-10-22T05:13:54.877Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-002-when-the-path-isnt-clear/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Launch calendar day 1.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
