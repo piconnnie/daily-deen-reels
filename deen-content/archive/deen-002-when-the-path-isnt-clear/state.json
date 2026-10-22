@@ -1,0 +1,38 @@
+{
+  "id": "deen-002-when-the-path-isnt-clear",
+  "createdAt": "2026-10-22T05:13:54.929Z",
+  "kind": "reel",
+  "release": {
+    "tag": "reel-deen-002-when-the-path-isnt-clear",
+    "cover": "deen-002-when-the-path-isnt-clear.jpg",
+    "contactSheet": "deen-002-when-the-path-isnt-clear-contact-sheet.png",
+    "video": "deen-002-when-the-path-isnt-clear.mp4"
+  },
+  "sha256": {
+    "video": "19e43e9c27ea38bb6aadd28c0efa055038d0cc8500588da33e42d5fc64a9df8f",
+    "cover": "cec1740cc66ce29af060d0f623b6db3b4447ed0f356297355fdccca63e58ec27"
+  },
+  "durationSec": 30.9,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 49
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}

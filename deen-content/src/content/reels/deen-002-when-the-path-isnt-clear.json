@@ -1,0 +1,272 @@
+{
+  "id": "deen-002-when-the-path-isnt-clear",
+  "version": 1,
+  "status": "qa-passed",
+  "kind": "reel",
+  "brief": {
+    "topic": "When life feels uncertain: trust in Allah",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "B: Heart-Softening Reminders",
+    "series": "heart-reminder",
+    "objective": "shares",
+    "format": "heart-reminder",
+    "targetDurationSec": 23,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "queueId": "q001-when-life-feels-uncertain",
+    "backlogId": null,
+    "writer": "queue"
+  },
+  "coreInsight": "Qur'an 65:3 says whoever relies on Allah, He is sufficient for him, so we can keep moving without seeing every step.",
+  "hooks": [
+    {
+      "text": "When life feels uncertain…",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the teaching answers it."
+    },
+    {
+      "text": "You don't need every step.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, less direct."
+    },
+    {
+      "text": "He is sufficient.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "When life feels uncertain… / You don't need to see every step.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "A REMINDER YOUR HEART NEEDS",
+      "lines": [
+        {
+          "text": "When life"
+        },
+        {
+          "text": "feels"
+        },
+        {
+          "text": "uncertain…",
+          "highlight": true
+        }
+      ],
+      "sub": "You don't need to see every step."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 432,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:65:3 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · AT-TALAQ",
+      "ref": "quran:65:3",
+      "excerpt": "And whoever relies upon Allah - then He is sufficient for him",
+      "arabicExcerpt": "وَمَن يَتَوَكَّلۡ عَلَى ٱللَّهِ فَهُوَ حَسۡبُهُۥٓۚ",
+      "resolved": {
+        "ref": "quran:65:3",
+        "collection": "quran",
+        "collectionName": "The Qur'an",
+        "kind": "quran",
+        "citation": "Qur'an 65:3",
+        "url": "https://quran.com/65/3",
+        "arabic": "وَيَرۡزُقۡهُ مِنۡ حَيۡثُ لَا يَحۡتَسِبُۚ وَمَن يَتَوَكَّلۡ عَلَى ٱللَّهِ فَهُوَ حَسۡبُهُۥٓۚ إِنَّ ٱللَّهَ بَٰلِغُ أَمۡرِهِۦۚ قَدۡ جَعَلَ ٱللَّهُ لِكُلِّ شَيۡءࣲ قَدۡرࣰ ا ٣",
+        "english": "And will provide for him from where he does not expect. And whoever relies upon Allah - then He is sufficient for him. Indeed, Allah will accomplish His purpose. Allah has already set for everything a [decreed] extent",
+        "translation": "Saheeh International",
+        "grade": null,
+        "transliteration": "Wayarzuqhu min haythu la yahtasibu waman yatawakkal AAala Allahi fahuwa hasbuhu inna Allaha balighu amrihi qad jaAAala Allahu likulli shayin qadran"
+      }
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "durationInFrames": 255,
+      "purpose": "Reflection: our words, clearly labelled.",
+      "onScreen": "REFLECTION / Trust, then take the next step. / Tawakkul isn't waiting with folded hands. It is doing what you can today and leaving what you can't see to Allah. You don't have to know every step ahead to keep moving forward.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "Trust, then take"
+        },
+        {
+          "text": "the next step.",
+          "highlight": true
+        }
+      ],
+      "body": [
+        "Tawakkul isn't waiting with folded hands. It is doing what you can today and leaving what you can't see to Allah.",
+        "You don't have to know every step ahead to keep moving forward."
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "He is enough. Take the next small step. / Share it with someone who needs it",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "He is enough."
+        },
+        {
+          "text": "Take the next"
+        },
+        {
+          "text": "small step.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with someone who needs it",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "A REMINDER YOUR HEART NEEDS",
+    "headline": [
+      {
+        "text": "When the path"
+      },
+      {
+        "text": "isn't clear",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "You don't have to know every step ahead to keep moving forward.",
+    "body": [
+      "Qur'an 65:3 is a reminder that whoever relies on Allah, He is sufficient for him.",
+      "Tawakkul isn't waiting with folded hands: do what you can today, and leave what you can't see to Allah."
+    ],
+    "cta": "Share it with someone who may find it helpful.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#IslamicReminder",
+      "#Tawakkul",
+      "#Sabr"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with someone who needs it"
+  },
+  "claims": [
+    {
+      "text": "What quran:65:3 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:65:3"
+    },
+    {
+      "text": "Doing what we can and trusting Allah with the rest is our reflection on the ayah.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Launch calendar day 1."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "style": {
+    "theme": "emerald",
+    "layout": "editorial",
+    "backdrop": "border",
+    "type": "serif",
+    "motion": "fade",
+    "music": "recitation"
+  },
+  "audio": {
+    "bed": "audio/deen-002-when-the-path-isnt-clear-bed.wav",
+    "bedVolume": 1,
+    "voiceover": null,
+    "voiceoverVolume": 1
+  },
+  "sources": [
+    {
+      "ref": "quran:65:3",
+      "citation": "Qur'an 65:3",
+      "url": "https://quran.com/65/3",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "And will provide for him from where he does not expect. And whoever relies upon Allah - then He is sufficient for him. Indeed, Allah will accomplish His purpose. Allah has already set for everything a [decreed] extent"
+    }
+  ],
+  "recitation": {
+    "ref": "quran:65:3",
+    "chosen": "default",
+    "citation": "Qur'an 65:3",
+    "url": "https://quran.com/65/3",
+    "reciter": "muaiqly",
+    "reciterName": "Maher Al-Muaiqly",
+    "folder": "MaherAlMuaiqly128kbps",
+    "source": "EveryAyah.com",
+    "mode": "scene",
+    "sceneId": "ayah",
+    "startFrame": 102,
+    "gapSec": 0.25,
+    "totalSec": 13.296,
+    "files": [
+      {
+        "file": "065003.mp3",
+        "url": "https://everyayah.com/data/MaherAlMuaiqly128kbps/065003.mp3",
+        "sha256": "b546c92ac34957b2f13eb8f85ee8868a330daf1e033542a64eb59ebe289e8d13",
+        "durationSec": 13.296
+      }
+    ]
+  }
+}
