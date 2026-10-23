@@ -1,0 +1,212 @@
+{
+  "contentId": "deen-003-the-best-day-of-the-week",
+  "version": 1,
+  "generatedAt": "2026-10-23T05:13:28.216Z",
+  "pillar": "F: Islamic Calendar & Occasions",
+  "format": "heart-reminder",
+  "objective": "shares",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "Friday reminder",
+  "coreInsight": "Sahih Muslim 854a calls Friday the best day on which the sun has risen.",
+  "hookVariants": [
+    {
+      "text": "It's Friday",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "The best day of the week",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Make today count.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "It's Friday",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "It's Friday. / Read this before Jumu'ah.",
+      "voiceover": null
+    },
+    {
+      "scene": "hadith",
+      "onScreen": "muslim:854a (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "practice",
+      "onScreen": "TODAY / Go early to Jumu'ah, if you can · Make extra du'a today · Read Surah Al-Kahf if it's your habit",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Jumu'ah Mubarak. / Share it with your family",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 270,
+      "startSec": 3,
+      "endSec": 9
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "startFrame": 270,
+      "endFrame": 525,
+      "startSec": 9,
+      "endSec": 17.5
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 525,
+      "endFrame": 731,
+      "startSec": 17.5,
+      "endSec": 24.37
+    }
+  ],
+  "caption": "Jumu'ah Mubarak.\n\nSahih Muslim 854a: the best day on which the sun has risen is Friday.\n\nShare it with your family.\n\n📖 Sources\n• Sahih Muslim 854a (Sahih, tr. Abdul Hamid Siddiqui) — sunnah.com/muslim:854a\nFull text: Abu Huraira reported Allah's Messenger (ﷺ) as saying: The best day on which the sun has risen is Friday; on it Adam was created, on it he was made to enter Paradise, on it he. was expelled from it\n• Recitation: Qur'an 62:9 — Mohamed Siddiq Al-Minshawi (Murattal) (EveryAyah.com) — quran.com/62/9\n\n#IslamicReminder #IslamicCalendar #JumuahMubarak #Friday",
+  "hashtags": [
+    "#IslamicReminder",
+    "#IslamicCalendar",
+    "#JumuahMubarak",
+    "#Friday"
+  ],
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with your family"
+  },
+  "coverHeadline": "The best day of the week",
+  "sources": [
+    {
+      "ref": "muslim:854a",
+      "citation": "Sahih Muslim 854a",
+      "url": "https://sunnah.com/muslim:854a",
+      "translation": "Abdul Hamid Siddiqui",
+      "grade": "Sahih",
+      "english": "Abu Huraira reported Allah's Messenger (ﷺ) as saying: The best day on which the sun has risen is Friday; on it Adam was created, on it he was made to enter Paradise, on it he. was expelled from it"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What muslim:854a says, quoted verbatim.",
+      "kind": "source",
+      "ref": "muslim:854a"
+    },
+    {
+      "text": "The suggestions for Friday are our own.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 24.37,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [
+      "public/audio/deen-003-the-best-day-of-the-week-bed.wav"
+    ],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-003-the-best-day-of-the-week.mp4",
+    "cover": "output/covers/deen-003-the-best-day-of-the-week.png",
+    "caption": "output/captions/deen-003-the-best-day-of-the-week.txt",
+    "storyboard": "output/storyboards/deen-003-the-best-day-of-the-week.md",
+    "subtitles": "output/storyboards/deen-003-the-best-day-of-the-week.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-10-23T05:13:34.000Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-003-the-best-day-of-the-week/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Evergreen.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
