@@ -5,7 +5,7 @@ name: "DEEN · Weekly insights"
 
 on:
   schedule:
-    - cron: "30 3 * * 0" # Sunday 09:00 IST
+    - cron: "37 3 * * 0" # Sunday 09:07 IST (odd minute: fewer skipped runs)
   workflow_dispatch:
 
 permissions:

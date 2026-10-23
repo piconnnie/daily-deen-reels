@@ -35,7 +35,7 @@ def repo_files():
     q1 = json.loads(main[f"{gh.QUEUE_DIR}/q002-one-ayah-ash-sharh.json"])
     q1["brief"]["queueId"] = "q002-one-ayah-ash-sharh"
     main[f"{gh.REELS_DIR}/deen-003-do-you-need-an-agent.json"] = json.dumps(q1)
-    for p in (ROOT / A / "src" / "content" / "reels").glob("*.json"):
+    for p in (ROOT / A / "src" / "content" / "reels").glob("deen-001-*.json"):  # the sample reel only; live posts must not change the counts
         main[f"{gh.REELS_DIR}/{p.name}"] = p.read_text()
     main[f"{gh.ARCHIVE_DIR}/deen-003-do-you-need-an-agent/state.json"] = json.dumps({
         "id": "deen-003-do-you-need-an-agent", "approval": {"status": "approved", "approvedAt": "2026-10-17T10:00:00Z"},

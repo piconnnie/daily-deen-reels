@@ -6,7 +6,7 @@ Every morning a GitHub Actions workflow takes the next post from the queue — a
 
 ## Auto-approve (on by default)
 
-Every post has already passed the source gate before its PR exists: verbatim text from the pinned datasets, approved collections only, no words attributed to Allah or the Prophet ﷺ outside a quote, verified recitation that is never cut. With auto-approve on, the hourly publish run (after `DEEN_POST_TIME`) merges the oldest open review PR that isn't on `hold` or `needs-attention`, records the approval and posts it — one at a time, within `DEEN_MAX_PER_DAY`. Each auto-approved PR gets a comment saying so.
+Every post has already passed the source gate before its PR exists: verbatim text from the pinned datasets, approved collections only, no words attributed to Allah or the Prophet ﷺ outside a quote, verified recitation that is never cut. With auto-approve on, the publish run that the post timer starts at `DEEN_POST_TIME` merges the oldest open review PR that isn't on `hold` or `needs-attention`, records the approval and posts it — one at a time, within `DEEN_MAX_PER_DAY`. Each auto-approved PR gets a comment saying so.
 
 | Kind | Posted as | Notes |
 |---|---|---|
@@ -17,7 +17,7 @@ Every post has already passed the source gate before its PR exists: verbatim tex
 **Occasions:** drafts marked `friday`, `ramadan`, `dhul-hijjah-10`, `eid-al-adha`… wait in the queue and jump ahead on their day (Umm al-Qura calendar; check `node scripts/daily/occasions.mjs`). Local moon sightings can differ by a day — you review every occasion post anyway. `node scripts/daily/dequeue.mjs --status` shows what's waiting.
 
 ```
-06:00 IST  DEEN · Daily reel   (makes reels, carousels and stories)
+morning    DEEN · Daily reel   (makes reels, carousels and stories; backstop schedules 05:47–11:23 IST, one build per day)
            plan topic (pillar mix, format rotation, no repeats, performance-weighted; used by opt-in writers)
            → writer:
                default   content queue: next draft for today (occasion drafts first on their day)  (data/queue, no model, free)
@@ -32,7 +32,12 @@ Every post has already passed the source gate before its PR exists: verbatim tex
 
 you        open each source link · merge = approve · edit the JSON in the PR = auto re-render · close = reject
 
-hourly     DEEN · Approve & publish   (also runs the moment you merge)
+after the  DEEN · Post timer   (starts when the build finishes; doesn't depend on GitHub's cron)
+build      sleeps until DEEN_POST_TIME (in ≤5h40m steps, handing over to a fresh timer),
+           then starts DEEN · Approve & publish
+
+19:00 IST  DEEN · Approve & publish   (started by the post timer; also runs the moment you merge,
+           with hourly schedules as a backstop)
            records approval for every merged reel PR (so none is lost)
            oldest approved reel, max 1/day, once the local time passes DEEN_POST_TIME
            → verifies the file hashes match what passed QA and what you approved
@@ -102,7 +107,7 @@ Choose one login type. Meta's dashboards change often, so follow the current scr
 3. Under the app's **Roles**, add your Instagram account as an Instagram tester and accept the invite in Instagram (Settings → Website permissions / Apps and websites → Tester invites). An account with a role on the app can use it without App Review; check the App Dashboard if Meta asks for more.
 4. In the API setup screen, **generate an access token** for your account. It is a long-lived token (~60 days).
 5. Add the secret `IG_ACCESS_TOKEN`. That's all the publisher needs: the account id is looked up from the token (`IG_USER_ID` is optional with this login type). `IG_LOGIN` defaults to `instagram`.
-6. Token renewal: add a `GH_SECRETS_PAT` secret (fine-grained GitHub token for this repo with **Secrets: read and write**) and **DEEN · Refresh Instagram token** renews it monthly. Without it, the workflow opens a reminder issue instead.
+6. Token renewal: add a `GH_SECRETS_PAT` secret (fine-grained GitHub token for this repo with **Secrets: read and write**) and **DEEN · Refresh Instagram token** renews it twice a week. Without it, the workflow opens a reminder issue instead.
 
 **Option B — Instagram API with Facebook Login (needs a Facebook Page linked to the account)**
 1. Create a Business app with Facebook Login for Business; permissions `instagram_basic`, `instagram_content_publish`, `pages_read_engagement`.
@@ -165,7 +170,8 @@ To choose yourself, edit e.g. `"style": {"theme": "ivory", "layout": "minimal"}`
 
 | Variable | Default | Meaning |
 |---|---|---|
-| `DEEN_POST_TIME` | `19:00` | Earliest local posting time (checked hourly, so changes apply within the hour) |
+| `DEEN_POST_TIME` | `19:00` | Local posting time. The post timer starts publishing at this time; a change applies from the next timer run |
+| `DEEN_TIMER_MAX_WAIT_MIN` | `340` | Longest the post timer sleeps in one run before handing over to a fresh one (GitHub jobs can run at most 6 hours) |
 | `DEEN_TZ` | `Asia/Kolkata` | Time zone for the slot and the daily cap |
 | `DEEN_MAX_PER_DAY` | `1` | Posts per day |
 | `DEEN_MAX_OPEN_REVIEWS` | `3` | Skip generation when this many PRs await review |
@@ -179,7 +185,7 @@ To choose yourself, edit e.g. `"style": {"theme": "ivory", "layout": "minimal"}`
 | `DEEN_PUBLIC_BASE_URL` | — | Your own public folder for MP4/JPEG files (URL mode) |
 | `DEEN_INSIGHT_METRICS` | `reach,saved,shares,views,…` | Insight metric names to request (Meta renames these between versions) |
 
-The daily generation time is the cron in `deen-daily-reel.yml` (`30 0 * * *` = 06:00 IST). GitHub can start scheduled runs late at busy times.
+**Why there's a post timer.** GitHub's scheduled (cron) runs are best-effort: they start late or are skipped at busy times. On this repo the "hourly" publish schedule ran only every 4–6 hours, and the 06:00 build started around 10:40. On 23 Oct 2026 the last publish run before the slot was at 18:49, so the post waited until it was merged by hand. Now the build has several backstop schedules (the first to run builds today's post; the others skip), and posting is driven by **DEEN · Post timer**, which starts when the build finishes and sleeps until the slot. Its own backstop schedules (15:07, 16:41, 18:13, 19:49 IST) restart it if a chain is ever broken. The publish run re-checks everything (approval, hold, needs-attention, daily cap, time), so a late or duplicate timer can't post twice or early. In the Actions tab a sleeping timer shows as "in progress" for hours; that's expected.
 
 ## Costs
 
@@ -216,4 +222,6 @@ The daily generation time is the cron in `deen-daily-reel.yml` (`30 0 * * *` = 0
 | Publish says "not approved" | The PR must be merged (not closed) and carry the `daily-reel` label. |
 | Container status `ERROR` | Usually the video URL couldn't be fetched. See "About video URLs". |
 | "hash mismatch" | The release files changed after approval. Re-run review for that reel (Daily reel → reel_id) and merge the new PR. |
+| A post didn't go out at the slot | Open Actions → **DEEN · Post timer**: the latest run's summary says what it decided (e.g. waiting, already posted today, every PR on hold / needs-attention, or posting paused). Run it by hand to re-evaluate; it posts right away if the slot has passed and a post is waiting. |
+| A Friday / seasonal PR is labelled needs-attention with "its day has passed" | Its slot was missed, so it wasn't posted on the wrong day. Close it, or merge it yourself if you still want it out. |
 | Scheduled workflows stopped | GitHub disables schedules after 60 days without repo activity; the daily commits normally prevent this. Re-enable in the Actions tab. |

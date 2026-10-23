@@ -6,7 +6,13 @@ name: "DEEN · Daily reel"
 
 on:
   schedule:
-    - cron: "30 0 * * *" # 06:00 IST (GitHub may start scheduled runs late)
+    # GitHub starts scheduled runs late (on this repo ~4h40m) or skips them, so
+    # there are several backstops at odd minutes. The first one to run builds
+    # today's post; the others see it was built today and skip.
+    - cron: "17 0 * * *" # 05:47 IST
+    - cron: "43 1 * * *" # 07:13 IST
+    - cron: "29 3 * * *" # 08:59 IST
+    - cron: "53 5 * * *" # 11:23 IST
   workflow_dispatch:
     inputs:
       reel_id:
@@ -54,7 +60,16 @@ jobs:
 
       - name: Pause if reviews are piling up
         id: gate
+        env:
+          EVENT: ${{ github.event_name }}
+          DEEN_TZ: ${{ vars.DEEN_TZ || 'Asia/Kolkata' }}
         run: |
+          # Scheduled runs build at most one post per local day (several backstop
+          # schedules exist); a manual run always builds.
+          if [ "$EVENT" = schedule ] && [ "$(node scripts/daily/built-today.mjs)" != no ]; then
+            echo "::notice::Today's post was already built by an earlier run — nothing to do."
+            echo "skip=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
           open=$(gh pr list --label daily-reel --state open --json number --jq 'length')
           echo "Open reel reviews: $open (limit $DEEN_MAX_OPEN_REVIEWS)"
           if [ -z "$INPUT_REEL_ID" ] && [ "$open" -ge "$DEEN_MAX_OPEN_REVIEWS" ]; then

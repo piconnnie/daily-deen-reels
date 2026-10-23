@@ -1,11 +1,14 @@
 name: "DEEN · Refresh Instagram token"
-# Instagram-Login user tokens last ~60 days. This refreshes it monthly and
+# Instagram-Login user tokens last ~60 days. This refreshes it twice a week (a
+# refresh restarts the 60 days; GitHub sometimes skips scheduled runs, so a
+# single monthly run could let the token lapse) and
 # stores the new value in the IG_ACCESS_TOKEN secret. Needs a GH_SECRETS_PAT
 # secret: a fine-grained token for this repo with "Secrets: Read and write".
 # Without it, the workflow opens a reminder issue instead.
 on:
   schedule:
-    - cron: "0 4 1 * *" # 1st of each month
+    - cron: "41 4 * * 1" # Mondays 10:11 IST
+    - cron: "41 4 * * 4" # Thursdays 10:11 IST
   workflow_dispatch:
 permissions:
   contents: read

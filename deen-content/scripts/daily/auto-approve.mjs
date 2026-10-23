@@ -16,6 +16,7 @@
 // Uses the gh CLI (GH_TOKEN). Never posts by itself; sync-approvals + publish-due do that.
 import {execFileSync} from 'node:child_process';
 import {loadStates, localParts} from './publish-due.mjs';
+import {occasionsOn} from './occasions.mjs';
 
 const log = (m) => console.error(`auto-approve: ${m}`);
 if (String(process.env.DEEN_AUTO_APPROVE ?? 'true').toLowerCase() === 'false') {
@@ -27,7 +28,8 @@ const MAX_PER_DAY = Number(process.env.DEEN_MAX_PER_DAY || 1);
 const SKIP = new Set(['needs-attention', 'hold']);
 const gh = (...args) => execFileSync('gh', args, {encoding: 'utf8'});
 
-const now = localParts(new Date());
+const nowDate = process.env.DEEN_NOW ? new Date(process.env.DEEN_NOW) : new Date();
+const now = localParts(nowDate);
 if (now.time < POST_TIME) {
   log(`before ${POST_TIME} (now ${now.time}): review window still open`);
   process.exit(0);
@@ -54,6 +56,27 @@ if (!prs.length) {
 }
 // Oldest first. A PR that can't be merged (e.g. a conflict) is flagged
 // needs-attention for a human and skipped, so it never blocks later reels.
+// A Friday / seasonal post belongs to its day. If its day has passed (e.g. the
+// slot was missed), don't post it late: flag it for a person and move on.
+const git = (...args) => execFileSync('git', args, {encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore']});
+const occasionOf = (p) => {
+  try {
+    const id = p.headRefName.replace(/^reel\//, '');
+    git('fetch', '--quiet', '--depth', '1', 'origin', p.headRefName);
+    return JSON.parse(git('show', `FETCH_HEAD:./src/content/reels/${id}.json`)).publish?.occasion ?? null;
+  } catch {
+    return null; // can't read it: don't block on this check
+  }
+};
+const today = occasionsOn(nowDate, process.env.DEEN_TZ || 'Asia/Kolkata');
+const flag = (number, why) => {
+  try {
+    gh('label', 'create', 'needs-attention', '--color', 'FFC66D', '--description', 'Waits for a person: QA warning or editor flag', '--force');
+    gh('pr', 'edit', String(number), '--add-label', 'needs-attention');
+    gh('pr', 'comment', String(number), '--body', why);
+  } catch {}
+};
+
 const tryMerge = (number) => {
   for (const method of ['--merge', '--squash', '--rebase']) {
     try {
@@ -68,17 +91,19 @@ const tryMerge = (number) => {
 };
 let pr = null;
 for (const p of prs) {
+  const occasion = occasionOf(p);
+  if (occasion && !today.has(occasion)) {
+    log(`PR #${p.number} is a "${occasion}" post and today isn't one; flagged instead of posting it late`);
+    flag(p.number, `⏸️ Not auto-approved: this is a **${occasion}** post and its day has passed (${now.date}). Posting it now would be out of place, so it waits for you. Close it (it isn't lost — the draft stays in the queue history), or merge it yourself if you still want it out.`);
+    continue;
+  }
   const res = tryMerge(p.number);
   if (res.ok) {
     pr = p;
     break;
   }
   log(`couldn't merge PR #${p.number}: ${res.why}`);
-  try {
-    gh('label', 'create', 'needs-attention', '--color', 'FFC66D', '--description', 'Editor pass flagged issues', '--force');
-    gh('pr', 'edit', String(p.number), '--add-label', 'needs-attention');
-    gh('pr', 'comment', String(p.number), '--body', `⚠️ Auto-approve couldn't merge this PR (${res.why}). It now waits for you; the next reel is approved instead.`);
-  } catch {}
+  flag(p.number, `⚠️ Auto-approve couldn't merge this PR (${res.why}). It now waits for you; the next reel is approved instead.`);
 }
 if (!pr) {
   log('no PR could be merged');

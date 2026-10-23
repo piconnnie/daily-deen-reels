@@ -22,6 +22,9 @@ export DEEN_RECITATION_DIR="$E2E/recitations"
 rm -rf "$E2E" && mkdir -p "$E2E"/{bin,releases}
 node "$SRC/deen-content/scripts/test/make-recitation-fixtures.mjs" "$E2E/recitations" > /dev/null
 export GH_FAKE_STATE="$E2E/gh-state.json" GH_FAKE_RELEASES="$E2E/releases"
+# PRs opened by the test look like they were opened on an earlier day, so the
+# one-build-per-day guard lets each scheduled build under test run (3g tests the guard).
+export GH_FAKE_NOW="2026-01-01T06:00:00Z"
 # Each workflow run starts from a clean checkout of main, like a fresh GitHub runner.
 fresh() { git -C "$W" reset -q --hard 2>/dev/null; git -C "$W" clean -qfdx 2>/dev/null; git -C "$W" checkout -q main 2>/dev/null; git -C "$W" pull -q origin main 2>/dev/null; true; }
 run_wf() { fresh; node "$HERE/run-workflow.mjs" "$@"; }
@@ -43,6 +46,12 @@ find "$E2E/seed/deen-content/data/queue" -name '*.json' ! -name 'q00[1-3]-*' -de
 # ...and start from the sample reel, not whatever the live repo has published since.
 find "$E2E/seed/deen-content/src/content/reels" -name 'deen-*.json' ! -name 'deen-001-*' -delete
 rm -rf "$E2E/seed/deen-content/archive" "$E2E/seed/deen-content/data/performance/index.json"
+# The sample reel on main carries the real recitation's file hashes from its live
+# post; the test uses stand-in audio, so let the pipeline re-fit it (a writer-chosen
+# recitation ref is kept). Without this the hash guard rightly refuses the audio.
+for f in "$E2E"/seed/deen-content/src/content/reels/*.json; do
+  node -e 'const fs=require("fs"),f=process.argv[1],r=JSON.parse(fs.readFileSync(f));if(r.recitation&&r.recitation.files){r.recitation=r.recitation.chosen==="writer"?{ref:r.recitation.ref,...(r.recitation.reciter?{reciter:r.recitation.reciter}:{})}:undefined;fs.writeFileSync(f,JSON.stringify(r,null,2)+"\n")}' "$f"
+done
 ( cd "$E2E/seed" && git init -q -b main && git add -A && git -c user.name=seed -c user.email=s@x commit -qm seed )
 git clone -q --bare "$E2E/seed" "$E2E/remote.git"
 git clone -q "$E2E/remote.git" "$E2E/work"
@@ -123,6 +132,39 @@ git -C "$W" checkout -q main
 echo "== 3e. Queue empty and no writer → clear failure, no PR"
 $RUN "$WF/deen-daily-reel.yml" --repo "$W" --event schedule --vars "$OPEN10" | tee "$E2E/s3e.log" > /dev/null
 check "Run fails with a clear 'queue exhausted' message and opens no PR" "grep -qE 'content queue is empty|No queued draft passed' '$E2E/s3e.log' && [ \"\$(ghq 's.prs.length')\" = 5 ]"
+git -C "$W" checkout -q main
+
+echo "== 3f. Post timer: starts publishing at the slot without relying on GitHub's cron"
+TIMERVARS='{"DEEN_MAX_PER_DAY":"10"}'
+ndisp() { ghq "(s.dispatches ?? []).length"; }
+lastdisp() { ghq "(s.dispatches ?? []).at(-1)?.workflow ?? ''"; }
+$RUN "$WF/deen-post-timer.yml" --repo "$W" --event workflow_run --event-json '{"workflow_run":{"name":"DEEN · Daily reel"}}' --vars '{"DEEN_MAX_PER_DAY":"10","DEEN_POST_TIME":"23:59","DEEN_TIMER_MAX_WAIT_MIN":"0"}' | tee "$E2E/s3f1.log" > /dev/null
+check "Slot far away: the timer hands over to a fresh timer (jobs can't sleep past 6h)" "grep -q '\"action\":\"wait-then-rearm\"' '$E2E/s3f1.log' && [ \"\$(lastdisp)\" = deen-post-timer.yml ]"
+SOON=$(TZ=Asia/Kolkata date -d '+1 min' +%H:%M)
+T0=$(date +%s); before=$(ndisp)
+$RUN "$WF/deen-post-timer.yml" --repo "$W" --event workflow_dispatch --vars "{\"DEEN_MAX_PER_DAY\":\"10\",\"DEEN_POST_TIME\":\"$SOON\"}" | tee "$E2E/s3f2.log" > /dev/null
+T1=$(date +%s)
+check "Slot within reach: the timer sleeps until $SOON IST, then starts DEEN · Approve & publish" "grep -q '\"action\":\"wait-then-publish\"' '$E2E/s3f2.log' && [ \$((T1 - T0)) -ge 25 ] && [ \"\$(ndisp)\" = \$((before + 1)) ] && [ \"\$(lastdisp)\" = deen-publish.yml ]"
+before=$(ndisp)
+$RUN "$WF/deen-post-timer.yml" --repo "$W" --event schedule --vars '{"DEEN_MAX_PER_DAY":"10","DEEN_POST_TIME":"00:00"}' | tee "$E2E/s3f3.log" > /dev/null
+check "Slot already passed with a post waiting (the 23 Oct case): publish starts right away" "grep -q '\"action\":\"publish-now\"' '$E2E/s3f3.log' && [ \"\$(ndisp)\" = \$((before + 1)) ] && [ \"\$(lastdisp)\" = deen-publish.yml ]"
+before=$(ndisp)
+$RUN "$WF/deen-post-timer.yml" --repo "$W" --event workflow_run --event-json '{"workflow_run":{"name":"DEEN · Approve & publish"}}' --vars '{"DEEN_MAX_PER_DAY":"10","DEEN_POST_TIME":"00:00"}' | tee "$E2E/s3f4.log" > /dev/null
+check "Right after a publish run past the slot: idle (no retry loop)" "grep -q '\"action\":\"idle\"' '$E2E/s3f4.log' && [ \"\$(ndisp)\" = \$before ]"
+$RUN "$WF/deen-post-timer.yml" --repo "$W" --event schedule --vars '{"DEEN_MAX_PER_DAY":"10","DEEN_POST_TIME":"00:00","DEEN_AUTO_APPROVE":"false"}' | tee "$E2E/s3f5.log" > /dev/null
+check "Auto-approve off and nothing approved: idle" "grep -q '\"action\":\"idle\",\"wait_seconds\":\"0\",\"reason\":\"auto-approve is off' '$E2E/s3f5.log' && [ \"\$(ndisp)\" = \$before ]"
+node -e "const f='$GH_FAKE_STATE',fs=require('fs');const s=JSON.parse(fs.readFileSync(f));s.disabledWorkflows=['deen-publish.yml'];fs.writeFileSync(f,JSON.stringify(s,null,2))"
+before=$(ndisp)
+$RUN "$WF/deen-post-timer.yml" --repo "$W" --event schedule --vars '{"DEEN_MAX_PER_DAY":"10","DEEN_POST_TIME":"00:00"}' | tee "$E2E/s3f6.log" > /dev/null
+check "Posting paused (publish workflow disabled): the timer tries, nothing starts, the run doesn't fail" "grep -q '\"action\":\"publish-now\"' '$E2E/s3f6.log' && grep -q '\[job timer\] success' '$E2E/s3f6.log' && [ \"\$(ndisp)\" = \$before ]"
+node -e "const f='$GH_FAKE_STATE',fs=require('fs');const s=JSON.parse(fs.readFileSync(f));s.disabledWorkflows=[];fs.writeFileSync(f,JSON.stringify(s,null,2))"
+git -C "$W" checkout -q main
+
+echo "== 3g. Several backstop build schedules → still one build per day"
+node -e "const f='$GH_FAKE_STATE',fs=require('fs');const s=JSON.parse(fs.readFileSync(f));s.prs[4].createdAt=new Date().toISOString();fs.writeFileSync(f,JSON.stringify(s,null,2))"
+$RUN "$WF/deen-daily-reel.yml" --repo "$W" --event schedule --vars "$OPEN10" | tee "$E2E/s3g.log" > /dev/null
+check "A later scheduled build the same day skips (today's post already built)" "grep -q '\"built\":\"true\",\"skip\":\"true\"' '$E2E/s3g.log' && [ \"\$(ghq 's.prs.length')\" = 5 ]"
+node -e "const f='$GH_FAKE_STATE',fs=require('fs');const s=JSON.parse(fs.readFileSync(f));s.prs[4].createdAt='2026-01-01T06:00:00Z';fs.writeFileSync(f,JSON.stringify(s,null,2))"
 git -C "$W" checkout -q main
 
 echo "== 4. Edit copy inside the PR → automatic re-render"
@@ -223,6 +265,16 @@ git -C "$W" fetch -q origin
 check "Carousel auto-approved and posted: 6 item containers + a CAROUSEL container" "[ \"\$(ghq 's.prs[4].state')\" = merged ] && [ \"\$(grep -c is_carousel_item '$E2E/ig-log.jsonl')\" = 6 ] && grep -q '\"media_type\":\"CAROUSEL\"' '$E2E/ig-log.jsonl' && git -C '$W' show origin/main:deen-content/archive/$QID/state.json | grep -q '\"status\": \"published\"'"
 $RUN "$WF/deen-publish.yml" --repo "$W" --event schedule --secrets "$IGSECRETS" --vars "$AUTOVARS" > /dev/null
 check "A PR on hold is never auto-approved" "[ \"\$(ghq 's.prs[0].state')\" = open ] && [ \"\$(grep -c media_publish '$E2E/ig-log.jsonl')\" = 4 ]"
+
+echo "== 7e. A seasonal post whose day has passed is flagged, not posted late"
+git -C "$U" fetch -q origin && git -C "$U" checkout -q -B occ "origin/reel/deen-001-hardship-is-never-alone"
+node -e "const f='$U/deen-content/src/content/reels/deen-001-hardship-is-never-alone.json',fs=require('fs');const r=JSON.parse(fs.readFileSync(f));r.publish={...(r.publish??{}),occasion:'ramadan'};fs.writeFileSync(f,JSON.stringify(r,null,2)+'\n')"
+git -C "$U" commit -qam "Mark as a Ramadan post" && git -C "$U" push -q origin occ:reel/deen-001-hardship-is-never-alone
+node -e "const f='$GH_FAKE_STATE',fs=require('fs');const s=JSON.parse(fs.readFileSync(f));s.prs[0].labels=s.prs[0].labels.filter(l=>l!=='hold');fs.writeFileSync(f,JSON.stringify(s,null,2))"
+posts=$(grep -c media_publish "$E2E/ig-log.jsonl")
+$RUN "$WF/deen-publish.yml" --repo "$W" --event schedule --secrets "$IGSECRETS" --vars "$AUTOVARS" | tee "$E2E/s7e.log" > /dev/null
+check "Ramadan post outside Ramadan: not merged, labelled needs-attention, told why" "[ \"\$(ghq 's.prs[0].state')\" = open ] && [ \"\$(ghq 's.prs[0].labels.includes(\"needs-attention\")')\" = true ] && ghq 's.prs[0].comments.join(\"|\")' | grep -q 'ramadan' && [ \"\$(grep -c media_publish '$E2E/ig-log.jsonl')\" = \$posts ]"
+git -C "$W" checkout -q main
 
 echo "== 8. A merged PR without the daily-reel label is ignored"
 $RUN "$WF/deen-publish.yml" --repo "$W" --event pull_request --event-json '{"pull_request":{"number":9,"merged":true,"labels":[{"name":"docs"}],"head":{"ref":"feature/x"}}}' --secrets "$IGSECRETS" | tee "$E2E/s8.log" > /dev/null

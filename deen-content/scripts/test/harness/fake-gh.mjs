@@ -49,14 +49,14 @@ if (group === 'pr') {
   if (cmd === 'list') {
     let prs = state.prs;
     const st = flag('state') ?? 'open';
-    prs = prs.filter((p) => p.state === st);
+    if (st !== 'all') prs = prs.filter((p) => p.state === st);
     if (flag('label')) prs = prs.filter((p) => p.labels.includes(flag('label')));
     if (flag('head')) prs = prs.filter((p) => p.headRefName === flag('head'));
-    done(jq(prs.map((p) => ({number: p.number, headRefName: p.headRefName, labels: p.labels.map((name) => ({name})), mergedBy: p.mergedBy ?? null, mergedAt: p.mergedAt ?? null})), flag('jq')));
+    done(jq(prs.map((p) => ({number: p.number, headRefName: p.headRefName, labels: p.labels.map((name) => ({name})), createdAt: p.createdAt ?? null, state: (p.state ?? 'open').toUpperCase(), mergedBy: p.mergedBy ?? null, mergedAt: p.mergedAt ?? null})), flag('jq')));
   }
   if (cmd === 'create') {
     const number = state.prs.length + 1;
-    state.prs.push({number, state: 'open', headRefName: flag('head'), title: flag('title'), body: fs.readFileSync(flag('body-file'), 'utf8'), labels: (flag('label') ?? '').split(',').filter(Boolean), comments: []});
+    state.prs.push({number, state: 'open', headRefName: flag('head'), title: flag('title'), body: fs.readFileSync(flag('body-file'), 'utf8'), labels: (flag('label') ?? '').split(',').filter(Boolean), comments: [], createdAt: process.env.GH_FAKE_NOW ?? new Date().toISOString()});
     done(`https://github.com/fake/repo/pull/${number}`);
   }
   if (cmd === 'edit') {
@@ -154,6 +154,13 @@ if (group === 'issue' && cmd === 'comment') {
   if (!issue) done(`fake gh: no issue ${positional()[0]}`, 1);
   issue.comments.push(flag('body'));
   done();
+}
+if (group === 'workflow' && cmd === 'run') {
+  // Records the dispatch; the test decides whether to run that workflow next.
+  const wf = positional()[0];
+  if ((state.disabledWorkflows ?? []).includes(wf)) done(`could not create workflow dispatch event: HTTP 422: Workflow does not have 'workflow_dispatch' trigger or is disabled`, 1);
+  (state.dispatches ??= []).push({workflow: wf, ref: flag('ref') ?? null});
+  done(`✓ Created workflow_dispatch event for ${wf}`);
 }
 if (group === 'secret' && cmd === 'set') {
   state.secrets[positional()[0]] = fs.readFileSync(0, 'utf8').length;

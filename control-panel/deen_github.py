@@ -33,6 +33,7 @@ ARCHIVE_DIR = f"{APP}/archive"
 WORKFLOWS = {
     "daily": ("deen-daily-reel.yml", "Daily reel"),
     "publish": ("deen-publish.yml", "Approve & publish"),
+    "timer": ("deen-post-timer.yml", "Post timer"),
     "weekly": ("deen-weekly.yml", "Weekly insights"),
     "check": ("deen-check-instagram.yml", "Check Instagram setup"),
     "token": ("deen-token-refresh.yml", "Refresh Instagram token"),
@@ -41,7 +42,7 @@ WORKFLOWS = {
 
 # Repo variables the panel can change: name -> (default, help)
 VARIABLES = {
-    "DEEN_POST_TIME": ("19:00", "Earliest local posting time (HH:MM). Checked every hour."),
+    "DEEN_POST_TIME": ("19:00", "Local posting time (HH:MM). The post timer starts publishing at this time."),
     "DEEN_TZ": ("Asia/Kolkata", "Time zone for the posting time and the daily cap."),
     "DEEN_MAX_PER_DAY": ("1", "Maximum posts per day."),
     "DEEN_MAX_OPEN_REVIEWS": ("3", "Skip making a new reel while this many wait for review."),

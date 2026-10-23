@@ -2,14 +2,18 @@ name: "DEEN · Approve & publish"
 # 1. When a reel review PR is merged, record the approval (who, when).
 # 2. Post the oldest approved reel once per day after DEEN_POST_TIME
 #    (default 19:00 Asia/Kolkata): at merge time if that time has passed,
-#    otherwise at the scheduled run below.
+#    otherwise when the post timer (deen-post-timer.yml) starts this workflow
+#    at the slot, with the schedules below as a backstop.
 # Publishing refuses any file whose hash differs from the one that passed QA.
 
 on:
   pull_request:
     types: [closed]
   schedule:
-    - cron: "5 * * * *" # hourly: posts once the local time passes DEEN_POST_TIME (no-op otherwise)
+    # Backstop only: the post timer (deen-post-timer.yml) starts this workflow at
+    # the slot. GitHub runs these schedules late or skips them, so don't rely on them.
+    - cron: "23 * * * *" # hourly at an odd minute: posts once the local time passes DEEN_POST_TIME
+    - cron: "47 13 * * *" # 19:17 IST
   workflow_dispatch:
     inputs:
       reel_id:

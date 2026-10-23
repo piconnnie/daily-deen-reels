@@ -1,0 +1,90 @@
+name: "DEEN · Post timer"
+# Makes the daily post go out at DEEN_POST_TIME (default 19:00 Asia/Kolkata).
+#
+# Why this exists: GitHub's scheduled (cron) runs are best-effort. On this repo
+# the "hourly" publish schedule ran only every 4–6 hours, so on 23 Oct 2026 the
+# last run before 19:00 was at 18:49 and the next one after midnight — the post
+# never went out. This timer doesn't depend on cron timing: it starts as soon
+# as the daily build (or any publish run) finishes, sleeps until the slot, and
+# then starts the publish workflow. A job may run at most 6 hours, so for longer
+# waits it sleeps ~5h40m and starts a fresh timer (workflow_dispatch with the
+# built-in token is allowed to start runs).
+#
+# The publish workflow re-checks everything when it runs (approval, hold /
+# needs-attention, daily cap, slot time), so a duplicate or late timer can never
+# post twice or post anything early.
+
+on:
+  workflow_run:
+    workflows: ["DEEN · Daily reel", "DEEN · Approve & publish"]
+    types: [completed]
+  workflow_dispatch:
+  schedule:
+    # Backstops in case a chain is ever broken (odd minutes: GitHub drops fewer
+    # runs off the top of the hour). Each one just re-evaluates and re-arms.
+    - cron: "37 9 * * *" # 15:07 IST
+    - cron: "11 11 * * *" # 16:41 IST
+    - cron: "43 12 * * *" # 18:13 IST
+    - cron: "19 14 * * *" # 19:49 IST
+
+permissions:
+  actions: write # start the publish workflow / a fresh timer
+  contents: read
+  pull-requests: read
+
+# One timer at a time. A newer trigger waits for the sleeping timer to finish
+# (then re-evaluates) instead of cancelling it.
+concurrency:
+  group: deen-post-timer
+  cancel-in-progress: false
+
+defaults:
+  run:
+    working-directory: deen-content
+
+jobs:
+  timer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      GH_TOKEN: ${{ github.token }}
+      DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+      DEEN_POST_TIME: ${{ vars.DEEN_POST_TIME || '19:00' }}
+      DEEN_TZ: ${{ vars.DEEN_TZ || 'Asia/Kolkata' }}
+      DEEN_MAX_PER_DAY: ${{ vars.DEEN_MAX_PER_DAY || '1' }}
+      DEEN_AUTO_APPROVE: ${{ vars.DEEN_AUTO_APPROVE || 'true' }}
+      DEEN_TIMER_MAX_WAIT_MIN: ${{ vars.DEEN_TIMER_MAX_WAIT_MIN || '340' }}
+      TIMER_TRIGGER: ${{ github.event.workflow_run.name || github.event_name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Decide
+        id: plan
+        run: node scripts/daily/post-timer.mjs
+
+      - name: Wait for the slot
+        if: startsWith(steps.plan.outputs.action, 'wait-')
+        env:
+          WAIT: ${{ steps.plan.outputs.wait_seconds }}
+        run: |
+          echo "Sleeping ${WAIT}s — ${{ steps.plan.outputs.reason }}"
+          sleep "$WAIT"
+
+      - name: Start the publish workflow
+        if: steps.plan.outputs.action == 'publish-now' || steps.plan.outputs.action == 'wait-then-publish'
+        run: |
+          if gh workflow run deen-publish.yml --ref "$DEFAULT_BRANCH"; then
+            echo "### Started DEEN · Approve & publish at $(TZ="$DEEN_TZ" date '+%H:%M %Z')" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "::warning::Couldn't start DEEN · Approve & publish (is it paused?). Nothing was posted."
+          fi
+
+      - name: Hand over to a fresh timer
+        if: steps.plan.outputs.action == 'wait-then-rearm'
+        run: gh workflow run deen-post-timer.yml --ref "$DEFAULT_BRANCH"

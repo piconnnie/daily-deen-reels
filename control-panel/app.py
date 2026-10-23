@@ -173,7 +173,7 @@ def overview(snap):
     with right:
         st.subheader("Automation")
         rows = []
-        for key in ("daily", "publish", "weekly", "check", "token"):
+        for key in ("daily", "publish", "timer", "weekly", "check", "token"):
             file, name = gh.WORKFLOWS[key]
             run = snap["latestRuns"].get(file)
             w = wf.get(file) or {}
