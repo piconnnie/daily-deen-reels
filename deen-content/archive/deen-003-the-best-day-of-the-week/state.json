@@ -1,0 +1,38 @@
+{
+  "id": "deen-003-the-best-day-of-the-week",
+  "createdAt": "2026-10-23T05:13:34.054Z",
+  "kind": "reel",
+  "release": {
+    "tag": "reel-deen-003-the-best-day-of-the-week",
+    "cover": "deen-003-the-best-day-of-the-week.jpg",
+    "contactSheet": "deen-003-the-best-day-of-the-week-contact-sheet.png",
+    "video": "deen-003-the-best-day-of-the-week.mp4"
+  },
+  "sha256": {
+    "video": "dd3b57cc34cd212ee830a6fd19b579fe3b775702e91ae745e06d95defd27da9e",
+    "cover": "b304c5e494485085f6baaa1a25e431202afa293916a797a57af18f79b67b5685"
+  },
+  "durationSec": 24.37,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 49
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
