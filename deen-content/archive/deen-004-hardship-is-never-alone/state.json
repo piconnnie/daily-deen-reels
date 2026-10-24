@@ -43,11 +43,11 @@
     "pr": 4
   },
   "publish": {
-    "status": "pending",
-    "mediaId": null,
-    "permalink": null,
-    "publishedAt": null,
-    "attempts": 0,
+    "status": "published",
+    "mediaId": "18051234758819653",
+    "permalink": "https://www.instagram.com/p/De4QKFwltGv/",
+    "publishedAt": "2026-10-24T13:36:18.062Z",
+    "attempts": 1,
     "lastError": null
   }
 }
