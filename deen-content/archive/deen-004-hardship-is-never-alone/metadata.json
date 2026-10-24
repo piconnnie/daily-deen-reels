@@ -1,0 +1,249 @@
+{
+  "contentId": "deen-004-hardship-is-never-alone",
+  "version": 1,
+  "generatedAt": "2026-10-24T04:45:47.875Z",
+  "pillar": "A: Qur'an & Hadith",
+  "format": "ayah-lesson",
+  "objective": "saves",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "Surah Ash-Sharh 94:5-6: ease alongside hardship",
+  "coreInsight": "Surah Ash-Sharh pairs hardship with ease twice and then turns us back to Allah once the hard work is done.",
+  "hookVariants": [
+    {
+      "text": "For the days that feel heavy",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "Why is it said twice?",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Ease is already with it.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "For the days that feel heavy",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "For the days that feel heavy. / One ayah. One lesson.",
+      "voiceover": null
+    },
+    {
+      "scene": "ayah",
+      "onScreen": "quran:94:5-6 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "context",
+      "onScreen": "quran:94:7-8 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "reflection",
+      "onScreen": "REFLECTION / The lesson / The promise comes twice, back to back: with hardship, ease. The surah then asks us to keep striving and to turn our longing to Allah. Hardship is real, and so is the ease that comes with it.",
+      "voiceover": null
+    },
+    {
+      "scene": "practice",
+      "onScreen": "LIVE IT TODAY / Name the hardship honestly, without despair · Look for one ease that is already present · Finish today's duty, then turn to Allah in du'a",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Hardship is never alone. / Save this for a difficult day",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 240,
+      "startSec": 3,
+      "endSec": 8
+    },
+    {
+      "id": "context",
+      "type": "source",
+      "startFrame": 240,
+      "endFrame": 390,
+      "startSec": 8,
+      "endSec": 13
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "startFrame": 390,
+      "endFrame": 540,
+      "startSec": 13,
+      "endSec": 18
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "startFrame": 540,
+      "endFrame": 690,
+      "startSec": 18,
+      "endSec": 23
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 690,
+      "endFrame": 840,
+      "startSec": 23,
+      "endSec": 28
+    }
+  ],
+  "caption": "A Qur'anic reminder for the days that feel heavy.\n\nSurah Ash-Sharh, ayat 5–6, then what comes next (7–8): keep going, and direct your longing to your Lord.\n\nSwipe for the ayah, its context and one lesson to live today.\n\nSave this reminder for a difficult day.\n\n📖 Sources\n• Qur'an 94:5-6 (tr. Saheeh International) — quran.com/94/5-6\n• Qur'an 94:7-8 (tr. Saheeh International) — quran.com/94/7-8\n\n#IslamicReminder #Quran #Sabr #OneAyahOneLesson",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Quran",
+    "#Sabr",
+    "#OneAyahOneLesson"
+  ],
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this for a difficult day"
+  },
+  "coverHeadline": "Hardship is never alone",
+  "sources": [
+    {
+      "ref": "quran:94:5-6",
+      "citation": "Qur'an 94:5-6",
+      "url": "https://quran.com/94/5-6",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "For indeed, with hardship [will be] ease (5) Indeed, with hardship [will be] ease (6)"
+    },
+    {
+      "ref": "quran:94:7-8",
+      "citation": "Qur'an 94:7-8",
+      "url": "https://quran.com/94/7-8",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "So when you have finished [your duties], then stand up [for worship] (7) And to your Lord direct [your] longing (8)"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What quran:94:5-6 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:94:5-6"
+    },
+    {
+      "text": "What quran:94:7-8 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:94:7-8"
+    },
+    {
+      "text": "The lesson and steps are our reflection on the ayat.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 28,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-004-hardship-is-never-alone.mp4",
+    "cover": "output/covers/deen-004-hardship-is-never-alone.png",
+    "caption": "output/captions/deen-004-hardship-is-never-alone.txt",
+    "storyboard": "output/storyboards/deen-004-hardship-is-never-alone.md",
+    "subtitles": "output/storyboards/deen-004-hardship-is-never-alone.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-10-24T04:45:52.221Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-004-hardship-is-never-alone/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Launch calendar day 2.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
