@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-24",
+  "writer": "queue",
+  "plan": {
+    "from": "draft",
+    "backlogId": null,
+    "pillar": "A",
+    "pillarName": "A: Qur'an & Hadith",
+    "format": "ayah-lesson",
+    "research": false
+  },
+  "reelId": "deen-004-hardship-is-never-alone",
+  "rounds": [],
+  "finalCritic": null,
+  "needsAttention": false,
+  "estimatedCostUsd": 0
+}

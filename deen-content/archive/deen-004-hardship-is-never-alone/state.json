@@ -1,0 +1,52 @@
+{
+  "id": "deen-004-hardship-is-never-alone",
+  "createdAt": "2026-10-24T04:45:52.264Z",
+  "kind": "carousel",
+  "release": {
+    "tag": "reel-deen-004-hardship-is-never-alone",
+    "cover": "deen-004-hardship-is-never-alone.jpg",
+    "contactSheet": "deen-004-hardship-is-never-alone-contact-sheet.png",
+    "slides": [
+      "deen-004-hardship-is-never-alone-slide-01.jpg",
+      "deen-004-hardship-is-never-alone-slide-02.jpg",
+      "deen-004-hardship-is-never-alone-slide-03.jpg",
+      "deen-004-hardship-is-never-alone-slide-04.jpg",
+      "deen-004-hardship-is-never-alone-slide-05.jpg",
+      "deen-004-hardship-is-never-alone-slide-06.jpg"
+    ]
+  },
+  "sha256": {
+    "cover": "1bf696671809702ebd9f165a81b6caaef682dbe2ed18db1324d39404243a124b",
+    "slides": [
+      "1bf696671809702ebd9f165a81b6caaef682dbe2ed18db1324d39404243a124b",
+      "63da149a7aabeaa915f2378411dc1894c9b06ece22fc7e57d65823e2a4bc51c4",
+      "10aee5943d90d48f8650dde08f91b58a11759f9569f02ff95637fbff1ca72f1e",
+      "334abb41ef85e32accee2051c63f6ce83b53ac9061f17d61b8f62360daa00bf9",
+      "fe49366da92b5c2fb58d00f280a6445b237dbc13c3e5eb5e224f959ea10626bd",
+      "9f3cddfb80272b45f839a27e0968cc8d3cee85f7ab0f7232a2842069f44f3f63"
+    ]
+  },
+  "durationSec": null,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 30
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
