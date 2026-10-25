@@ -1,0 +1,38 @@
+{
+  "id": "deen-005-a-dua-for-knowledge",
+  "createdAt": "2026-10-25T04:46:36.161Z",
+  "kind": "reel",
+  "release": {
+    "tag": "reel-deen-005-a-dua-for-knowledge",
+    "cover": "deen-005-a-dua-for-knowledge.jpg",
+    "contactSheet": "deen-005-a-dua-for-knowledge-contact-sheet.png",
+    "video": "deen-005-a-dua-for-knowledge.mp4"
+  },
+  "sha256": {
+    "video": "3ab53ac58e4ad3d0d2de2a2be9b03cd7563cc9233015c30a9d8771873f81a2b9",
+    "cover": "eebf98fd7a46b3a699f22dffadd56e54953d6fd37737efed850c5801a3ef7309"
+  },
+  "durationSec": 28.5,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 49
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
