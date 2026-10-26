@@ -1,0 +1,50 @@
+{
+  "id": "deen-006-five-ways-to-speak-better",
+  "createdAt": "2026-10-26T04:52:25.398Z",
+  "kind": "carousel",
+  "release": {
+    "tag": "reel-deen-006-five-ways-to-speak-better",
+    "cover": "deen-006-five-ways-to-speak-better.jpg",
+    "contactSheet": "deen-006-five-ways-to-speak-better-contact-sheet.png",
+    "slides": [
+      "deen-006-five-ways-to-speak-better-slide-01.jpg",
+      "deen-006-five-ways-to-speak-better-slide-02.jpg",
+      "deen-006-five-ways-to-speak-better-slide-03.jpg",
+      "deen-006-five-ways-to-speak-better-slide-04.jpg",
+      "deen-006-five-ways-to-speak-better-slide-05.jpg"
+    ]
+  },
+  "sha256": {
+    "cover": "fffa10a9ff5984be113f164aecf451f7c90d7025c5173ac5e05519bc05abd607",
+    "slides": [
+      "fffa10a9ff5984be113f164aecf451f7c90d7025c5173ac5e05519bc05abd607",
+      "498b9954bf626ffb20ad23e79a8a0620bcd0fd4d210a3100738596a82c5573ef",
+      "4694ef9c6ed5f41b36591be3eed1458d92c5d552363ae529693c43939a6d403f",
+      "2d083020fdbc377a385dd8974dd15360d6553895192cc3cb2f39834b29a007ef",
+      "59d8f70df91704cf574e52edbb3d8622730f17df1ed5ab706a593553335f27b1"
+    ]
+  },
+  "durationSec": null,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 30
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
