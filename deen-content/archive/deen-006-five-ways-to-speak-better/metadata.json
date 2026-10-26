@@ -1,0 +1,223 @@
+{
+  "contentId": "deen-006-five-ways-to-speak-better",
+  "version": 1,
+  "generatedAt": "2026-10-26T04:52:20.558Z",
+  "pillar": "C: Daily Deen & Practical Islam",
+  "format": "check-in",
+  "objective": "shares",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "Five small ways to practise better adab in conversation",
+  "coreInsight": "Sahih al-Bukhari 6018 gives one test for speech, and small habits make it practical in everyday conversations.",
+  "hookVariants": [
+    {
+      "text": "Your character shows in small moments",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "How do you speak when it's hard?",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Good words, or silence.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "Your character shows in small moments",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "Your character shows in the small moments. / A daily check-in on speech.",
+      "voiceover": null
+    },
+    {
+      "scene": "hadith",
+      "onScreen": "bukhari:6018 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "practice",
+      "onScreen": "CHECK-IN / Listen to the end before you reply · Lower your voice when you disagree · Say thank you and please, even at home · Leave one argument unanswered · If it isn't good, let it stay unsaid",
+      "voiceover": null
+    },
+    {
+      "scene": "reflection",
+      "onScreen": "REFLECTION / Why it matters / Character is mostly built in moments nobody celebrates: a calm reply, a kind word, a silence that protects someone.",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Good words, or silence. / Share this with your family",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 240,
+      "startSec": 3,
+      "endSec": 8
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "startFrame": 240,
+      "endFrame": 390,
+      "startSec": 8,
+      "endSec": 13
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "startFrame": 390,
+      "endFrame": 540,
+      "startSec": 13,
+      "endSec": 18
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 540,
+      "endFrame": 690,
+      "startSec": 18,
+      "endSec": 23
+    }
+  ],
+  "caption": "Your character shows in the moments nobody celebrates.\n\nOne test from Sahih al-Bukhari 6018: is it good? If not, keep quiet.\n\nSwipe for five small ways to practise it today.\n\nShare it with someone who may find it helpful.\n\n📖 Sources\n• Sahih al-Bukhari 6018 (Sahih, tr. Muhsin Khan) — sunnah.com/bukhari:6018\nFull text: Narrated Abu Huraira: Allah's Messenger (ﷺ) said, \"Anybody who believes in Allah and the Last Day should not harm his neighbor, and anybody who believes in Allah and the Last Day should entertain his guest generously and anybody who believes in Allah and the Last Day should talk what is good or keep quiet. (i.e. abstain from all kinds of evil and dirty talk)\n\n#IslamicReminder #DailyDeen #Adab #Hadith",
+  "hashtags": [
+    "#IslamicReminder",
+    "#DailyDeen",
+    "#Adab",
+    "#Hadith"
+  ],
+  "primaryCta": {
+    "type": "share",
+    "text": "Share this with your family"
+  },
+  "coverHeadline": "Five ways to speak better",
+  "sources": [
+    {
+      "ref": "bukhari:6018",
+      "citation": "Sahih al-Bukhari 6018",
+      "url": "https://sunnah.com/bukhari:6018",
+      "translation": "Muhsin Khan",
+      "grade": "Sahih",
+      "english": "Narrated Abu Huraira: Allah's Messenger (ﷺ) said, \"Anybody who believes in Allah and the Last Day should not harm his neighbor, and anybody who believes in Allah and the Last Day should entertain his guest generously and anybody who believes in Allah and the Last Day should talk what is good or keep quiet. (i.e. abstain from all kinds of evil and dirty talk)"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What bukhari:6018 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:6018"
+    },
+    {
+      "text": "The five habits are our suggestions for acting on the hadith.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 23,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-006-five-ways-to-speak-better.mp4",
+    "cover": "output/covers/deen-006-five-ways-to-speak-better.png",
+    "caption": "output/captions/deen-006-five-ways-to-speak-better.txt",
+    "storyboard": "output/storyboards/deen-006-five-ways-to-speak-better.md",
+    "subtitles": "output/storyboards/deen-006-five-ways-to-speak-better.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-10-26T04:52:25.341Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-006-five-ways-to-speak-better/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Launch calendar day 4.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}

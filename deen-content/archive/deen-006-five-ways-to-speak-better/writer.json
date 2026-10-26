@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-26",
+  "writer": "queue",
+  "plan": {
+    "from": "draft",
+    "backlogId": null,
+    "pillar": "C",
+    "pillarName": "C: Daily Deen & Practical Islam",
+    "format": "check-in",
+    "research": false
+  },
+  "reelId": "deen-006-five-ways-to-speak-better",
+  "rounds": [],
+  "finalCritic": null,
+  "needsAttention": false,
+  "estimatedCostUsd": 0
+}
