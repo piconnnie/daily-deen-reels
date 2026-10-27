@@ -1,0 +1,199 @@
+{
+  "contentId": "deen-007-it-starts-with-intention",
+  "version": 1,
+  "generatedAt": "2026-10-27T05:10:57.704Z",
+  "pillar": "A: Qur'an & Hadith",
+  "format": "before-you-scroll",
+  "objective": "reach",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "Why intentions matter in ordinary actions",
+  "coreInsight": "The first hadith in Sahih al-Bukhari ties every deed to its intention, so an ordinary action can be done for Allah.",
+  "hookVariants": [
+    {
+      "text": "Same action. Different intention.",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "It starts before you begin.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Intend it first.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "Same action. Different intention.",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "Same action. Different intention. / Pause for one second.",
+      "voiceover": null
+    },
+    {
+      "scene": "hadith",
+      "onScreen": "bukhari:1 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Intend it before you do it. / Share it with a friend",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 375,
+      "startSec": 3,
+      "endSec": 12.5
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 375,
+      "endFrame": 585,
+      "startSec": 12.5,
+      "endSec": 19.5
+    }
+  ],
+  "caption": "The same action can begin with a different intention.\n\nThe very first hadith in Sahih al-Bukhari is about intention.\n\nBefore your next task today, pause and set it for Allah.\n\nShare it with a friend.\n\n📖 Sources\n• Sahih al-Bukhari 1 (Sahih, tr. Muhsin Khan) — sunnah.com/bukhari:1\nFull text: Narrated 'Umar bin Al-Khattab: I heard Allah's Messenger (ﷺ) saying, \"The reward of deeds depends upon the intentions and every person will get the reward according to what he has intended. So whoever emigrated for worldly benefits or for a woman to marry, his emigration was for what he emigrated for\n• Recitation: Qur'an 6:162 — Mahmoud Khalil Al-Husary (EveryAyah.com) — quran.com/6/162\n\n#IslamicReminder #Quran #Niyyah #Hadith",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Quran",
+    "#Niyyah",
+    "#Hadith"
+  ],
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with a friend"
+  },
+  "coverHeadline": "It starts with intention",
+  "sources": [
+    {
+      "ref": "bukhari:1",
+      "citation": "Sahih al-Bukhari 1",
+      "url": "https://sunnah.com/bukhari:1",
+      "translation": "Muhsin Khan",
+      "grade": "Sahih",
+      "english": "Narrated 'Umar bin Al-Khattab: I heard Allah's Messenger (ﷺ) saying, \"The reward of deeds depends upon the intentions and every person will get the reward according to what he has intended. So whoever emigrated for worldly benefits or for a woman to marry, his emigration was for what he emigrated for"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What bukhari:1 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:1"
+    },
+    {
+      "text": "Pausing to set an intention is our suggestion for acting on the hadith.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 19.5,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [
+      "public/audio/deen-007-it-starts-with-intention-bed.wav"
+    ],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-007-it-starts-with-intention.mp4",
+    "cover": "output/covers/deen-007-it-starts-with-intention.png",
+    "caption": "output/captions/deen-007-it-starts-with-intention.txt",
+    "storyboard": "output/storyboards/deen-007-it-starts-with-intention.md",
+    "subtitles": "output/storyboards/deen-007-it-starts-with-intention.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-10-27T05:11:02.861Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-007-it-starts-with-intention/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Launch calendar day 5.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
