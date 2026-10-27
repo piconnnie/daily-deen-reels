@@ -1,0 +1,248 @@
+{
+  "id": "deen-007-it-starts-with-intention",
+  "version": 1,
+  "status": "qa-passed",
+  "kind": "reel",
+  "brief": {
+    "topic": "Why intentions matter in ordinary actions",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "A: Qur'an & Hadith",
+    "series": "before-you-scroll",
+    "objective": "reach",
+    "format": "before-you-scroll",
+    "targetDurationSec": 18,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "queueId": "q005-before-you-scroll-intention",
+    "backlogId": null,
+    "writer": "queue"
+  },
+  "coreInsight": "The first hadith in Sahih al-Bukhari ties every deed to its intention, so an ordinary action can be done for Allah.",
+  "hooks": [
+    {
+      "text": "Same action. Different intention.",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the teaching answers it."
+    },
+    {
+      "text": "It starts before you begin.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, less direct."
+    },
+    {
+      "text": "Intend it first.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Same action. Different intention. / Pause for one second.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "BEFORE YOU SCROLL",
+      "lines": [
+        {
+          "text": "Same"
+        },
+        {
+          "text": "action."
+        },
+        {
+          "text": "Different"
+        },
+        {
+          "text": "intention.",
+          "highlight": true
+        }
+      ],
+      "sub": "Pause for one second."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 285,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "bukhari:1 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ SAID",
+      "ref": "bukhari:1",
+      "excerpt": "The reward of deeds depends upon the intentions and every person will get the reward according to what he has intended",
+      "resolved": {
+        "ref": "bukhari:1",
+        "collection": "bukhari",
+        "collectionName": "Sahih al-Bukhari",
+        "kind": "hadith",
+        "citation": "Sahih al-Bukhari 1",
+        "url": "https://sunnah.com/bukhari:1",
+        "arabic": "حَدَّثَنَا الْحُمَيْدِيُّ عَبْدُ اللَّهِ بْنُ الزُّبَيْرِ ، قَالَ : حَدَّثَنَا سُفْيَانُ ، قَالَ : حَدَّثَنَا يَحْيَى بْنُ سَعِيدٍ الْأَنْصَارِيُّ ، قَالَ : أَخْبَرَنِي مُحَمَّدُ بْنُ إِبْرَاهِيمَ التَّيْمِيُّ ، أَنَّهُ سَمِعَ عَلْقَمَةَ بْنَ وَقَّاصٍ اللَّيْثِيَّ ، يَقُولُ : سَمِعْتُ عُمَرَ بْنَ الْخَطَّابِ رَضِيَ اللَّهُ عَنْهُ عَلَى الْمِنْبَرِ، قَالَ : سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، يَقُولُ : \" إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى، فَمَنْ كَانَتْ هِجْرَتُهُ إِلَى دُنْيَا يُصِيبُهَا أَوْ إِلَى امْرَأَةٍ يَنْكِحُهَا، فَهِجْرَتُهُ إِلَى مَا هَاجَرَ إِلَيْهِ",
+        "english": "Narrated 'Umar bin Al-Khattab: I heard Allah's Messenger (ﷺ) saying, \"The reward of deeds depends upon the intentions and every person will get the reward according to what he has intended. So whoever emigrated for worldly benefits or for a woman to marry, his emigration was for what he emigrated for",
+        "translation": "Muhsin Khan",
+        "grade": "Sahih",
+        "narrator": "'Umar bin Al-Khattab"
+      }
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 210,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Intend it before you do it. / Share it with a friend",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Intend it"
+        },
+        {
+          "text": "before you"
+        },
+        {
+          "text": "do it.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with a friend",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "BEFORE YOU SCROLL",
+    "headline": [
+      {
+        "text": "It starts with"
+      },
+      {
+        "text": "intention",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "The same action can begin with a different intention.",
+    "body": [
+      "The very first hadith in Sahih al-Bukhari is about intention.",
+      "Before your next task today, pause and set it for Allah."
+    ],
+    "cta": "Share it with a friend.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Quran",
+      "#Niyyah",
+      "#Hadith"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with a friend"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:1 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:1"
+    },
+    {
+      "text": "Pausing to set an intention is our suggestion for acting on the hadith.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Launch calendar day 5."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:6:162",
+    "chosen": "writer",
+    "citation": "Qur'an 6:162",
+    "url": "https://quran.com/6/162",
+    "reciter": "husary",
+    "reciterName": "Mahmoud Khalil Al-Husary",
+    "folder": "Husary_128kbps",
+    "source": "EveryAyah.com",
+    "mode": "background",
+    "sceneId": null,
+    "startFrame": 20,
+    "gapSec": 0.25,
+    "totalSec": 18.111,
+    "files": [
+      {
+        "file": "006162.mp3",
+        "url": "https://everyayah.com/data/Husary_128kbps/006162.mp3",
+        "sha256": "75c13f7251e0e6dd66146dce59e75f1c67e960a0cd84398e3eff8a41d3a5f162",
+        "durationSec": 18.111
+      }
+    ]
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "style": {
+    "theme": "rose",
+    "layout": "minimal",
+    "backdrop": "plain",
+    "type": "serif",
+    "motion": "slide",
+    "music": "recitation"
+  },
+  "audio": {
+    "bed": "audio/deen-007-it-starts-with-intention-bed.wav",
+    "bedVolume": 1,
+    "voiceover": null,
+    "voiceoverVolume": 1
+  },
+  "sources": [
+    {
+      "ref": "bukhari:1",
+      "citation": "Sahih al-Bukhari 1",
+      "url": "https://sunnah.com/bukhari:1",
+      "translation": "Muhsin Khan",
+      "grade": "Sahih",
+      "english": "Narrated 'Umar bin Al-Khattab: I heard Allah's Messenger (ﷺ) saying, \"The reward of deeds depends upon the intentions and every person will get the reward according to what he has intended. So whoever emigrated for worldly benefits or for a woman to marry, his emigration was for what he emigrated for"
+    }
+  ]
+}

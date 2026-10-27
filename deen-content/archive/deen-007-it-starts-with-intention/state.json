@@ -1,0 +1,38 @@
+{
+  "id": "deen-007-it-starts-with-intention",
+  "createdAt": "2026-10-27T05:11:02.917Z",
+  "kind": "reel",
+  "release": {
+    "tag": "reel-deen-007-it-starts-with-intention",
+    "cover": "deen-007-it-starts-with-intention.jpg",
+    "contactSheet": "deen-007-it-starts-with-intention-contact-sheet.png",
+    "video": "deen-007-it-starts-with-intention.mp4"
+  },
+  "sha256": {
+    "video": "19e0ae9be5652b8916083fbeb8205a72e384783bc1fe72b34ba76a4ac3cfe626",
+    "cover": "8ca84f69980cb4205e482376724e0f13491b4b677fd269de5c85455107d5acd8"
+  },
+  "durationSec": 19.5,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 49
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
