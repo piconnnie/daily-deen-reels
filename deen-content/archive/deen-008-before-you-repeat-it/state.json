@@ -1,0 +1,50 @@
+{
+  "id": "deen-008-before-you-repeat-it",
+  "createdAt": "2026-10-28T05:47:55.390Z",
+  "kind": "carousel",
+  "release": {
+    "tag": "reel-deen-008-before-you-repeat-it",
+    "cover": "deen-008-before-you-repeat-it.jpg",
+    "contactSheet": "deen-008-before-you-repeat-it-contact-sheet.png",
+    "slides": [
+      "deen-008-before-you-repeat-it-slide-01.jpg",
+      "deen-008-before-you-repeat-it-slide-02.jpg",
+      "deen-008-before-you-repeat-it-slide-03.jpg",
+      "deen-008-before-you-repeat-it-slide-04.jpg",
+      "deen-008-before-you-repeat-it-slide-05.jpg"
+    ]
+  },
+  "sha256": {
+    "cover": "6905191c30a5430cc4b518469e44865bcaf21573eb321c75d06aeb0cd1f9c34c",
+    "slides": [
+      "6905191c30a5430cc4b518469e44865bcaf21573eb321c75d06aeb0cd1f9c34c",
+      "f326168f9bd028723cae9a0eccb08842238c23516321a61a4fa34f480437c63c",
+      "a8491a56b85d5646398cb4e41176b4d899dd5b22313798e91ed86e1d7b1b3c0f",
+      "dae966d51aa313a71d97fa4304639b51c633ebaed729f6e19106dbb9e319e3f9",
+      "3be00ef6b0c72cf748a2b518b301c58af4816ef1b7111596c9bbb4b069db760d"
+    ]
+  },
+  "durationSec": null,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 30
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}

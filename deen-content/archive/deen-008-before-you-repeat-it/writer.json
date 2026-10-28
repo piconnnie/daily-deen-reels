@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-28",
+  "writer": "queue",
+  "plan": {
+    "from": "draft",
+    "backlogId": null,
+    "pillar": "E",
+    "pillarName": "E: Islam in Everyday Life",
+    "format": "hadith-explained",
+    "research": false
+  },
+  "reelId": "deen-008-before-you-repeat-it",
+  "rounds": [],
+  "finalCritic": null,
+  "needsAttention": false,
+  "estimatedCostUsd": 0
+}
