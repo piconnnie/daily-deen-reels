@@ -1,0 +1,295 @@
+{
+  "id": "deen-008-before-you-repeat-it",
+  "version": 1,
+  "status": "qa-passed",
+  "kind": "carousel",
+  "brief": {
+    "topic": "Backbiting and guarding speech",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "E: Islam in Everyday Life",
+    "series": null,
+    "objective": "shares",
+    "format": "hadith-explained",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "queueId": "q006-before-repeating-it-pause",
+    "backlogId": null,
+    "writer": "queue"
+  },
+  "coreInsight": "Sahih Muslim 2589 defines backbiting as mentioning your brother in a way he dislikes, even when it is true.",
+  "hooks": [
+    {
+      "text": "Before repeating something about someone, pause.",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the teaching answers it."
+    },
+    {
+      "text": "Is it backbiting if it's true?",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, less direct."
+    },
+    {
+      "text": "Choose the kinder response.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Before repeating it, pause. / Even if it's true.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Before"
+        },
+        {
+          "text": "repeating it,"
+        },
+        {
+          "text": "pause.",
+          "highlight": true
+        }
+      ],
+      "sub": "Even if it's true."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "muslim:2589 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ ASKED",
+      "ref": "muslim:2589",
+      "excerpt": "Do you know what is backbiting? They (the Companions) said: Allah and His Messenger know best. Thereupon he (the Holy Prophet) said: Backbiting implies your talking about your brother in a manner which he does not like",
+      "resolved": {
+        "ref": "muslim:2589",
+        "collection": "muslim",
+        "collectionName": "Sahih Muslim",
+        "kind": "hadith",
+        "citation": "Sahih Muslim 2589",
+        "url": "https://sunnah.com/muslim:2589",
+        "arabic": "حَدَّثَنَا يَحْيَى بْنُ أَيُّوبَ، وَقُتَيْبَةُ، وَابْنُ، حُجْرٍ قَالُوا حَدَّثَنَا إِسْمَاعِيلُ، عَنِ الْعَلاَءِ، عَنْ أَبِيهِ، عَنْ أَبِي هُرَيْرَةَ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم قَالَ \" أَتَدْرُونَ مَا الْغِيبَةُ \" . قَالُوا اللَّهُ وَرَسُولُهُ أَعْلَمُ . قَالَ \" ذِكْرُكَ أَخَاكَ بِمَا يَكْرَهُ \" . قِيلَ أَفَرَأَيْتَ إِنْ كَانَ فِي أَخِي مَا أَقُولُ قَالَ \" إِنْ كَانَ فِيهِ مَا تَقُولُ فَقَدِ اغْتَبْتَهُ وَإِنْ لَمْ يَكُنْ فِيهِ فَقَدْ بَهَتَّهُ \" .",
+        "english": "Abu Huraira reported Allah's Messenger (ﷺ) as saying: Do you know what is backbiting? They (the Companions) said: Allah and His Messenger know best. Thereupon he (the Holy Prophet) said: Backbiting implies your talking about your brother in a manner which he does not like. It was said to him: What is your opinion about this that if I actually find (that failing) in my brother which I made a mention of? He said: If (that failing) is actually found (in him) what you assert, you in fact backbited him, and if that is not in him it is a slander",
+        "translation": "Abdul Hamid Siddiqui",
+        "grade": "Sahih",
+        "narrator": "Abu Huraira"
+      }
+    },
+    {
+      "id": "truth",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "muslim:2589 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "AND IF IT IS TRUE?",
+      "ref": "muslim:2589",
+      "excerpt": "If (that failing) is actually found (in him) what you assert, you in fact backbited him, and if that is not in him it is a slander",
+      "resolved": {
+        "ref": "muslim:2589",
+        "collection": "muslim",
+        "collectionName": "Sahih Muslim",
+        "kind": "hadith",
+        "citation": "Sahih Muslim 2589",
+        "url": "https://sunnah.com/muslim:2589",
+        "arabic": "حَدَّثَنَا يَحْيَى بْنُ أَيُّوبَ، وَقُتَيْبَةُ، وَابْنُ، حُجْرٍ قَالُوا حَدَّثَنَا إِسْمَاعِيلُ، عَنِ الْعَلاَءِ، عَنْ أَبِيهِ، عَنْ أَبِي هُرَيْرَةَ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم قَالَ \" أَتَدْرُونَ مَا الْغِيبَةُ \" . قَالُوا اللَّهُ وَرَسُولُهُ أَعْلَمُ . قَالَ \" ذِكْرُكَ أَخَاكَ بِمَا يَكْرَهُ \" . قِيلَ أَفَرَأَيْتَ إِنْ كَانَ فِي أَخِي مَا أَقُولُ قَالَ \" إِنْ كَانَ فِيهِ مَا تَقُولُ فَقَدِ اغْتَبْتَهُ وَإِنْ لَمْ يَكُنْ فِيهِ فَقَدْ بَهَتَّهُ \" .",
+        "english": "Abu Huraira reported Allah's Messenger (ﷺ) as saying: Do you know what is backbiting? They (the Companions) said: Allah and His Messenger know best. Thereupon he (the Holy Prophet) said: Backbiting implies your talking about your brother in a manner which he does not like. It was said to him: What is your opinion about this that if I actually find (that failing) in my brother which I made a mention of? He said: If (that failing) is actually found (in him) what you assert, you in fact backbited him, and if that is not in him it is a slander",
+        "translation": "Abdul Hamid Siddiqui",
+        "grade": "Sahih",
+        "narrator": "Abu Huraira"
+      }
+    },
+    {
+      "id": "moments",
+      "type": "cards",
+      "durationInFrames": 150,
+      "purpose": "Practical examples (our suggestions).",
+      "onScreen": "A KINDER RESPONSE / Change the subject gently · Say something good instead · Speak to them, not about them",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "A KINDER RESPONSE",
+      "headline": [
+        {
+          "text": "When the talk"
+        },
+        {
+          "text": "turns to someone",
+          "highlight": true
+        }
+      ],
+      "enter": "pop",
+      "popStart": 12,
+      "popStagger": 16,
+      "cards": [
+        {
+          "text": "Change the subject gently",
+          "status": "pass",
+          "tag": "REDIRECT"
+        },
+        {
+          "text": "Say something good instead",
+          "status": "pass",
+          "tag": "DEFEND"
+        },
+        {
+          "text": "Speak to them, not about them",
+          "status": "pass",
+          "tag": "DIRECT"
+        }
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Protect them in their absence. / Share this with a friend",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Protect them"
+        },
+        {
+          "text": "in their"
+        },
+        {
+          "text": "absence.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share this with a friend",
+      "ctaAt": 10,
+      "endCardAt": 20
+    }
+  ],
+  "cover": {
+    "kicker": "GUARDING THE TONGUE",
+    "headline": [
+      {
+        "text": "Before you"
+      },
+      {
+        "text": "repeat it",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Before repeating something about someone, pause.",
+    "body": [
+      "Sahih Muslim 2589: backbiting is mentioning your brother in a way he dislikes — and the hadith addresses the case where it is true.",
+      "Swipe for three kinder responses when the conversation turns to someone."
+    ],
+    "cta": "Share it with someone who may find it helpful.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Akhlaq",
+      "#Ghibah",
+      "#Hadith"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share this with a friend"
+  },
+  "claims": [
+    {
+      "text": "What muslim:2589 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "muslim:2589"
+    },
+    {
+      "text": "The three responses are our suggestions.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Launch calendar day 6."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "style": {
+    "theme": "ink",
+    "layout": "editorial",
+    "backdrop": "gradient",
+    "type": "sans",
+    "motion": "fade",
+    "music": "recitation"
+  },
+  "audio": {
+    "bed": null,
+    "bedVolume": 1,
+    "voiceover": null,
+    "voiceoverVolume": 1
+  },
+  "recitation": {
+    "off": true
+  },
+  "sources": [
+    {
+      "ref": "muslim:2589",
+      "citation": "Sahih Muslim 2589",
+      "url": "https://sunnah.com/muslim:2589",
+      "translation": "Abdul Hamid Siddiqui",
+      "grade": "Sahih",
+      "english": "Abu Huraira reported Allah's Messenger (ﷺ) as saying: Do you know what is backbiting? They (the Companions) said: Allah and His Messenger know best. Thereupon he (the Holy Prophet) said: Backbiting implies your talking about your brother in a manner which he does not like. It was said to him: What is your opinion about this that if I actually find (that failing) in my brother which I made a mention of? He said: If (that failing) is actually found (in him) what you assert, you in fact backbited him, and if that is not in him it is a slander"
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "contentId": "deen-008-before-you-repeat-it",
+  "version": 1,
+  "generatedAt": "2026-10-28T05:47:51.288Z",
+  "pillar": "E: Islam in Everyday Life",
+  "format": "hadith-explained",
+  "objective": "shares",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "Backbiting and guarding speech",
+  "coreInsight": "Sahih Muslim 2589 defines backbiting as mentioning your brother in a way he dislikes, even when it is true.",
+  "hookVariants": [
+    {
+      "text": "Before repeating something about someone, pause.",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "Is it backbiting if it's true?",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Choose the kinder response.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "Before repeating something about someone, pause.",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "Before repeating it, pause. / Even if it's true.",
+      "voiceover": null
+    },
+    {
+      "scene": "hadith",
+      "onScreen": "muslim:2589 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "truth",
+      "onScreen": "muslim:2589 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "moments",
+      "onScreen": "A KINDER RESPONSE / Change the subject gently · Say something good instead · Speak to them, not about them",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Protect them in their absence. / Share this with a friend",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 240,
+      "startSec": 3,
+      "endSec": 8
+    },
+    {
+      "id": "truth",
+      "type": "source",
+      "startFrame": 240,
+      "endFrame": 390,
+      "startSec": 8,
+      "endSec": 13
+    },
+    {
+      "id": "moments",
+      "type": "cards",
+      "startFrame": 390,
+      "endFrame": 540,
+      "startSec": 13,
+      "endSec": 18
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 540,
+      "endFrame": 690,
+      "startSec": 18,
+      "endSec": 23
+    }
+  ],
+  "caption": "Before repeating something about someone, pause.\n\nSahih Muslim 2589: backbiting is mentioning your brother in a way he dislikes — and the hadith addresses the case where it is true.\n\nSwipe for three kinder responses when the conversation turns to someone.\n\nShare it with someone who may find it helpful.\n\n📖 Sources\n• Sahih Muslim 2589 (Sahih, tr. Abdul Hamid Siddiqui) — sunnah.com/muslim:2589\nFull text: Abu Huraira reported Allah's Messenger (ﷺ) as saying: Do you know what is backbiting? They (the Companions) said: Allah and His Messenger know best. Thereupon he (the Holy Prophet) said: Backbiting implies your talking about your brother in a manner which he does not like. It was said to him: What is your opinion about this that if I actually find (that failing) in my brother which I made a mention of? He said: If (that failing) is actually found (in him) what you assert, you in fact backbited him, and if that is not in him it is a slander\n\n#IslamicReminder #Akhlaq #Ghibah #Hadith",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Akhlaq",
+    "#Ghibah",
+    "#Hadith"
+  ],
+  "primaryCta": {
+    "type": "share",
+    "text": "Share this with a friend"
+  },
+  "coverHeadline": "Before you repeat it",
+  "sources": [
+    {
+      "ref": "muslim:2589",
+      "citation": "Sahih Muslim 2589",
+      "url": "https://sunnah.com/muslim:2589",
+      "translation": "Abdul Hamid Siddiqui",
+      "grade": "Sahih",
+      "english": "Abu Huraira reported Allah's Messenger (ﷺ) as saying: Do you know what is backbiting? They (the Companions) said: Allah and His Messenger know best. Thereupon he (the Holy Prophet) said: Backbiting implies your talking about your brother in a manner which he does not like. It was said to him: What is your opinion about this that if I actually find (that failing) in my brother which I made a mention of? He said: If (that failing) is actually found (in him) what you assert, you in fact backbited him, and if that is not in him it is a slander"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What muslim:2589 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "muslim:2589"
+    },
+    {
+      "text": "The three responses are our suggestions.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 23,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-008-before-you-repeat-it.mp4",
+    "cover": "output/covers/deen-008-before-you-repeat-it.png",
+    "caption": "output/captions/deen-008-before-you-repeat-it.txt",
+    "storyboard": "output/storyboards/deen-008-before-you-repeat-it.md",
+    "subtitles": "output/storyboards/deen-008-before-you-repeat-it.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-10-28T05:47:55.339Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-008-before-you-repeat-it/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Launch calendar day 6.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
