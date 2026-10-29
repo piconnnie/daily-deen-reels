@@ -1,0 +1,161 @@
+{
+  "id": "deen-009-one-quiet-minute",
+  "version": 1,
+  "status": "qa-passed",
+  "kind": "story",
+  "brief": {
+    "topic": "Weekly self-check",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "C: Daily Deen & Practical Islam",
+    "series": null,
+    "objective": "replies",
+    "format": "story-check-in",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "queueId": "q007-story-weekly-self-check",
+    "backlogId": null,
+    "writer": "queue"
+  },
+  "coreInsight": "A quiet weekly check-in on gratitude, prayer, speech, kindness and intentions.",
+  "hooks": [
+    {
+      "text": "Take one quiet minute",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the teaching answers it."
+    },
+    {
+      "text": "A weekly check-in",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, less direct."
+    },
+    {
+      "text": "How was your week?",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "check",
+      "type": "checklist",
+      "durationInFrames": 150,
+      "purpose": "Takeaway in practice (our suggestions).",
+      "onScreen": "WEEKLY SELF-CHECK / Gratitude: did I thank Allah and people? · Prayer: which salah needs more care? · Speech: did my words help or hurt? · Kindness: who did I make smile? · Intention: what did I do for Allah?",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "WEEKLY SELF-CHECK",
+      "headline": [
+        {
+          "text": "Take one"
+        },
+        {
+          "text": "quiet minute.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Gratitude: did I thank Allah and people?",
+        "Prayer: which salah needs more care?",
+        "Speech: did my words help or hurt?",
+        "Kindness: who did I make smile?",
+        "Intention: what did I do for Allah?"
+      ],
+      "itemStart": 10,
+      "itemStagger": 10
+    }
+  ],
+  "cover": {
+    "kicker": "WEEKLY SELF-CHECK",
+    "headline": [
+      {
+        "text": "One quiet"
+      },
+      {
+        "text": "minute",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Take one quiet minute to check in with yourself.",
+    "body": [
+      "Gratitude · prayer · speech · kindness · intentions."
+    ],
+    "cta": "Reply with the one you'll work on.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#DailyDeen",
+      "#SelfReflection"
+    ]
+  },
+  "primaryCta": {
+    "type": "question",
+    "text": "Reply: which one will you work on?"
+  },
+  "claims": [
+    {
+      "text": "The check-in questions are our own prompts.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Launch calendar day 7."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "replyPrompt": "Reply: which one will you work on?",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "style": {
+    "theme": "olive",
+    "layout": "framed",
+    "backdrop": "motif",
+    "type": "sans",
+    "motion": "rise",
+    "music": "recitation"
+  },
+  "audio": {
+    "bed": null,
+    "bedVolume": 1,
+    "voiceover": null,
+    "voiceoverVolume": 1
+  },
+  "recitation": {
+    "off": true
+  },
+  "sources": []
+}
