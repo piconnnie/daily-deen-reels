@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-29",
+  "writer": "queue",
+  "plan": {
+    "from": "draft",
+    "backlogId": null,
+    "pillar": "C",
+    "pillarName": "C: Daily Deen & Practical Islam",
+    "format": "story-check-in",
+    "research": false
+  },
+  "reelId": "deen-009-one-quiet-minute",
+  "rounds": [],
+  "finalCritic": null,
+  "needsAttention": false,
+  "estimatedCostUsd": 0
+}
