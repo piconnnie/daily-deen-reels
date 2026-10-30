@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-30",
+  "writer": "queue",
+  "plan": {
+    "from": "draft",
+    "backlogId": null,
+    "pillar": "B",
+    "pillarName": "B: Heart-Softening Reminders",
+    "format": "heart-reminder",
+    "research": false
+  },
+  "reelId": "deen-010-not-the-end-of-your-return",
+  "rounds": [],
+  "finalCritic": null,
+  "needsAttention": false,
+  "estimatedCostUsd": 0
+}

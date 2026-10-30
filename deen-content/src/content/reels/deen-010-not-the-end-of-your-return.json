@@ -1,0 +1,270 @@
+{
+  "id": "deen-010-not-the-end-of-your-return",
+  "version": 1,
+  "status": "qa-passed",
+  "kind": "reel",
+  "brief": {
+    "topic": "Repentance and returning to Allah after a mistake",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "B: Heart-Softening Reminders",
+    "series": "heart-reminder",
+    "objective": "shares",
+    "format": "heart-reminder",
+    "targetDurationSec": 30,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "queueId": "q008-returning-to-allah",
+    "backlogId": null,
+    "writer": "queue"
+  },
+  "coreInsight": "Qur'an 39:53 tells those who have wronged themselves not to despair of Allah's mercy, so a mistake can be the start of a return.",
+  "hooks": [
+    {
+      "text": "A mistake doesn't have to be the end",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the teaching answers it."
+    },
+    {
+      "text": "Is it too late to come back?",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, less direct."
+    },
+    {
+      "text": "Return. He forgives.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "A mistake is not the end of your return. / Read this if you feel too far.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "A REMINDER YOUR HEART NEEDS",
+      "lines": [
+        {
+          "text": "A mistake"
+        },
+        {
+          "text": "is not the"
+        },
+        {
+          "text": "end of your"
+        },
+        {
+          "text": "return.",
+          "highlight": true
+        }
+      ],
+      "sub": "Read this if you feel too far."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 758,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:39:53 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · AZ-ZUMAR",
+      "ref": "quran:39:53",
+      "resolved": {
+        "ref": "quran:39:53",
+        "collection": "quran",
+        "collectionName": "The Qur'an",
+        "kind": "quran",
+        "citation": "Qur'an 39:53",
+        "url": "https://quran.com/39/53",
+        "arabic": "۞قُلۡ يَٰعِبَادِيَ ٱلَّذِينَ أَسۡرَفُواْ عَلَىٰٓ أَنفُسِهِمۡ لَا تَقۡنَطُواْ مِن رَّحۡمَةِ ٱللَّهِۚ إِنَّ ٱللَّهَ يَغۡفِرُ ٱلذُّنُوبَ جَمِيعًاۚ إِنَّهُۥ هُوَ ٱلۡغَفُورُ ٱلرَّحِيمُ ٥٣",
+        "english": "Say, \"O My servants who have transgressed against themselves [by sinning], do not despair of the mercy of Allah. Indeed, Allah forgives all sins. Indeed, it is He who is the Forgiving, the Merciful",
+        "translation": "Saheeh International",
+        "grade": null,
+        "transliteration": "Qul ya AAibadiya allatheena asrafoo AAala anfusihim la taqnatoo min rahmati Allahi inna Allaha yaghfiru alththunooba jameeAAan innahu huwa alghafooru alrraheemu"
+      }
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "durationInFrames": 255,
+      "purpose": "Reflection: our words, clearly labelled.",
+      "onScreen": "REFLECTION / Come back, as you are. / Feeling far is not a reason to stay away. The door this ayah describes is open to the one who returns. Begin with a sincere istighfar today.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "Come back,"
+        },
+        {
+          "text": "as you are.",
+          "highlight": true
+        }
+      ],
+      "body": [
+        "Feeling far is not a reason to stay away. The door this ayah describes is open to the one who returns.",
+        "Begin with a sincere istighfar today."
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Return. He forgives. / Share it with someone who needs it",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Return."
+        },
+        {
+          "text": "He forgives.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with someone who needs it",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "A REMINDER YOUR HEART NEEDS",
+    "headline": [
+      {
+        "text": "Not the end of"
+      },
+      {
+        "text": "your return",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "A mistake does not have to be the end of your return.",
+    "body": [
+      "Qur'an 39:53 speaks to those who have wronged themselves: do not despair of the mercy of Allah.",
+      "Begin with a sincere istighfar today."
+    ],
+    "cta": "Share it with someone who may find it helpful.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#IslamicReminder",
+      "#Tawbah",
+      "#Quran"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with someone who needs it"
+  },
+  "claims": [
+    {
+      "text": "What quran:39:53 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:39:53"
+    },
+    {
+      "text": "Starting with istighfar is our suggestion.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Launch calendar day 8."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "style": {
+    "theme": "night",
+    "layout": "minimal",
+    "backdrop": "border",
+    "type": "serif",
+    "motion": "slide",
+    "music": "recitation"
+  },
+  "audio": {
+    "bed": "audio/deen-010-not-the-end-of-your-return-bed.wav",
+    "bedVolume": 1,
+    "voiceover": null,
+    "voiceoverVolume": 1
+  },
+  "sources": [
+    {
+      "ref": "quran:39:53",
+      "citation": "Qur'an 39:53",
+      "url": "https://quran.com/39/53",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "Say, \"O My servants who have transgressed against themselves [by sinning], do not despair of the mercy of Allah. Indeed, Allah forgives all sins. Indeed, it is He who is the Forgiving, the Merciful"
+    }
+  ],
+  "recitation": {
+    "ref": "quran:39:53",
+    "chosen": "default",
+    "citation": "Qur'an 39:53",
+    "url": "https://quran.com/39/53",
+    "reciter": "sudais",
+    "reciterName": "Abdur-Rahman As-Sudais",
+    "folder": "Abdurrahmaan_As-Sudais_192kbps",
+    "source": "EveryAyah.com",
+    "mode": "scene",
+    "sceneId": "ayah",
+    "startFrame": 102,
+    "gapSec": 0.25,
+    "totalSec": 24.163,
+    "files": [
+      {
+        "file": "039053.mp3",
+        "url": "https://everyayah.com/data/Abdurrahmaan_As-Sudais_192kbps/039053.mp3",
+        "sha256": "2bd261e1b2ffe6260619ea25181ccedfbffb8029b3b4b4a69fef84ee0d87c8e3",
+        "durationSec": 24.163
+      }
+    ]
+  }
+}

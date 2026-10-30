@@ -1,0 +1,212 @@
+{
+  "contentId": "deen-010-not-the-end-of-your-return",
+  "version": 1,
+  "generatedAt": "2026-10-30T05:54:24.941Z",
+  "pillar": "B: Heart-Softening Reminders",
+  "format": "heart-reminder",
+  "objective": "shares",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "Repentance and returning to Allah after a mistake",
+  "coreInsight": "Qur'an 39:53 tells those who have wronged themselves not to despair of Allah's mercy, so a mistake can be the start of a return.",
+  "hookVariants": [
+    {
+      "text": "A mistake doesn't have to be the end",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "Is it too late to come back?",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Return. He forgives.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "A mistake doesn't have to be the end",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "A mistake is not the end of your return. / Read this if you feel too far.",
+      "voiceover": null
+    },
+    {
+      "scene": "ayah",
+      "onScreen": "quran:39:53 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "reflection",
+      "onScreen": "REFLECTION / Come back, as you are. / Feeling far is not a reason to stay away. The door this ayah describes is open to the one who returns. Begin with a sincere istighfar today.",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Return. He forgives. / Share it with someone who needs it",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 848,
+      "startSec": 3,
+      "endSec": 28.27
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "startFrame": 848,
+      "endFrame": 1103,
+      "startSec": 28.27,
+      "endSec": 36.77
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 1103,
+      "endFrame": 1253,
+      "startSec": 36.77,
+      "endSec": 41.77
+    }
+  ],
+  "caption": "A mistake does not have to be the end of your return.\n\nQur'an 39:53 speaks to those who have wronged themselves: do not despair of the mercy of Allah.\n\nBegin with a sincere istighfar today.\n\nShare it with someone who may find it helpful.\n\n📖 Sources\n• Qur'an 39:53 (tr. Saheeh International) — quran.com/39/53\n• Recitation: Qur'an 39:53 — Abdur-Rahman As-Sudais (EveryAyah.com) — quran.com/39/53\n\n#IslamicReminder #IslamicReminder #Tawbah #Quran",
+  "hashtags": [
+    "#IslamicReminder",
+    "#IslamicReminder",
+    "#Tawbah",
+    "#Quran"
+  ],
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with someone who needs it"
+  },
+  "coverHeadline": "Not the end of your return",
+  "sources": [
+    {
+      "ref": "quran:39:53",
+      "citation": "Qur'an 39:53",
+      "url": "https://quran.com/39/53",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "Say, \"O My servants who have transgressed against themselves [by sinning], do not despair of the mercy of Allah. Indeed, Allah forgives all sins. Indeed, it is He who is the Forgiving, the Merciful"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What quran:39:53 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:39:53"
+    },
+    {
+      "text": "Starting with istighfar is our suggestion.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 41.77,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [
+      "public/audio/deen-010-not-the-end-of-your-return-bed.wav"
+    ],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-010-not-the-end-of-your-return.mp4",
+    "cover": "output/covers/deen-010-not-the-end-of-your-return.png",
+    "caption": "output/captions/deen-010-not-the-end-of-your-return.txt",
+    "storyboard": "output/storyboards/deen-010-not-the-end-of-your-return.md",
+    "subtitles": "output/storyboards/deen-010-not-the-end-of-your-return.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-10-30T05:54:33.119Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-010-not-the-end-of-your-return/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Launch calendar day 8.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
