@@ -1,0 +1,38 @@
+{
+  "id": "deen-010-not-the-end-of-your-return",
+  "createdAt": "2026-10-30T05:54:33.172Z",
+  "kind": "reel",
+  "release": {
+    "tag": "reel-deen-010-not-the-end-of-your-return",
+    "cover": "deen-010-not-the-end-of-your-return.jpg",
+    "contactSheet": "deen-010-not-the-end-of-your-return-contact-sheet.png",
+    "video": "deen-010-not-the-end-of-your-return.mp4"
+  },
+  "sha256": {
+    "video": "84d4a4c0ff87e7ae1afdc35d420f6df7713f86e5af7bbb296a2dac490a09797d",
+    "cover": "6fbe16948105cd6cd43d74ba920e4d11289fb608c3516dd96b288616c9444316"
+  },
+  "durationSec": 41.77,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 49
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
