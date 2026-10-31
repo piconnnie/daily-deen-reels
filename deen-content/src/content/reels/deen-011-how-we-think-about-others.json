@@ -1,0 +1,317 @@
+{
+  "id": "deen-011-how-we-think-about-others",
+  "version": 1,
+  "status": "qa-passed",
+  "kind": "carousel",
+  "brief": {
+    "topic": "Surah Al-Hujurat 49:12: suspicion, spying and backbiting",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "A: Qur'an & Hadith",
+    "series": "one-ayah-one-lesson",
+    "objective": "saves",
+    "format": "ayah-lesson",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "queueId": "q009-one-ayah-al-hujurat",
+    "backlogId": null,
+    "writer": "queue"
+  },
+  "coreInsight": "Qur'an 49:12 asks us to avoid much assumption, not to spy and not to backbite, and 49:13 reminds us that the most noble are the most righteous.",
+  "hooks": [
+    {
+      "text": "A verse that examines how we think of others",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the teaching answers it."
+    },
+    {
+      "text": "What we assume about people",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, less direct."
+    },
+    {
+      "text": "Think well of others.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "How do you think about others? / One ayah. One lesson.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "ONE AYAH. ONE LESSON.",
+      "lines": [
+        {
+          "text": "How do you"
+        },
+        {
+          "text": "think about"
+        },
+        {
+          "text": "others?",
+          "highlight": true
+        }
+      ],
+      "sub": "One ayah. One lesson."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:49:12 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · AL-HUJURAT 49:12",
+      "ref": "quran:49:12",
+      "excerpt": "O you who have believed, avoid much [negative] assumption. Indeed, some assumption is sin. And do not spy or backbite each other",
+      "arabicExcerpt": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُواْ ٱجۡتَنِبُواْ كَثِيرࣰ ا مِّنَ ٱلظَّنِّ إِنَّ بَعۡضَ ٱلظَّنِّ إِثۡمࣱۖ وَلَا تَجَسَّسُواْ وَلَا يَغۡتَب بَّعۡضُكُم بَعۡضًاۚ",
+      "resolved": {
+        "ref": "quran:49:12",
+        "collection": "quran",
+        "collectionName": "The Qur'an",
+        "kind": "quran",
+        "citation": "Qur'an 49:12",
+        "url": "https://quran.com/49/12",
+        "arabic": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُواْ ٱجۡتَنِبُواْ كَثِيرࣰ ا مِّنَ ٱلظَّنِّ إِنَّ بَعۡضَ ٱلظَّنِّ إِثۡمࣱۖ وَلَا تَجَسَّسُواْ وَلَا يَغۡتَب بَّعۡضُكُم بَعۡضًاۚ أَيُحِبُّ أَحَدُكُمۡ أَن يَأۡكُلَ لَحۡمَ أَخِيهِ مَيۡتࣰ ا فَكَرِهۡتُمُوهُۚ وَٱتَّقُواْ ٱللَّهَۚ إِنَّ ٱللَّهَ تَوَّابࣱ رَّحِيمࣱ ١٢",
+        "english": "O you who have believed, avoid much [negative] assumption. Indeed, some assumption is sin. And do not spy or backbite each other. Would one of you like to eat the flesh of his brother when dead? You would detest it. And fear Allah; indeed, Allah is Accepting of repentance and Merciful",
+        "translation": "Saheeh International",
+        "grade": null,
+        "transliteration": "Ya ayyuha allatheena amanoo ijtaniboo katheeran mina alththanni inna baAAda alththanni ithmun wala tajassasoo wala yaghtab baAAdukum baAAdan ayuhibbu ahadukum an yakula lahma akheehi maytan fakarihtumoohu waittaqoo Allaha inna Allaha tawwabun raheemun"
+      }
+    },
+    {
+      "id": "context",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Context: the next ayah, quoted.",
+      "onScreen": "quran:49:13 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "CONTEXT · THE NEXT AYAH",
+      "ref": "quran:49:13",
+      "excerpt": "Indeed, the most noble of you in the sight of Allah is the most righteous of you",
+      "arabicExcerpt": "إِنَّ أَكۡرَمَكُمۡ عِندَ ٱللَّهِ أَتۡقَىٰكُمۡۚ",
+      "resolved": {
+        "ref": "quran:49:13",
+        "collection": "quran",
+        "collectionName": "The Qur'an",
+        "kind": "quran",
+        "citation": "Qur'an 49:13",
+        "url": "https://quran.com/49/13",
+        "arabic": "يَٰٓأَيُّهَا ٱلنَّاسُ إِنَّا خَلَقۡنَٰكُم مِّن ذَكَرࣲ وَأُنثَىٰ وَجَعَلۡنَٰكُمۡ شُعُوبࣰ ا وَقَبَآئِلَ لِتَعَارَفُوٓاْۚ إِنَّ أَكۡرَمَكُمۡ عِندَ ٱللَّهِ أَتۡقَىٰكُمۡۚ إِنَّ ٱللَّهَ عَلِيمٌ خَبِيرࣱ ١٣",
+        "english": "O mankind, indeed We have created you from male and female and made you peoples and tribes that you may know one another. Indeed, the most noble of you in the sight of Allah is the most righteous of you. Indeed, Allah is Knowing and Acquainted",
+        "translation": "Saheeh International",
+        "grade": null,
+        "transliteration": "Ya ayyuha alnnasu inna khalaqnakum min thakarin waontha wajaAAalnakum shuAAooban waqabaila litaAAarafoo inna akramakum AAinda Allahi atqakum inna Allaha AAaleemun khabeerun"
+      }
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "durationInFrames": 150,
+      "purpose": "Reflection: our words, clearly labelled.",
+      "onScreen": "REFLECTION / The lesson / The ayah starts in the mind: assumptions come before spying and backbiting. Guard the thought, and the words follow. Honour is measured by righteousness, not by what we say about others.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "The lesson",
+          "highlight": true
+        }
+      ],
+      "body": [
+        "The ayah starts in the mind: assumptions come before spying and backbiting. Guard the thought, and the words follow.",
+        "Honour is measured by righteousness, not by what we say about others."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 150,
+      "purpose": "Takeaway in practice (our suggestions).",
+      "onScreen": "LIVE IT TODAY / Give one person an excuse you'd want for yourself · Don't search for what others hide · Stop a conversation that turns to someone absent",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "LIVE IT TODAY",
+      "headline": [
+        {
+          "text": "Three small"
+        },
+        {
+          "text": "steps.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Give one person an excuse you'd want for yourself",
+        "Don't search for what others hide",
+        "Stop a conversation that turns to someone absent"
+      ],
+      "itemStart": 10,
+      "itemStagger": 10
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Think well of others. / Save this reminder",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Think well"
+        },
+        {
+          "text": "of others.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this reminder",
+      "ctaAt": 10,
+      "endCardAt": 20
+    }
+  ],
+  "cover": {
+    "kicker": "ONE AYAH. ONE LESSON.",
+    "headline": [
+      {
+        "text": "How we think"
+      },
+      {
+        "text": "about others",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "A verse that asks us to examine how we think about others.",
+    "body": [
+      "Surah Al-Hujurat 49:12, with the ayah that follows it (49:13).",
+      "Swipe for the ayah, its context and one lesson to live today."
+    ],
+    "cta": "Save this reminder.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Quran",
+      "#OneAyahOneLesson",
+      "#Akhlaq"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this reminder"
+  },
+  "claims": [
+    {
+      "text": "What quran:49:12 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:49:12"
+    },
+    {
+      "text": "What quran:49:13 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:49:13"
+    },
+    {
+      "text": "The lesson and steps are our reflection on the ayat.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Launch calendar day 9."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "style": {
+    "theme": "ivory",
+    "layout": "editorial",
+    "backdrop": "plain",
+    "type": "serif",
+    "motion": "fade",
+    "music": "recitation"
+  },
+  "audio": {
+    "bed": null,
+    "bedVolume": 1,
+    "voiceover": null,
+    "voiceoverVolume": 1
+  },
+  "recitation": {
+    "off": true
+  },
+  "sources": [
+    {
+      "ref": "quran:49:12",
+      "citation": "Qur'an 49:12",
+      "url": "https://quran.com/49/12",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "O you who have believed, avoid much [negative] assumption. Indeed, some assumption is sin. And do not spy or backbite each other. Would one of you like to eat the flesh of his brother when dead? You would detest it. And fear Allah; indeed, Allah is Accepting of repentance and Merciful"
+    },
+    {
+      "ref": "quran:49:13",
+      "citation": "Qur'an 49:13",
+      "url": "https://quran.com/49/13",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "O mankind, indeed We have created you from male and female and made you peoples and tribes that you may know one another. Indeed, the most noble of you in the sight of Allah is the most righteous of you. Indeed, Allah is Knowing and Acquainted"
+    }
+  ]
+}

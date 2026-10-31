@@ -1,0 +1,249 @@
+{
+  "contentId": "deen-011-how-we-think-about-others",
+  "version": 1,
+  "generatedAt": "2026-10-31T05:47:25.247Z",
+  "pillar": "A: Qur'an & Hadith",
+  "format": "ayah-lesson",
+  "objective": "saves",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "Surah Al-Hujurat 49:12: suspicion, spying and backbiting",
+  "coreInsight": "Qur'an 49:12 asks us to avoid much assumption, not to spy and not to backbite, and 49:13 reminds us that the most noble are the most righteous.",
+  "hookVariants": [
+    {
+      "text": "A verse that examines how we think of others",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "What we assume about people",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Think well of others.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "A verse that examines how we think of others",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "How do you think about others? / One ayah. One lesson.",
+      "voiceover": null
+    },
+    {
+      "scene": "ayah",
+      "onScreen": "quran:49:12 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "context",
+      "onScreen": "quran:49:13 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "reflection",
+      "onScreen": "REFLECTION / The lesson / The ayah starts in the mind: assumptions come before spying and backbiting. Guard the thought, and the words follow. Honour is measured by righteousness, not by what we say about others.",
+      "voiceover": null
+    },
+    {
+      "scene": "practice",
+      "onScreen": "LIVE IT TODAY / Give one person an excuse you'd want for yourself · Don't search for what others hide · Stop a conversation that turns to someone absent",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Think well of others. / Save this reminder",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 240,
+      "startSec": 3,
+      "endSec": 8
+    },
+    {
+      "id": "context",
+      "type": "source",
+      "startFrame": 240,
+      "endFrame": 390,
+      "startSec": 8,
+      "endSec": 13
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "startFrame": 390,
+      "endFrame": 540,
+      "startSec": 13,
+      "endSec": 18
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "startFrame": 540,
+      "endFrame": 690,
+      "startSec": 18,
+      "endSec": 23
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 690,
+      "endFrame": 840,
+      "startSec": 23,
+      "endSec": 28
+    }
+  ],
+  "caption": "A verse that asks us to examine how we think about others.\n\nSurah Al-Hujurat 49:12, with the ayah that follows it (49:13).\n\nSwipe for the ayah, its context and one lesson to live today.\n\nSave this reminder.\n\n📖 Sources\n• Qur'an 49:12 (tr. Saheeh International) — quran.com/49/12\nFull text: O you who have believed, avoid much [negative] assumption. Indeed, some assumption is sin. And do not spy or backbite each other. Would one of you like to eat the flesh of his brother when dead? You would detest it. And fear Allah; indeed, Allah is Accepting of repentance and Merciful\n• Qur'an 49:13 (tr. Saheeh International) — quran.com/49/13\nFull text: O mankind, indeed We have created you from male and female and made you peoples and tribes that you may know one another. Indeed, the most noble of you in the sight of Allah is the most righteous of you. Indeed, Allah is Knowing and Acquainted\n\n#IslamicReminder #Quran #OneAyahOneLesson #Akhlaq",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Quran",
+    "#OneAyahOneLesson",
+    "#Akhlaq"
+  ],
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this reminder"
+  },
+  "coverHeadline": "How we think about others",
+  "sources": [
+    {
+      "ref": "quran:49:12",
+      "citation": "Qur'an 49:12",
+      "url": "https://quran.com/49/12",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "O you who have believed, avoid much [negative] assumption. Indeed, some assumption is sin. And do not spy or backbite each other. Would one of you like to eat the flesh of his brother when dead? You would detest it. And fear Allah; indeed, Allah is Accepting of repentance and Merciful"
+    },
+    {
+      "ref": "quran:49:13",
+      "citation": "Qur'an 49:13",
+      "url": "https://quran.com/49/13",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "O mankind, indeed We have created you from male and female and made you peoples and tribes that you may know one another. Indeed, the most noble of you in the sight of Allah is the most righteous of you. Indeed, Allah is Knowing and Acquainted"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What quran:49:12 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:49:12"
+    },
+    {
+      "text": "What quran:49:13 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:49:13"
+    },
+    {
+      "text": "The lesson and steps are our reflection on the ayat.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 28,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-011-how-we-think-about-others.mp4",
+    "cover": "output/covers/deen-011-how-we-think-about-others.png",
+    "caption": "output/captions/deen-011-how-we-think-about-others.txt",
+    "storyboard": "output/storyboards/deen-011-how-we-think-about-others.md",
+    "subtitles": "output/storyboards/deen-011-how-we-think-about-others.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-10-31T05:47:30.696Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-011-how-we-think-about-others/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Launch calendar day 9.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
