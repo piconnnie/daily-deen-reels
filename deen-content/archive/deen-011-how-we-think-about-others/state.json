@@ -1,0 +1,52 @@
+{
+  "id": "deen-011-how-we-think-about-others",
+  "createdAt": "2026-10-31T05:47:30.748Z",
+  "kind": "carousel",
+  "release": {
+    "tag": "reel-deen-011-how-we-think-about-others",
+    "cover": "deen-011-how-we-think-about-others.jpg",
+    "contactSheet": "deen-011-how-we-think-about-others-contact-sheet.png",
+    "slides": [
+      "deen-011-how-we-think-about-others-slide-01.jpg",
+      "deen-011-how-we-think-about-others-slide-02.jpg",
+      "deen-011-how-we-think-about-others-slide-03.jpg",
+      "deen-011-how-we-think-about-others-slide-04.jpg",
+      "deen-011-how-we-think-about-others-slide-05.jpg",
+      "deen-011-how-we-think-about-others-slide-06.jpg"
+    ]
+  },
+  "sha256": {
+    "cover": "68de4858b56e4d2989d55ed748bf9780c16382a3ee7bd2779270adca3d8d42b0",
+    "slides": [
+      "68de4858b56e4d2989d55ed748bf9780c16382a3ee7bd2779270adca3d8d42b0",
+      "e9071ed74ff4e88298bc2b81232ef4ff89a191934e20b08b35e2e540ab7b06b2",
+      "190e63628600f3c0be6dfb52430c47256e2f3c92c47536e7cb6079fa7e4ea7d4",
+      "66293c249e05085dfe74993a87abc203d24e4a4f80abe7e762a3b293eaa7940c",
+      "7c182240bc66347b7a993b31e7d1ef85f94396b3c5d959e616f3dc5a6adbbfa4",
+      "20aa84f305e9e70f3d429d01ff56ecdcc302ae324572ca31896e33f16a35734e"
+    ]
+  },
+  "durationSec": null,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 30
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
