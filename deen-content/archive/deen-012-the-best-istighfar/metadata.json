@@ -1,0 +1,223 @@
+{
+  "contentId": "deen-012-the-best-istighfar",
+  "version": 1,
+  "generatedAt": "2026-11-01T06:11:52.214Z",
+  "pillar": "D: Dua & Dhikr",
+  "format": "dua-card",
+  "objective": "saves",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "Sayyid al-Istighfar: a remembrance for morning and evening",
+  "coreInsight": "Sahih al-Bukhari 6306 names the most superior way of asking forgiveness, with a virtue for saying it in the day or the night.",
+  "hookVariants": [
+    {
+      "text": "A remembrance to learn this week",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "The best way to ask forgiveness",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Say it morning and evening.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "A remembrance to learn this week",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "A remembrance to learn and revisit. / Morning and evening.",
+      "voiceover": null
+    },
+    {
+      "scene": "dua",
+      "onScreen": "bukhari:6306 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "virtue",
+      "onScreen": "bukhari:6306 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "moments",
+      "onScreen": "WHEN TO SAY IT / After Fajr · After Maghrib · Learn one line a day",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Learn it. Say it daily. / Save this to learn it",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "dua",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 240,
+      "startSec": 3,
+      "endSec": 8
+    },
+    {
+      "id": "virtue",
+      "type": "source",
+      "startFrame": 240,
+      "endFrame": 390,
+      "startSec": 8,
+      "endSec": 13
+    },
+    {
+      "id": "moments",
+      "type": "cards",
+      "startFrame": 390,
+      "endFrame": 540,
+      "startSec": 13,
+      "endSec": 18
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 540,
+      "endFrame": 690,
+      "startSec": 18,
+      "endSec": 23
+    }
+  ],
+  "caption": "A remembrance to learn and revisit each morning.\n\nSayyid al-Istighfar, from Sahih al-Bukhari 6306: the Arabic, and the words as given in Muhsin Khan's translation.\n\nSwipe for its virtue and when to say it.\n\nSave this to learn it.\n\n📖 Sources\n• Sahih al-Bukhari 6306 (Sahih, tr. Muhsin Khan) — sunnah.com/bukhari:6306\nFull text: Narrated Shaddad bin Aus: The Prophet (ﷺ) said \"The most superior way of asking for forgiveness from Allah is: 'Allahumma anta Rabbi la ilaha illa anta, Khalaqtani wa ana `Abduka, wa ana `ala `ahdika wa wa`dika mastata`tu, A`udhu bika min Sharri ma sana`tu, abu'u Laka bini`matika `alaiya, wa abu'u laka bidhanbi faghfir lee fa innahu la yaghfiru adhdhunuba illa anta.\" The Prophet (ﷺ) added. \"If somebody recites it during the day with firm faith in it, and dies on the same day before the evening, he will be from the people of Paradise; and if somebody recites it at night with firm faith in it, and dies before the morning, he will be from the people of Paradise\n\n#IslamicReminder #Dua #Dhikr #Istighfar",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Dua",
+    "#Dhikr",
+    "#Istighfar"
+  ],
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this to learn it"
+  },
+  "coverHeadline": "The best istighfar",
+  "sources": [
+    {
+      "ref": "bukhari:6306",
+      "citation": "Sahih al-Bukhari 6306",
+      "url": "https://sunnah.com/bukhari:6306",
+      "translation": "Muhsin Khan",
+      "grade": "Sahih",
+      "english": "Narrated Shaddad bin Aus: The Prophet (ﷺ) said \"The most superior way of asking for forgiveness from Allah is: 'Allahumma anta Rabbi la ilaha illa anta, Khalaqtani wa ana `Abduka, wa ana `ala `ahdika wa wa`dika mastata`tu, A`udhu bika min Sharri ma sana`tu, abu'u Laka bini`matika `alaiya, wa abu'u laka bidhanbi faghfir lee fa innahu la yaghfiru adhdhunuba illa anta.\" The Prophet (ﷺ) added. \"If somebody recites it during the day with firm faith in it, and dies on the same day before the evening, he will be from the people of Paradise; and if somebody recites it at night with firm faith in it, and dies before the morning, he will be from the people of Paradise"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What bukhari:6306 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:6306"
+    },
+    {
+      "text": "Suggested moments and memorising tips are our own.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 23,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-012-the-best-istighfar.mp4",
+    "cover": "output/covers/deen-012-the-best-istighfar.png",
+    "caption": "output/captions/deen-012-the-best-istighfar.txt",
+    "storyboard": "output/storyboards/deen-012-the-best-istighfar.md",
+    "subtitles": "output/storyboards/deen-012-the-best-istighfar.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-01T06:11:58.351Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-012-the-best-istighfar/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Launch calendar day 10.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}

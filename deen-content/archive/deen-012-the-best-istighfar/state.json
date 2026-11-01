@@ -1,0 +1,50 @@
+{
+  "id": "deen-012-the-best-istighfar",
+  "createdAt": "2026-11-01T06:11:58.394Z",
+  "kind": "carousel",
+  "release": {
+    "tag": "reel-deen-012-the-best-istighfar",
+    "cover": "deen-012-the-best-istighfar.jpg",
+    "contactSheet": "deen-012-the-best-istighfar-contact-sheet.png",
+    "slides": [
+      "deen-012-the-best-istighfar-slide-01.jpg",
+      "deen-012-the-best-istighfar-slide-02.jpg",
+      "deen-012-the-best-istighfar-slide-03.jpg",
+      "deen-012-the-best-istighfar-slide-04.jpg",
+      "deen-012-the-best-istighfar-slide-05.jpg"
+    ]
+  },
+  "sha256": {
+    "cover": "6ab934cb163b144fbb657beece45b7772f4431f95e1cc42868041a135c673d12",
+    "slides": [
+      "6ab934cb163b144fbb657beece45b7772f4431f95e1cc42868041a135c673d12",
+      "b2f66ad6fd6b7c50563722f3cf329189240df46adcef4eb53dd2638680707f07",
+      "42998325a758322db80e0d42f1c95f53ac9e8c4ac66af097f00a5193e6de75d3",
+      "51fc1caf7526da6c8995ed2de78be998eb3bdbc6e408b3f9d622f04aa9d5545b",
+      "854e42a9fbf55fab5223e063f5ee7e3d236deec1382bca7286dc58c020260153"
+    ]
+  },
+  "durationSec": null,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 30
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
