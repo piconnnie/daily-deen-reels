@@ -1,0 +1,199 @@
+{
+  "contentId": "deen-013-gratitude-you-can-see",
+  "version": 1,
+  "generatedAt": "2026-11-02T06:11:31.810Z",
+  "pillar": "C: Daily Deen & Practical Islam",
+  "format": "before-you-scroll",
+  "objective": "shares",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "Practising gratitude through one action",
+  "coreInsight": "Qur'an 14:7 links gratitude with increase, and gratitude can be shown in how we treat people today.",
+  "hookVariants": [
+    {
+      "text": "What if gratitude changed how you treated people?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "Gratitude is a verb.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Thank someone today.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "What if gratitude changed how you treated people?",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "What if gratitude changed how you treat people? / Before you scroll on.",
+      "voiceover": null
+    },
+    {
+      "scene": "ayah",
+      "onScreen": "quran:14:7 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Thank one person today. / Share it with a friend",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 811,
+      "startSec": 3,
+      "endSec": 27.03
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 811,
+      "endFrame": 961,
+      "startSec": 27.03,
+      "endSec": 32.03
+    }
+  ],
+  "caption": "What if gratitude changed how you treated people today?\n\nQur'an 14:7 ties gratitude to increase.\n\nOne action today: thank someone specifically for something they did.\n\nShare it with a friend.\n\n📖 Sources\n• Qur'an 14:7 (tr. Saheeh International) — quran.com/14/7\n• Recitation: Qur'an 14:7 — Mahmoud Khalil Al-Husary (EveryAyah.com) — quran.com/14/7\n\n#IslamicReminder #DailyDeen #Shukr #Quran",
+  "hashtags": [
+    "#IslamicReminder",
+    "#DailyDeen",
+    "#Shukr",
+    "#Quran"
+  ],
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with a friend"
+  },
+  "coverHeadline": "Gratitude you can see",
+  "sources": [
+    {
+      "ref": "quran:14:7",
+      "citation": "Qur'an 14:7",
+      "url": "https://quran.com/14/7",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "And [remember] when your Lord proclaimed, 'If you are grateful, I will surely increase you [in favor]; but if you deny, indeed, My punishment is severe"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What quran:14:7 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:14:7"
+    },
+    {
+      "text": "Thanking someone is our suggestion for acting on the ayah.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 32.03,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [
+      "public/audio/deen-013-gratitude-you-can-see-bed.wav"
+    ],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-013-gratitude-you-can-see.mp4",
+    "cover": "output/covers/deen-013-gratitude-you-can-see.png",
+    "caption": "output/captions/deen-013-gratitude-you-can-see.txt",
+    "storyboard": "output/storyboards/deen-013-gratitude-you-can-see.md",
+    "subtitles": "output/storyboards/deen-013-gratitude-you-can-see.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-02T06:11:38.730Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-013-gratitude-you-can-see/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Launch calendar day 11.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
