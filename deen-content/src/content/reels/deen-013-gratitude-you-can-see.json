@@ -1,0 +1,247 @@
+{
+  "id": "deen-013-gratitude-you-can-see",
+  "version": 1,
+  "status": "qa-passed",
+  "kind": "reel",
+  "brief": {
+    "topic": "Practising gratitude through one action",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "C: Daily Deen & Practical Islam",
+    "series": "before-you-scroll",
+    "objective": "shares",
+    "format": "before-you-scroll",
+    "targetDurationSec": 19,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "queueId": "q011-gratitude-in-action",
+    "backlogId": null,
+    "writer": "queue"
+  },
+  "coreInsight": "Qur'an 14:7 links gratitude with increase, and gratitude can be shown in how we treat people today.",
+  "hooks": [
+    {
+      "text": "What if gratitude changed how you treated people?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the teaching answers it."
+    },
+    {
+      "text": "Gratitude is a verb.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, less direct."
+    },
+    {
+      "text": "Thank someone today.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "What if gratitude changed how you treat people? / Before you scroll on.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "BEFORE YOU SCROLL",
+      "lines": [
+        {
+          "text": "What if"
+        },
+        {
+          "text": "gratitude"
+        },
+        {
+          "text": "changed how"
+        },
+        {
+          "text": "you treat"
+        },
+        {
+          "text": "people?",
+          "highlight": true
+        }
+      ],
+      "sub": "Before you scroll on."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 721,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:14:7 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · IBRAHIM",
+      "ref": "quran:14:7",
+      "resolved": {
+        "ref": "quran:14:7",
+        "collection": "quran",
+        "collectionName": "The Qur'an",
+        "kind": "quran",
+        "citation": "Qur'an 14:7",
+        "url": "https://quran.com/14/7",
+        "arabic": "وَإِذۡ تَأَذَّنَ رَبُّكُمۡ لَئِن شَكَرۡتُمۡ لَأَزِيدَنَّكُمۡۖ وَلَئِن كَفَرۡتُمۡ إِنَّ عَذَابِي لَشَدِيدࣱ ٧",
+        "english": "And [remember] when your Lord proclaimed, 'If you are grateful, I will surely increase you [in favor]; but if you deny, indeed, My punishment is severe",
+        "translation": "Saheeh International",
+        "grade": null,
+        "transliteration": "Waith taaththana rabbukum lain shakartum laazeedannakum walain kafartum inna AAathabee lashadeedun"
+      }
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Thank one person today. / Share it with a friend",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Thank one"
+        },
+        {
+          "text": "person today.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with a friend",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "BEFORE YOU SCROLL",
+    "headline": [
+      {
+        "text": "Gratitude you"
+      },
+      {
+        "text": "can see",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "What if gratitude changed how you treated people today?",
+    "body": [
+      "Qur'an 14:7 ties gratitude to increase.",
+      "One action today: thank someone specifically for something they did."
+    ],
+    "cta": "Share it with a friend.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#DailyDeen",
+      "#Shukr",
+      "#Quran"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with a friend"
+  },
+  "claims": [
+    {
+      "text": "What quran:14:7 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:14:7"
+    },
+    {
+      "text": "Thanking someone is our suggestion for acting on the ayah.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Launch calendar day 11."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "style": {
+    "theme": "mist",
+    "layout": "minimal",
+    "backdrop": "motif",
+    "type": "sans",
+    "motion": "slide",
+    "music": "recitation"
+  },
+  "audio": {
+    "bed": "audio/deen-013-gratitude-you-can-see-bed.wav",
+    "bedVolume": 1,
+    "voiceover": null,
+    "voiceoverVolume": 1
+  },
+  "sources": [
+    {
+      "ref": "quran:14:7",
+      "citation": "Qur'an 14:7",
+      "url": "https://quran.com/14/7",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "And [remember] when your Lord proclaimed, 'If you are grateful, I will surely increase you [in favor]; but if you deny, indeed, My punishment is severe"
+    }
+  ],
+  "recitation": {
+    "ref": "quran:14:7",
+    "chosen": "default",
+    "citation": "Qur'an 14:7",
+    "url": "https://quran.com/14/7",
+    "reciter": "husary",
+    "reciterName": "Mahmoud Khalil Al-Husary",
+    "folder": "Husary_128kbps",
+    "source": "EveryAyah.com",
+    "mode": "scene",
+    "sceneId": "ayah",
+    "startFrame": 102,
+    "gapSec": 0.25,
+    "totalSec": 22.917,
+    "files": [
+      {
+        "file": "014007.mp3",
+        "url": "https://everyayah.com/data/Husary_128kbps/014007.mp3",
+        "sha256": "aff9f00dfbcaacbd5d29503bf507b27479f6f67d1ff02e93d6b6a32cea8fc258",
+        "durationSec": 22.917
+      }
+    ]
+  }
+}

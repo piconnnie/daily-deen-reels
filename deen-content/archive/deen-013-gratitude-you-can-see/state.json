@@ -1,0 +1,38 @@
+{
+  "id": "deen-013-gratitude-you-can-see",
+  "createdAt": "2026-11-02T06:11:38.784Z",
+  "kind": "reel",
+  "release": {
+    "tag": "reel-deen-013-gratitude-you-can-see",
+    "cover": "deen-013-gratitude-you-can-see.jpg",
+    "contactSheet": "deen-013-gratitude-you-can-see-contact-sheet.png",
+    "video": "deen-013-gratitude-you-can-see.mp4"
+  },
+  "sha256": {
+    "video": "196b1c07aa6bf9cc24def3b6086a40bd9113cfd7081433e5b079a28592ee42ab",
+    "cover": "e74524bb71a42b6bc5c1115747be87e6e9699c5f98049ad5c7319d40b706d29d"
+  },
+  "durationSec": 32.03,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 49
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
