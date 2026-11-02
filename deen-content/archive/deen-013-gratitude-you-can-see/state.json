@@ -23,9 +23,10 @@
   "needsAttention": false,
   "attentionReasons": [],
   "approval": {
-    "status": "pending",
-    "approvedBy": null,
-    "approvedAt": null
+    "status": "approved",
+    "approvedBy": "app/github-actions",
+    "approvedAt": "2026-11-02T13:31:01Z",
+    "pr": 13
   },
   "publish": {
     "status": "pending",
