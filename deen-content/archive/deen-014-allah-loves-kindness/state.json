@@ -1,0 +1,50 @@
+{
+  "id": "deen-014-allah-loves-kindness",
+  "createdAt": "2026-11-03T06:52:33.853Z",
+  "kind": "carousel",
+  "release": {
+    "tag": "reel-deen-014-allah-loves-kindness",
+    "cover": "deen-014-allah-loves-kindness.jpg",
+    "contactSheet": "deen-014-allah-loves-kindness-contact-sheet.png",
+    "slides": [
+      "deen-014-allah-loves-kindness-slide-01.jpg",
+      "deen-014-allah-loves-kindness-slide-02.jpg",
+      "deen-014-allah-loves-kindness-slide-03.jpg",
+      "deen-014-allah-loves-kindness-slide-04.jpg",
+      "deen-014-allah-loves-kindness-slide-05.jpg"
+    ]
+  },
+  "sha256": {
+    "cover": "cae96994189527e1bc7622b656dc5e1bc8fb0891411c0e4b7f41a179e274a628",
+    "slides": [
+      "cae96994189527e1bc7622b656dc5e1bc8fb0891411c0e4b7f41a179e274a628",
+      "6fd302013185409d76b7be10f230bb7625a4c0e5fe09b4ef7c35fe85438b0ed9",
+      "ea90713b166c27cdbc1740ddf2b356584b6088d874224134b5b8d7d56435abcd",
+      "6f170e68ea964aca59d24c9609e55d8d71bcec9380bda8d1aeefd22dcf989fa1",
+      "54997405f4b7824d3b66abad0e528f8b49c04d38aeda948998d9d8b01651e819"
+    ]
+  },
+  "durationSec": null,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 30
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
