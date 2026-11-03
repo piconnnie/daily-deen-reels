@@ -1,0 +1,223 @@
+{
+  "contentId": "deen-014-allah-loves-kindness",
+  "version": 1,
+  "generatedAt": "2026-11-03T06:52:28.950Z",
+  "pillar": "A: Qur'an & Hadith",
+  "format": "hadith-explained",
+  "objective": "saves",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "A hadith on kindness",
+  "coreInsight": "Sahih Muslim 2593 says Allah is kind and loves kindness, and gives for kindness what He does not give for severity.",
+  "hookVariants": [
+    {
+      "text": "Small acts of kindness deserve attention",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "Gentle or harsh?",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Choose kindness.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "Small acts of kindness deserve attention",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "Small acts of kindness matter. / A hadith, with context.",
+      "voiceover": null
+    },
+    {
+      "scene": "hadith",
+      "onScreen": "muslim:2593 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "reflection",
+      "onScreen": "REFLECTION / The context / These words were addressed to A'isha. Kindness is not weakness: it is a quality Allah loves and rewards. It applies to how we correct, ask and disagree.",
+      "voiceover": null
+    },
+    {
+      "scene": "moments",
+      "onScreen": "IN PRACTICE / Correct in private · Ask, don't order · Be patient with the slow",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Choose the gentle way. / Save this reminder",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 240,
+      "startSec": 3,
+      "endSec": 8
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "startFrame": 240,
+      "endFrame": 390,
+      "startSec": 8,
+      "endSec": 13
+    },
+    {
+      "id": "moments",
+      "type": "cards",
+      "startFrame": 390,
+      "endFrame": 540,
+      "startSec": 13,
+      "endSec": 18
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 540,
+      "endFrame": 690,
+      "startSec": 18,
+      "endSec": 23
+    }
+  ],
+  "caption": "Small acts of kindness deserve our attention, too.\n\nSahih Muslim 2593: Allah is kind and loves kindness.\n\nSwipe for the context and three practical examples.\n\nSave this reminder.\n\n📖 Sources\n• Sahih Muslim 2593 (Sahih, tr. Abdul Hamid Siddiqui) — sunnah.com/muslim:2593\nFull text: A'isha, the wife of Allah's Apostle (ﷺ), reported that Allah's Messenger (ﷺ) said:'A'isha, verily Allah is kind and He loves kindness and confers upon kindness which he does not confer upon severity and does not confer upon anything else besides it (kindness)\n\n#IslamicReminder #Quran #Kindness #Hadith",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Quran",
+    "#Kindness",
+    "#Hadith"
+  ],
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this reminder"
+  },
+  "coverHeadline": "Allah loves kindness",
+  "sources": [
+    {
+      "ref": "muslim:2593",
+      "citation": "Sahih Muslim 2593",
+      "url": "https://sunnah.com/muslim:2593",
+      "translation": "Abdul Hamid Siddiqui",
+      "grade": "Sahih",
+      "english": "A'isha, the wife of Allah's Apostle (ﷺ), reported that Allah's Messenger (ﷺ) said:'A'isha, verily Allah is kind and He loves kindness and confers upon kindness which he does not confer upon severity and does not confer upon anything else besides it (kindness)"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What muslim:2593 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "muslim:2593"
+    },
+    {
+      "text": "The context note and examples are our reflection.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 23,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-014-allah-loves-kindness.mp4",
+    "cover": "output/covers/deen-014-allah-loves-kindness.png",
+    "caption": "output/captions/deen-014-allah-loves-kindness.txt",
+    "storyboard": "output/storyboards/deen-014-allah-loves-kindness.md",
+    "subtitles": "output/storyboards/deen-014-allah-loves-kindness.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-03T06:52:33.800Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-014-allah-loves-kindness/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Launch calendar day 12.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
