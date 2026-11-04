@@ -1,0 +1,38 @@
+{
+  "id": "deen-015-pause-before-you-react",
+  "createdAt": "2026-11-04T06:28:50.635Z",
+  "kind": "reel",
+  "release": {
+    "tag": "reel-deen-015-pause-before-you-react",
+    "cover": "deen-015-pause-before-you-react.jpg",
+    "contactSheet": "deen-015-pause-before-you-react-contact-sheet.png",
+    "video": "deen-015-pause-before-you-react.mp4"
+  },
+  "sha256": {
+    "video": "60f63d596695161e67945e31781895f5c5a271a357ab7f41bb68fb2f66e2c812",
+    "cover": "209a8f8a9dc363dfe9800aa20640fa53ae3631d991488fd77d7417a8c9e1b8b8"
+  },
+  "durationSec": 25.3,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 49
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
