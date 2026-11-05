@@ -1,0 +1,156 @@
+{
+  "contentId": "deen-016-next-weeks-reminder",
+  "version": 1,
+  "generatedAt": "2026-11-05T06:52:40.227Z",
+  "pillar": "E: Islam in Everyday Life",
+  "format": "story-question",
+  "objective": "replies",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "Ask followers what to learn next",
+  "coreInsight": "Inviting followers to choose next week's reminder topic.",
+  "hookVariants": [
+    {
+      "text": "What should next week's reminder be?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "Your choice",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Tell us",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "What should next week's reminder be?",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "question",
+      "onScreen": "What should next week's reminder be about? / Patience · Salah · Family · Du'a",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "question",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    }
+  ],
+  "caption": "What would you like your next reminder to be about?\n\nPatience, salah, family or du'a — or something else.\n\nReply with a topic.\n\n#IslamicReminder #Akhlaq #DailyReminder",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Akhlaq",
+    "#DailyReminder"
+  ],
+  "primaryCta": {
+    "type": "question",
+    "text": "Reply with your topic"
+  },
+  "coverHeadline": "Next week's reminder",
+  "sources": [],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "This is a question to followers, not a teaching.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 3,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-016-next-weeks-reminder.mp4",
+    "cover": "output/covers/deen-016-next-weeks-reminder.png",
+    "caption": "output/captions/deen-016-next-weeks-reminder.txt",
+    "storyboard": "output/storyboards/deen-016-next-weeks-reminder.md",
+    "subtitles": "output/storyboards/deen-016-next-weeks-reminder.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-05T06:52:41.239Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-016-next-weeks-reminder/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Launch calendar day 14.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
