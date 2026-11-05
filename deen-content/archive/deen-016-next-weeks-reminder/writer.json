@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-05",
+  "writer": "queue",
+  "plan": {
+    "from": "draft",
+    "backlogId": null,
+    "pillar": "E",
+    "pillarName": "E: Islam in Everyday Life",
+    "format": "story-question",
+    "research": false
+  },
+  "reelId": "deen-016-next-weeks-reminder",
+  "rounds": [],
+  "finalCritic": null,
+  "needsAttention": false,
+  "estimatedCostUsd": 0
+}
