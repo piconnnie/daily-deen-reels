@@ -1,0 +1,291 @@
+{
+  "id": "deen-017-what-allah-looks-at",
+  "version": 1,
+  "status": "qa-passed",
+  "kind": "reel",
+  "brief": {
+    "topic": "Allah looks at hearts and deeds",
+    "audience": "Muslims looking for a short, authentic reminder they can act on today",
+    "pillar": "B: Heart-Softening Reminders",
+    "objective": "saves",
+    "format": "heart-check",
+    "targetDurationSec": 26,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "series": "heart-reminder",
+    "queueId": "q018-what-allah-looks-at",
+    "backlogId": null,
+    "writer": "queue"
+  },
+  "coreInsight": "A hadith in Sahih Muslim and an ayah in Ash-Shu'ara together point to the heart, not appearance or wealth.",
+  "hooks": [
+    {
+      "text": "Does it matter how it looks?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the source answers it right away."
+    },
+    {
+      "text": "Your heart is being looked at.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, slightly less direct."
+    },
+    {
+      "text": "Look after your heart.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Works better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the quoted source pays it off immediately.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Recognition: meet the viewer where they are.",
+      "onScreen": "Does it matter how it looks? / Two reminders, side by side.",
+      "storyboard": {
+        "visual": "Headline, highlighted last line; sub-line.",
+        "animation": "Readable on frame 0; underline sweep."
+      },
+      "kicker": "A REMINDER YOUR HEART NEEDS",
+      "lines": [
+        {
+          "text": "Does it"
+        },
+        {
+          "text": "matter how"
+        },
+        {
+          "text": "it looks?",
+          "highlight": true
+        }
+      ],
+      "sub": "Two reminders, side by side."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 255,
+      "purpose": "The source itself, verbatim, with its reference.",
+      "onScreen": "muslim:2564c (text pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Framed panel: Arabic (if any), translation; citation pill.",
+        "animation": "Arabic, then translation, then citation."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ SAID",
+      "ref": "muslim:2564c",
+      "excerpt": "Verily Allah does not look to your faces and your wealth but He looks to your heart and to your deeds",
+      "resolved": {
+        "ref": "muslim:2564c",
+        "collection": "muslim",
+        "collectionName": "Sahih Muslim",
+        "kind": "hadith",
+        "citation": "Sahih Muslim 2564c",
+        "url": "https://sunnah.com/muslim:2564c",
+        "arabic": "حَدَّثَنَا عَمْرٌو النَّاقِدُ، حَدَّثَنَا كَثِيرُ بْنُ هِشَامٍ، حَدَّثَنَا جَعْفَرُ بْنُ بُرْقَانَ، عَنْ يَزِيدَ بْنِ، الأَصَمِّ عَنْ أَبِي هُرَيْرَةَ، قَالَ قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم \" إِنَّ اللَّهَ لاَ يَنْظُرُ إِلَى صُوَرِكُمْ وَأَمْوَالِكُمْ وَلَكِنْ يَنْظُرُ إِلَى قُلُوبِكُمْ وَأَعْمَالِكُمْ \" .",
+        "english": "Abu Huraira reported Allah's Messenger (ﷺ) as saying: Verily Allah does not look to your faces and your wealth but He looks to your heart and to your deeds",
+        "translation": "Abdul Hamid Siddiqui",
+        "grade": "Sahih",
+        "narrator": "Abu Huraira"
+      }
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 498,
+      "purpose": "The ayah that completes the picture.",
+      "onScreen": "quran:26:88-89 (text pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Framed panel: Arabic (if any), translation; citation pill.",
+        "animation": "Arabic, then translation, then citation."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · ASH-SHU'ARA",
+      "ref": "quran:26:88-89",
+      "resolved": {
+        "ref": "quran:26:88-89",
+        "collection": "quran",
+        "collectionName": "The Qur'an",
+        "kind": "quran",
+        "citation": "Qur'an 26:88-89",
+        "url": "https://quran.com/26/88-89",
+        "arabic": "يَوۡمَ لَا يَنفَعُ مَالࣱ وَلَا بَنُونَ ٨٨ إِلَّا مَنۡ أَتَى ٱللَّهَ بِقَلۡبࣲ سَلِيمࣲ ٨٩",
+        "english": "The Day when there will not benefit [anyone] wealth or children (88) But only one who comes to Allah with a sound heart (89)",
+        "translation": "Saheeh International",
+        "grade": null,
+        "transliteration": "Yawma la yanfaAAu malun wala banoona … Illa man ata Allaha biqalbin saleemin"
+      }
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One line to remember + one CTA.",
+      "onScreen": "What does my heart need today? / Save this and come back to it",
+      "storyboard": {
+        "visual": "Takeaway lines, CTA pill, end card.",
+        "animation": "Lines rise; CTA at 40; end card at 70."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "What does"
+        },
+        {
+          "text": "my heart"
+        },
+        {
+          "text": "need today?",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this and come back to it",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "A REMINDER YOUR HEART NEEDS",
+    "headline": [
+      {
+        "text": "What Allah"
+      },
+      {
+        "text": "looks at",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Appearances are easy to polish. Hearts take work.",
+    "body": [
+      "Sahih Muslim 2564c and Qur'an 26:88-89, read together: faces and wealth are not what is looked at — the heart and its deeds are.",
+      "A question to sit with today: what does my heart need?"
+    ],
+    "cta": "Save this and come back to it.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Akhlaq",
+      "#Quran",
+      "#Hadith"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this and come back to it"
+  },
+  "claims": [
+    {
+      "text": "What muslim:2564c says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "muslim:2564c"
+    },
+    {
+      "text": "What quran:26:88-89 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "quran:26:88-89"
+    },
+    {
+      "text": "Reading the two sources together as a prompt to look after one's heart.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "2026-10-25",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "style": {
+    "theme": "rose",
+    "layout": "editorial",
+    "backdrop": "motif",
+    "type": "sans",
+    "motion": "fade",
+    "music": "recitation"
+  },
+  "audio": {
+    "bed": "audio/deen-017-what-allah-looks-at-bed.wav",
+    "bedVolume": 1,
+    "voiceover": null,
+    "voiceoverVolume": 1
+  },
+  "sources": [
+    {
+      "ref": "muslim:2564c",
+      "citation": "Sahih Muslim 2564c",
+      "url": "https://sunnah.com/muslim:2564c",
+      "translation": "Abdul Hamid Siddiqui",
+      "grade": "Sahih",
+      "english": "Abu Huraira reported Allah's Messenger (ﷺ) as saying: Verily Allah does not look to your faces and your wealth but He looks to your heart and to your deeds"
+    },
+    {
+      "ref": "quran:26:88-89",
+      "citation": "Qur'an 26:88-89",
+      "url": "https://quran.com/26/88-89",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "The Day when there will not benefit [anyone] wealth or children (88) But only one who comes to Allah with a sound heart (89)"
+    }
+  ],
+  "recitation": {
+    "ref": "quran:26:88-89",
+    "chosen": "default",
+    "citation": "Qur'an 26:88-89",
+    "url": "https://quran.com/26/88-89",
+    "reciter": "alafasy",
+    "reciterName": "Mishary Rashid Alafasy",
+    "folder": "Alafasy_128kbps",
+    "source": "EveryAyah.com",
+    "mode": "scene",
+    "sceneId": "ayah",
+    "startFrame": 357,
+    "gapSec": 0.25,
+    "totalSec": 15.481,
+    "files": [
+      {
+        "file": "026088.mp3",
+        "url": "https://everyayah.com/data/Alafasy_128kbps/026088.mp3",
+        "sha256": "a027a436bc47d083937ab0cab20261ae4bef60c9a2d0432fae42372c008a8b15",
+        "durationSec": 7.772
+      },
+      {
+        "file": "026089.mp3",
+        "url": "https://everyayah.com/data/Alafasy_128kbps/026089.mp3",
+        "sha256": "b1d68bc82ddc825d4294673d494bb2f375e92c9aa9aad96951a35af44820dfa4",
+        "durationSec": 7.459
+      }
+    ]
+  }
+}

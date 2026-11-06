@@ -1,0 +1,225 @@
+{
+  "contentId": "deen-017-what-allah-looks-at",
+  "version": 1,
+  "generatedAt": "2026-11-06T07:24:21.460Z",
+  "pillar": "B: Heart-Softening Reminders",
+  "format": "heart-check",
+  "objective": "saves",
+  "targetAudience": "Muslims looking for a short, authentic reminder they can act on today",
+  "topic": "Allah looks at hearts and deeds",
+  "coreInsight": "A hadith in Sahih Muslim and an ayah in Ash-Shu'ara together point to the heart, not appearance or wealth.",
+  "hookVariants": [
+    {
+      "text": "Does it matter how it looks?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "Your heart is being looked at.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Look after your heart.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "Does it matter how it looks?",
+  "selectionRationale": "Most relevant and clearest at a glance; the quoted source pays it off immediately.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "Does it matter how it looks? / Two reminders, side by side.",
+      "voiceover": null
+    },
+    {
+      "scene": "hadith",
+      "onScreen": "muslim:2564c (text pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "ayah",
+      "onScreen": "quran:26:88-89 (text pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "What does my heart need today? / Save this and come back to it",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 345,
+      "startSec": 3,
+      "endSec": 11.5
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "startFrame": 345,
+      "endFrame": 843,
+      "startSec": 11.5,
+      "endSec": 28.1
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 843,
+      "endFrame": 993,
+      "startSec": 28.1,
+      "endSec": 33.1
+    }
+  ],
+  "caption": "Appearances are easy to polish. Hearts take work.\n\nSahih Muslim 2564c and Qur'an 26:88-89, read together: faces and wealth are not what is looked at — the heart and its deeds are.\n\nA question to sit with today: what does my heart need?\n\nSave this and come back to it.\n\n📖 Sources\n• Sahih Muslim 2564c (Sahih, tr. Abdul Hamid Siddiqui) — sunnah.com/muslim:2564c\nFull text: Abu Huraira reported Allah's Messenger (ﷺ) as saying: Verily Allah does not look to your faces and your wealth but He looks to your heart and to your deeds\n• Qur'an 26:88-89 (tr. Saheeh International) — quran.com/26/88-89\n• Recitation: Qur'an 26:88-89 — Mishary Rashid Alafasy (EveryAyah.com) — quran.com/26/88-89\n\n#IslamicReminder #Akhlaq #Quran #Hadith",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Akhlaq",
+    "#Quran",
+    "#Hadith"
+  ],
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this and come back to it"
+  },
+  "coverHeadline": "What Allah looks at",
+  "sources": [
+    {
+      "ref": "muslim:2564c",
+      "citation": "Sahih Muslim 2564c",
+      "url": "https://sunnah.com/muslim:2564c",
+      "translation": "Abdul Hamid Siddiqui",
+      "grade": "Sahih",
+      "english": "Abu Huraira reported Allah's Messenger (ﷺ) as saying: Verily Allah does not look to your faces and your wealth but He looks to your heart and to your deeds"
+    },
+    {
+      "ref": "quran:26:88-89",
+      "citation": "Qur'an 26:88-89",
+      "url": "https://quran.com/26/88-89",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "The Day when there will not benefit [anyone] wealth or children (88) But only one who comes to Allah with a sound heart (89)"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What muslim:2564c says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "muslim:2564c"
+    },
+    {
+      "text": "What quran:26:88-89 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "quran:26:88-89"
+    },
+    {
+      "text": "Reading the two sources together as a prompt to look after one's heart.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 33.1,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [
+      "public/audio/deen-017-what-allah-looks-at-bed.wav"
+    ],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-017-what-allah-looks-at.mp4",
+    "cover": "output/covers/deen-017-what-allah-looks-at.png",
+    "caption": "output/captions/deen-017-what-allah-looks-at.txt",
+    "storyboard": "output/storyboards/deen-017-what-allah-looks-at.md",
+    "subtitles": "output/storyboards/deen-017-what-allah-looks-at.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-06T07:24:26.997Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-017-what-allah-looks-at/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "2026-10-25",
+  "publishNotes": "Evergreen.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
