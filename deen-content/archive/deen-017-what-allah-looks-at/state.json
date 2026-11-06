@@ -1,0 +1,38 @@
+{
+  "id": "deen-017-what-allah-looks-at",
+  "createdAt": "2026-11-06T07:24:27.049Z",
+  "kind": "reel",
+  "release": {
+    "tag": "reel-deen-017-what-allah-looks-at",
+    "cover": "deen-017-what-allah-looks-at.jpg",
+    "contactSheet": "deen-017-what-allah-looks-at-contact-sheet.png",
+    "video": "deen-017-what-allah-looks-at.mp4"
+  },
+  "sha256": {
+    "video": "70a1f64c64449303ac6fc70cce467d00f655ace67731e55ede7c5116e9f0dca1",
+    "cover": "1fda0fe308b09cc88ca6d0c25bab15e40286eac8db9218ef421fe5c84da152f8"
+  },
+  "durationSec": 33.1,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 49
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
