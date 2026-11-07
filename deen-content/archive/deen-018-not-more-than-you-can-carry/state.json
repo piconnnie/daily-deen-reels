@@ -1,0 +1,38 @@
+{
+  "id": "deen-018-not-more-than-you-can-carry",
+  "createdAt": "2026-11-07T06:03:21.418Z",
+  "kind": "reel",
+  "release": {
+    "tag": "reel-deen-018-not-more-than-you-can-carry",
+    "cover": "deen-018-not-more-than-you-can-carry.jpg",
+    "contactSheet": "deen-018-not-more-than-you-can-carry-contact-sheet.png",
+    "video": "deen-018-not-more-than-you-can-carry.mp4"
+  },
+  "sha256": {
+    "video": "56b150c3f35e4d0863d4dbd2229480cb1b168b36cc23f97331d5ed5ee5b4d159",
+    "cover": "6d428a4747f8382a4760e4e97fb6f433e2440aea002cca54390c1f930cbc3b2a"
+  },
+  "durationSec": 23.5,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 49
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}

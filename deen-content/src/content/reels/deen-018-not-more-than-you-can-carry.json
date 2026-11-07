@@ -1,0 +1,275 @@
+{
+  "id": "deen-018-not-more-than-you-can-carry",
+  "version": 1,
+  "status": "qa-passed",
+  "kind": "reel",
+  "brief": {
+    "topic": "Allah does not burden a soul beyond its capacity",
+    "audience": "Muslims looking for a short, authentic reminder they can act on today",
+    "pillar": "B: Heart-Softening Reminders",
+    "objective": "shares",
+    "format": "ayah-reflection",
+    "targetDurationSec": 24,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "series": "heart-reminder",
+    "queueId": "q020-not-more-than-you-can-carry",
+    "backlogId": null,
+    "writer": "queue"
+  },
+  "coreInsight": "Qur'an 2:286 opens with the reassurance that no soul is charged beyond its capacity.",
+  "hooks": [
+    {
+      "text": "Feeling overwhelmed?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the source answers it right away."
+    },
+    {
+      "text": "You were given what you can carry.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, slightly less direct."
+    },
+    {
+      "text": "One step at a time.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Works better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the quoted source pays it off immediately.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Recognition: meet the viewer where they are.",
+      "onScreen": "Feeling overwhelmed? / This ayah is for you.",
+      "storyboard": {
+        "visual": "Headline, highlighted last line; sub-line.",
+        "animation": "Readable on frame 0; underline sweep."
+      },
+      "kicker": "A REMINDER YOUR HEART NEEDS",
+      "lines": [
+        {
+          "text": "Feeling"
+        },
+        {
+          "text": "overwhelmed?",
+          "highlight": true
+        }
+      ],
+      "sub": "This ayah is for you."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 210,
+      "purpose": "The source itself, verbatim, with its reference.",
+      "onScreen": "quran:2:286 (text pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Framed panel: Arabic (if any), translation; citation pill.",
+        "animation": "Arabic, then translation, then citation."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · AL-BAQARAH",
+      "ref": "quran:2:286",
+      "excerpt": "Allah does not charge a soul except [with that within] its capacity",
+      "arabicExcerpt": "لَا يُكَلِّفُ ٱللَّهُ نَفۡسًا إِلَّا وُسۡعَهَاۚ",
+      "resolved": {
+        "ref": "quran:2:286",
+        "collection": "quran",
+        "collectionName": "The Qur'an",
+        "kind": "quran",
+        "citation": "Qur'an 2:286",
+        "url": "https://quran.com/2/286",
+        "arabic": "لَا يُكَلِّفُ ٱللَّهُ نَفۡسًا إِلَّا وُسۡعَهَاۚ لَهَا مَا كَسَبَتۡ وَعَلَيۡهَا مَا ٱكۡتَسَبَتۡۗ رَبَّنَا لَا تُؤَاخِذۡنَآ إِن نَّسِينَآ أَوۡ أَخۡطَأۡنَاۚ رَبَّنَا وَلَا تَحۡمِلۡ عَلَيۡنَآ إِصۡرࣰ ا كَمَا حَمَلۡتَهُۥ عَلَى ٱلَّذِينَ مِن قَبۡلِنَاۚ رَبَّنَا وَلَا تُحَمِّلۡنَا مَا لَا طَاقَةَ لَنَا بِهِۦۖ وَٱعۡفُ عَنَّا وَٱغۡفِرۡ لَنَا وَٱرۡحَمۡنَآۚ أَنتَ مَوۡلَىٰنَا فَٱنصُرۡنَا عَلَى ٱلۡقَوۡمِ ٱلۡكَٰفِرِينَ ٢٨٦",
+        "english": "Allah does not charge a soul except [with that within] its capacity. It will have [the consequence of] what [good] it has gained, and it will bear [the consequence of] what [evil] it has earned. \"Our Lord, do not impose blame upon us if we have forgotten or erred. Our Lord, and lay not upon us a burden like that which You laid upon those before us. Our Lord, and burden us not with that which we have no ability to bear. And pardon us; and forgive us; and have mercy upon us. You are our protector, so give us victory over the disbelieving people",
+        "translation": "Saheeh International",
+        "grade": null,
+        "transliteration": "La yukallifu Allahu nafsan illa wusAAaha laha ma kasabat waAAalayha ma iktasabat rabbana la tuakhithna in naseena aw akhtana rabbana wala tahmil AAalayna isran kama hamaltahu AAala allatheena min qablina rabbana wala tuhammilna ma la taqata lana bihi waoAAfu AAanna waighfir lana wairhamna anta mawlana faonsurna AAala alqawmi alkafireena"
+      }
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 255,
+      "purpose": "Our reflection: small, concrete actions (our words, not attributed).",
+      "onScreen": "REFLECTION / Take the next small step. / Write down what is weighing on you · Do the next small step, not all of it · Ask Allah for help with the rest",
+      "storyboard": {
+        "visual": "Numbered list, rule box.",
+        "animation": "Items every 34 frames from 24."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "Take the next"
+        },
+        {
+          "text": "small step.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Write down what is weighing on you",
+        "Do the next small step, not all of it",
+        "Ask Allah for help with the rest"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34,
+      "rule": "Capacity is part of the promise. One step at a time."
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One line to remember + one CTA.",
+      "onScreen": "One step at a time. / Send this to someone who needs it",
+      "storyboard": {
+        "visual": "Takeaway lines, CTA pill, end card.",
+        "animation": "Lines rise; CTA at 40; end card at 70."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "One step"
+        },
+        {
+          "text": "at a time.",
+          "highlight": true
+        }
+      ],
+      "cta": "Send this to someone who needs it",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "A REMINDER YOUR HEART NEEDS",
+    "headline": [
+      {
+        "text": "Not more than"
+      },
+      {
+        "text": "you can carry",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "If everything feels like too much right now, start with the first line of Qur'an 2:286.",
+    "body": [
+      "A reflection for today:\n→ write down what is weighing on you\n→ do the next small step, not all of it\n→ ask Allah for help with the rest"
+    ],
+    "cta": "Send this to someone who needs it today.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Sabr",
+      "#Quran",
+      "#Tawakkul"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Send this to someone who needs it"
+  },
+  "claims": [
+    {
+      "text": "What quran:2:286 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "quran:2:286"
+    },
+    {
+      "text": "Writing it down, taking the next step and asking for help are ways to act on the ayah.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "2026-10-29",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:94:5-6",
+    "chosen": "writer",
+    "citation": "Qur'an 94:5-6",
+    "url": "https://quran.com/94/5-6",
+    "reciter": "abdulbasit",
+    "reciterName": "Abdul Basit Abdus Samad (Murattal)",
+    "folder": "Abdul_Basit_Murattal_192kbps",
+    "source": "EveryAyah.com",
+    "mode": "background",
+    "sceneId": null,
+    "startFrame": 20,
+    "gapSec": 0.25,
+    "totalSec": 9.378,
+    "files": [
+      {
+        "file": "094005.mp3",
+        "url": "https://everyayah.com/data/Abdul_Basit_Murattal_192kbps/094005.mp3",
+        "sha256": "dfa0c209330a15c78a2df4ec5d9e431484d903ab12f9147305f064cfd9c8ae97",
+        "durationSec": 4.76
+      },
+      {
+        "file": "094006.mp3",
+        "url": "https://everyayah.com/data/Abdul_Basit_Murattal_192kbps/094006.mp3",
+        "sha256": "5db4bfe84ea31d832e6bace25b77dbabbdb2375816ae1c6a49ac1be137826d76",
+        "durationSec": 4.368
+      }
+    ]
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "style": {
+    "theme": "ink",
+    "layout": "framed",
+    "backdrop": "border",
+    "type": "serif",
+    "motion": "rise",
+    "music": "recitation"
+  },
+  "audio": {
+    "bed": "audio/deen-018-not-more-than-you-can-carry-bed.wav",
+    "bedVolume": 1,
+    "voiceover": null,
+    "voiceoverVolume": 1
+  },
+  "sources": [
+    {
+      "ref": "quran:2:286",
+      "citation": "Qur'an 2:286",
+      "url": "https://quran.com/2/286",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "Allah does not charge a soul except [with that within] its capacity. It will have [the consequence of] what [good] it has gained, and it will bear [the consequence of] what [evil] it has earned. \"Our Lord, do not impose blame upon us if we have forgotten or erred. Our Lord, and lay not upon us a burden like that which You laid upon those before us. Our Lord, and burden us not with that which we have no ability to bear. And pardon us; and forgive us; and have mercy upon us. You are our protector, so give us victory over the disbelieving people"
+    }
+  ]
+}
