@@ -1,0 +1,38 @@
+{
+  "id": "deen-019-a-dua-for-your-parents",
+  "createdAt": "2026-11-08T06:08:01.334Z",
+  "kind": "reel",
+  "release": {
+    "tag": "reel-deen-019-a-dua-for-your-parents",
+    "cover": "deen-019-a-dua-for-your-parents.jpg",
+    "contactSheet": "deen-019-a-dua-for-your-parents-contact-sheet.png",
+    "video": "deen-019-a-dua-for-your-parents.mp4"
+  },
+  "sha256": {
+    "video": "8020905b88898852a7fd07f212ea59e09955ee427a888e01700a12b2455bdef9",
+    "cover": "70cf66639fe88d5e7ae4df9de1c25e6d4023f2500e0ea205a006e26153ea5054"
+  },
+  "durationSec": 34.8,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 49
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
