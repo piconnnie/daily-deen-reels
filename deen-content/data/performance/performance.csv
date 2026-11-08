@@ -1,11 +1,17 @@
 content_id,posted_date,days_since_post,duration_sec,pillar,format,hook_angle,cta_type,reach,non_follower_reach,plays,avg_watch_time_sec,shares,saves,comments_meaningful,profile_visits,follows,production_time_min,notes,kind,series,goal
-deen-001-hardship-is-never-alone,2026-10-21,10,31,F: Hope; Patience and Trust,ayah-reflection,Direct; personal recognition,share,120,,148,6.2,2,1,,,,,auto-imported 2026-11-01; comments total 0,reel,,shares
-deen-002-when-the-path-isnt-clear,2026-10-22,9,30.9,B: Heart-Softening Reminders,heart-reminder,Personal recognition,share,151,,171,4.9,2,2,,,,,auto-imported 2026-11-01; comments total 1,reel,heart-reminder,shares
-deen-003-the-best-day-of-the-week,2026-10-23,8,24.37,F: Islamic Calendar & Occasions,heart-reminder,Personal recognition,share,34,,46,6.6,0,0,,,,,auto-imported 2026-11-01; comments total 0,reel,,shares
-deen-004-hardship-is-never-alone,2026-10-24,7,,A: Qur'an & Hadith,ayah-lesson,Personal recognition,save,10,,31,,5,0,,1,0,,auto-imported 2026-11-01; comments total 0,carousel,one-ayah-one-lesson,saves
-deen-005-a-dua-for-knowledge,2026-10-25,6,28.5,D: Dua & Dhikr,dua,Personal recognition,save,115,,128,3.2,8,1,,,,,auto-imported 2026-11-01; comments total 0,reel,dua-of-the-day,saves
-deen-006-five-ways-to-speak-better,2026-10-26,5,,C: Daily Deen & Practical Islam,check-in,Personal recognition,share,4,,8,,0,0,,1,0,,auto-imported 2026-11-01; comments total 0,carousel,daily-check-in,shares
-deen-007-it-starts-with-intention,2026-10-27,4,19.5,A: Qur'an & Hadith,before-you-scroll,Personal recognition,share,106,,133,4.5,1,1,,,,,auto-imported 2026-11-01; comments total 0,reel,before-you-scroll,reach
-deen-008-before-you-repeat-it,2026-10-28,3,,E: Islam in Everyday Life,hadith-explained,Personal recognition,share,4,,12,,0,0,,0,0,,auto-imported 2026-11-01; comments total 0,carousel,,shares
-deen-010-not-the-end-of-your-return,2026-10-30,1,41.77,B: Heart-Softening Reminders,heart-reminder,Personal recognition,share,101,,114,4.1,1,0,,,,,auto-imported 2026-11-01; comments total 0,reel,heart-reminder,shares
-deen-011-how-we-think-about-others,2026-10-31,0,,A: Qur'an & Hadith,ayah-lesson,Personal recognition,save,2,,5,,0,0,,0,0,,auto-imported 2026-11-01; comments total 0,carousel,one-ayah-one-lesson,saves
+deen-001-hardship-is-never-alone,2026-10-21,17,31,F: Hope; Patience and Trust,ayah-reflection,Direct; personal recognition,share,120,,148,6.2,2,1,,,,,auto-imported 2026-11-08; comments total 0,reel,,shares
+deen-002-when-the-path-isnt-clear,2026-10-22,16,30.9,B: Heart-Softening Reminders,heart-reminder,Personal recognition,share,151,,171,4.9,2,2,,,,,auto-imported 2026-11-08; comments total 1,reel,heart-reminder,shares
+deen-003-the-best-day-of-the-week,2026-10-23,15,24.37,F: Islamic Calendar & Occasions,heart-reminder,Personal recognition,share,34,,46,6.6,0,0,,,,,auto-imported 2026-11-08; comments total 0,reel,,shares
+deen-004-hardship-is-never-alone,2026-10-24,14,,A: Qur'an & Hadith,ayah-lesson,Personal recognition,save,10,,31,,5,0,,1,0,,auto-imported 2026-11-08; comments total 0,carousel,one-ayah-one-lesson,saves
+deen-005-a-dua-for-knowledge,2026-10-25,13,28.5,D: Dua & Dhikr,dua,Personal recognition,save,115,,128,3.2,8,1,,,,,auto-imported 2026-11-08; comments total 0,reel,dua-of-the-day,saves
+deen-006-five-ways-to-speak-better,2026-10-26,12,,C: Daily Deen & Practical Islam,check-in,Personal recognition,share,4,,8,,0,0,,1,0,,auto-imported 2026-11-08; comments total 0,carousel,daily-check-in,shares
+deen-007-it-starts-with-intention,2026-10-27,11,19.5,A: Qur'an & Hadith,before-you-scroll,Personal recognition,share,106,,133,4.5,1,1,,,,,auto-imported 2026-11-08; comments total 0,reel,before-you-scroll,reach
+deen-008-before-you-repeat-it,2026-10-28,10,,E: Islam in Everyday Life,hadith-explained,Personal recognition,share,4,,12,,0,0,,0,0,,auto-imported 2026-11-08; comments total 0,carousel,,shares
+deen-010-not-the-end-of-your-return,2026-10-30,8,41.77,B: Heart-Softening Reminders,heart-reminder,Personal recognition,share,102,,116,4.3,1,0,,,,,auto-imported 2026-11-08; comments total 0,reel,heart-reminder,shares
+deen-011-how-we-think-about-others,2026-10-31,7,,A: Qur'an & Hadith,ayah-lesson,Personal recognition,save,4,,10,,0,0,,0,0,,auto-imported 2026-11-08; comments total 0,carousel,one-ayah-one-lesson,saves
+deen-012-the-best-istighfar,2026-11-01,6,,D: Dua & Dhikr,dua-card,Personal recognition,save,3,,11,,0,0,,0,0,,auto-imported 2026-11-08; comments total 0,carousel,dua-of-the-day,saves
+deen-013-gratitude-you-can-see,2026-11-02,5,32.03,C: Daily Deen & Practical Islam,before-you-scroll,Personal recognition,share,57,,65,2.4,0,1,,,,,auto-imported 2026-11-08; comments total 0,reel,before-you-scroll,shares
+deen-014-allah-loves-kindness,2026-11-03,4,,A: Qur'an & Hadith,hadith-explained,Personal recognition,save,6,,21,,0,0,,0,0,,auto-imported 2026-11-08; comments total 0,carousel,,saves
+deen-015-pause-before-you-react,2026-11-04,3,25.3,E: Islam in Everyday Life,before-you-scroll,Personal recognition,save,101,,114,3.2,0,0,,,,,auto-imported 2026-11-08; comments total 0,reel,before-you-scroll,reach
+deen-017-what-allah-looks-at,2026-11-06,1,33.1,B: Heart-Softening Reminders,heart-check,Personal recognition,save,109,,125,3.2,1,0,,,,,auto-imported 2026-11-08; comments total 0,reel,heart-reminder,saves
+deen-018-not-more-than-you-can-carry,2026-11-07,0,23.5,B: Heart-Softening Reminders,ayah-reflection,Personal recognition,share,116,,142,3.7,1,0,,,,,auto-imported 2026-11-08; comments total 0,reel,heart-reminder,shares
