@@ -1,0 +1,212 @@
+{
+  "contentId": "deen-019-a-dua-for-your-parents",
+  "version": 1,
+  "generatedAt": "2026-11-08T06:07:54.065Z",
+  "pillar": "D: Dua & Dhikr",
+  "format": "dua",
+  "objective": "saves",
+  "targetAudience": "Muslims looking for a short, authentic reminder they can act on today",
+  "topic": "A du'a for parents from the Qur'an",
+  "coreInsight": "Qur'an 17:24 teaches a short du'a for parents that can be said every day.",
+  "hookVariants": [
+    {
+      "text": "A du'a for your parents",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "Say this for them today.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "They raised you. Pray for them.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "A du'a for your parents",
+  "selectionRationale": "Most relevant and clearest at a glance; the quoted source pays it off immediately.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "A du'a for your parents / Short enough to say every day.",
+      "voiceover": null
+    },
+    {
+      "scene": "ayah",
+      "onScreen": "quran:17:24 (text pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "moments",
+      "onScreen": "WHEN TO SAY IT / After every prayer · When you think of them · On their hard days",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Say it for them today. / Save this du'a",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 714,
+      "startSec": 3,
+      "endSec": 23.8
+    },
+    {
+      "id": "moments",
+      "type": "cards",
+      "startFrame": 714,
+      "endFrame": 894,
+      "startSec": 23.8,
+      "endSec": 29.8
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 894,
+      "endFrame": 1044,
+      "startSec": 29.8,
+      "endSec": 34.8
+    }
+  ],
+  "caption": "One of the most beautiful du'as in the Qur'an is for our parents.\n\nIt's in Surah Al-Isra', ayah 24, right after the command to be kind to them.\n\nMoments to say it:\n→ after every prayer\n→ whenever you think of them\n→ on their hard days\n\nSave this du'a.\n\n📖 Sources\n• Qur'an 17:24 (tr. Saheeh International) — quran.com/17/24\n• Recitation: Qur'an 17:24 — Mahmoud Khalil Al-Husary (EveryAyah.com) — quran.com/17/24\n\n#IslamicReminder #Family #Dua #Parents",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Family",
+    "#Dua",
+    "#Parents"
+  ],
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this du'a"
+  },
+  "coverHeadline": "A du'a for your parents",
+  "sources": [
+    {
+      "ref": "quran:17:24",
+      "citation": "Qur'an 17:24",
+      "url": "https://quran.com/17/24",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "And lower to them the wing of humility out of mercy and say, \"My Lord, have mercy upon them as they brought me up [when I was] small"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What quran:17:24 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "quran:17:24"
+    },
+    {
+      "text": "Suggested moments to say the du'a are our own suggestions.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 34.8,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [
+      "public/audio/deen-019-a-dua-for-your-parents-bed.wav"
+    ],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-019-a-dua-for-your-parents.mp4",
+    "cover": "output/covers/deen-019-a-dua-for-your-parents.png",
+    "caption": "output/captions/deen-019-a-dua-for-your-parents.txt",
+    "storyboard": "output/storyboards/deen-019-a-dua-for-your-parents.md",
+    "subtitles": "output/storyboards/deen-019-a-dua-for-your-parents.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-08T06:08:01.278Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-019-a-dua-for-your-parents/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "2026-10-27",
+  "publishNotes": "Evergreen.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}

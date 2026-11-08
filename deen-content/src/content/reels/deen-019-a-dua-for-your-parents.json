@@ -1,0 +1,284 @@
+{
+  "id": "deen-019-a-dua-for-your-parents",
+  "version": 1,
+  "status": "qa-passed",
+  "kind": "reel",
+  "brief": {
+    "topic": "A du'a for parents from the Qur'an",
+    "audience": "Muslims looking for a short, authentic reminder they can act on today",
+    "pillar": "D: Dua & Dhikr",
+    "objective": "saves",
+    "format": "dua",
+    "targetDurationSec": 24,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "series": "dua-of-the-day",
+    "queueId": "q019-dua-for-parents",
+    "backlogId": null,
+    "writer": "queue"
+  },
+  "coreInsight": "Qur'an 17:24 teaches a short du'a for parents that can be said every day.",
+  "hooks": [
+    {
+      "text": "A du'a for your parents",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the source answers it right away."
+    },
+    {
+      "text": "Say this for them today.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, slightly less direct."
+    },
+    {
+      "text": "They raised you. Pray for them.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Works better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the quoted source pays it off immediately.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Recognition: meet the viewer where they are.",
+      "onScreen": "A du'a for your parents / Short enough to say every day.",
+      "storyboard": {
+        "visual": "Headline, highlighted last line; sub-line.",
+        "animation": "Readable on frame 0; underline sweep."
+      },
+      "kicker": "DUA OF THE DAY",
+      "lines": [
+        {
+          "text": "A du'a"
+        },
+        {
+          "text": "for your"
+        },
+        {
+          "text": "parents",
+          "highlight": true
+        }
+      ],
+      "sub": "Short enough to say every day."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 624,
+      "purpose": "The source itself, verbatim, with its reference.",
+      "onScreen": "quran:17:24 (text pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Framed panel: Arabic (if any), translation; citation pill.",
+        "animation": "Arabic, then translation, then citation."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · AL-ISRA'",
+      "ref": "quran:17:24",
+      "showTransliteration": true,
+      "resolved": {
+        "ref": "quran:17:24",
+        "collection": "quran",
+        "collectionName": "The Qur'an",
+        "kind": "quran",
+        "citation": "Qur'an 17:24",
+        "url": "https://quran.com/17/24",
+        "arabic": "وَٱخۡفِضۡ لَهُمَا جَنَاحَ ٱلذُّلِّ مِنَ ٱلرَّحۡمَةِ وَقُل رَّبِّ ٱرۡحَمۡهُمَا كَمَا رَبَّيَانِي صَغِيرࣰ ا ٢٤",
+        "english": "And lower to them the wing of humility out of mercy and say, \"My Lord, have mercy upon them as they brought me up [when I was] small",
+        "translation": "Saheeh International",
+        "grade": null,
+        "transliteration": "Waikhfid lahuma janaha alththulli mina alrrahmati waqul rabbi irhamhuma kama rabbayanee sagheeran"
+      }
+    },
+    {
+      "id": "moments",
+      "type": "cards",
+      "durationInFrames": 180,
+      "purpose": "Moments to use it (our suggestions).",
+      "onScreen": "WHEN TO SAY IT / After every prayer · When you think of them · On their hard days",
+      "storyboard": {
+        "visual": "Kicker + headline; cards pop in.",
+        "animation": "Cards every 16 frames from 12."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "WHEN TO SAY IT",
+      "headline": [
+        {
+          "text": "Make it a"
+        },
+        {
+          "text": "daily habit.",
+          "highlight": true
+        }
+      ],
+      "enter": "pop",
+      "popStart": 12,
+      "popStagger": 16,
+      "cards": [
+        {
+          "text": "After every prayer",
+          "status": "pass",
+          "tag": "PRAYER"
+        },
+        {
+          "text": "When you think of them",
+          "status": "pass",
+          "tag": "ANYTIME"
+        },
+        {
+          "text": "On their hard days",
+          "status": "pass",
+          "tag": "SUPPORT"
+        }
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One line to remember + one CTA.",
+      "onScreen": "Say it for them today. / Save this du'a",
+      "storyboard": {
+        "visual": "Takeaway lines, CTA pill, end card.",
+        "animation": "Lines rise; CTA at 40; end card at 70."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Say it for"
+        },
+        {
+          "text": "them today.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this du'a",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "DUA OF THE DAY",
+    "headline": [
+      {
+        "text": "A du'a for"
+      },
+      {
+        "text": "your parents",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "One of the most beautiful du'as in the Qur'an is for our parents.",
+    "body": [
+      "It's in Surah Al-Isra', ayah 24, right after the command to be kind to them.",
+      "Moments to say it:\n→ after every prayer\n→ whenever you think of them\n→ on their hard days"
+    ],
+    "cta": "Save this du'a.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Family",
+      "#Dua",
+      "#Parents"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this du'a"
+  },
+  "claims": [
+    {
+      "text": "What quran:17:24 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "quran:17:24"
+    },
+    {
+      "text": "Suggested moments to say the du'a are our own suggestions.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "2026-10-27",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "style": {
+    "theme": "olive",
+    "layout": "minimal",
+    "backdrop": "plain",
+    "type": "serif",
+    "motion": "slide",
+    "music": "recitation"
+  },
+  "audio": {
+    "bed": "audio/deen-019-a-dua-for-your-parents-bed.wav",
+    "bedVolume": 1,
+    "voiceover": null,
+    "voiceoverVolume": 1
+  },
+  "sources": [
+    {
+      "ref": "quran:17:24",
+      "citation": "Qur'an 17:24",
+      "url": "https://quran.com/17/24",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "And lower to them the wing of humility out of mercy and say, \"My Lord, have mercy upon them as they brought me up [when I was] small"
+    }
+  ],
+  "recitation": {
+    "ref": "quran:17:24",
+    "chosen": "default",
+    "citation": "Qur'an 17:24",
+    "url": "https://quran.com/17/24",
+    "reciter": "husary",
+    "reciterName": "Mahmoud Khalil Al-Husary",
+    "folder": "Husary_128kbps",
+    "source": "EveryAyah.com",
+    "mode": "scene",
+    "sceneId": "ayah",
+    "startFrame": 102,
+    "gapSec": 0.25,
+    "totalSec": 19.678,
+    "files": [
+      {
+        "file": "017024.mp3",
+        "url": "https://everyayah.com/data/Husary_128kbps/017024.mp3",
+        "sha256": "24e2ec2c7b93909527a48217ac91c78d56f89f9dd5ef0d4f7a94670c622b8348",
+        "durationSec": 19.678
+      }
+    ]
+  }
+}
