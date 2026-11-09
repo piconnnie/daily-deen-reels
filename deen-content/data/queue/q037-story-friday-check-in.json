@@ -1,0 +1,134 @@
+{
+  "kind": "story",
+  "brief": {
+    "topic": "Friday check-in",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "F: Islamic Calendar & Occasions",
+    "series": null,
+    "objective": "replies",
+    "format": "story-check-in",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "A short Friday check-in on salawat, du'a, Qur'an and family.",
+  "hooks": [
+    {
+      "text": "Your Friday check-in",
+      "angle": "Timely",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear and gentle."
+    },
+    {
+      "text": "How was your Friday?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Vague."
+    },
+    {
+      "text": "Four small Friday deeds",
+      "angle": "List",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Good as a headline."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "check",
+      "type": "checklist",
+      "durationInFrames": 150,
+      "purpose": "Takeaway in practice (our suggestions).",
+      "onScreen": "FRIDAY CHECK-IN / Did I send salawat on the Prophet ﷺ? · Did I make the du'a I keep putting off? · Did I read some Qur'an today? · Did I check on someone I love?",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "FRIDAY CHECK-IN",
+      "headline": [
+        {
+          "text": "Four small"
+        },
+        {
+          "text": "Friday deeds.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Did I send salawat on the Prophet ﷺ?",
+        "Did I make the du'a I keep putting off?",
+        "Did I read some Qur'an today?",
+        "Did I check on someone I love?"
+      ],
+      "itemStart": 10,
+      "itemStagger": 10
+    }
+  ],
+  "cover": {
+    "kicker": "FRIDAY CHECK-IN",
+    "headline": [
+      {
+        "text": "Four small"
+      },
+      {
+        "text": "Friday deeds",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Jumu'ah Mubarak. A quiet Friday check-in.",
+    "body": [
+      "Salawat · du'a · Qur'an · family."
+    ],
+    "cta": "Reply with the one still on your list.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#JumuahMubarak",
+      "#DailyDeen"
+    ]
+  },
+  "primaryCta": {
+    "type": "question",
+    "text": "Reply: which one is still on your list?"
+  },
+  "claims": [
+    {
+      "text": "The check-in questions are our own prompts.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen.",
+    "occasion": "friday"
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "replyPrompt": "Reply: which one is still on your list?"
+}

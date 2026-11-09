@@ -1,0 +1,231 @@
+{
+  "kind": "carousel",
+  "brief": {
+    "topic": "Sahih al-Bukhari 6094: truthfulness leads to righteousness",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "C: Daily Deen & Practical Islam",
+    "series": "daily-check-in",
+    "objective": "saves",
+    "format": "check-in",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "backlogId": "t009"
+  },
+  "coreInsight": "Sahih al-Bukhari 6094 describes truthfulness as a path that leads to righteousness; it is built in small, everyday honesty.",
+  "hooks": [
+    {
+      "text": "Honesty starts in small things",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Relatable, not accusing."
+    },
+    {
+      "text": "Would you notice a small lie?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Edges toward guilt."
+    },
+    {
+      "text": "Truth is a road",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Better in the reflection."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and gentle; invites a check-in without guilt.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Honesty starts in small things. / A daily check-in.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Honesty"
+        },
+        {
+          "text": "starts in"
+        },
+        {
+          "text": "small things.",
+          "highlight": true
+        }
+      ],
+      "sub": "A daily check-in."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "bukhari:6094 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ SAID",
+      "ref": "bukhari:6094",
+      "excerpt": "Truthfulness leads to righteousness, and righteousness leads to Paradise. And a man keeps on telling the truth until he becomes a truthful person"
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 150,
+      "purpose": "Takeaway in practice (our suggestions).",
+      "onScreen": "CHECK-IN / Did I exaggerate to make a story better? · Did I keep my word, or make an excuse? · Did I say \"I don't know\" when I didn't? · Was I honest about my own mistake? · Was I truthful when no one would notice?",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "CHECK-IN",
+      "headline": [
+        {
+          "text": "Five honest"
+        },
+        {
+          "text": "questions.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Did I exaggerate to make a story better?",
+        "Did I keep my word, or make an excuse?",
+        "Did I say \"I don't know\" when I didn't?",
+        "Was I honest about my own mistake?",
+        "Was I truthful when no one would notice?"
+      ],
+      "itemStart": 10,
+      "itemStagger": 10
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "durationInFrames": 150,
+      "purpose": "Reflection: our words, clearly labelled.",
+      "onScreen": "REFLECTION / Why it matters / This hadith describes truthfulness as a path: each honest word is a step along it. Small honesty, repeated, is how the path is walked.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "Why it matters",
+          "highlight": true
+        }
+      ],
+      "body": [
+        "This hadith describes truthfulness as a path: each honest word is a step along it.",
+        "Small honesty, repeated, is how the path is walked."
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Tell the truth, even when small. / Save this for your evening check-in",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Tell the truth,"
+        },
+        {
+          "text": "even when"
+        },
+        {
+          "text": "small.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this for your evening check-in",
+      "ctaAt": 10,
+      "endCardAt": 20
+    }
+  ],
+  "cover": {
+    "kicker": "A MUSLIM'S DAILY CHECK-IN",
+    "headline": [
+      {
+        "text": "Honesty in"
+      },
+      {
+        "text": "small things",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Honesty is mostly built in small moments nobody sees.",
+    "body": [
+      "Sahih al-Bukhari 6094: truthfulness leads to righteousness.",
+      "Swipe for five quiet questions to ask yourself tonight."
+    ],
+    "cta": "Save this for your evening check-in.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#DailyDeen",
+      "#Honesty",
+      "#Hadith"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this for your evening check-in"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:6094 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:6094"
+    },
+    {
+      "text": "The check-in questions and reflection are our own.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "kind": "carousel",
+  "brief": {
+    "topic": "Fussilat 41:34: repel evil with what is better",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "A: Qur'an & Hadith",
+    "series": "one-ayah-one-lesson",
+    "objective": "shares",
+    "format": "ayah-lesson",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Fussilat 41:34 asks us to answer bad with what is better, and 41:35 is honest that it takes patience.",
+  "hooks": [
+    {
+      "text": "When someone is unkind to you",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 5,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Specific everyday moment."
+    },
+    {
+      "text": "A harder, better response",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Vague."
+    },
+    {
+      "text": "Not equal",
+      "angle": "Quote-led",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 3
+      },
+      "notes": "Too short to understand."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "When someone is unkind to you. / One ayah. One lesson.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "When someone"
+        },
+        {
+          "text": "is unkind"
+        },
+        {
+          "text": "to you.",
+          "highlight": true
+        }
+      ],
+      "sub": "One ayah. One lesson."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:41:34 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · FUSSILAT 41:34",
+      "ref": "quran:41:34"
+    },
+    {
+      "id": "context",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:41:35 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "CONTEXT · THE AYAH AFTER",
+      "ref": "quran:41:35"
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "durationInFrames": 150,
+      "purpose": "Reflection: our words, clearly labelled.",
+      "onScreen": "REFLECTION / The lesson / The ayah sets the good and the bad side by side and asks us to respond with what is better. The next ayah is honest about the cost: it takes patience. That makes it a goal to grow into, one response at a time.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "The lesson",
+          "highlight": true
+        }
+      ],
+      "body": [
+        "The ayah sets the good and the bad side by side and asks us to respond with what is better.",
+        "The next ayah is honest about the cost: it takes patience. That makes it a goal to grow into, one response at a time."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 150,
+      "purpose": "Takeaway in practice (our suggestions).",
+      "onScreen": "LIVE IT TODAY / Answer a sharp message with a calm one · Greet first, even when it feels awkward · Make du'a for someone you find difficult",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "LIVE IT TODAY",
+      "headline": [
+        {
+          "text": "Three small"
+        },
+        {
+          "text": "responses.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Answer a sharp message with a calm one",
+        "Greet first, even when it feels awkward",
+        "Make du'a for someone you find difficult"
+      ],
+      "itemStart": 10,
+      "itemStagger": 10
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Respond with what is better. / Share it with someone who needs it",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Respond with"
+        },
+        {
+          "text": "what is better.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with someone who needs it",
+      "ctaAt": 10,
+      "endCardAt": 20
+    }
+  ],
+  "cover": {
+    "kicker": "ONE AYAH. ONE LESSON.",
+    "headline": [
+      {
+        "text": "Respond with"
+      },
+      {
+        "text": "what is better",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "For the next time someone is short with you.",
+    "body": [
+      "Fussilat 41:34, then the ayah after it (41:35): it takes patience.",
+      "Swipe for the ayah, its context and three small responses to try."
+    ],
+    "cta": "Share it with someone who may find it helpful.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Quran",
+      "#Akhlaq",
+      "#OneAyahOneLesson"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with someone who needs it"
+  },
+  "claims": [
+    {
+      "text": "What quran:41:34 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:41:34"
+    },
+    {
+      "text": "What quran:41:35 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:41:35"
+    },
+    {
+      "text": "The lesson and the three responses are our reflection on the ayat.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

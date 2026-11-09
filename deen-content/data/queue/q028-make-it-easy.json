@@ -1,0 +1,236 @@
+{
+  "kind": "carousel",
+  "brief": {
+    "topic": "Sahih al-Bukhari 69: make things easy for people",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "A: Qur'an & Hadith",
+    "series": null,
+    "objective": "shares",
+    "format": "hadith-explained",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "backlogId": "t005"
+  },
+  "coreInsight": "In Sahih al-Bukhari 69 the Prophet ﷺ tells us to make things easy for people, give good news, and not drive them away.",
+  "hooks": [
+    {
+      "text": "Make it easy, not heavy",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear and true to the hadith."
+    },
+    {
+      "text": "How do you remind people?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, slightly abstract."
+    },
+    {
+      "text": "Good news first",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Better as a practice card."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Make it easy, not heavy. / A hadith, with context.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Make it easy,"
+        },
+        {
+          "text": "not heavy.",
+          "highlight": true
+        }
+      ],
+      "sub": "A hadith, with context."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "bukhari:69 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ SAID",
+      "ref": "bukhari:69",
+      "excerpt": "Facilitate things to people (concerning religious matters), and do not make it hard for them and give them good tidings and do not make them run away (from Islam)"
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "durationInFrames": 150,
+      "purpose": "Reflection: our words, clearly labelled.",
+      "onScreen": "REFLECTION / What it teaches / This hadith is about how we share the deen with others: make it easier to come close, give good news, and don't push people away. It shapes how we remind family, friends and anyone new to practice.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "What it teaches",
+          "highlight": true
+        }
+      ],
+      "body": [
+        "This hadith is about how we share the deen with others: make it easier to come close, give good news, and don't push people away.",
+        "It shapes how we remind family, friends and anyone new to practice."
+      ]
+    },
+    {
+      "id": "moments",
+      "type": "cards",
+      "durationInFrames": 150,
+      "purpose": "Practical examples (our suggestions).",
+      "onScreen": "IN PRACTICE / Lead with mercy, not mistakes · Answer questions patiently · Encourage small steps",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "IN PRACTICE",
+      "headline": [
+        {
+          "text": "Easy looks"
+        },
+        {
+          "text": "like this.",
+          "highlight": true
+        }
+      ],
+      "enter": "pop",
+      "popStart": 12,
+      "popStagger": 16,
+      "cards": [
+        {
+          "text": "Lead with mercy, not mistakes",
+          "status": "pass",
+          "tag": "ADVICE"
+        },
+        {
+          "text": "Answer questions patiently",
+          "status": "pass",
+          "tag": "AT HOME"
+        },
+        {
+          "text": "Encourage small steps",
+          "status": "pass",
+          "tag": "FRIENDS"
+        }
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Make the way easier. / Share it with someone who teaches",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Make the way"
+        },
+        {
+          "text": "easier.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with someone who teaches",
+      "ctaAt": 10,
+      "endCardAt": 20
+    }
+  ],
+  "cover": {
+    "kicker": "HADITH EXPLAINED",
+    "headline": [
+      {
+        "text": "Make it easy,"
+      },
+      {
+        "text": "not heavy",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "How we remind people matters as much as what we say.",
+    "body": [
+      "Sahih al-Bukhari 69: make things easy, give good tidings, don't drive people away.",
+      "Swipe for what it teaches and three ways to live it."
+    ],
+    "cta": "Share it with someone who may find it helpful.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Hadith",
+      "#Akhlaq",
+      "#Dawah"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with someone who teaches"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:69 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:69"
+    },
+    {
+      "text": "The explanation and practice cards are our own reflection.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

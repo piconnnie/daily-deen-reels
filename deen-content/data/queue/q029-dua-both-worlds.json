@@ -1,0 +1,236 @@
+{
+  "kind": "carousel",
+  "brief": {
+    "topic": "The du'a for good in this world and the next (Al-Baqarah 2:201)",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "D: Dua & Dhikr",
+    "series": "dua-of-the-day",
+    "objective": "saves",
+    "format": "dua-card",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "backlogId": "t013"
+  },
+  "coreInsight": "Al-Baqarah 2:201 asks for good in this world and the Hereafter, and Sahih al-Bukhari 6389 says it was the Prophet's ﷺ most frequent invocation.",
+  "hooks": [
+    {
+      "text": "One du'a for both worlds",
+      "angle": "Benefit",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear and save-worthy."
+    },
+    {
+      "text": "Don't know what to ask for?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Good; used as a card instead."
+    },
+    {
+      "text": "His most frequent du'a",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 5,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Strong, but the ayah should lead."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "One du'a for both worlds. / Arabic, meaning and source.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "One du'a"
+        },
+        {
+          "text": "for both"
+        },
+        {
+          "text": "worlds.",
+          "highlight": true
+        }
+      ],
+      "sub": "Arabic, meaning and source."
+    },
+    {
+      "id": "dua",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:2:201 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · AL-BAQARAH 2:201",
+      "ref": "quran:2:201",
+      "showTransliteration": true
+    },
+    {
+      "id": "virtue",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "bukhari:6389 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "WHY LEARN IT",
+      "ref": "bukhari:6389"
+    },
+    {
+      "id": "moments",
+      "type": "cards",
+      "durationInFrames": 150,
+      "purpose": "Practical examples (our suggestions).",
+      "onScreen": "WHEN TO SAY IT / When you're unsure what to ask · At the end of your own du'a · For your family, too",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "WHEN TO SAY IT",
+      "headline": [
+        {
+          "text": "Make it part"
+        },
+        {
+          "text": "of your day.",
+          "highlight": true
+        }
+      ],
+      "enter": "pop",
+      "popStart": 12,
+      "popStagger": 16,
+      "cards": [
+        {
+          "text": "When you're unsure what to ask",
+          "status": "pass",
+          "tag": "ANYTIME"
+        },
+        {
+          "text": "At the end of your own du'a",
+          "status": "pass",
+          "tag": "DAILY"
+        },
+        {
+          "text": "For your family, too",
+          "status": "pass",
+          "tag": "FAMILY"
+        }
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Ask for good in both worlds. / Save this to learn it",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Ask for good"
+        },
+        {
+          "text": "in both worlds.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this to learn it",
+      "ctaAt": 10,
+      "endCardAt": 20
+    }
+  ],
+  "cover": {
+    "kicker": "DUA OF THE DAY",
+    "headline": [
+      {
+        "text": "A du'a for"
+      },
+      {
+        "text": "both worlds",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "A short du'a to learn this week.",
+    "body": [
+      "Al-Baqarah 2:201: the Arabic, transliteration and meaning.",
+      "Sahih al-Bukhari 6389: it was the Prophet's ﷺ most frequent invocation.",
+      "Swipe for when to say it."
+    ],
+    "cta": "Save this to learn it.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Dua",
+      "#Quran",
+      "#DuaOfTheDay"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this to learn it"
+  },
+  "claims": [
+    {
+      "text": "What quran:2:201 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:2:201"
+    },
+    {
+      "text": "What bukhari:6389 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:6389"
+    },
+    {
+      "text": "Suggested moments to say it are our own.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

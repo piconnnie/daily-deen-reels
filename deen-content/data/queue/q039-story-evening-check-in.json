@@ -1,0 +1,133 @@
+{
+  "kind": "story",
+  "brief": {
+    "topic": "Evening check-in",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "C: Daily Deen & Practical Islam",
+    "series": null,
+    "objective": "replies",
+    "format": "story-check-in",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "A one-minute evening check-in: gratitude, kindness, one thing to improve and a du'a for tomorrow.",
+  "hooks": [
+    {
+      "text": "Before you sleep tonight",
+      "angle": "Timely",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Gentle and specific."
+    },
+    {
+      "text": "How did today go?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Vague."
+    },
+    {
+      "text": "Four quiet questions",
+      "angle": "List",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Good as a headline."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "check",
+      "type": "checklist",
+      "durationInFrames": 150,
+      "purpose": "Takeaway in practice (our suggestions).",
+      "onScreen": "EVENING CHECK-IN / One blessing I'm grateful for today · One person I was kind to · One thing I'd do differently · One du'a for tomorrow",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "EVENING CHECK-IN",
+      "headline": [
+        {
+          "text": "Before you"
+        },
+        {
+          "text": "sleep tonight.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "One blessing I'm grateful for today",
+        "One person I was kind to",
+        "One thing I'd do differently",
+        "One du'a for tomorrow"
+      ],
+      "itemStart": 10,
+      "itemStagger": 10
+    }
+  ],
+  "cover": {
+    "kicker": "EVENING CHECK-IN",
+    "headline": [
+      {
+        "text": "Before you"
+      },
+      {
+        "text": "sleep tonight",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "One quiet minute before you sleep.",
+    "body": [
+      "Gratitude · kindness · one thing to improve · a du'a for tomorrow."
+    ],
+    "cta": "Reply with one blessing from today.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#DailyDeen",
+      "#Gratitude"
+    ]
+  },
+  "primaryCta": {
+    "type": "question",
+    "text": "Reply with one blessing from today"
+  },
+  "claims": [
+    {
+      "text": "The check-in questions are our own prompts.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "replyPrompt": "Reply with one blessing from today"
+}

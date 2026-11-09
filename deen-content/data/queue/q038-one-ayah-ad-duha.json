@@ -1,0 +1,243 @@
+{
+  "kind": "carousel",
+  "brief": {
+    "topic": "Ad-Duha 93:1-3 and 93:6-8: you have not been left",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "A: Qur'an & Hadith",
+    "series": "one-ayah-one-lesson",
+    "objective": "saves",
+    "format": "ayah-lesson",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Surah Ad-Duha reassures the Prophet ﷺ that his Lord has not left him, then recalls how he was cared for before; looking back at past care can steady a heavy heart.",
+  "hooks": [
+    {
+      "text": "For a season that feels dark",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Mirrors the surah's own morning-and-night imagery."
+    },
+    {
+      "text": "Look back before you lose hope",
+      "angle": "Advice",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Slightly preachy."
+    },
+    {
+      "text": "Morning comes after the night",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 4,
+        "comprehension": 5
+      },
+      "notes": "Could read as a promise we can't make."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "For a season that feels dark. / One ayah. One lesson.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "For a season"
+        },
+        {
+          "text": "that feels"
+        },
+        {
+          "text": "dark.",
+          "highlight": true
+        }
+      ],
+      "sub": "One ayah. One lesson."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:93:1-3 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · AD-DUHA 93:1-3",
+      "ref": "quran:93:1-3"
+    },
+    {
+      "id": "context",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:93:6-8 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "CONTEXT · LATER IN THE SURAH",
+      "ref": "quran:93:6-8"
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "durationInFrames": 150,
+      "purpose": "Reflection: our words, clearly labelled.",
+      "onScreen": "REFLECTION / The lesson / The surah opens with morning light and night, then reassures the Prophet ﷺ that his Lord has not left him. Later it recalls how he was cared for. On a dark day, remembering how you were carried before can steady the heart.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "The lesson",
+          "highlight": true
+        }
+      ],
+      "body": [
+        "The surah opens with morning light and night, then reassures the Prophet ﷺ that his Lord has not left him. Later it recalls how he was cared for.",
+        "On a dark day, remembering how you were carried before can steady the heart."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 150,
+      "purpose": "Takeaway in practice (our suggestions).",
+      "onScreen": "LIVE IT TODAY / Write down three times you were helped through · Thank Allah for each one · Ask Him for today's need",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "LIVE IT TODAY",
+      "headline": [
+        {
+          "text": "Look back,"
+        },
+        {
+          "text": "then look up.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Write down three times you were helped through",
+        "Thank Allah for each one",
+        "Ask Him for today's need"
+      ],
+      "itemStart": 10,
+      "itemStagger": 10
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Look back. Then look up. / Save this for a difficult day",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Look back."
+        },
+        {
+          "text": "Then look up.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this for a difficult day",
+      "ctaAt": 10,
+      "endCardAt": 20
+    }
+  ],
+  "cover": {
+    "kicker": "ONE AYAH. ONE LESSON.",
+    "headline": [
+      {
+        "text": "You have not"
+      },
+      {
+        "text": "been left",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "For a season that feels dark.",
+    "body": [
+      "Surah Ad-Duha, ayat 1–3, and later in the surah, 6–8: remembering how the Prophet ﷺ was cared for.",
+      "Swipe for the ayat and one practice: look back, then look up."
+    ],
+    "cta": "Save this reminder for a difficult day.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Quran",
+      "#Hope",
+      "#OneAyahOneLesson"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this for a difficult day"
+  },
+  "claims": [
+    {
+      "text": "What quran:93:1-3 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:93:1-3"
+    },
+    {
+      "text": "What quran:93:6-8 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:93:6-8"
+    },
+    {
+      "text": "The lesson and the three steps are our reflection on the ayat.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

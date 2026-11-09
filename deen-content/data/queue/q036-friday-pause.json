@@ -1,0 +1,247 @@
+{
+  "kind": "carousel",
+  "brief": {
+    "topic": "Al-Jumu'ah 62:9-10: pause for remembrance, then return",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "F: Islamic Calendar & Occasions",
+    "series": "one-ayah-one-lesson",
+    "objective": "saves",
+    "format": "ayah-lesson",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Al-Jumu'ah 62:9 calls believers to the remembrance of Allah when the Friday call is made, and 62:10 sends them back out, remembering Him often.",
+  "hooks": [
+    {
+      "text": "Friday has a pause in it",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Fits the ayat: stop, remember, return."
+    },
+    {
+      "text": "What do you put down on Friday?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, slightly abstract."
+    },
+    {
+      "text": "Leave the deal for later",
+      "angle": "Action",
+      "scores": {
+        "specificity": 4,
+        "relevance": 3,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Narrow."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Friday has a pause in it. / One ayah. One lesson.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Friday has"
+        },
+        {
+          "text": "a pause"
+        },
+        {
+          "text": "in it.",
+          "highlight": true
+        }
+      ],
+      "sub": "One ayah. One lesson."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:62:9 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · AL-JUMU'AH 62:9",
+      "ref": "quran:62:9"
+    },
+    {
+      "id": "context",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:62:10 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "CONTEXT · THE AYAH AFTER",
+      "ref": "quran:62:10"
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "durationInFrames": 150,
+      "purpose": "Reflection: our words, clearly labelled.",
+      "onScreen": "REFLECTION / The lesson / The first ayah asks believers to stop and hasten to the remembrance of Allah when the Friday call is made. The next sends them back to their day, remembering Him often. Friday is a pause in the middle of life, not a break from it.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "The lesson",
+          "highlight": true
+        }
+      ],
+      "body": [
+        "The first ayah asks believers to stop and hasten to the remembrance of Allah when the Friday call is made. The next sends them back to their day, remembering Him often.",
+        "Friday is a pause in the middle of life, not a break from it."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 150,
+      "purpose": "Takeaway in practice (our suggestions).",
+      "onScreen": "THIS FRIDAY / Clear your schedule before the call comes · Leave the phone and the work for later · Go back to your day with dhikr on your tongue",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THIS FRIDAY",
+      "headline": [
+        {
+          "text": "Pause,"
+        },
+        {
+          "text": "then return.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Clear your schedule before the call comes",
+        "Leave the phone and the work for later",
+        "Go back to your day with dhikr on your tongue"
+      ],
+      "itemStart": 10,
+      "itemStagger": 10
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Pause. Remember. Return. / Save this for next Friday",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Pause."
+        },
+        {
+          "text": "Remember."
+        },
+        {
+          "text": "Return.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this for next Friday",
+      "ctaAt": 10,
+      "endCardAt": 20
+    }
+  ],
+  "cover": {
+    "kicker": "FRIDAY REMINDER",
+    "headline": [
+      {
+        "text": "Friday has"
+      },
+      {
+        "text": "a pause in it",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Jumu'ah Mubarak.",
+    "body": [
+      "Al-Jumu'ah 62:9, then the ayah after it (62:10): stop for the remembrance of Allah, then go back out remembering Him often.",
+      "Swipe for the ayat and three small ways to keep the pause."
+    ],
+    "cta": "Save this for next Friday.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#JumuahMubarak",
+      "#Quran",
+      "#Friday"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this for next Friday"
+  },
+  "claims": [
+    {
+      "text": "What quran:62:9 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:62:9"
+    },
+    {
+      "text": "What quran:62:10 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:62:10"
+    },
+    {
+      "text": "The lesson and the three steps are our reflection on the ayat.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen.",
+    "occasion": "friday"
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

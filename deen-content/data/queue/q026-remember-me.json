@@ -1,0 +1,248 @@
+{
+  "kind": "carousel",
+  "brief": {
+    "topic": "Al-Baqarah 2:152: remember Allah, and be grateful",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "A: Qur'an & Hadith",
+    "series": "one-ayah-one-lesson",
+    "objective": "saves",
+    "format": "ayah-lesson",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "backlogId": "t003"
+  },
+  "coreInsight": "Al-Baqarah 2:152 joins remembering Allah with gratitude, and the next ayah names patience and prayer as the help to lean on.",
+  "hooks": [
+    {
+      "text": "Remembrance goes both ways",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Honest summary of the ayah in our words; the ayah itself follows."
+    },
+    {
+      "text": "When did you last remember Allah in a queue?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 5,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Specific, but long for a cover."
+    },
+    {
+      "text": "Five words worth keeping",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Too vague."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Remembrance goes both ways. / One ayah. One lesson.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Remembrance"
+        },
+        {
+          "text": "goes both"
+        },
+        {
+          "text": "ways.",
+          "highlight": true
+        }
+      ],
+      "sub": "One ayah. One lesson."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:2:152 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · AL-BAQARAH 2:152",
+      "ref": "quran:2:152",
+      "showTransliteration": true
+    },
+    {
+      "id": "context",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:2:153 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "CONTEXT · THE AYAH AFTER",
+      "ref": "quran:2:153"
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "durationInFrames": 150,
+      "purpose": "Reflection: our words, clearly labelled.",
+      "onScreen": "REFLECTION / The lesson / This ayah ties remembering Allah to gratitude. The very next one names what to lean on when life is hard: patience and prayer. Remembrance is not only for quiet days. It belongs in ordinary moments, too.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "The lesson",
+          "highlight": true
+        }
+      ],
+      "body": [
+        "This ayah ties remembering Allah to gratitude. The very next one names what to lean on when life is hard: patience and prayer.",
+        "Remembrance is not only for quiet days. It belongs in ordinary moments, too."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 150,
+      "purpose": "Takeaway in practice (our suggestions).",
+      "onScreen": "LIVE IT TODAY / Remember Allah on the commute or in a queue · Thank Him for one specific thing today · When the day gets heavy, turn to salah first",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "LIVE IT TODAY",
+      "headline": [
+        {
+          "text": "Three small"
+        },
+        {
+          "text": "moments.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Remember Allah on the commute or in a queue",
+        "Thank Him for one specific thing today",
+        "When the day gets heavy, turn to salah first"
+      ],
+      "itemStart": 10,
+      "itemStagger": 10
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Remember Allah once more today. / Save this reminder",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Remember Allah"
+        },
+        {
+          "text": "once more"
+        },
+        {
+          "text": "today.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this reminder",
+      "ctaAt": 10,
+      "endCardAt": 20
+    }
+  ],
+  "cover": {
+    "kicker": "ONE AYAH. ONE LESSON.",
+    "headline": [
+      {
+        "text": "Remembrance"
+      },
+      {
+        "text": "goes both ways",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "A short ayah to carry through an ordinary day.",
+    "body": [
+      "Al-Baqarah 2:152, then the ayah after it (2:153): patience and prayer as the help to lean on.",
+      "Swipe for the ayah, its context and three small moments to practise it today."
+    ],
+    "cta": "Save this reminder for a busy day.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Quran",
+      "#Dhikr",
+      "#OneAyahOneLesson"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this reminder"
+  },
+  "claims": [
+    {
+      "text": "What quran:2:152 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:2:152"
+    },
+    {
+      "text": "What quran:2:153 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:2:153"
+    },
+    {
+      "text": "The lesson and the three moments are our reflection on the ayat.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

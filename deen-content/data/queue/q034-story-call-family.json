@@ -1,0 +1,134 @@
+{
+  "kind": "story",
+  "brief": {
+    "topic": "Reach out to family today",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "E: Islam in Everyday Life",
+    "series": null,
+    "objective": "replies",
+    "format": "story-question",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "A gentle prompt to call a family member today.",
+  "hooks": [
+    {
+      "text": "Who would love your call today?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 5,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Specific and actionable."
+    },
+    {
+      "text": "When did you last call home?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Can read as guilt."
+    },
+    {
+      "text": "One call today",
+      "angle": "Action",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Flat."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "question",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Who in your family would love a call from you today? / Call them, then tell us below.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Who in your"
+        },
+        {
+          "text": "family would"
+        },
+        {
+          "text": "love a call"
+        },
+        {
+          "text": "from you"
+        },
+        {
+          "text": "today?",
+          "highlight": true
+        }
+      ],
+      "sub": "Call them, then tell us below."
+    }
+  ],
+  "cover": {
+    "kicker": "FAMILY",
+    "headline": [
+      {
+        "text": "One call"
+      },
+      {
+        "text": "today",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Who in your family would love to hear from you today?",
+    "body": [
+      "A parent, a grandparent, a cousin you keep meaning to call."
+    ],
+    "cta": "Reply after you call.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Family",
+      "#DailyDeen"
+    ]
+  },
+  "primaryCta": {
+    "type": "question",
+    "text": "Reply: who will you call today?"
+  },
+  "claims": [
+    {
+      "text": "This is a question to followers, not a teaching.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "replyPrompt": "Reply: who will you call today?"
+}
