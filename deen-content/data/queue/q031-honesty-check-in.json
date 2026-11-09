@@ -101,7 +101,7 @@
       "type": "checklist",
       "durationInFrames": 150,
       "purpose": "Takeaway in practice (our suggestions).",
-      "onScreen": "CHECK-IN / Did I exaggerate to make a story better? · Did I keep my word, or make an excuse? · Did I say \"I don't know\" when I didn't? · Was I honest about my own mistake? · Was I truthful when no one would notice?",
+      "onScreen": "CHECK-IN / Did I exaggerate to make a story better? · Did I keep my word, or make an excuse? · Did I admit it when I didn't know? · Was I honest about my own mistake? · Was I truthful when no one would notice?",
       "storyboard": {
         "visual": "Per layout (rotates).",
         "animation": "Staged reveal."
@@ -120,7 +120,7 @@
       "items": [
         "Did I exaggerate to make a story better?",
         "Did I keep my word, or make an excuse?",
-        "Did I say \"I don't know\" when I didn't?",
+        "Did I admit it when I didn't know?",
         "Was I honest about my own mistake?",
         "Was I truthful when no one would notice?"
       ],

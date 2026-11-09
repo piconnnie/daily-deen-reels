@@ -60,7 +60,7 @@
       "type": "hook",
       "durationInFrames": 90,
       "purpose": "Make the viewer pause.",
-      "onScreen": "Who in your family would love a call from you today? / Call them, then tell us below.",
+      "onScreen": "Who in your family would love a call from you today? / Call them, then reply here.",
       "storyboard": {
         "visual": "Per layout (rotates).",
         "animation": "Staged reveal."
@@ -84,7 +84,7 @@
           "highlight": true
         }
       ],
-      "sub": "Call them, then tell us below."
+      "sub": "Call them, then reply here."
     }
   ],
   "cover": {
