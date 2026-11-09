@@ -1,0 +1,38 @@
+{
+  "id": "deen-020-where-hearts-find-rest",
+  "createdAt": "2026-11-09T06:38:05.313Z",
+  "kind": "reel",
+  "release": {
+    "tag": "reel-deen-020-where-hearts-find-rest",
+    "cover": "deen-020-where-hearts-find-rest.jpg",
+    "contactSheet": "deen-020-where-hearts-find-rest-contact-sheet.png",
+    "video": "deen-020-where-hearts-find-rest.mp4"
+  },
+  "sha256": {
+    "video": "9423c0e648ccdfd7bdc98a8e23e65bb81abd4b0ada83fef317ce0e69bdea4105",
+    "cover": "c0968b32a672fca9dbf312522c76b7c4153d30881ba96483ad2319faf5235822"
+  },
+  "durationSec": 36.1,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 49
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}

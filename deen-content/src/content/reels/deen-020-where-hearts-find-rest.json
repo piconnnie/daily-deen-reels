@@ -1,0 +1,270 @@
+{
+  "id": "deen-020-where-hearts-find-rest",
+  "version": 1,
+  "status": "qa-passed",
+  "kind": "reel",
+  "brief": {
+    "topic": "Hearts find rest in the remembrance of Allah",
+    "audience": "Muslims looking for a short, authentic reminder they can act on today",
+    "pillar": "D: Dua & Dhikr",
+    "objective": "saves",
+    "format": "ayah-reflection",
+    "targetDurationSec": 27,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "series": null,
+    "queueId": "q021-where-hearts-find-rest",
+    "backlogId": null,
+    "writer": "queue"
+  },
+  "coreInsight": "Qur'an 13:28 says hearts are assured by the remembrance of Allah, so small daily dhikr is worth building in.",
+  "hooks": [
+    {
+      "text": "Restless lately?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the source answers it right away."
+    },
+    {
+      "text": "Before you reach for your phone.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, slightly less direct."
+    },
+    {
+      "text": "Remember Allah, find rest.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Works better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the quoted source pays it off immediately.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Recognition: meet the viewer where they are.",
+      "onScreen": "Restless lately? / Before you reach for your phone.",
+      "storyboard": {
+        "visual": "Headline, highlighted last line; sub-line.",
+        "animation": "Readable on frame 0; underline sweep."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Restless"
+        },
+        {
+          "text": "lately?",
+          "highlight": true
+        }
+      ],
+      "sub": "Before you reach for your phone."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 588,
+      "purpose": "The source itself, verbatim, with its reference.",
+      "onScreen": "quran:13:28 (text pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Framed panel: Arabic (if any), translation; citation pill.",
+        "animation": "Arabic, then translation, then citation."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · AR-RA'D",
+      "ref": "quran:13:28",
+      "resolved": {
+        "ref": "quran:13:28",
+        "collection": "quran",
+        "collectionName": "The Qur'an",
+        "kind": "quran",
+        "citation": "Qur'an 13:28",
+        "url": "https://quran.com/13/28",
+        "arabic": "ٱلَّذِينَ ءَامَنُواْ وَتَطۡمَئِنُّ قُلُوبُهُم بِذِكۡرِ ٱللَّهِۗ أَلَا بِذِكۡرِ ٱللَّهِ تَطۡمَئِنُّ ٱلۡقُلُوبُ ٢٨",
+        "english": "Those who have believed and whose hearts are assured by the remembrance of Allah. Unquestionably, by the remembrance of Allah hearts are assured",
+        "translation": "Saheeh International",
+        "grade": null,
+        "transliteration": "Allatheena amanoo watatmainnu quloobuhum bithikri Allahi ala bithikri Allahi tatmainnu alquloobu"
+      }
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 255,
+      "purpose": "Our reflection: small, concrete actions (our words, not attributed).",
+      "onScreen": "TRY THIS TODAY / Make space for remembrance. / Sit for two quiet minutes after each prayer · Swap one scroll break for dhikr · Say Alhamdulillah when you notice a blessing",
+      "storyboard": {
+        "visual": "Numbered list, rule box.",
+        "animation": "Items every 34 frames from 24."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "TRY THIS TODAY",
+      "headline": [
+        {
+          "text": "Make space for"
+        },
+        {
+          "text": "remembrance.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Sit for two quiet minutes after each prayer",
+        "Swap one scroll break for dhikr",
+        "Say Alhamdulillah when you notice a blessing"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34,
+      "rule": "Small, regular remembrance, wherever your day takes you."
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One line to remember + one CTA.",
+      "onScreen": "Remember Allah, find rest. / Save this for a restless day",
+      "storyboard": {
+        "visual": "Takeaway lines, CTA pill, end card.",
+        "animation": "Lines rise; CTA at 40; end card at 70."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Remember"
+        },
+        {
+          "text": "Allah, find"
+        },
+        {
+          "text": "rest.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this for a restless day",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "QUR'AN 13:28",
+    "headline": [
+      {
+        "text": "Where hearts"
+      },
+      {
+        "text": "find rest",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Restless, even when nothing is wrong? Read Qur'an 13:28 slowly.",
+    "body": [
+      "Try this today:\n→ two quiet minutes after each prayer\n→ swap one scroll break for dhikr\n→ say Alhamdulillah when you notice a blessing"
+    ],
+    "cta": "Save this for a restless day.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Quran",
+      "#Dhikr",
+      "#Quran"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this for a restless day"
+  },
+  "claims": [
+    {
+      "text": "What quran:13:28 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "quran:13:28"
+    },
+    {
+      "text": "Short, regular dhikr during the day is a way to act on the ayah.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "2026-10-30",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "style": {
+    "theme": "night",
+    "layout": "editorial",
+    "backdrop": "gradient",
+    "type": "sans",
+    "motion": "fade",
+    "music": "recitation"
+  },
+  "audio": {
+    "bed": "audio/deen-020-where-hearts-find-rest-bed.wav",
+    "bedVolume": 1,
+    "voiceover": null,
+    "voiceoverVolume": 1
+  },
+  "sources": [
+    {
+      "ref": "quran:13:28",
+      "citation": "Qur'an 13:28",
+      "url": "https://quran.com/13/28",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "Those who have believed and whose hearts are assured by the remembrance of Allah. Unquestionably, by the remembrance of Allah hearts are assured"
+    }
+  ],
+  "recitation": {
+    "ref": "quran:13:28",
+    "chosen": "default",
+    "citation": "Qur'an 13:28",
+    "url": "https://quran.com/13/28",
+    "reciter": "muaiqly",
+    "reciterName": "Maher Al-Muaiqly",
+    "folder": "MaherAlMuaiqly128kbps",
+    "source": "EveryAyah.com",
+    "mode": "scene",
+    "sceneId": "ayah",
+    "startFrame": 102,
+    "gapSec": 0.25,
+    "totalSec": 18.495,
+    "files": [
+      {
+        "file": "013028.mp3",
+        "url": "https://everyayah.com/data/MaherAlMuaiqly128kbps/013028.mp3",
+        "sha256": "b09d439505a47a400ce626d3ef27faec66a87ffaf84706d47dbb1fc8de5dcac7",
+        "durationSec": 18.495
+      }
+    ]
+  }
+}

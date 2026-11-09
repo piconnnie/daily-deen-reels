@@ -1,0 +1,212 @@
+{
+  "contentId": "deen-020-where-hearts-find-rest",
+  "version": 1,
+  "generatedAt": "2026-11-09T06:37:58.930Z",
+  "pillar": "D: Dua & Dhikr",
+  "format": "ayah-reflection",
+  "objective": "saves",
+  "targetAudience": "Muslims looking for a short, authentic reminder they can act on today",
+  "topic": "Hearts find rest in the remembrance of Allah",
+  "coreInsight": "Qur'an 13:28 says hearts are assured by the remembrance of Allah, so small daily dhikr is worth building in.",
+  "hookVariants": [
+    {
+      "text": "Restless lately?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "Before you reach for your phone.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Remember Allah, find rest.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "Restless lately?",
+  "selectionRationale": "Most relevant and clearest at a glance; the quoted source pays it off immediately.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "Restless lately? / Before you reach for your phone.",
+      "voiceover": null
+    },
+    {
+      "scene": "ayah",
+      "onScreen": "quran:13:28 (text pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "practice",
+      "onScreen": "TRY THIS TODAY / Make space for remembrance. / Sit for two quiet minutes after each prayer · Swap one scroll break for dhikr · Say Alhamdulillah when you notice a blessing",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Remember Allah, find rest. / Save this for a restless day",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 678,
+      "startSec": 3,
+      "endSec": 22.6
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "startFrame": 678,
+      "endFrame": 933,
+      "startSec": 22.6,
+      "endSec": 31.1
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 933,
+      "endFrame": 1083,
+      "startSec": 31.1,
+      "endSec": 36.1
+    }
+  ],
+  "caption": "Restless, even when nothing is wrong? Read Qur'an 13:28 slowly.\n\nTry this today:\n→ two quiet minutes after each prayer\n→ swap one scroll break for dhikr\n→ say Alhamdulillah when you notice a blessing\n\nSave this for a restless day.\n\n📖 Sources\n• Qur'an 13:28 (tr. Saheeh International) — quran.com/13/28\n• Recitation: Qur'an 13:28 — Maher Al-Muaiqly (EveryAyah.com) — quran.com/13/28\n\n#IslamicReminder #Quran #Dhikr #Quran",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Quran",
+    "#Dhikr",
+    "#Quran"
+  ],
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this for a restless day"
+  },
+  "coverHeadline": "Where hearts find rest",
+  "sources": [
+    {
+      "ref": "quran:13:28",
+      "citation": "Qur'an 13:28",
+      "url": "https://quran.com/13/28",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "Those who have believed and whose hearts are assured by the remembrance of Allah. Unquestionably, by the remembrance of Allah hearts are assured"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What quran:13:28 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "quran:13:28"
+    },
+    {
+      "text": "Short, regular dhikr during the day is a way to act on the ayah.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 36.1,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [
+      "public/audio/deen-020-where-hearts-find-rest-bed.wav"
+    ],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-020-where-hearts-find-rest.mp4",
+    "cover": "output/covers/deen-020-where-hearts-find-rest.png",
+    "caption": "output/captions/deen-020-where-hearts-find-rest.txt",
+    "storyboard": "output/storyboards/deen-020-where-hearts-find-rest.md",
+    "subtitles": "output/storyboards/deen-020-where-hearts-find-rest.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-09T06:38:05.270Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-020-where-hearts-find-rest/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "2026-10-30",
+  "publishNotes": "Evergreen.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
