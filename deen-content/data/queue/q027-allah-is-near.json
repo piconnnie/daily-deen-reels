@@ -1,0 +1,201 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "Al-Baqarah 2:186: Allah is near and responds to the one who calls",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "B: Heart-Softening Reminders",
+    "series": "heart-reminder",
+    "objective": "shares",
+    "format": "ayah-reflection",
+    "targetDurationSec": 24,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "backlogId": "t001"
+  },
+  "coreInsight": "Al-Baqarah 2:186 says Allah is near and responds to the one who calls upon Him, so we can ask Him directly, today.",
+  "hooks": [
+    {
+      "text": "Feeling unheard?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the ayah answers it."
+    },
+    {
+      "text": "No appointment needed",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Playful, less clear."
+    },
+    {
+      "text": "Make one du'a right now",
+      "angle": "Action",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Better as the takeaway."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Feeling unheard? / This ayah is for you.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Feeling"
+        },
+        {
+          "text": "unheard?",
+          "highlight": true
+        }
+      ],
+      "sub": "This ayah is for you."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 240,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:2:186 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · AL-BAQARAH 2:186",
+      "ref": "quran:2:186",
+      "excerpt": "indeed I am near. I respond to the invocation of the supplicant when he calls upon Me",
+      "arabicExcerpt": "فَإِنِّي قَرِيبٌۖ أُجِيبُ دَعۡوَةَ ٱلدَّاعِ إِذَا دَعَانِۖ"
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 255,
+      "purpose": "Takeaway in practice (our suggestions).",
+      "onScreen": "REFLECTION / Ask in your own words, in any language · Ask for the small things, too · Keep asking, and keep trusting",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "Ask Him"
+        },
+        {
+          "text": "directly.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Ask in your own words, in any language",
+        "Ask for the small things, too",
+        "Keep asking, and keep trusting"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34,
+      "rule": "No go-between needed. Just ask."
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Make one du'a right now. / Send this to someone who needs it",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Make one du'a"
+        },
+        {
+          "text": "right now.",
+          "highlight": true
+        }
+      ],
+      "cta": "Send this to someone who needs it",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "QUR'AN 2:186",
+    "headline": [
+      {
+        "text": "Allah is"
+      },
+      {
+        "text": "near",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "If you feel like no one is listening, sit with Al-Baqarah 2:186 for a moment.",
+    "body": [
+      "A reflection for today:\n→ ask in your own words, in any language\n→ ask for the small things, too\n→ keep asking, and keep trusting"
+    ],
+    "cta": "Send this to someone who needs it today.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Dua",
+      "#Quran",
+      "#Tawakkul"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Send this to someone who needs it"
+  },
+  "claims": [
+    {
+      "text": "What quran:2:186 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:2:186"
+    },
+    {
+      "text": "The three ways to act on the ayah are our reflection.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "Sahih al-Bukhari 6406: two phrases light on the tongue",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "D: Dua & Dhikr",
+    "series": "before-you-scroll",
+    "objective": "saves",
+    "format": "before-you-scroll",
+    "targetDurationSec": 20,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "backlogId": "t011"
+  },
+  "coreInsight": "Sahih al-Bukhari 6406 names two short phrases that are easy on the tongue, heavy in the balance and dear to the Most Merciful.",
+  "hooks": [
+    {
+      "text": "Got ten seconds?",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 5,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Fits the series: a pause before scrolling."
+    },
+    {
+      "text": "Light on the tongue",
+      "angle": "Benefit",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Echoes the hadith; better after it."
+    },
+    {
+      "text": "Two phrases to say today",
+      "angle": "Action",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear but flat."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Got ten seconds? / Spend them on this.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Got ten"
+        },
+        {
+          "text": "seconds?",
+          "highlight": true
+        }
+      ],
+      "sub": "Spend them on this."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 420,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "bukhari:6406 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ SAID",
+      "ref": "bukhari:6406",
+      "excerpt": "There are two expressions which are very easy for the tongue to say, but they are very heavy in the balance and are very dear to The Beneficent (Allah), and they are, 'Subhan Allah Al- `Azim and 'Subhan Allah wa bihamdihi",
+      "arabicExcerpt": "سُبْحَانَ اللَّهِ الْعَظِيمِ، سُبْحَانَ اللَّهِ وَبِحَمْدِهِ"
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Say them before you scroll. / Save this and say them daily",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Say them"
+        },
+        {
+          "text": "before"
+        },
+        {
+          "text": "you scroll.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this and say them daily",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "BEFORE YOU SCROLL",
+    "headline": [
+      {
+        "text": "Two phrases,"
+      },
+      {
+        "text": "ten seconds",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Before the next video: two short phrases.",
+    "body": [
+      "Sahih al-Bukhari 6406: easy on the tongue, heavy in the balance, dear to the Most Merciful.",
+      "Say them now, then once more on your way somewhere today."
+    ],
+    "cta": "Save this and say them daily.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Dhikr",
+      "#Hadith",
+      "#BeforeYouScroll"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this and say them daily"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:6406 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:6406"
+    },
+    {
+      "text": "Saying them before scrolling is our suggestion.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:33:41-42"
+  }
+}

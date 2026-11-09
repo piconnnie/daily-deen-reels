@@ -1,0 +1,207 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "Sahih al-Bukhari 935: the hour on Friday for du'a",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "F: Islamic Calendar & Occasions",
+    "series": null,
+    "objective": "shares",
+    "format": "hadith-practice",
+    "targetDurationSec": 24,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Sahih al-Bukhari 935 mentions a short hour on Friday in which a Muslim praying and asking Allah is given what he asks, so come to Friday with your du'a ready.",
+  "hooks": [
+    {
+      "text": "It's Friday. Have your du'a ready.",
+      "angle": "Timely",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear on the day; the hadith pays it off."
+    },
+    {
+      "text": "An hour you might miss",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 5,
+        "credibility": 4,
+        "comprehension": 4
+      },
+      "notes": "Edges toward fear of missing out."
+    },
+    {
+      "text": "What would you ask for today?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good as a sub-line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "It's Friday. Have your du'a ready. / What would you ask for today?",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "It's Friday."
+        },
+        {
+          "text": "Have your"
+        },
+        {
+          "text": "du'a ready.",
+          "highlight": true
+        }
+      ],
+      "sub": "What would you ask for today?"
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 330,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "bukhari:935 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "ALLAH'S MESSENGER ﷺ SAID",
+      "ref": "bukhari:935",
+      "excerpt": "There is an hour (opportune time) on Friday and if a Muslim gets it while praying and asks something from Allah, then Allah will definitely meet his demand"
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 255,
+      "purpose": "Takeaway in practice (our suggestions).",
+      "onScreen": "TODAY / Write down what you want to ask for · Ask in your salah today · Include someone else in your du'a",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "TODAY",
+      "headline": [
+        {
+          "text": "Come ready"
+        },
+        {
+          "text": "to ask.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Write down what you want to ask for",
+        "Ask in your salah today",
+        "Include someone else in your du'a"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34,
+      "rule": "Specific, sincere, and for others too."
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Ask. Then ask again. / Share it with your family",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Ask."
+        },
+        {
+          "text": "Then ask again.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with your family",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "FRIDAY REMINDER",
+    "headline": [
+      {
+        "text": "Have your du'a"
+      },
+      {
+        "text": "ready",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Jumu'ah Mubarak. Have your du'a ready today.",
+    "body": [
+      "Sahih al-Bukhari 935: an hour on Friday, and the Prophet ﷺ pointed out how short it is.",
+      "Today:\n→ write down what you want to ask for\n→ ask in your salah\n→ include someone else in your du'a"
+    ],
+    "cta": "Share it with your family.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#JumuahMubarak",
+      "#Dua",
+      "#Friday"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with your family"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:935 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:935"
+    },
+    {
+      "text": "The three ways to prepare are our suggestions.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen.",
+    "occasion": "friday"
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:27:62"
+  }
+}

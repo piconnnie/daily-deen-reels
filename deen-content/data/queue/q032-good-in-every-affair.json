@@ -1,0 +1,200 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "Sahih Muslim 2999: good in every affair of the believer",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "B: Heart-Softening Reminders",
+    "series": "heart-reminder",
+    "objective": "shares",
+    "format": "heart-reminder",
+    "targetDurationSec": 24,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "backlogId": "t018"
+  },
+  "coreInsight": "Sahih Muslim 2999: for the believer, gratitude in good times and patience in hard times both turn into good.",
+  "hooks": [
+    {
+      "text": "Good day or hard day?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Everyone is in one of the two; the hadith covers both."
+    },
+    {
+      "text": "Both can be good for you",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good as a sub-line."
+    },
+    {
+      "text": "Strange are the ways of a believer",
+      "angle": "Quote",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Quote belongs in the source scene."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Good day or hard day? / This hadith speaks to both.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Good day"
+        },
+        {
+          "text": "or hard day?",
+          "highlight": true
+        }
+      ],
+      "sub": "This hadith speaks to both."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 420,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "muslim:2999 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "ALLAH'S MESSENGER ﷺ SAID",
+      "ref": "muslim:2999",
+      "excerpt": "for if he has an occasion to feel delight, he thanks (God), thus there is a good for him in it, and if he gets into trouble and shows resignation (and endures it patiently), there is a good for him in it"
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "durationInFrames": 240,
+      "purpose": "Reflection: our words, clearly labelled.",
+      "onScreen": "REFLECTION / Two responses / On a good day: gratitude. On a hard day: patience. Notice which one you are in today, and answer it the way this hadith describes.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "Two responses",
+          "highlight": true
+        }
+      ],
+      "body": [
+        "On a good day: gratitude. On a hard day: patience.",
+        "Notice which one you are in today, and answer it the way this hadith describes."
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Thank in ease. Endure in hardship. / Send this to someone who needs it",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Thank in ease."
+        },
+        {
+          "text": "Endure in"
+        },
+        {
+          "text": "hardship.",
+          "highlight": true
+        }
+      ],
+      "cta": "Send this to someone who needs it",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "SAHIH MUSLIM 2999",
+    "headline": [
+      {
+        "text": "Good in"
+      },
+      {
+        "text": "every affair",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Whatever kind of day you're having, this hadith has a response for it.",
+    "body": [
+      "Sahih Muslim 2999: gratitude in ease, patience in hardship, and good in both for the believer.",
+      "Today: name which one you are in, and answer it."
+    ],
+    "cta": "Send this to someone who needs it today.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Sabr",
+      "#Shukr",
+      "#Hadith"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Send this to someone who needs it"
+  },
+  "claims": [
+    {
+      "text": "What muslim:2999 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "muslim:2999"
+    },
+    {
+      "text": "Naming the kind of day and responding to it is our reflection.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:2:155-156"
+  }
+}
