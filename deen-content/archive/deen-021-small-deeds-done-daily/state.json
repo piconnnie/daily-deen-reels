@@ -1,0 +1,38 @@
+{
+  "id": "deen-021-small-deeds-done-daily",
+  "createdAt": "2026-11-10T07:23:41.433Z",
+  "kind": "reel",
+  "release": {
+    "tag": "reel-deen-021-small-deeds-done-daily",
+    "cover": "deen-021-small-deeds-done-daily.jpg",
+    "contactSheet": "deen-021-small-deeds-done-daily-contact-sheet.png",
+    "video": "deen-021-small-deeds-done-daily.mp4"
+  },
+  "sha256": {
+    "video": "9e8708a5724f7d71da3b0fe6e16cb1e26e7f242285f4bc04d719bd8ddae6d3e3",
+    "cover": "0f66dfc2c382a045f9571b6c65bc01eaebd453ed9c6e6346404c2c315716e777"
+  },
+  "durationSec": 25.5,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 49
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}

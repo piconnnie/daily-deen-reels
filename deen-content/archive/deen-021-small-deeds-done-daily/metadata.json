@@ -1,0 +1,212 @@
+{
+  "contentId": "deen-021-small-deeds-done-daily",
+  "version": 1,
+  "generatedAt": "2026-11-10T07:23:37.644Z",
+  "pillar": "C: Daily Deen & Practical Islam",
+  "format": "habit-checklist",
+  "objective": "saves",
+  "targetAudience": "Muslims looking for a short, authentic reminder they can act on today",
+  "topic": "Consistent small deeds are most loved",
+  "coreInsight": "In Sahih al-Bukhari 6465 the deeds loved most by Allah are the regular, constant ones even if few.",
+  "hookVariants": [
+    {
+      "text": "Small but daily beats big but rare.",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "What's the deed you can keep?",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Small. Daily. Kept.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "Small but daily beats big but rare.",
+  "selectionRationale": "Most relevant and clearest at a glance; the quoted source pays it off immediately.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "Small but daily beats big but rare. / Especially in worship.",
+      "voiceover": null
+    },
+    {
+      "scene": "hadith",
+      "onScreen": "bukhari:6465 (text pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "practice",
+      "onScreen": "START THIS WEEK / Pick one small deed. Keep it. / Two rak'ah of sunnah you can keep every day · One page of Qur'an after Fajr · A daily sadaqah, even a small one",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Small. Daily. Kept. / Save this and pick your deed today",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 360,
+      "startSec": 3,
+      "endSec": 12
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "startFrame": 360,
+      "endFrame": 615,
+      "startSec": 12,
+      "endSec": 20.5
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 615,
+      "endFrame": 765,
+      "startSec": 20.5,
+      "endSec": 25.5
+    }
+  ],
+  "caption": "Big bursts of worship feel great. Small daily ones last.\n\nThe deeds loved most by Allah are the regular ones, even if few (Sahih al-Bukhari 6465).\n\nPick one this week:\n→ two rak'ah of sunnah you can keep every day\n→ one page of Qur'an after Fajr\n→ a daily sadaqah, even a small one\n\nSave this and pick your deed today.\n\n📖 Sources\n• Sahih al-Bukhari 6465 (Sahih, tr. Muhsin Khan) — sunnah.com/bukhari:6465\nFull text: Narrated `Aisha: The Prophet (ﷺ) was asked, \"What deeds are loved most by Allah?\" He said, \"The most regular constant deeds even though they may be few.\" He added, 'Don't take upon yourselves, except the deeds which are within your ability\n• Recitation: Qur'an 99:7 — Mohamed Siddiq Al-Minshawi (Murattal) (EveryAyah.com) — quran.com/99/7\n\n#IslamicReminder #Ibadah #Habits #Hadith",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Ibadah",
+    "#Habits",
+    "#Hadith"
+  ],
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this and pick your deed today"
+  },
+  "coverHeadline": "Small deeds, done daily",
+  "sources": [
+    {
+      "ref": "bukhari:6465",
+      "citation": "Sahih al-Bukhari 6465",
+      "url": "https://sunnah.com/bukhari:6465",
+      "translation": "Muhsin Khan",
+      "grade": "Sahih",
+      "english": "Narrated `Aisha: The Prophet (ﷺ) was asked, \"What deeds are loved most by Allah?\" He said, \"The most regular constant deeds even though they may be few.\" He added, 'Don't take upon yourselves, except the deeds which are within your ability"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What bukhari:6465 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "bukhari:6465"
+    },
+    {
+      "text": "The three example deeds are our suggestions for acting on the hadith.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 25.5,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [
+      "public/audio/deen-021-small-deeds-done-daily-bed.wav"
+    ],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-021-small-deeds-done-daily.mp4",
+    "cover": "output/covers/deen-021-small-deeds-done-daily.png",
+    "caption": "output/captions/deen-021-small-deeds-done-daily.txt",
+    "storyboard": "output/storyboards/deen-021-small-deeds-done-daily.md",
+    "subtitles": "output/storyboards/deen-021-small-deeds-done-daily.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-10T07:23:41.393Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-021-small-deeds-done-daily/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "2026-10-31",
+  "publishNotes": "Evergreen.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
