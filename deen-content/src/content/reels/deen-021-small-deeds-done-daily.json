@@ -1,0 +1,278 @@
+{
+  "id": "deen-021-small-deeds-done-daily",
+  "version": 1,
+  "status": "qa-passed",
+  "kind": "reel",
+  "brief": {
+    "topic": "Consistent small deeds are most loved",
+    "audience": "Muslims looking for a short, authentic reminder they can act on today",
+    "pillar": "C: Daily Deen & Practical Islam",
+    "objective": "saves",
+    "format": "habit-checklist",
+    "targetDurationSec": 26,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "series": null,
+    "queueId": "q022-small-deeds-done-daily",
+    "backlogId": null,
+    "writer": "queue"
+  },
+  "coreInsight": "In Sahih al-Bukhari 6465 the deeds loved most by Allah are the regular, constant ones even if few.",
+  "hooks": [
+    {
+      "text": "Small but daily beats big but rare.",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the source answers it right away."
+    },
+    {
+      "text": "What's the deed you can keep?",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, slightly less direct."
+    },
+    {
+      "text": "Small. Daily. Kept.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Works better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the quoted source pays it off immediately.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Recognition: meet the viewer where they are.",
+      "onScreen": "Small but daily beats big but rare. / Especially in worship.",
+      "storyboard": {
+        "visual": "Headline, highlighted last line; sub-line.",
+        "animation": "Readable on frame 0; underline sweep."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Small"
+        },
+        {
+          "text": "but daily"
+        },
+        {
+          "text": "beats big"
+        },
+        {
+          "text": "but rare.",
+          "highlight": true
+        }
+      ],
+      "sub": "Especially in worship."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 270,
+      "purpose": "The source itself, verbatim, with its reference.",
+      "onScreen": "bukhari:6465 (text pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Framed panel: Arabic (if any), translation; citation pill.",
+        "animation": "Arabic, then translation, then citation."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ WAS ASKED",
+      "ref": "bukhari:6465",
+      "excerpt": "\"What deeds are loved most by Allah?\" He said, \"The most regular constant deeds even though they may be few.\"",
+      "resolved": {
+        "ref": "bukhari:6465",
+        "collection": "bukhari",
+        "collectionName": "Sahih al-Bukhari",
+        "kind": "hadith",
+        "citation": "Sahih al-Bukhari 6465",
+        "url": "https://sunnah.com/bukhari:6465",
+        "arabic": "حَدَّثَنِي مُحَمَّدُ بْنُ عَرْعَرَةَ، حَدَّثَنَا شُعْبَةُ، عَنْ سَعْدِ بْنِ إِبْرَاهِيمَ، عَنْ أَبِي سَلَمَةَ، عَنْ عَائِشَةَ ـ رضى الله عنها ـ أَنَّهَا قَالَتْ سُئِلَ النَّبِيُّ صلى الله عليه وسلم أَىُّ الأَعْمَالِ أَحَبُّ إِلَى اللَّهِ قَالَ \" أَدْوَمُهَا وَإِنْ قَلَّ \". وَقَالَ \" اكْلَفُوا مِنَ الأَعْمَالِ مَا تُطِيقُونَ \".",
+        "english": "Narrated `Aisha: The Prophet (ﷺ) was asked, \"What deeds are loved most by Allah?\" He said, \"The most regular constant deeds even though they may be few.\" He added, 'Don't take upon yourselves, except the deeds which are within your ability",
+        "translation": "Muhsin Khan",
+        "grade": "Sahih",
+        "narrator": "`Aisha"
+      }
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 255,
+      "purpose": "Our reflection: small, concrete actions (our words, not attributed).",
+      "onScreen": "START THIS WEEK / Pick one small deed. Keep it. / Two rak'ah of sunnah you can keep every day · One page of Qur'an after Fajr · A daily sadaqah, even a small one",
+      "storyboard": {
+        "visual": "Numbered list, rule box.",
+        "animation": "Items every 34 frames from 24."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "START THIS WEEK",
+      "headline": [
+        {
+          "text": "Pick one small"
+        },
+        {
+          "text": "deed. Keep it.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Two rak'ah of sunnah you can keep every day",
+        "One page of Qur'an after Fajr",
+        "A daily sadaqah, even a small one"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34,
+      "rule": "Choose what you can keep. Keep what you choose."
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One line to remember + one CTA.",
+      "onScreen": "Small. Daily. Kept. / Save this and pick your deed today",
+      "storyboard": {
+        "visual": "Takeaway lines, CTA pill, end card.",
+        "animation": "Lines rise; CTA at 40; end card at 70."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Small."
+        },
+        {
+          "text": "Daily."
+        },
+        {
+          "text": "Kept.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this and pick your deed today",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "SMALL HABITS",
+    "headline": [
+      {
+        "text": "Small deeds,"
+      },
+      {
+        "text": "done daily",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Big bursts of worship feel great. Small daily ones last.",
+    "body": [
+      "The deeds loved most by Allah are the regular ones, even if few (Sahih al-Bukhari 6465).",
+      "Pick one this week:\n→ two rak'ah of sunnah you can keep every day\n→ one page of Qur'an after Fajr\n→ a daily sadaqah, even a small one"
+    ],
+    "cta": "Save this and pick your deed today.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Ibadah",
+      "#Habits",
+      "#Hadith"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this and pick your deed today"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:6465 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "bukhari:6465"
+    },
+    {
+      "text": "The three example deeds are our suggestions for acting on the hadith.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "2026-10-31",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:99:7",
+    "chosen": "writer",
+    "citation": "Qur'an 99:7",
+    "url": "https://quran.com/99/7",
+    "reciter": "minshawi",
+    "reciterName": "Mohamed Siddiq Al-Minshawi (Murattal)",
+    "folder": "Minshawy_Murattal_128kbps",
+    "source": "EveryAyah.com",
+    "mode": "background",
+    "sceneId": null,
+    "startFrame": 20,
+    "gapSec": 0.25,
+    "totalSec": 8.837,
+    "files": [
+      {
+        "file": "099007.mp3",
+        "url": "https://everyayah.com/data/Minshawy_Murattal_128kbps/099007.mp3",
+        "sha256": "1dcbea946a451eb5cb7b81409928687c262f1d6e4332596564dc5f759836a8a6",
+        "durationSec": 8.837
+      }
+    ]
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "style": {
+    "theme": "ivory",
+    "layout": "framed",
+    "backdrop": "motif",
+    "type": "sans",
+    "motion": "rise",
+    "music": "recitation"
+  },
+  "audio": {
+    "bed": "audio/deen-021-small-deeds-done-daily-bed.wav",
+    "bedVolume": 1,
+    "voiceover": null,
+    "voiceoverVolume": 1
+  },
+  "sources": [
+    {
+      "ref": "bukhari:6465",
+      "citation": "Sahih al-Bukhari 6465",
+      "url": "https://sunnah.com/bukhari:6465",
+      "translation": "Muhsin Khan",
+      "grade": "Sahih",
+      "english": "Narrated `Aisha: The Prophet (ﷺ) was asked, \"What deeds are loved most by Allah?\" He said, \"The most regular constant deeds even though they may be few.\" He added, 'Don't take upon yourselves, except the deeds which are within your ability"
+    }
+  ]
+}

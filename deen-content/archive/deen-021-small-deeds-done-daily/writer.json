@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-10",
+  "writer": "queue",
+  "plan": {
+    "from": "draft",
+    "backlogId": null,
+    "pillar": "C",
+    "pillarName": "C: Daily Deen & Practical Islam",
+    "format": "habit-checklist",
+    "research": false
+  },
+  "reelId": "deen-021-small-deeds-done-daily",
+  "rounds": [],
+  "finalCritic": null,
+  "needsAttention": false,
+  "estimatedCostUsd": 0
+}
