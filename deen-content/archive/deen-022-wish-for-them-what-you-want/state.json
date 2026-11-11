@@ -1,0 +1,38 @@
+{
+  "id": "deen-022-wish-for-them-what-you-want",
+  "createdAt": "2026-11-11T06:29:08.137Z",
+  "kind": "reel",
+  "release": {
+    "tag": "reel-deen-022-wish-for-them-what-you-want",
+    "cover": "deen-022-wish-for-them-what-you-want.jpg",
+    "contactSheet": "deen-022-wish-for-them-what-you-want-contact-sheet.png",
+    "video": "deen-022-wish-for-them-what-you-want.mp4"
+  },
+  "sha256": {
+    "video": "4b359f1d98ce5f379fe634ea931fb7f764875b1ca9a67974f9d8e63e871f5740",
+    "cover": "cfe759cdcdc569eddbb58277567d8344f51a9abd754eead94233f8145e915de2"
+  },
+  "durationSec": 24.5,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 49
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
