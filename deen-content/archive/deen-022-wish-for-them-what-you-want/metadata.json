@@ -1,0 +1,212 @@
+{
+  "contentId": "deen-022-wish-for-them-what-you-want",
+  "version": 1,
+  "generatedAt": "2026-11-11T06:29:03.107Z",
+  "pillar": "E: Islam in Everyday Life",
+  "format": "hadith-practice",
+  "objective": "shares",
+  "targetAudience": "Muslims looking for a short, authentic reminder they can act on today",
+  "topic": "Wishing for others what you wish for yourself",
+  "coreInsight": "Sahih al-Bukhari 13 links faith to wishing for your brother what you like for yourself.",
+  "hookVariants": [
+    {
+      "text": "Happy for them, or jealous?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "Their good isn't your loss.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Wish them what you wish for you.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "Happy for them, or jealous?",
+  "selectionRationale": "Most relevant and clearest at a glance; the quoted source pays it off immediately.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "Happy for them, or jealous? / A quick heart check.",
+      "voiceover": null
+    },
+    {
+      "scene": "hadith",
+      "onScreen": "bukhari:13 (text pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "practice",
+      "onScreen": "TRY THIS TODAY / Wish them what you wish for you. / Congratulate someone sincerely today · Make du'a for a friend by name · Pass on a good opportunity you found",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Their good is not your loss. / Send this to a friend",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 330,
+      "startSec": 3,
+      "endSec": 11
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "startFrame": 330,
+      "endFrame": 585,
+      "startSec": 11,
+      "endSec": 19.5
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 585,
+      "endFrame": 735,
+      "startSec": 19.5,
+      "endSec": 24.5
+    }
+  ],
+  "caption": "When a friend gets the thing you wanted, what's your first feeling?\n\nSahih al-Bukhari 13 ties faith to wishing for your brother what you like for yourself.\n\nTry this today:\n→ congratulate someone sincerely\n→ make du'a for a friend by name\n→ pass on a good opportunity you found\n\nSend this to a friend.\n\n📖 Sources\n• Sahih al-Bukhari 13 (Sahih, tr. Muhsin Khan) — sunnah.com/bukhari:13\nFull text: Narrated Anas: The Prophet (ﷺ) said, \"None of you will have faith till he wishes for his (Muslim) brother what he likes for himself\n• Recitation: Qur'an 49:10 — Abdur-Rahman As-Sudais (EveryAyah.com) — quran.com/49/10\n\n#IslamicReminder #Family #Brotherhood #Hadith",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Family",
+    "#Brotherhood",
+    "#Hadith"
+  ],
+  "primaryCta": {
+    "type": "share",
+    "text": "Send this to a friend"
+  },
+  "coverHeadline": "Wish for them what you want",
+  "sources": [
+    {
+      "ref": "bukhari:13",
+      "citation": "Sahih al-Bukhari 13",
+      "url": "https://sunnah.com/bukhari:13",
+      "translation": "Muhsin Khan",
+      "grade": "Sahih",
+      "english": "Narrated Anas: The Prophet (ﷺ) said, \"None of you will have faith till he wishes for his (Muslim) brother what he likes for himself"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What bukhari:13 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "bukhari:13"
+    },
+    {
+      "text": "Congratulating, making du'a and sharing opportunities are ways to act on the hadith.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 24.5,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [
+      "public/audio/deen-022-wish-for-them-what-you-want-bed.wav"
+    ],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-022-wish-for-them-what-you-want.mp4",
+    "cover": "output/covers/deen-022-wish-for-them-what-you-want.png",
+    "caption": "output/captions/deen-022-wish-for-them-what-you-want.txt",
+    "storyboard": "output/storyboards/deen-022-wish-for-them-what-you-want.md",
+    "subtitles": "output/storyboards/deen-022-wish-for-them-what-you-want.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-11T06:29:08.090Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-022-wish-for-them-what-you-want/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "2026-11-01",
+  "publishNotes": "Evergreen.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}

@@ -1,0 +1,275 @@
+{
+  "id": "deen-022-wish-for-them-what-you-want",
+  "version": 1,
+  "status": "qa-passed",
+  "kind": "reel",
+  "brief": {
+    "topic": "Wishing for others what you wish for yourself",
+    "audience": "Muslims looking for a short, authentic reminder they can act on today",
+    "pillar": "E: Islam in Everyday Life",
+    "objective": "shares",
+    "format": "hadith-practice",
+    "targetDurationSec": 24,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "series": null,
+    "queueId": "q023-wish-for-them",
+    "backlogId": null,
+    "writer": "queue"
+  },
+  "coreInsight": "Sahih al-Bukhari 13 links faith to wishing for your brother what you like for yourself.",
+  "hooks": [
+    {
+      "text": "Happy for them, or jealous?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear in two seconds; the source answers it right away."
+    },
+    {
+      "text": "Their good isn't your loss.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good, slightly less direct."
+    },
+    {
+      "text": "Wish them what you wish for you.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Works better as a takeaway line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the quoted source pays it off immediately.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Recognition: meet the viewer where they are.",
+      "onScreen": "Happy for them, or jealous? / A quick heart check.",
+      "storyboard": {
+        "visual": "Headline, highlighted last line; sub-line.",
+        "animation": "Readable on frame 0; underline sweep."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Happy for"
+        },
+        {
+          "text": "them, or"
+        },
+        {
+          "text": "jealous?",
+          "highlight": true
+        }
+      ],
+      "sub": "A quick heart check."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 240,
+      "purpose": "The source itself, verbatim, with its reference.",
+      "onScreen": "bukhari:13 (text pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Framed panel: Arabic (if any), translation; citation pill.",
+        "animation": "Arabic, then translation, then citation."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ SAID",
+      "ref": "bukhari:13",
+      "excerpt": "None of you will have faith till he wishes for his (Muslim) brother what he likes for himself",
+      "resolved": {
+        "ref": "bukhari:13",
+        "collection": "bukhari",
+        "collectionName": "Sahih al-Bukhari",
+        "kind": "hadith",
+        "citation": "Sahih al-Bukhari 13",
+        "url": "https://sunnah.com/bukhari:13",
+        "arabic": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا يَحْيَى، عَنْ شُعْبَةَ، عَنْ قَتَادَةَ، عَنْ أَنَسٍ ـ رضى الله عنه ـ عَنِ النَّبِيِّ صلى الله عليه وسلم. وَعَنْ حُسَيْنٍ الْمُعَلِّمِ، قَالَ حَدَّثَنَا قَتَادَةُ، عَنْ أَنَسٍ، عَنِ النَّبِيِّ صلى الله عليه وسلم قَالَ \" لا يُؤْمِنُ أَحَدُكُمْ حَتَّى يُحِبَّ لأَخِيهِ مَا يُحِبُّ لِنَفْسِهِ \".",
+        "english": "Narrated Anas: The Prophet (ﷺ) said, \"None of you will have faith till he wishes for his (Muslim) brother what he likes for himself",
+        "translation": "Muhsin Khan",
+        "grade": "Sahih",
+        "narrator": "Anas"
+      }
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 255,
+      "purpose": "Our reflection: small, concrete actions (our words, not attributed).",
+      "onScreen": "TRY THIS TODAY / Wish them what you wish for you. / Congratulate someone sincerely today · Make du'a for a friend by name · Pass on a good opportunity you found",
+      "storyboard": {
+        "visual": "Numbered list, rule box.",
+        "animation": "Items every 34 frames from 24."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "TRY THIS TODAY",
+      "headline": [
+        {
+          "text": "Wish them what"
+        },
+        {
+          "text": "you wish for you.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Congratulate someone sincerely today",
+        "Make du'a for a friend by name",
+        "Pass on a good opportunity you found"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34,
+      "rule": "When their good news stings, make du'a for them."
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One line to remember + one CTA.",
+      "onScreen": "Their good is not your loss. / Send this to a friend",
+      "storyboard": {
+        "visual": "Takeaway lines, CTA pill, end card.",
+        "animation": "Lines rise; CTA at 40; end card at 70."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Their good"
+        },
+        {
+          "text": "is not your"
+        },
+        {
+          "text": "loss.",
+          "highlight": true
+        }
+      ],
+      "cta": "Send this to a friend",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "HEART CHECK",
+    "headline": [
+      {
+        "text": "Wish for them"
+      },
+      {
+        "text": "what you want",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "When a friend gets the thing you wanted, what's your first feeling?",
+    "body": [
+      "Sahih al-Bukhari 13 ties faith to wishing for your brother what you like for yourself.",
+      "Try this today:\n→ congratulate someone sincerely\n→ make du'a for a friend by name\n→ pass on a good opportunity you found"
+    ],
+    "cta": "Send this to a friend.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Family",
+      "#Brotherhood",
+      "#Hadith"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Send this to a friend"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:13 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "bukhari:13"
+    },
+    {
+      "text": "Congratulating, making du'a and sharing opportunities are ways to act on the hadith.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "2026-11-01",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:49:10",
+    "chosen": "writer",
+    "citation": "Qur'an 49:10",
+    "url": "https://quran.com/49/10",
+    "reciter": "sudais",
+    "reciterName": "Abdur-Rahman As-Sudais",
+    "folder": "Abdurrahmaan_As-Sudais_192kbps",
+    "source": "EveryAyah.com",
+    "mode": "background",
+    "sceneId": null,
+    "startFrame": 20,
+    "gapSec": 0.25,
+    "totalSec": 18.599,
+    "files": [
+      {
+        "file": "049010.mp3",
+        "url": "https://everyayah.com/data/Abdurrahmaan_As-Sudais_192kbps/049010.mp3",
+        "sha256": "b7e15d5405dd35fd40d8a28471876a711788b4365d574b0b2080b9ff9818508c",
+        "durationSec": 18.599
+      }
+    ]
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "style": {
+    "theme": "emerald",
+    "layout": "minimal",
+    "backdrop": "border",
+    "type": "serif",
+    "motion": "slide",
+    "music": "recitation"
+  },
+  "audio": {
+    "bed": "audio/deen-022-wish-for-them-what-you-want-bed.wav",
+    "bedVolume": 1,
+    "voiceover": null,
+    "voiceoverVolume": 1
+  },
+  "sources": [
+    {
+      "ref": "bukhari:13",
+      "citation": "Sahih al-Bukhari 13",
+      "url": "https://sunnah.com/bukhari:13",
+      "translation": "Muhsin Khan",
+      "grade": "Sahih",
+      "english": "Narrated Anas: The Prophet (ﷺ) said, \"None of you will have faith till he wishes for his (Muslim) brother what he likes for himself"
+    }
+  ]
+}
