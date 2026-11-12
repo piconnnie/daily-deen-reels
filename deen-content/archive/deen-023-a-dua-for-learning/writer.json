@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-12",
+  "writer": "queue",
+  "plan": {
+    "from": "draft",
+    "backlogId": null,
+    "pillar": "D",
+    "pillarName": "D: Dua & Dhikr",
+    "format": "dua",
+    "research": false
+  },
+  "reelId": "deen-023-a-dua-for-learning",
+  "rounds": [],
+  "finalCritic": null,
+  "needsAttention": false,
+  "estimatedCostUsd": 0
+}
