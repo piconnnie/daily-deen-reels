@@ -1,0 +1,212 @@
+{
+  "contentId": "deen-023-a-dua-for-learning",
+  "version": 1,
+  "generatedAt": "2026-11-12T07:16:34.296Z",
+  "pillar": "D: Dua & Dhikr",
+  "format": "dua",
+  "objective": "saves",
+  "targetAudience": "Muslims looking for a short, authentic reminder they can act on today",
+  "topic": "A du'a for anyone learning",
+  "coreInsight": "Qur'an 20:114 contains a short du'a asking for more knowledge, useful before any study or work.",
+  "hookVariants": [
+    {
+      "text": "A du'a for anyone learning",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "Before you open the book.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Ask for more.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "A du'a for anyone learning",
+  "selectionRationale": "Most relevant and clearest at a glance; the quoted source pays it off immediately.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "A du'a for anyone learning / Before class, work or study.",
+      "voiceover": null
+    },
+    {
+      "scene": "ayah",
+      "onScreen": "quran:20:114 (text pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "moments",
+      "onScreen": "WHEN TO SAY IT / Before studying · Before a hard meeting · When something confuses you",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Ask for more. / Save this du'a",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 660,
+      "startSec": 3,
+      "endSec": 22
+    },
+    {
+      "id": "moments",
+      "type": "cards",
+      "startFrame": 660,
+      "endFrame": 840,
+      "startSec": 22,
+      "endSec": 28
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 840,
+      "endFrame": 990,
+      "startSec": 28,
+      "endSec": 33
+    }
+  ],
+  "caption": "A short du'a to say before you study, work or try to understand something new.\n\nIt's the end of Surah Ta-Ha, ayah 114.\n\nMoments to say it:\n→ before studying\n→ before a hard meeting\n→ when something confuses you\n\nSave this du'a.\n\n📖 Sources\n• Qur'an 20:114 (tr. Saheeh International) — quran.com/20/114\nFull text: So high [above all] is Allah, the Sovereign, the Truth. And, [O Muhammad], do not hasten with [recitation of] the Qur'an before its revelation is completed to you, and say, \"My Lord, increase me in knowledge\n• Recitation: Qur'an 20:114 — Mishary Rashid Alafasy (EveryAyah.com) — quran.com/20/114\n\n#IslamicReminder #Ibadah #Dua #Knowledge",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Ibadah",
+    "#Dua",
+    "#Knowledge"
+  ],
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this du'a"
+  },
+  "coverHeadline": "A du'a for learning",
+  "sources": [
+    {
+      "ref": "quran:20:114",
+      "citation": "Qur'an 20:114",
+      "url": "https://quran.com/20/114",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "So high [above all] is Allah, the Sovereign, the Truth. And, [O Muhammad], do not hasten with [recitation of] the Qur'an before its revelation is completed to you, and say, \"My Lord, increase me in knowledge"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What quran:20:114 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "quran:20:114"
+    },
+    {
+      "text": "Suggested moments to say the du'a are our own suggestions.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 33,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [
+      "public/audio/deen-023-a-dua-for-learning-bed.wav"
+    ],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-023-a-dua-for-learning.mp4",
+    "cover": "output/covers/deen-023-a-dua-for-learning.png",
+    "caption": "output/captions/deen-023-a-dua-for-learning.txt",
+    "storyboard": "output/storyboards/deen-023-a-dua-for-learning.md",
+    "subtitles": "output/storyboards/deen-023-a-dua-for-learning.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-12T07:16:39.919Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-023-a-dua-for-learning/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "2026-10-28",
+  "publishNotes": "Evergreen.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}

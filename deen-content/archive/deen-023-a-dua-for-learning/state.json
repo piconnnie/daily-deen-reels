@@ -1,0 +1,38 @@
+{
+  "id": "deen-023-a-dua-for-learning",
+  "createdAt": "2026-11-12T07:16:40.109Z",
+  "kind": "reel",
+  "release": {
+    "tag": "reel-deen-023-a-dua-for-learning",
+    "cover": "deen-023-a-dua-for-learning.jpg",
+    "contactSheet": "deen-023-a-dua-for-learning-contact-sheet.png",
+    "video": "deen-023-a-dua-for-learning.mp4"
+  },
+  "sha256": {
+    "video": "e083559361faa5185f747c919ab42fc7fc58fddc5173d49b2bb35bd6bfd13daa",
+    "cover": "a5d32329fe0fc8a3f0d8a763dedba78c21a72a227b549b459bd23860d4df44a8"
+  },
+  "durationSec": 33,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 49
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
