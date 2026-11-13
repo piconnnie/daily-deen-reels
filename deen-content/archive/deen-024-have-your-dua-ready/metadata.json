@@ -1,0 +1,212 @@
+{
+  "contentId": "deen-024-have-your-dua-ready",
+  "version": 1,
+  "generatedAt": "2026-11-13T06:51:27.970Z",
+  "pillar": "F: Islamic Calendar & Occasions",
+  "format": "hadith-practice",
+  "objective": "shares",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "Sahih al-Bukhari 935: the hour on Friday for du'a",
+  "coreInsight": "Sahih al-Bukhari 935 mentions a short hour on Friday in which a Muslim praying and asking Allah is given what he asks, so come to Friday with your du'a ready.",
+  "hookVariants": [
+    {
+      "text": "It's Friday. Have your du'a ready.",
+      "angle": "Timely",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "An hour you might miss",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 5,
+        "credibility": 4,
+        "comprehension": 4
+      },
+      "total": 20
+    },
+    {
+      "text": "What would you ask for today?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "It's Friday. Have your du'a ready.",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "It's Friday. Have your du'a ready. / What would you ask for today?",
+      "voiceover": null
+    },
+    {
+      "scene": "hadith",
+      "onScreen": "bukhari:935 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "practice",
+      "onScreen": "TODAY / Write down what you want to ask for · Ask in your salah today · Include someone else in your du'a",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Ask. Then ask again. / Share it with your family",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 420,
+      "startSec": 3,
+      "endSec": 14
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "startFrame": 420,
+      "endFrame": 675,
+      "startSec": 14,
+      "endSec": 22.5
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 675,
+      "endFrame": 840,
+      "startSec": 22.5,
+      "endSec": 28
+    }
+  ],
+  "caption": "Jumu'ah Mubarak. Have your du'a ready today.\n\nSahih al-Bukhari 935: an hour on Friday, and the Prophet ﷺ pointed out how short it is.\n\nToday:\n→ write down what you want to ask for\n→ ask in your salah\n→ include someone else in your du'a\n\nShare it with your family.\n\n📖 Sources\n• Sahih al-Bukhari 935 (Sahih, tr. Muhsin Khan) — sunnah.com/bukhari:935\nFull text: Narrated Abu Huraira: Allah's Messenger (ﷺ) talked about Friday and said, \"There is an hour (opportune time) on Friday and if a Muslim gets it while praying and asks something from Allah, then Allah will definitely meet his demand.\" And he (the Prophet) pointed out the shortness of that time with his hands\n• Recitation: Qur'an 27:62 — Abdul Basit Abdus Samad (Murattal) (EveryAyah.com) — quran.com/27/62\n\n#IslamicReminder #JumuahMubarak #Dua #Friday",
+  "hashtags": [
+    "#IslamicReminder",
+    "#JumuahMubarak",
+    "#Dua",
+    "#Friday"
+  ],
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with your family"
+  },
+  "coverHeadline": "Have your du'a ready",
+  "sources": [
+    {
+      "ref": "bukhari:935",
+      "citation": "Sahih al-Bukhari 935",
+      "url": "https://sunnah.com/bukhari:935",
+      "translation": "Muhsin Khan",
+      "grade": "Sahih",
+      "english": "Narrated Abu Huraira: Allah's Messenger (ﷺ) talked about Friday and said, \"There is an hour (opportune time) on Friday and if a Muslim gets it while praying and asks something from Allah, then Allah will definitely meet his demand.\" And he (the Prophet) pointed out the shortness of that time with his hands"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What bukhari:935 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:935"
+    },
+    {
+      "text": "The three ways to prepare are our suggestions.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 28,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [
+      "public/audio/deen-024-have-your-dua-ready-bed.wav"
+    ],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-024-have-your-dua-ready.mp4",
+    "cover": "output/covers/deen-024-have-your-dua-ready.png",
+    "caption": "output/captions/deen-024-have-your-dua-ready.txt",
+    "storyboard": "output/storyboards/deen-024-have-your-dua-ready.md",
+    "subtitles": "output/storyboards/deen-024-have-your-dua-ready.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-13T06:51:34.962Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-024-have-your-dua-ready/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Evergreen.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}

@@ -1,0 +1,38 @@
+{
+  "id": "deen-024-have-your-dua-ready",
+  "createdAt": "2026-11-13T06:51:35.021Z",
+  "kind": "reel",
+  "release": {
+    "tag": "reel-deen-024-have-your-dua-ready",
+    "cover": "deen-024-have-your-dua-ready.jpg",
+    "contactSheet": "deen-024-have-your-dua-ready-contact-sheet.png",
+    "video": "deen-024-have-your-dua-ready.mp4"
+  },
+  "sha256": {
+    "video": "e799f4f9a7de1a42e4d7eb458644cacf5ce8a45d66cdd3810858665061c47135",
+    "cover": "23cf69691a461e3cf1c0a023fec5443d6b766357851a9101d9d2d39274a03fc5"
+  },
+  "durationSec": 28,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 49
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "id": "deen-024-have-your-dua-ready",
+  "version": 1,
+  "status": "qa-passed",
+  "kind": "reel",
+  "brief": {
+    "topic": "Sahih al-Bukhari 935: the hour on Friday for du'a",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "F: Islamic Calendar & Occasions",
+    "series": null,
+    "objective": "shares",
+    "format": "hadith-practice",
+    "targetDurationSec": 24,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "queueId": "q035-friday-hour",
+    "backlogId": null,
+    "writer": "queue"
+  },
+  "coreInsight": "Sahih al-Bukhari 935 mentions a short hour on Friday in which a Muslim praying and asking Allah is given what he asks, so come to Friday with your du'a ready.",
+  "hooks": [
+    {
+      "text": "It's Friday. Have your du'a ready.",
+      "angle": "Timely",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear on the day; the hadith pays it off."
+    },
+    {
+      "text": "An hour you might miss",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 5,
+        "credibility": 4,
+        "comprehension": 4
+      },
+      "notes": "Edges toward fear of missing out."
+    },
+    {
+      "text": "What would you ask for today?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good as a sub-line."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "It's Friday. Have your du'a ready. / What would you ask for today?",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "It's Friday."
+        },
+        {
+          "text": "Have your"
+        },
+        {
+          "text": "du'a ready.",
+          "highlight": true
+        }
+      ],
+      "sub": "What would you ask for today?"
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 330,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "bukhari:935 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "ALLAH'S MESSENGER ﷺ SAID",
+      "ref": "bukhari:935",
+      "excerpt": "There is an hour (opportune time) on Friday and if a Muslim gets it while praying and asks something from Allah, then Allah will definitely meet his demand",
+      "resolved": {
+        "ref": "bukhari:935",
+        "collection": "bukhari",
+        "collectionName": "Sahih al-Bukhari",
+        "kind": "hadith",
+        "citation": "Sahih al-Bukhari 935",
+        "url": "https://sunnah.com/bukhari:935",
+        "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ، عَنْ مَالِكٍ، عَنْ أَبِي الزِّنَادِ، عَنِ الأَعْرَجِ، عَنْ أَبِي هُرَيْرَةَ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم ذَكَرَ يَوْمَ الْجُمُعَةِ فَقَالَ \" فِيهِ سَاعَةٌ لاَ يُوَافِقُهَا عَبْدٌ مُسْلِمٌ، وَهْوَ قَائِمٌ يُصَلِّي، يَسْأَلُ اللَّهَ تَعَالَى شَيْئًا إِلاَّ أَعْطَاهُ إِيَّاهُ \". وَأَشَارَ بِيَدِهِ يُقَلِّلُهَا.",
+        "english": "Narrated Abu Huraira: Allah's Messenger (ﷺ) talked about Friday and said, \"There is an hour (opportune time) on Friday and if a Muslim gets it while praying and asks something from Allah, then Allah will definitely meet his demand.\" And he (the Prophet) pointed out the shortness of that time with his hands",
+        "translation": "Muhsin Khan",
+        "grade": "Sahih",
+        "narrator": "Abu Huraira"
+      }
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 255,
+      "purpose": "Takeaway in practice (our suggestions).",
+      "onScreen": "TODAY / Write down what you want to ask for · Ask in your salah today · Include someone else in your du'a",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "TODAY",
+      "headline": [
+        {
+          "text": "Come ready"
+        },
+        {
+          "text": "to ask.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Write down what you want to ask for",
+        "Ask in your salah today",
+        "Include someone else in your du'a"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34,
+      "rule": "Specific, sincere, and for others too."
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 165,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Ask. Then ask again. / Share it with your family",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Ask."
+        },
+        {
+          "text": "Then ask again.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with your family",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "FRIDAY REMINDER",
+    "headline": [
+      {
+        "text": "Have your du'a"
+      },
+      {
+        "text": "ready",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Jumu'ah Mubarak. Have your du'a ready today.",
+    "body": [
+      "Sahih al-Bukhari 935: an hour on Friday, and the Prophet ﷺ pointed out how short it is.",
+      "Today:\n→ write down what you want to ask for\n→ ask in your salah\n→ include someone else in your du'a"
+    ],
+    "cta": "Share it with your family.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#JumuahMubarak",
+      "#Dua",
+      "#Friday"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with your family"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:935 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:935"
+    },
+    {
+      "text": "The three ways to prepare are our suggestions.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:27:62",
+    "chosen": "writer",
+    "citation": "Qur'an 27:62",
+    "url": "https://quran.com/27/62",
+    "reciter": "abdulbasit",
+    "reciterName": "Abdul Basit Abdus Samad (Murattal)",
+    "folder": "Abdul_Basit_Murattal_192kbps",
+    "source": "EveryAyah.com",
+    "mode": "background",
+    "sceneId": null,
+    "startFrame": 20,
+    "gapSec": 0.25,
+    "totalSec": 26.624,
+    "files": [
+      {
+        "file": "027062.mp3",
+        "url": "https://everyayah.com/data/Abdul_Basit_Murattal_192kbps/027062.mp3",
+        "sha256": "d8e6f594054df55333abaff436385a59b60089464ddbddfc4ec8521f43ef93bf",
+        "durationSec": 26.624
+      }
+    ]
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "style": {
+    "theme": "dusk",
+    "layout": "framed",
+    "backdrop": "gradient",
+    "type": "sans",
+    "motion": "rise",
+    "music": "recitation"
+  },
+  "audio": {
+    "bed": "audio/deen-024-have-your-dua-ready-bed.wav",
+    "bedVolume": 1,
+    "voiceover": null,
+    "voiceoverVolume": 1
+  },
+  "sources": [
+    {
+      "ref": "bukhari:935",
+      "citation": "Sahih al-Bukhari 935",
+      "url": "https://sunnah.com/bukhari:935",
+      "translation": "Muhsin Khan",
+      "grade": "Sahih",
+      "english": "Narrated Abu Huraira: Allah's Messenger (ﷺ) talked about Friday and said, \"There is an hour (opportune time) on Friday and if a Muslim gets it while praying and asks something from Allah, then Allah will definitely meet his demand.\" And he (the Prophet) pointed out the shortness of that time with his hands"
+    }
+  ]
+}
