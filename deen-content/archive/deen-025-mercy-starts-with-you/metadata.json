@@ -1,0 +1,212 @@
+{
+  "contentId": "deen-025-mercy-starts-with-you",
+  "version": 1,
+  "generatedAt": "2026-11-14T06:29:49.342Z",
+  "pillar": "A: Qur'an & Hadith",
+  "format": "hadith-practice",
+  "objective": "shares",
+  "targetAudience": "Muslims looking for a short, authentic reminder they can act on today",
+  "topic": "Show mercy to receive mercy",
+  "coreInsight": "Sahih al-Bukhari 6013 ties being treated mercifully to being merciful to others.",
+  "hookVariants": [
+    {
+      "text": "Want mercy? Start here.",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "A short hadith with a big ask.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Be merciful, first.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "Want mercy? Start here.",
+  "selectionRationale": "Most relevant and clearest at a glance; the quoted source pays it off immediately.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "Want mercy? Start here. / A short hadith with a big ask.",
+      "voiceover": null
+    },
+    {
+      "scene": "hadith",
+      "onScreen": "bukhari:6013 (text pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "practice",
+      "onScreen": "TRY THIS TODAY / Show mercy first. / Be patient with someone who is slow · Forgive one small wrong without mentioning it · Be gentle with children and animals",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Be merciful, first. / Share this with your family",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 285,
+      "startSec": 3,
+      "endSec": 9.5
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "startFrame": 285,
+      "endFrame": 540,
+      "startSec": 9.5,
+      "endSec": 18
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 540,
+      "endFrame": 690,
+      "startSec": 18,
+      "endSec": 23
+    }
+  ],
+  "caption": "We all hope for mercy. This hadith asks us to start giving it.\n\nSahih al-Bukhari 6013 is one line long and asks a lot of us.\n\nTry this today:\n→ be patient with someone who is slow\n→ forgive one small wrong without mentioning it\n→ be gentle with children and animals\n\nShare this with your family.\n\n📖 Sources\n• Sahih al-Bukhari 6013 (Sahih, tr. Muhsin Khan) — sunnah.com/bukhari:6013\nFull text: Narrated Jarir bin `Abdullah: The Prophet (ﷺ) said, \"He who is not merciful to others, will not be treated mercifully\n• Recitation: Qur'an 21:107 — Mahmoud Khalil Al-Husary (EveryAyah.com) — quran.com/21/107\n\n#IslamicReminder #Sunnah #Mercy #Hadith",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Sunnah",
+    "#Mercy",
+    "#Hadith"
+  ],
+  "primaryCta": {
+    "type": "share",
+    "text": "Share this with your family"
+  },
+  "coverHeadline": "Mercy starts with you",
+  "sources": [
+    {
+      "ref": "bukhari:6013",
+      "citation": "Sahih al-Bukhari 6013",
+      "url": "https://sunnah.com/bukhari:6013",
+      "translation": "Muhsin Khan",
+      "grade": "Sahih",
+      "english": "Narrated Jarir bin `Abdullah: The Prophet (ﷺ) said, \"He who is not merciful to others, will not be treated mercifully"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What bukhari:6013 says, quoted verbatim on screen.",
+      "kind": "source",
+      "ref": "bukhari:6013"
+    },
+    {
+      "text": "Patience, quiet forgiveness and gentleness are ways to act on the hadith.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 23,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [
+      "public/audio/deen-025-mercy-starts-with-you-bed.wav"
+    ],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-025-mercy-starts-with-you.mp4",
+    "cover": "output/covers/deen-025-mercy-starts-with-you.png",
+    "caption": "output/captions/deen-025-mercy-starts-with-you.txt",
+    "storyboard": "output/storyboards/deen-025-mercy-starts-with-you.md",
+    "subtitles": "output/storyboards/deen-025-mercy-starts-with-you.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-14T06:29:55.035Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-025-mercy-starts-with-you/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "2026-11-03",
+  "publishNotes": "Evergreen.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}

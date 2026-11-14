@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-14",
+  "writer": "queue",
+  "plan": {
+    "from": "draft",
+    "backlogId": null,
+    "pillar": "A",
+    "pillarName": "A: Qur'an & Hadith",
+    "format": "hadith-practice",
+    "research": false
+  },
+  "reelId": "deen-025-mercy-starts-with-you",
+  "rounds": [],
+  "finalCritic": null,
+  "needsAttention": false,
+  "estimatedCostUsd": 0
+}

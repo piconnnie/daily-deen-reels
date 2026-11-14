@@ -1,0 +1,38 @@
+{
+  "id": "deen-025-mercy-starts-with-you",
+  "createdAt": "2026-11-14T06:29:55.091Z",
+  "kind": "reel",
+  "release": {
+    "tag": "reel-deen-025-mercy-starts-with-you",
+    "cover": "deen-025-mercy-starts-with-you.jpg",
+    "contactSheet": "deen-025-mercy-starts-with-you-contact-sheet.png",
+    "video": "deen-025-mercy-starts-with-you.mp4"
+  },
+  "sha256": {
+    "video": "f7380039c9c97ebee295ab5ea12d9da7c57f88a963bd1e28680f957bc18e2bf8",
+    "cover": "30b3760c987b5d1d60422659ed5de76aeba50a3d6bfe0fe2c0edd0b1db31e986"
+  },
+  "durationSec": 23,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 49
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
