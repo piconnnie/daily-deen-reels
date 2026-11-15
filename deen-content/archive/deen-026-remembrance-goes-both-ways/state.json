@@ -43,11 +43,11 @@
     "pr": 27
   },
   "publish": {
-    "status": "pending",
-    "mediaId": null,
-    "permalink": null,
-    "publishedAt": null,
-    "attempts": 0,
+    "status": "published",
+    "mediaId": "18386571400236152",
+    "permalink": "https://www.instagram.com/p/Dfw541-Fuab/",
+    "publishedAt": "2026-11-15T13:38:24.517Z",
+    "attempts": 1,
     "lastError": null
   }
 }
