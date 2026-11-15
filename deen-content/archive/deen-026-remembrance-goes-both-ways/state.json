@@ -1,0 +1,52 @@
+{
+  "id": "deen-026-remembrance-goes-both-ways",
+  "createdAt": "2026-11-15T06:39:21.791Z",
+  "kind": "carousel",
+  "release": {
+    "tag": "reel-deen-026-remembrance-goes-both-ways",
+    "cover": "deen-026-remembrance-goes-both-ways.jpg",
+    "contactSheet": "deen-026-remembrance-goes-both-ways-contact-sheet.png",
+    "slides": [
+      "deen-026-remembrance-goes-both-ways-slide-01.jpg",
+      "deen-026-remembrance-goes-both-ways-slide-02.jpg",
+      "deen-026-remembrance-goes-both-ways-slide-03.jpg",
+      "deen-026-remembrance-goes-both-ways-slide-04.jpg",
+      "deen-026-remembrance-goes-both-ways-slide-05.jpg",
+      "deen-026-remembrance-goes-both-ways-slide-06.jpg"
+    ]
+  },
+  "sha256": {
+    "cover": "416fd87ef32ef025c8bce767da7ea3d4461465072c8ca1fceae0b670ab7f7c2f",
+    "slides": [
+      "416fd87ef32ef025c8bce767da7ea3d4461465072c8ca1fceae0b670ab7f7c2f",
+      "b202959456a534fb9071ba611f6b8ee810290b14b9a2ca3d7078b76a7220c488",
+      "505c3e963d3d6f829c0f512ea2e2a0f3fabfda926f9b08ebd4c41b02f08f4cb6",
+      "b0422a179cc73537a8cceabf59623a583034aef002fc0a1381c423b0af9d3e6a",
+      "7498a0efdd04362224422e51f4f64bfeef31985e685e47f211901197f7532035",
+      "8c3b27b3531b53860755ac734cebc91846044bf81126bc1bd8bad6cd2c7e95b0"
+    ]
+  },
+  "durationSec": null,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 30
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
