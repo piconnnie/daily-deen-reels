@@ -1,0 +1,179 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "Sahih Muslim 2626: no good deed is too small",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "C: Daily Deen & Practical Islam",
+    "series": "before-you-scroll",
+    "objective": "reach",
+    "format": "before-you-scroll",
+    "targetDurationSec": 18,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "backlogId": "t008"
+  },
+  "coreInsight": "In Sahih Muslim 2626 the Prophet ﷺ tells us not to consider any good thing insignificant, even meeting your brother with a cheerful face.",
+  "hooks": [
+    {
+      "text": "Think a smile is too small?",
+      "angle": "Challenge",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Short, honest, paid off by the hadith."
+    },
+    {
+      "text": "The easiest good deed today",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Good, more generic."
+    },
+    {
+      "text": "No deed is too small",
+      "angle": "Statement",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Gives the answer away."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Think a smile is too small? / Read this first.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Think a smile"
+        },
+        {
+          "text": "is too"
+        },
+        {
+          "text": "small?",
+          "highlight": true
+        }
+      ],
+      "sub": "Read this first."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 360,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "muslim:2626 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ SAID",
+      "ref": "muslim:2626"
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Greet the next person you see with a smile. / Send this to a friend who smiles",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Greet the next"
+        },
+        {
+          "text": "person you see"
+        },
+        {
+          "text": "with a smile.",
+          "highlight": true
+        }
+      ],
+      "cta": "Send this to a friend who smiles",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "BEFORE YOU SCROLL",
+    "headline": [
+      {
+        "text": "Not too"
+      },
+      {
+        "text": "small",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Before the next video: one small good deed.",
+    "body": [
+      "Sahih Muslim 2626: don't consider any good thing insignificant, even meeting your brother with a cheerful face.",
+      "Greet the next person you see, at home, at work or online, with warmth."
+    ],
+    "cta": "Send this to someone who brightens your day.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Hadith",
+      "#BeforeYouScroll",
+      "#GoodDeeds"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Send this to a friend who smiles"
+  },
+  "claims": [
+    {
+      "text": "What muslim:2626 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "muslim:2626"
+    },
+    {
+      "text": "Greeting the next person with a smile is our suggestion.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:17:53"
+  }
+}

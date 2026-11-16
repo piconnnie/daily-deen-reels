@@ -1,0 +1,175 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "Al-Furqan 25:63: answering harshness with peace",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "A: Qur'an & Hadith",
+    "series": "before-you-scroll",
+    "objective": "reach",
+    "format": "before-you-scroll",
+    "targetDurationSec": 20,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Al-Furqan 25:63 describes the servants of the Most Merciful: they walk on the earth easily, and when the ignorant address them harshly, they answer with words of peace.",
+  "hooks": [
+    {
+      "text": "Before you reply to that comment…",
+      "angle": "Timely",
+      "scores": {
+        "specificity": 5,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Meets the viewer exactly where they are."
+    },
+    {
+      "text": "Not every comment needs a comeback",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Good; a little preachy."
+    },
+    {
+      "text": "How the servants of the Most Merciful reply",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 3
+      },
+      "notes": "Too long for the first frame."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Before you reply to that comment… / Read this ayah first.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Before you"
+        },
+        {
+          "text": "reply to"
+        },
+        {
+          "text": "that comment…",
+          "highlight": true
+        }
+      ],
+      "sub": "Read this ayah first."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 300,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:25:63 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · AL-FURQAN 25:63",
+      "ref": "quran:25:63"
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Answer with peace, or let it go. / Save this for the next heated thread",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Answer with"
+        },
+        {
+          "text": "peace, or"
+        },
+        {
+          "text": "let it go.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this for the next heated thread",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "BEFORE YOU SCROLL",
+    "headline": [
+      {
+        "text": "Before you"
+      },
+      {
+        "text": "reply",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Before you reply to that comment, read this.",
+    "body": [
+      "Al-Furqan 25:63 describes the servants of the Most Merciful: when the ignorant address them harshly, they say words of peace.",
+      "Next heated thread: answer with peace, or let it go."
+    ],
+    "cta": "Save this for the next heated thread.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Quran",
+      "#BeforeYouScroll",
+      "#Akhlaq"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this for the next heated thread"
+  },
+  "claims": [
+    {
+      "text": "What quran:25:63 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:25:63"
+    },
+    {
+      "text": "Applying the ayah to online replies is our reflection.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

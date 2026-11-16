@@ -1,0 +1,201 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "Yusuf 12:86: taking your grief to Allah",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "B: Heart-Softening Reminders",
+    "series": "heart-reminder",
+    "objective": "shares",
+    "format": "heart-reminder",
+    "targetDurationSec": 25,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "In Yusuf 12:86, Ya'qub says he complains of his suffering and grief only to Allah: the grief we can't explain to people can still be taken to Him.",
+  "hooks": [
+    {
+      "text": "Some grief is hard to explain…",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Names a real feeling; the ayah answers it directly."
+    },
+    {
+      "text": "Who do you tell when it hurts?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Good, slightly less specific."
+    },
+    {
+      "text": "Grief has an address.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 5,
+        "credibility": 4,
+        "comprehension": 3
+      },
+      "notes": "Intriguing but needs a second read."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Some grief is hard to explain… / Ya'qub's words in the Qur'an.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Some grief"
+        },
+        {
+          "text": "is hard"
+        },
+        {
+          "text": "to explain…",
+          "highlight": true
+        }
+      ],
+      "sub": "Ya'qub's words in the Qur'an."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 300,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:12:86 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · YUSUF 12:86",
+      "ref": "quran:12:86"
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "durationInFrames": 255,
+      "purpose": "Reflection: our words, clearly labelled.",
+      "onScreen": "REFLECTION / Take it to Allah first. / Ya'qub's grief for his son was long and deep. In this ayah he says he brings his complaint to Allah. You don't need the right words. Tell Him what you can't tell anyone else, in your own language.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "Take it to"
+        },
+        {
+          "text": "Allah first.",
+          "highlight": true
+        }
+      ],
+      "body": [
+        "Ya'qub's grief for his son was long and deep. In this ayah he says he brings his complaint to Allah.",
+        "You don't need the right words. Tell Him what you can't tell anyone else, in your own language."
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Tell Allah what hurts today. / Share it with someone who is grieving",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Tell Allah"
+        },
+        {
+          "text": "what hurts"
+        },
+        {
+          "text": "today.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with someone who is grieving",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "A REMINDER YOUR HEART NEEDS",
+    "headline": [
+      {
+        "text": "For the grief"
+      },
+      {
+        "text": "no one sees",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Some grief is hard to explain, even to the people closest to you.",
+    "body": [
+      "In Yusuf 12:86, Ya'qub says he complains of his suffering and his grief to Allah.",
+      "Tonight, in your own words and your own language, tell Allah what you couldn't tell anyone else."
+    ],
+    "cta": "Share it with someone who may be grieving quietly.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Quran",
+      "#Sabr",
+      "#Dua"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with someone who is grieving"
+  },
+  "claims": [
+    {
+      "text": "What quran:12:86 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:12:86"
+    },
+    {
+      "text": "Bringing what we can't explain to people to Allah in du'a is our reflection on the ayah.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

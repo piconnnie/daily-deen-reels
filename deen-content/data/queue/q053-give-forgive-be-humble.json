@@ -1,0 +1,240 @@
+{
+  "kind": "carousel",
+  "brief": {
+    "topic": "Sahih Muslim 2588: charity, forgiveness and humility",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "E: Islam in Everyday Life",
+    "series": null,
+    "objective": "shares",
+    "format": "hadith-explained",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Sahih Muslim 2588: charity does not decrease wealth, forgiving increases honour, and humbling oneself for Allah raises one's status.",
+  "hooks": [
+    {
+      "text": "Three things that feel like losing, but aren't",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 5,
+        "relevance": 5,
+        "curiosity": 5,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Strong tension; the hadith resolves it."
+    },
+    {
+      "text": "Give. Forgive. Stay humble.",
+      "angle": "Statement",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Good as the takeaway."
+    },
+    {
+      "text": "Does forgiving make you look weak?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Covers only one of the three."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Three things that feel like losing, but aren't. / A hadith, explained simply.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Three things"
+        },
+        {
+          "text": "that feel"
+        },
+        {
+          "text": "like losing,"
+        },
+        {
+          "text": "but aren't.",
+          "highlight": true
+        }
+      ],
+      "sub": "A hadith, explained simply."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "muslim:2588 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "ALLAH'S MESSENGER ﷺ SAID",
+      "ref": "muslim:2588"
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "durationInFrames": 150,
+      "purpose": "Reflection: our words, clearly labelled.",
+      "onScreen": "REFLECTION / What it teaches / Giving can feel like having less. Forgiving can feel like losing face. Humility can feel like being overlooked. This hadith turns each one around.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "What it teaches",
+          "highlight": true
+        }
+      ],
+      "body": [
+        "Giving can feel like having less. Forgiving can feel like losing face. Humility can feel like being overlooked.",
+        "This hadith turns each one around."
+      ]
+    },
+    {
+      "id": "moments",
+      "type": "cards",
+      "durationInFrames": 150,
+      "purpose": "Our suggestions, clearly ours.",
+      "onScreen": "IN PRACTICE / Give something, even small · Let one grudge go · Let someone else get credit",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "IN PRACTICE",
+      "headline": [
+        {
+          "text": "One of each,"
+        },
+        {
+          "text": "this week.",
+          "highlight": true
+        }
+      ],
+      "enter": "pop",
+      "popStart": 12,
+      "popStagger": 16,
+      "cards": [
+        {
+          "text": "Give something, even small",
+          "status": "pass",
+          "tag": "GIVE"
+        },
+        {
+          "text": "Let one grudge go",
+          "status": "pass",
+          "tag": "FORGIVE"
+        },
+        {
+          "text": "Let someone else get credit",
+          "status": "pass",
+          "tag": "HUMILITY"
+        }
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Give. Forgive. Stay humble. / Share it with someone you love",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Give. Forgive."
+        },
+        {
+          "text": "Stay humble.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with someone you love",
+      "ctaAt": 10,
+      "endCardAt": 20
+    }
+  ],
+  "cover": {
+    "kicker": "HADITH EXPLAINED",
+    "headline": [
+      {
+        "text": "Give, forgive,"
+      },
+      {
+        "text": "stay humble",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Three things that can feel like losing, but aren't.",
+    "body": [
+      "Sahih Muslim 2588: charity does not decrease wealth, forgiving increases honour, and humbling yourself for Allah raises your status.",
+      "Swipe for one way to practise each this week."
+    ],
+    "cta": "Share it with someone you love.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Hadith",
+      "#Akhlaq",
+      "#Forgiveness"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with someone you love"
+  },
+  "claims": [
+    {
+      "text": "What muslim:2588 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "muslim:2588"
+    },
+    {
+      "text": "The explanation and practice cards are our own reflection on the hadith.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

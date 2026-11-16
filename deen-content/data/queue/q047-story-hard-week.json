@@ -1,0 +1,131 @@
+{
+  "kind": "story",
+  "brief": {
+    "topic": "What helped you through a hard week?",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "B: Heart-Softening Reminders",
+    "series": null,
+    "objective": "replies",
+    "format": "story-question",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "A gentle question so followers can share what helped them through a difficult week.",
+  "hooks": [
+    {
+      "text": "What helped you through a hard week?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Open, kind, easy to answer."
+    },
+    {
+      "text": "How are you, really?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 3,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Warm but hard to answer publicly."
+    },
+    {
+      "text": "Share what got you through",
+      "angle": "Invitation",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Fine, less personal."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "question",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "What helped you through a hard week? / Your answer may help others.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "What helped"
+        },
+        {
+          "text": "you through"
+        },
+        {
+          "text": "a hard"
+        },
+        {
+          "text": "week?",
+          "highlight": true
+        }
+      ],
+      "sub": "Your answer may help others."
+    }
+  ],
+  "cover": {
+    "kicker": "YOUR ANSWERS",
+    "headline": [
+      {
+        "text": "Through a"
+      },
+      {
+        "text": "hard week",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "What helped you through a hard week?",
+    "body": [
+      "A du'a, a person, a habit, a walk after Fajr."
+    ],
+    "cta": "Reply and help someone else.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Sabr",
+      "#DailyDeen"
+    ]
+  },
+  "primaryCta": {
+    "type": "question",
+    "text": "Reply: what helped you through it?"
+  },
+  "claims": [
+    {
+      "text": "This is a question to followers, not a teaching.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "replyPrompt": "Reply: what helped you through it?"
+}

@@ -1,0 +1,134 @@
+{
+  "kind": "story",
+  "brief": {
+    "topic": "Friday reset: closing the week well",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "F: Islamic Calendar & Occasions",
+    "series": null,
+    "objective": "replies",
+    "format": "story-check-in",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "A short Friday check-in to close the week: istighfar, letting go, a call home and one intention for next week.",
+  "hooks": [
+    {
+      "text": "Close the week well",
+      "angle": "Invitation",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Calm and practical."
+    },
+    {
+      "text": "A Friday reset",
+      "angle": "Name",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Good headline, less clear."
+    },
+    {
+      "text": "How did this week go?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Vague."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and gentle; invites a check-in without guilt.",
+  "scenes": [
+    {
+      "id": "check",
+      "type": "checklist",
+      "durationInFrames": 150,
+      "purpose": "The check-in.",
+      "onScreen": "FRIDAY RESET / Did I make istighfar for this week? · Is there someone I need to forgive? · Did I call or message my family? · What is one intention for next week?",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "FRIDAY RESET",
+      "headline": [
+        {
+          "text": "Close the"
+        },
+        {
+          "text": "week well.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Did I make istighfar for this week?",
+        "Is there someone I need to forgive?",
+        "Did I call or message my family?",
+        "What is one intention for next week?"
+      ],
+      "itemStart": 10,
+      "itemStagger": 10,
+      "transitionIn": "fade-up"
+    }
+  ],
+  "cover": {
+    "kicker": "FRIDAY RESET",
+    "headline": [
+      {
+        "text": "Close the"
+      },
+      {
+        "text": "week well",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Jumu'ah Mubarak. A quiet reset before the new week.",
+    "body": [
+      "Istighfar · forgiveness · family · one intention."
+    ],
+    "cta": "Reply with your intention for next week.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#JumuahMubarak",
+      "#DailyDeen"
+    ]
+  },
+  "primaryCta": {
+    "type": "question",
+    "text": "Reply: your one intention for next week?"
+  },
+  "claims": [
+    {
+      "text": "The check-in questions are our own prompts.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen.",
+    "occasion": "friday"
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "replyPrompt": "Reply: your one intention for next week?"
+}

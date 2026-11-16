@@ -1,0 +1,246 @@
+{
+  "kind": "carousel",
+  "brief": {
+    "topic": "Sahih al-Bukhari 883: getting ready for Jumu'ah",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "F: Islamic Calendar & Occasions",
+    "series": "daily-check-in",
+    "objective": "saves",
+    "format": "check-in",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Sahih al-Bukhari 883 describes how to come to Jumu'ah: bathe, purify, use oil or perfume, don't separate two people, pray what is written for you, and listen quietly to the khutbah.",
+  "hooks": [
+    {
+      "text": "How do you arrive at Jumu'ah?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "A gentle self-check tied to the day."
+    },
+    {
+      "text": "Jumu'ah, step by step",
+      "angle": "Practical",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear, less personal."
+    },
+    {
+      "text": "Rushing in late again?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Risks sounding like a telling-off."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and gentle; invites a check-in without guilt.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "How do you arrive at Jumu'ah? / A Friday check-in.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "How do you"
+        },
+        {
+          "text": "arrive at"
+        },
+        {
+          "text": "Jumu'ah?",
+          "highlight": true
+        }
+      ],
+      "sub": "A Friday check-in."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "bukhari:883 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ SAID",
+      "ref": "bukhari:883",
+      "excerpt": "Whoever takes a bath on Friday, purifies himself as much as he can, then uses his (hair) oil or perfumes himself with the scent of his house, then proceeds (for the Jumua prayer)"
+    },
+    {
+      "id": "hadith2",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "bukhari:883 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE HADITH CONTINUES",
+      "ref": "bukhari:883",
+      "excerpt": "and does not separate two persons sitting together (in the mosque), then prays as much as (Allah has) written for him and then remains silent while the Imam is delivering the Khutba, his sins in-between the present and the last Friday would be forgiven"
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 150,
+      "purpose": "Takeaway in practice (our suggestions).",
+      "onScreen": "CHECK-IN / Did I bathe and prepare, not just rush? · Did I wear something clean and smell good? · Did I find a space without squeezing between people? · Did I pray before the khutbah began? · Did I listen with my phone away?",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "CHECK-IN",
+      "headline": [
+        {
+          "text": "Before"
+        },
+        {
+          "text": "Jumu'ah.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Did I bathe and prepare, not just rush?",
+        "Did I wear something clean and smell good?",
+        "Did I find a space without squeezing between people?",
+        "Did I pray before the khutbah began?",
+        "Did I listen with my phone away?"
+      ],
+      "itemStart": 10,
+      "itemStagger": 10
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "durationInFrames": 150,
+      "purpose": "Reflection: our words, clearly labelled.",
+      "onScreen": "REFLECTION / Why it matters / This hadith turns Jumu'ah into something we prepare for, not something we squeeze in. Pick the one step you usually skip, and give it attention this Friday.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "Why it matters",
+          "highlight": true
+        }
+      ],
+      "body": [
+        "This hadith turns Jumu'ah into something we prepare for, not something we squeeze in.",
+        "Pick the one step you usually skip, and give it attention this Friday."
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Prepare for it. Then be present. / Save this for next Friday",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Prepare for it."
+        },
+        {
+          "text": "Then be"
+        },
+        {
+          "text": "present.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this for next Friday",
+      "ctaAt": 10,
+      "endCardAt": 20
+    }
+  ],
+  "cover": {
+    "kicker": "A MUSLIM'S DAILY CHECK-IN",
+    "headline": [
+      {
+        "text": "Getting ready"
+      },
+      {
+        "text": "for Jumu'ah",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Jumu'ah Mubarak. How do you usually arrive at Jumu'ah?",
+    "body": [
+      "Sahih al-Bukhari 883 describes coming to Jumu'ah prepared: bathing, purifying, perfume, not separating two people, praying, then listening quietly to the khutbah.",
+      "Swipe for five check-in questions, and pick the one you usually skip."
+    ],
+    "cta": "Save this for next Friday.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#JumuahMubarak",
+      "#Friday",
+      "#Hadith"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this for next Friday"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:883 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:883"
+    },
+    {
+      "text": "The check-in questions and reflection are our own.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen.",
+    "occasion": "friday"
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

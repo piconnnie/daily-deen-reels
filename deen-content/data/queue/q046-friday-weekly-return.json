@@ -1,0 +1,202 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "Sahih Muslim 233a: the five prayers and Friday to Friday",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "F: Islamic Calendar & Occasions",
+    "series": "heart-reminder",
+    "objective": "shares",
+    "format": "heart-reminder",
+    "targetDurationSec": 25,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Sahih Muslim 233a says the five prayers and one Friday prayer to the next are an expiation for what is between them, if major sins are avoided: each week has a place to return to.",
+  "hooks": [
+    {
+      "text": "It's Friday. Come back.",
+      "angle": "Invitation",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Warm and short; fits the day."
+    },
+    {
+      "text": "Rough week?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Relatable, but less tied to Friday."
+    },
+    {
+      "text": "A weekly return",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Better as the reflection headline."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "It's Friday. Come back. / However this week went.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "It's Friday."
+        },
+        {
+          "text": "Come back.",
+          "highlight": true
+        }
+      ],
+      "sub": "However this week went."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 420,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "muslim:233a (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE MESSENGER OF ALLAH ﷺ SAID",
+      "ref": "muslim:233a"
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "durationInFrames": 255,
+      "purpose": "Reflection: our words, clearly labelled.",
+      "onScreen": "REFLECTION / A weekly return. / This hadith links the five daily prayers and Jumu'ah, week after week. A week of slips doesn't have to keep you away. Turn back to Allah, and come to Jumu'ah today.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "A weekly"
+        },
+        {
+          "text": "return.",
+          "highlight": true
+        }
+      ],
+      "body": [
+        "This hadith links the five daily prayers and Jumu'ah, week after week.",
+        "A week of slips doesn't have to keep you away. Turn back to Allah, and come to Jumu'ah today."
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Make istighfar. Then go to Jumu'ah. / Share it with a friend this Friday",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Make istighfar."
+        },
+        {
+          "text": "Then go to"
+        },
+        {
+          "text": "Jumu'ah.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with a friend this Friday",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "FRIDAY REMINDER",
+    "headline": [
+      {
+        "text": "Friday to"
+      },
+      {
+        "text": "Friday",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Jumu'ah Mubarak. However this week went, today is a day to come back.",
+    "body": [
+      "Sahih Muslim 233a links the five daily prayers and one Friday prayer to the next.",
+      "Today: make istighfar for the week behind you, then come to Jumu'ah."
+    ],
+    "cta": "Share it with a friend this Friday.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#JumuahMubarak",
+      "#Friday",
+      "#Hadith"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with a friend this Friday"
+  },
+  "claims": [
+    {
+      "text": "What muslim:233a says, quoted verbatim.",
+      "kind": "source",
+      "ref": "muslim:233a"
+    },
+    {
+      "text": "Treating each Friday as a weekly return to Allah, with istighfar, is our reflection on the hadith.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen.",
+    "occasion": "friday"
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:11:114"
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "Sahih al-Bukhari 6015: kindness to neighbours",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "E: Islam in Everyday Life",
+    "series": null,
+    "objective": "shares",
+    "format": "hadith-practice",
+    "targetDurationSec": 25,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "backlogId": "t015"
+  },
+  "coreInsight": "In Sahih al-Bukhari 6015 the Prophet ﷺ says Gabriel kept recommending kindness to neighbours so often that he thought they would be made heirs.",
+  "hooks": [
+    {
+      "text": "Do you know your neighbour's name?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 5,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Concrete and a little uncomfortable, in a good way."
+    },
+    {
+      "text": "The people next door matter",
+      "angle": "Statement",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "True but flat."
+    },
+    {
+      "text": "Recommended again and again",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 5,
+        "credibility": 4,
+        "comprehension": 3
+      },
+      "notes": "Unclear without context."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Do you know your neighbour's name? / This hadith is worth a pause.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Do you know"
+        },
+        {
+          "text": "your"
+        },
+        {
+          "text": "neighbour's"
+        },
+        {
+          "text": "name?",
+          "highlight": true
+        }
+      ],
+      "sub": "This hadith is worth a pause."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 400,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "bukhari:6015 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "ALLAH'S MESSENGER ﷺ SAID",
+      "ref": "bukhari:6015"
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 255,
+      "purpose": "Takeaway in practice (our suggestions).",
+      "onScreen": "TRY THIS WEEK / Greet them by name, or ask it · Share a plate of whatever you cook · Keep the noise and the parking kind",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "TRY THIS WEEK",
+      "headline": [
+        {
+          "text": "Start with"
+        },
+        {
+          "text": "next door.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Greet them by name, or ask it",
+        "Share a plate of whatever you cook",
+        "Keep the noise and the parking kind"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34,
+      "rule": "Small, kind and regular."
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Be the neighbour you'd want. / Share it with your family",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Be the"
+        },
+        {
+          "text": "neighbour"
+        },
+        {
+          "text": "you'd want.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with your family",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "YOUR NEIGHBOUR",
+    "headline": [
+      {
+        "text": "The people"
+      },
+      {
+        "text": "next door",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "How well do you know the people next door?",
+    "body": [
+      "Sahih al-Bukhari 6015: Gabriel kept recommending kindness to neighbours, so much that the Prophet ﷺ thought they would be made heirs.",
+      "Try this week:\n→ greet them by name, or ask it\n→ share a plate of whatever you cook\n→ keep the noise and the parking kind"
+    ],
+    "cta": "Share it with your family.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Hadith",
+      "#Neighbours",
+      "#Akhlaq"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with your family"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:6015 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:6015"
+    },
+    {
+      "text": "The three ways to be a good neighbour are our suggestions.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:16:90"
+  }
+}

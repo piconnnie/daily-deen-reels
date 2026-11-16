@@ -1,0 +1,267 @@
+{
+  "kind": "carousel",
+  "brief": {
+    "topic": "Sahih Muslim 1009: charity due on every joint, every day",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "A: Qur'an & Hadith",
+    "series": null,
+    "objective": "saves",
+    "format": "hadith-explained",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "backlogId": "t014"
+  },
+  "coreInsight": "Sahih Muslim 1009 lists everyday acts as sadaqah: justice between two people, helping someone with their load, a good word, steps to prayer and removing harm from the way.",
+  "hooks": [
+    {
+      "text": "Sadaqah without spending a penny",
+      "angle": "Benefit",
+      "scores": {
+        "specificity": 5,
+        "relevance": 5,
+        "curiosity": 5,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Specific and true to the hadith."
+    },
+    {
+      "text": "Your body owes charity daily",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 5,
+        "credibility": 4,
+        "comprehension": 4
+      },
+      "notes": "Accurate but can read as heavy."
+    },
+    {
+      "text": "Five charities you can give today",
+      "angle": "List",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Good subtitle."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Sadaqah without spending a penny. / A hadith, explained simply.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Sadaqah"
+        },
+        {
+          "text": "without"
+        },
+        {
+          "text": "spending"
+        },
+        {
+          "text": "a penny.",
+          "highlight": true
+        }
+      ],
+      "sub": "A hadith, explained simply."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "muslim:1009 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "ALLAH'S MESSENGER ﷺ SAID",
+      "ref": "muslim:1009",
+      "excerpt": "Sadaqa is due on every joint of a person, every day the sun rises. Administering of justice between two men is also a Sadaqa. And assisting a man to ride upon his beast, or helping him load his luggage upon it, is a Sadaqa"
+    },
+    {
+      "id": "hadith2",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "muslim:1009 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE HADITH CONTINUES",
+      "ref": "muslim:1009",
+      "excerpt": "and a good word is a Sadaqa; and every step that you take towards prayer is a Sadaqa, and removing of harmful things from the pathway is a Sadaqa"
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "durationInFrames": 150,
+      "purpose": "Reflection: our words, clearly labelled.",
+      "onScreen": "REFLECTION / What it teaches / This hadith widens what sadaqah means. Every day the sun rises, there is charity due, and ordinary acts count. Fairness, a helping hand, a good word, walking to prayer, clearing the way: all of them appear in the hadith.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "What it teaches",
+          "highlight": true
+        }
+      ],
+      "body": [
+        "This hadith widens what sadaqah means. Every day the sun rises, there is charity due, and ordinary acts count.",
+        "Fairness, a helping hand, a good word, walking to prayer, clearing the way: all of them appear in the hadith."
+      ]
+    },
+    {
+      "id": "moments",
+      "type": "cards",
+      "durationInFrames": 150,
+      "purpose": "Our suggestions, clearly ours.",
+      "onScreen": "TODAY / Settle a dispute fairly · Carry something for someone · Say one good word · Walk to your next salah · Clear harm from the path",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "TODAY",
+      "headline": [
+        {
+          "text": "Five ways"
+        },
+        {
+          "text": "to give.",
+          "highlight": true
+        }
+      ],
+      "enter": "pop",
+      "popStart": 12,
+      "popStagger": 16,
+      "cards": [
+        {
+          "text": "Settle a dispute fairly",
+          "status": "pass",
+          "tag": "FAIRNESS"
+        },
+        {
+          "text": "Carry something for someone",
+          "status": "pass",
+          "tag": "HELP"
+        },
+        {
+          "text": "Say one good word",
+          "status": "pass",
+          "tag": "SPEECH"
+        },
+        {
+          "text": "Walk to your next salah",
+          "status": "pass",
+          "tag": "PRAYER"
+        },
+        {
+          "text": "Clear harm from the path",
+          "status": "pass",
+          "tag": "PATH"
+        }
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Give one of these today. / Save this list for tomorrow",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Give one of"
+        },
+        {
+          "text": "these today.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this list for tomorrow",
+      "ctaAt": 10,
+      "endCardAt": 20
+    }
+  ],
+  "cover": {
+    "kicker": "HADITH EXPLAINED",
+    "headline": [
+      {
+        "text": "Charity with"
+      },
+      {
+        "text": "no money",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Charity is not only money.",
+    "body": [
+      "Sahih Muslim 1009 names everyday acts as sadaqah: fairness between two people, helping someone with their load, a good word, every step to prayer, and removing harm from the way.",
+      "Swipe for five ways to give one today."
+    ],
+    "cta": "Save this list for tomorrow.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Hadith",
+      "#Sadaqah",
+      "#DailyDeen"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this list for tomorrow"
+  },
+  "claims": [
+    {
+      "text": "What muslim:1009 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "muslim:1009"
+    },
+    {
+      "text": "The explanation and the five practice cards are our own reflection on the hadith.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

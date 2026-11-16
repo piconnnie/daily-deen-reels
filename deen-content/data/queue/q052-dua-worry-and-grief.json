@@ -1,0 +1,219 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "Sahih al-Bukhari 6369: seeking refuge from worry and grief",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "D: Dua & Dhikr",
+    "series": "dua-of-the-day",
+    "objective": "saves",
+    "format": "dua",
+    "targetDurationSec": 28,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "In Sahih al-Bukhari 6369 the Prophet ﷺ used to seek refuge with Allah from worry and grief, incapacity and laziness, cowardice and miserliness, heavy debt and being overpowered.",
+  "hooks": [
+    {
+      "text": "A du'a for an anxious mind",
+      "angle": "Benefit",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Honest; the du'a names worry and grief directly."
+    },
+    {
+      "text": "Worried about everything lately?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Relatable, slightly heavier."
+    },
+    {
+      "text": "He ﷺ used to say this",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 5,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Intriguing but vague."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "A du'a for an anxious mind. / The Prophet ﷺ used to say it.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "A du'a for"
+        },
+        {
+          "text": "an anxious"
+        },
+        {
+          "text": "mind.",
+          "highlight": true
+        }
+      ],
+      "sub": "The Prophet ﷺ used to say it."
+    },
+    {
+      "id": "dua",
+      "type": "source",
+      "durationInFrames": 420,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "bukhari:6369 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "HE ﷺ USED TO SAY",
+      "ref": "bukhari:6369",
+      "excerpt": "O Allah! I seek refuge with You from worry and grief, from incapacity and laziness, from cowardice and miserliness, from being heavily in debt and from being overpowered by (other) men",
+      "arabicExcerpt": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَالْعَجْزِ وَالْكَسَلِ، وَالْجُبْنِ وَالْبُخْلِ، وَضَلَعِ الدَّيْنِ، وَغَلَبَةِ الرِّجَالِ"
+    },
+    {
+      "id": "moments",
+      "type": "cards",
+      "durationInFrames": 180,
+      "purpose": "Our suggestions, clearly ours.",
+      "onScreen": "WHEN TO SAY IT / When worry keeps you awake · When a task feels too big · After your salah",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "WHEN TO SAY IT",
+      "headline": [
+        {
+          "text": "Say it when"
+        },
+        {
+          "text": "it builds up.",
+          "highlight": true
+        }
+      ],
+      "enter": "pop",
+      "popStart": 12,
+      "popStagger": 16,
+      "cards": [
+        {
+          "text": "When worry keeps you awake",
+          "status": "pass",
+          "tag": "NIGHT"
+        },
+        {
+          "text": "When a task feels too big",
+          "status": "pass",
+          "tag": "WORK"
+        },
+        {
+          "text": "After your salah",
+          "status": "pass",
+          "tag": "DAILY"
+        }
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Hand your worry to Allah. / Save this du'a",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Hand your worry"
+        },
+        {
+          "text": "to Allah.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this du'a",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "DUA OF THE DAY",
+    "headline": [
+      {
+        "text": "A du'a for an"
+      },
+      {
+        "text": "anxious mind",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "A du'a the Prophet ﷺ used to say, for the days your mind won't settle.",
+    "body": [
+      "Sahih al-Bukhari 6369: refuge from worry and grief, incapacity and laziness, cowardice and miserliness, heavy debt and being overpowered by others.",
+      "Say it when worry keeps you awake, before a task you keep putting off, or after your salah."
+    ],
+    "cta": "Save this du'a.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Dua",
+      "#DuaOfTheDay",
+      "#Hadith"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this du'a"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:6369 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:6369"
+    },
+    {
+      "text": "Suggested moments to say the du'a are our own suggestions.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:9:51"
+  }
+}

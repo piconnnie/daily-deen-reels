@@ -1,0 +1,207 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "Sahih al-Bukhari 12: feed people and greet those you know and don't know",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "A: Qur'an & Hadith",
+    "series": null,
+    "objective": "shares",
+    "format": "hadith-practice",
+    "targetDurationSec": 25,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "backlogId": "t007"
+  },
+  "coreInsight": "In Sahih al-Bukhari 12 the Prophet ﷺ answers which qualities of Islam are good: feeding people and greeting those you know and those you don't.",
+  "hooks": [
+    {
+      "text": "Two good deeds anyone can do",
+      "angle": "Benefit",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Simple and practical."
+    },
+    {
+      "text": "Greeting strangers? Yes.",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 5,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Interesting but half the hadith."
+    },
+    {
+      "text": "What makes Islam good to see?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 4,
+        "comprehension": 4
+      },
+      "notes": "Too abstract."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Two good deeds anyone can do today. / Straight from a hadith.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "Two good"
+        },
+        {
+          "text": "deeds anyone"
+        },
+        {
+          "text": "can do today.",
+          "highlight": true
+        }
+      ],
+      "sub": "Straight from a hadith."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 390,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "bukhari:12 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ WAS ASKED",
+      "ref": "bukhari:12",
+      "excerpt": "A man asked the Prophet (ﷺ) , \"What sort of deeds or (what qualities of) Islam are good?\" The Prophet (ﷺ) replied, 'To feed (the poor) and greet those whom you know and those whom you do not Know"
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 255,
+      "purpose": "Takeaway in practice (our suggestions).",
+      "onScreen": "TRY THIS TODAY / Buy or share a meal with someone in need · Say salam to someone you don't know · Bring food for colleagues or classmates",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "TRY THIS TODAY",
+      "headline": [
+        {
+          "text": "Feed someone."
+        },
+        {
+          "text": "Greet someone.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "Buy or share a meal with someone in need",
+        "Say salam to someone you don't know",
+        "Bring food for colleagues or classmates"
+      ],
+      "itemStart": 24,
+      "itemStagger": 34,
+      "rule": "Generous with food, generous with salam."
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Share food. Spread salam. / Share it with a friend",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Share food."
+        },
+        {
+          "text": "Spread salam.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with a friend",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "HADITH IN PRACTICE",
+    "headline": [
+      {
+        "text": "Feed and"
+      },
+      {
+        "text": "greet",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Two good deeds you can do before the day ends.",
+    "body": [
+      "Sahih al-Bukhari 12: asked which qualities of Islam are good, the Prophet ﷺ answered: feeding (the poor) and greeting those you know and those you don't.",
+      "Try this today:\n→ share a meal with someone in need\n→ say salam to someone you don't know\n→ bring food for colleagues or classmates"
+    ],
+    "cta": "Share it with a friend.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Hadith",
+      "#Salam",
+      "#Sadaqah"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with a friend"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:12 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:12"
+    },
+    {
+      "text": "The three ways to practise the hadith are our suggestions.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:76:8-9"
+  }
+}

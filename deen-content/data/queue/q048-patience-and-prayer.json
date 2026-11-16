@@ -1,0 +1,202 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "Al-Baqarah 2:45-46: seek help through patience and prayer",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "B: Heart-Softening Reminders",
+    "series": "heart-reminder",
+    "objective": "shares",
+    "format": "heart-reminder",
+    "targetDurationSec": 26,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "backlogId": "t012"
+  },
+  "coreInsight": "Al-Baqarah 2:45 tells us to seek help through patience and prayer, so when the day is heavy, salah is where to turn first.",
+  "hooks": [
+    {
+      "text": "Where do you turn first?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Makes the viewer check their own habit."
+    },
+    {
+      "text": "Stressed? Read this before you reach for your phone.",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 3
+      },
+      "notes": "Too long for the first frame."
+    },
+    {
+      "text": "Help is closer than you think",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 4,
+        "comprehension": 5
+      },
+      "notes": "Vague."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "When it gets heavy, where do you turn first? / This ayah answers.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "When it gets"
+        },
+        {
+          "text": "heavy, where"
+        },
+        {
+          "text": "do you"
+        },
+        {
+          "text": "turn first?",
+          "highlight": true
+        }
+      ],
+      "sub": "This ayah answers."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 330,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:2:45-46 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · AL-BAQARAH",
+      "ref": "quran:2:45-46"
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "durationInFrames": 255,
+      "purpose": "Reflection: our words, clearly labelled.",
+      "onScreen": "REFLECTION / Turn to salah first. / This ayah names two sources of help: patience and prayer. It also admits it isn't easy. Before the next scroll or rant, try two rak'ah and a few quiet minutes with Allah.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "Turn to salah"
+        },
+        {
+          "text": "first.",
+          "highlight": true
+        }
+      ],
+      "body": [
+        "This ayah names two sources of help: patience and prayer. It also admits it isn't easy.",
+        "Before the next scroll or rant, try two rak'ah and a few quiet minutes with Allah."
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Heavy day? Pray first. / Share it with someone who needs it",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Heavy day?"
+        },
+        {
+          "text": "Pray first.",
+          "highlight": true
+        }
+      ],
+      "cta": "Share it with someone who needs it",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "A REMINDER YOUR HEART NEEDS",
+    "headline": [
+      {
+        "text": "Where do you"
+      },
+      {
+        "text": "turn first?",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "When the day gets heavy, where do you turn first?",
+    "body": [
+      "Al-Baqarah 2:45-46: seek help through patience and prayer, and it is difficult except for the humbly submissive.",
+      "Next time: two rak'ah and a few quiet minutes with Allah, before anything else."
+    ],
+    "cta": "Share it with someone who may find it helpful.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Quran",
+      "#Sabr",
+      "#Salah"
+    ]
+  },
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with someone who needs it"
+  },
+  "claims": [
+    {
+      "text": "What quran:2:45-46 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:2:45-46"
+    },
+    {
+      "text": "Turning to salah before anything else on a heavy day is our reflection on the ayat.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

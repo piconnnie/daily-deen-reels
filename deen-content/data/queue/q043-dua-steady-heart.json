@@ -1,0 +1,218 @@
+{
+  "kind": "reel",
+  "brief": {
+    "topic": "Al 'Imran 3:8: a du'a to keep the heart steady after guidance",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "D: Dua & Dhikr",
+    "series": "dua-of-the-day",
+    "objective": "saves",
+    "format": "dua",
+    "targetDurationSec": 28,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Al 'Imran 3:8 is a du'a asking Allah not to let our hearts deviate after He has guided us, and to grant us mercy from Him.",
+  "hooks": [
+    {
+      "text": "A du'a for a steady heart",
+      "angle": "Benefit",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear and gentle; says exactly what the post gives."
+    },
+    {
+      "text": "Felt close to Allah, then drifted?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 5,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Relatable, slightly longer to read."
+    },
+    {
+      "text": "Guidance is a gift. Ask to keep it.",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Good as a takeaway."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "A du'a for a steady heart. / For when your heart drifts.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "A du'a for"
+        },
+        {
+          "text": "a steady"
+        },
+        {
+          "text": "heart.",
+          "highlight": true
+        }
+      ],
+      "sub": "For when your heart drifts."
+    },
+    {
+      "id": "dua",
+      "type": "source",
+      "durationInFrames": 360,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:3:8 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · AL 'IMRAN 3:8",
+      "ref": "quran:3:8",
+      "showTransliteration": true
+    },
+    {
+      "id": "moments",
+      "type": "cards",
+      "durationInFrames": 180,
+      "purpose": "Our suggestions, clearly ours.",
+      "onScreen": "WHEN TO SAY IT / After a good moment of worship · When you feel distant · In sujud, in your own words",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "WHEN TO SAY IT",
+      "headline": [
+        {
+          "text": "Keep it"
+        },
+        {
+          "text": "close.",
+          "highlight": true
+        }
+      ],
+      "enter": "pop",
+      "popStart": 12,
+      "popStagger": 16,
+      "cards": [
+        {
+          "text": "After a good moment of worship",
+          "status": "pass",
+          "tag": "AFTER"
+        },
+        {
+          "text": "When you feel distant",
+          "status": "pass",
+          "tag": "ANYTIME"
+        },
+        {
+          "text": "In sujud, in your own words",
+          "status": "pass",
+          "tag": "SALAH"
+        }
+      ]
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Ask Him to keep your heart steady. / Save this du'a",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Ask Him to"
+        },
+        {
+          "text": "keep your"
+        },
+        {
+          "text": "heart steady.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this du'a",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "DUA OF THE DAY",
+    "headline": [
+      {
+        "text": "A du'a for"
+      },
+      {
+        "text": "a steady heart",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "A short Qur'anic du'a for anyone who has felt close to Allah and then drifted.",
+    "body": [
+      "Al 'Imran 3:8: Arabic, transliteration and meaning.",
+      "Say it after a good moment of worship, when you feel yourself drifting, or in your own du'a."
+    ],
+    "cta": "Save this du'a.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Dua",
+      "#DuaOfTheDay",
+      "#Quran"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this du'a"
+  },
+  "claims": [
+    {
+      "text": "What quran:3:8 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:3:8"
+    },
+    {
+      "text": "Suggested moments to say the du'a are our own suggestions.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}

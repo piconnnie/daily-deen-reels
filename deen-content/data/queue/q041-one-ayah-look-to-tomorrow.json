@@ -1,0 +1,247 @@
+{
+  "kind": "carousel",
+  "brief": {
+    "topic": "Al-Hashr 59:18: let every soul look to what it has put forth for tomorrow",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "A: Qur'an & Hadith",
+    "series": "one-ayah-one-lesson",
+    "objective": "saves",
+    "format": "ayah-lesson",
+    "targetDurationSec": 0,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": []
+  },
+  "coreInsight": "Al-Hashr 59:18 asks every soul to look at what it has sent ahead for tomorrow; a short, honest look at our week is one way to live it.",
+  "hooks": [
+    {
+      "text": "What are you sending ahead?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 5,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Mirrors the ayah's own question without quoting it."
+    },
+    {
+      "text": "A weekly review, from the Qur'an",
+      "angle": "Practical",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear, a little flat."
+    },
+    {
+      "text": "Tomorrow starts today",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 4,
+        "comprehension": 5
+      },
+      "notes": "Too generic."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "What are you sending ahead? / One ayah. One lesson.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "DAILY REMINDER",
+      "lines": [
+        {
+          "text": "What are you"
+        },
+        {
+          "text": "sending"
+        },
+        {
+          "text": "ahead?",
+          "highlight": true
+        }
+      ],
+      "sub": "One ayah. One lesson."
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:59:18 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE QUR'AN · AL-HASHR 59:18",
+      "ref": "quran:59:18",
+      "showTransliteration": true
+    },
+    {
+      "id": "context",
+      "type": "source",
+      "durationInFrames": 150,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "quran:59:19 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "CONTEXT · THE AYAH AFTER",
+      "ref": "quran:59:19"
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "durationInFrames": 150,
+      "purpose": "Reflection: our words, clearly labelled.",
+      "onScreen": "REFLECTION / The lesson / This ayah asks each of us to look at what we have put forward for tomorrow. The next one warns against forgetting Allah. Pausing to look at our deeds, honestly and without despair, is a way of remembering Him.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "REFLECTION",
+      "headline": [
+        {
+          "text": "The lesson",
+          "highlight": true
+        }
+      ],
+      "body": [
+        "This ayah asks each of us to look at what we have put forward for tomorrow. The next one warns against forgetting Allah.",
+        "Pausing to look at our deeds, honestly and without despair, is a way of remembering Him."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "durationInFrames": 150,
+      "purpose": "Takeaway in practice (our suggestions).",
+      "onScreen": "LIVE IT THIS WEEK / What good did I do this week that I want to keep? · What do I want to leave behind? · One deed I can send ahead tomorrow",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "LIVE IT THIS WEEK",
+      "headline": [
+        {
+          "text": "A five-minute"
+        },
+        {
+          "text": "look back.",
+          "highlight": true
+        }
+      ],
+      "items": [
+        "What good did I do this week that I want to keep?",
+        "What do I want to leave behind?",
+        "One deed I can send ahead tomorrow"
+      ],
+      "itemStart": 10,
+      "itemStagger": 10
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 150,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Look back gently. Then send ahead. / Save this for your weekly review",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Look back"
+        },
+        {
+          "text": "gently. Then"
+        },
+        {
+          "text": "send ahead.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this for your weekly review",
+      "ctaAt": 10,
+      "endCardAt": 20
+    }
+  ],
+  "cover": {
+    "kicker": "ONE AYAH. ONE LESSON.",
+    "headline": [
+      {
+        "text": "What are you"
+      },
+      {
+        "text": "sending ahead?",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "An ayah that turns into a five-minute weekly review.",
+    "body": [
+      "Al-Hashr 59:18, then the ayah after it (59:19).",
+      "Swipe for the lesson and three questions to ask yourself this week."
+    ],
+    "cta": "Save this for your weekly review.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Quran",
+      "#OneAyahOneLesson",
+      "#SelfReflection"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this for your weekly review"
+  },
+  "claims": [
+    {
+      "text": "What quran:59:18 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:59:18"
+    },
+    {
+      "text": "What quran:59:19 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:59:19"
+    },
+    {
+      "text": "The lesson and the three review questions are our reflection on the ayat.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  }
+}
