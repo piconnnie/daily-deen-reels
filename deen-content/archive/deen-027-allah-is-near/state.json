@@ -1,0 +1,38 @@
+{
+  "id": "deen-027-allah-is-near",
+  "createdAt": "2026-11-18T12:23:00.427Z",
+  "kind": "reel",
+  "release": {
+    "tag": "reel-deen-027-allah-is-near",
+    "cover": "deen-027-allah-is-near.jpg",
+    "contactSheet": "deen-027-allah-is-near-contact-sheet.png",
+    "video": "deen-027-allah-is-near.mp4"
+  },
+  "sha256": {
+    "video": "b510c9aa6c521b2210637bb6b00c95e561aabb8c8220a96b831e3840e544d00b",
+    "cover": "fe9c14c9d3e42d7b4e07a5b535d7218eea3cfd4c2c6ef2a992bf986166fa00e7"
+  },
+  "durationSec": 42.07,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 49
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}

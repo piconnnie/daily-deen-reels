@@ -1,0 +1,212 @@
+{
+  "contentId": "deen-027-allah-is-near",
+  "version": 1,
+  "generatedAt": "2026-11-18T12:22:55.283Z",
+  "pillar": "B: Heart-Softening Reminders",
+  "format": "ayah-reflection",
+  "objective": "shares",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "Al-Baqarah 2:186: Allah is near and responds to the one who calls",
+  "coreInsight": "Al-Baqarah 2:186 says Allah is near and responds to the one who calls upon Him, so we can ask Him directly, today.",
+  "hookVariants": [
+    {
+      "text": "Feeling unheard?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "No appointment needed",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 20
+    },
+    {
+      "text": "Make one du'a right now",
+      "angle": "Action",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "Feeling unheard?",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "Feeling unheard? / This ayah is for you.",
+      "voiceover": null
+    },
+    {
+      "scene": "ayah",
+      "onScreen": "quran:2:186 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "practice",
+      "onScreen": "REFLECTION / Ask in your own words, in any language · Ask for the small things, too · Keep asking, and keep trusting",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Make one du'a right now. / Send this to someone who needs it",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 857,
+      "startSec": 3,
+      "endSec": 28.57
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "startFrame": 857,
+      "endFrame": 1112,
+      "startSec": 28.57,
+      "endSec": 37.07
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 1112,
+      "endFrame": 1262,
+      "startSec": 37.07,
+      "endSec": 42.07
+    }
+  ],
+  "caption": "If you feel like no one is listening, sit with Al-Baqarah 2:186 for a moment.\n\nA reflection for today:\n→ ask in your own words, in any language\n→ ask for the small things, too\n→ keep asking, and keep trusting\n\nSend this to someone who needs it today.\n\n📖 Sources\n• Qur'an 2:186 (tr. Saheeh International) — quran.com/2/186\nFull text: And when My servants ask you, [O Muhammad], concerning Me - indeed I am near. I respond to the invocation of the supplicant when he calls upon Me. So let them respond to Me [by obedience] and believe in Me that they may be [rightly] guided\n• Recitation: Qur'an 2:186 — Mohamed Siddiq Al-Minshawi (Murattal) (EveryAyah.com) — quran.com/2/186\n\n#IslamicReminder #Dua #Quran #Tawakkul",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Dua",
+    "#Quran",
+    "#Tawakkul"
+  ],
+  "primaryCta": {
+    "type": "share",
+    "text": "Send this to someone who needs it"
+  },
+  "coverHeadline": "Allah is near",
+  "sources": [
+    {
+      "ref": "quran:2:186",
+      "citation": "Qur'an 2:186",
+      "url": "https://quran.com/2/186",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "And when My servants ask you, [O Muhammad], concerning Me - indeed I am near. I respond to the invocation of the supplicant when he calls upon Me. So let them respond to Me [by obedience] and believe in Me that they may be [rightly] guided"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What quran:2:186 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:2:186"
+    },
+    {
+      "text": "The three ways to act on the ayah are our reflection.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 42.07,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [
+      "public/audio/deen-027-allah-is-near-bed.wav"
+    ],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-027-allah-is-near.mp4",
+    "cover": "output/covers/deen-027-allah-is-near.png",
+    "caption": "output/captions/deen-027-allah-is-near.txt",
+    "storyboard": "output/storyboards/deen-027-allah-is-near.md",
+    "subtitles": "output/storyboards/deen-027-allah-is-near.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-18T12:23:00.389Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-027-allah-is-near/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Evergreen.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
