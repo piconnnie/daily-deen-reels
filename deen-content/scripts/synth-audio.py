@@ -442,7 +442,10 @@ def recitation_track(rec, n):
     for a, b in active:
         out[a:a + k] *= np.linspace(0, 1, k)[:, None]
         out[b - k:b] *= np.linspace(1, 0, k)[:, None]
-    return np.clip(limiter(out, ceiling_db=-1.5), -0.999, 0.999)
+    # Ceiling is a sample-peak limit; leave headroom for inter-sample peaks and
+    # AAC encoding overshoot (two encodes: render + Instagram conform), so the
+    # final MP4 stays under QA's -1.0 dBTP true-peak gate.
+    return np.clip(limiter(out, ceiling_db=-3.0), -0.999, 0.999)
 
 
 def write_wav(reel_id, stereo):
