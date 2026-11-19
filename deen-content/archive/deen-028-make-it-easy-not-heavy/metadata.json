@@ -1,0 +1,223 @@
+{
+  "contentId": "deen-028-make-it-easy-not-heavy",
+  "version": 1,
+  "generatedAt": "2026-11-19T07:33:33.752Z",
+  "pillar": "A: Qur'an & Hadith",
+  "format": "hadith-explained",
+  "objective": "shares",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "Sahih al-Bukhari 69: make things easy for people",
+  "coreInsight": "In Sahih al-Bukhari 69 the Prophet ﷺ tells us to make things easy for people, give good news, and not drive them away.",
+  "hookVariants": [
+    {
+      "text": "Make it easy, not heavy",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "How do you remind people?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Good news first",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 20
+    }
+  ],
+  "selectedHook": "Make it easy, not heavy",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "Make it easy, not heavy. / A hadith, with context.",
+      "voiceover": null
+    },
+    {
+      "scene": "hadith",
+      "onScreen": "bukhari:69 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "reflection",
+      "onScreen": "REFLECTION / What it teaches / This hadith is about how we share the deen with others: make it easier to come close, give good news, and don't push people away. It shapes how we remind family, friends and anyone new to practice.",
+      "voiceover": null
+    },
+    {
+      "scene": "moments",
+      "onScreen": "IN PRACTICE / Lead with mercy, not mistakes · Answer questions patiently · Encourage small steps",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Make the way easier. / Share it with someone who teaches",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 240,
+      "startSec": 3,
+      "endSec": 8
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "startFrame": 240,
+      "endFrame": 390,
+      "startSec": 8,
+      "endSec": 13
+    },
+    {
+      "id": "moments",
+      "type": "cards",
+      "startFrame": 390,
+      "endFrame": 540,
+      "startSec": 13,
+      "endSec": 18
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 540,
+      "endFrame": 690,
+      "startSec": 18,
+      "endSec": 23
+    }
+  ],
+  "caption": "How we remind people matters as much as what we say.\n\nSahih al-Bukhari 69: make things easy, give good tidings, don't drive people away.\n\nSwipe for what it teaches and three ways to live it.\n\nShare it with someone who teaches.\n\n📖 Sources\n• Sahih al-Bukhari 69 (Sahih, tr. Muhsin Khan) — sunnah.com/bukhari:69\nFull text: Narrated Anas bin Malik: The Prophet (ﷺ) said, \"Facilitate things to people (concerning religious matters), and do not make it hard for them and give them good tidings and do not make them run away (from Islam)\n\n#IslamicReminder #Hadith #Akhlaq #Dawah",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Hadith",
+    "#Akhlaq",
+    "#Dawah"
+  ],
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with someone who teaches"
+  },
+  "coverHeadline": "Make it easy, not heavy",
+  "sources": [
+    {
+      "ref": "bukhari:69",
+      "citation": "Sahih al-Bukhari 69",
+      "url": "https://sunnah.com/bukhari:69",
+      "translation": "Muhsin Khan",
+      "grade": "Sahih",
+      "english": "Narrated Anas bin Malik: The Prophet (ﷺ) said, \"Facilitate things to people (concerning religious matters), and do not make it hard for them and give them good tidings and do not make them run away (from Islam)"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What bukhari:69 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:69"
+    },
+    {
+      "text": "The explanation and practice cards are our own reflection.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 23,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-028-make-it-easy-not-heavy.mp4",
+    "cover": "output/covers/deen-028-make-it-easy-not-heavy.png",
+    "caption": "output/captions/deen-028-make-it-easy-not-heavy.txt",
+    "storyboard": "output/storyboards/deen-028-make-it-easy-not-heavy.md",
+    "subtitles": "output/storyboards/deen-028-make-it-easy-not-heavy.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-19T07:33:38.107Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-028-make-it-easy-not-heavy/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Evergreen.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}

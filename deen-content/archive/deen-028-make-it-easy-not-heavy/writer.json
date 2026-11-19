@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-19",
+  "writer": "queue",
+  "plan": {
+    "from": "draft",
+    "backlogId": "t005",
+    "pillar": "A",
+    "pillarName": "A: Qur'an & Hadith",
+    "format": "hadith-explained",
+    "research": false
+  },
+  "reelId": "deen-028-make-it-easy-not-heavy",
+  "rounds": [],
+  "finalCritic": null,
+  "needsAttention": false,
+  "estimatedCostUsd": 0
+}
