@@ -41,12 +41,12 @@
     "pr": 29
   },
   "publish": {
-    "status": "failed",
-    "mediaId": null,
-    "permalink": null,
-    "publishedAt": null,
-    "attempts": 1,
-    "lastError": "Graph API POST 17841415816230293/media_publish → 400: Media ID is not available (type OAuthException, code 9007, subcode 2207027)",
+    "status": "published",
+    "mediaId": "18140518087636763",
+    "permalink": "https://www.instagram.com/p/Df7VMmsken3/",
+    "publishedAt": "2026-11-19T14:49:28.397Z",
+    "attempts": 2,
+    "lastError": null,
     "lastAttemptAt": "2026-11-19T13:35:12.638Z"
   }
 }
