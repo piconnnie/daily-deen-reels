@@ -6,6 +6,7 @@
 //   node scripts/daily/dequeue.mjs            → prints the new reel id (last line)
 //   node scripts/daily/dequeue.mjs --status   → how many drafts are left (with names)
 //   node scripts/daily/dequeue.mjs --count    → just the number
+//   node scripts/daily/dequeue.mjs --skip q027-a,q030-b → don't pick these drafts (they failed this run)
 import {spawnSync} from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
@@ -16,7 +17,9 @@ import {occasionsOn, postDate} from './occasions.mjs';
 const dir = path.join(ROOT, 'data', 'queue');
 const drafts = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort() : [];
 const used = new Set(listReels().map((id) => loadReel(id).brief?.queueId).filter(Boolean));
-const unusedDrafts = drafts.filter((f) => !used.has(f.replace(/\.json$/, '')));
+const skipArg = process.argv.indexOf('--skip');
+const skip = new Set(skipArg > 0 ? String(process.argv[skipArg + 1] ?? '').split(/[\s,]+/).filter(Boolean) : []);
+const unusedDrafts = drafts.filter((f) => !used.has(f.replace(/\.json$/, '')) && !skip.has(f.replace(/\.json$/, '')));
 // Occasion drafts (Friday, Ramadan, Dhul Hijjah…) wait for their day and jump the
 // queue on it; everything else keeps calendar order.
 const today = occasionsOn(postDate());

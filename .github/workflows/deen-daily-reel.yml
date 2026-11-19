@@ -180,14 +180,18 @@ jobs:
 
       - name: Render, check and upload previews
         if: steps.gate.outputs.skip != 'true'
+        id: build
         env:
           ID: ${{ steps.write.outputs.id }}
-        run: scripts/daily/build-for-review.sh "$ID"
+          MODE: ${{ steps.mode.outputs.mode }}
+        # If a draft fails render/QA or would be held for a person, it is moved to
+        # data/queue/held/ (with an issue) and the next queue draft is built instead.
+        run: scripts/daily/build-with-fallback.sh "$ID" "$MODE"
 
       - name: Open review PR
         if: steps.gate.outputs.skip != 'true'
         env:
-          ID: ${{ steps.write.outputs.id }}
+          ID: ${{ steps.build.outputs.id }}
         run: |
           # Remove planner-only copies of other branches' reels before committing.
           xargs -r rm -f < /tmp/planner-copies.txt
@@ -210,7 +214,7 @@ jobs:
       - name: Summary
         if: steps.gate.outputs.skip != 'true'
         env:
-          ID: ${{ steps.write.outputs.id }}
+          ID: ${{ steps.build.outputs.id }}
         run: |
           {
             echo "### Reel ready for review: $ID"

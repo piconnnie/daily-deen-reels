@@ -17,15 +17,15 @@ runs:
     - name: System packages
       if: inputs.render == 'true'
       shell: bash
-      run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+      run: for i in 1 2 3; do sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null && exit 0; echo "::warning::apt attempt $i failed, retrying"; sleep $((i * 20)); done; exit 1
     - name: Python packages
       if: inputs.render == 'true'
       shell: bash
-      run: pip install --quiet numpy scipy
+      run: for i in 1 2 3; do pip install --quiet numpy scipy && exit 0; echo "::warning::pip attempt $i failed, retrying"; sleep $((i * 20)); done; exit 1
     - name: npm install
       shell: bash
       working-directory: deen-content
-      run: npm install --no-audit --no-fund
+      run: for i in 1 2 3; do npm install --no-audit --no-fund && exit 0; echo "::warning::npm attempt $i failed, retrying"; npm cache clean --force > /dev/null 2>&1; sleep $((i * 30)); done; exit 1
     - name: Cache verified source datasets
       uses: actions/cache@v4
       with:
@@ -34,11 +34,14 @@ runs:
     - name: Fetch + hash-check verified sources (Qur'an, Bukhari, Muslim)
       shell: bash
       working-directory: deen-content
-      run: node scripts/sources/cli.mjs fetch
+      run: for i in 1 2 3; do node scripts/sources/cli.mjs fetch && exit 0; echo "::warning::source fetch attempt $i failed, retrying"; sleep $((i * 20)); done; exit 1
     - name: Browsers
       if: inputs.render == 'true'
       shell: bash
       working-directory: deen-content
       run: |
-        npx playwright install --with-deps chromium
-        npx remotion browser ensure
+        for i in 1 2 3; do
+          npx playwright install --with-deps chromium && npx remotion browser ensure && exit 0
+          echo "::warning::browser install attempt $i failed, retrying"; sleep $((i * 20))
+        done
+        exit 1

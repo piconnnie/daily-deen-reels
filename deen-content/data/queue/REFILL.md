@@ -27,3 +27,7 @@ Copy the structure of the existing drafts exactly: `q001`–`q014` cover every k
 ## Never
 
 - Never quote anything that didn't come from the source tools. Never edit `sources/sources.json`, workflows, settings or other files; merge or close PRs; post anything; or touch secrets.
+
+## Held drafts
+
+If a draft fails render/QA, or QA would hold it for a person, the daily build moves it to `data/queue/held/`, opens a `queue-held` issue and posts the next draft instead, so the page never stalls. Held drafts are not counted as queued. To reuse one, fix it, validate it, and move it back to `data/queue/`.
