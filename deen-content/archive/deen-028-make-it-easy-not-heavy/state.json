@@ -1,0 +1,50 @@
+{
+  "id": "deen-028-make-it-easy-not-heavy",
+  "createdAt": "2026-11-19T07:33:38.164Z",
+  "kind": "carousel",
+  "release": {
+    "tag": "reel-deen-028-make-it-easy-not-heavy",
+    "cover": "deen-028-make-it-easy-not-heavy.jpg",
+    "contactSheet": "deen-028-make-it-easy-not-heavy-contact-sheet.png",
+    "slides": [
+      "deen-028-make-it-easy-not-heavy-slide-01.jpg",
+      "deen-028-make-it-easy-not-heavy-slide-02.jpg",
+      "deen-028-make-it-easy-not-heavy-slide-03.jpg",
+      "deen-028-make-it-easy-not-heavy-slide-04.jpg",
+      "deen-028-make-it-easy-not-heavy-slide-05.jpg"
+    ]
+  },
+  "sha256": {
+    "cover": "48902ef53a62249f41c456e9cb1e8aacd26a6675b2f3a6662d7166e3944a3ffc",
+    "slides": [
+      "48902ef53a62249f41c456e9cb1e8aacd26a6675b2f3a6662d7166e3944a3ffc",
+      "1dd1195b4b1364f042b6f35c8a9e724f96c311ca1864a5f0983832de224fa5ac",
+      "3e29ebffcd58ff7fddde634294f1e49b86780abd4bd30b6f46c5bacfcb97c498",
+      "ebb8948660cca7049e6642cd43d46b7bf71f4449b804c3e27e04e26c1c8d43a5",
+      "faf3e114e9ee6099fa2d758a01f66d174e9c04b4a395c7f2133b6d84a407ef3c"
+    ]
+  },
+  "durationSec": null,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 30
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
