@@ -41,11 +41,12 @@
     "pr": 29
   },
   "publish": {
-    "status": "pending",
+    "status": "failed",
     "mediaId": null,
     "permalink": null,
     "publishedAt": null,
-    "attempts": 0,
-    "lastError": null
+    "attempts": 1,
+    "lastError": "Graph API POST 17841415816230293/media_publish → 400: Media ID is not available (type OAuthException, code 9007, subcode 2207027)",
+    "lastAttemptAt": "2026-11-19T13:35:12.638Z"
   }
 }
