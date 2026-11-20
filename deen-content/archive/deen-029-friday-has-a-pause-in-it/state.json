@@ -1,0 +1,52 @@
+{
+  "id": "deen-029-friday-has-a-pause-in-it",
+  "createdAt": "2026-11-20T07:21:34.162Z",
+  "kind": "carousel",
+  "release": {
+    "tag": "reel-deen-029-friday-has-a-pause-in-it",
+    "cover": "deen-029-friday-has-a-pause-in-it.jpg",
+    "contactSheet": "deen-029-friday-has-a-pause-in-it-contact-sheet.png",
+    "slides": [
+      "deen-029-friday-has-a-pause-in-it-slide-01.jpg",
+      "deen-029-friday-has-a-pause-in-it-slide-02.jpg",
+      "deen-029-friday-has-a-pause-in-it-slide-03.jpg",
+      "deen-029-friday-has-a-pause-in-it-slide-04.jpg",
+      "deen-029-friday-has-a-pause-in-it-slide-05.jpg",
+      "deen-029-friday-has-a-pause-in-it-slide-06.jpg"
+    ]
+  },
+  "sha256": {
+    "cover": "d15d44aac344ba0f9e1f1722c9df5d678cb743e8bf474bc4deddbf792228eebc",
+    "slides": [
+      "d15d44aac344ba0f9e1f1722c9df5d678cb743e8bf474bc4deddbf792228eebc",
+      "3857de134698f2607c58c2494dc1a2d8f589173abb01e5a81ac2c2d9bfdcaef4",
+      "83651e521e08b9af823bb8448ec1a0f2b15b5f5f0f2596c1e444ce8bebbaf627",
+      "4e55bf1b347da2c4e0b5694867bbe824143c4291417c56f3f543591427c3f8af",
+      "b589faf61714e65ba4fd55efb4cf1b2b77bd7e3b70142ffb7624b1845077e259",
+      "a5d34e798e2bfc69c3c0da3bdbae6de7256d2102a2ac4458a178ae65223471fa"
+    ]
+  },
+  "durationSec": null,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 30
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
