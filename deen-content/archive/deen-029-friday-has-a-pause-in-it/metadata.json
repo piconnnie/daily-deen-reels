@@ -1,0 +1,249 @@
+{
+  "contentId": "deen-029-friday-has-a-pause-in-it",
+  "version": 1,
+  "generatedAt": "2026-11-20T07:21:29.627Z",
+  "pillar": "F: Islamic Calendar & Occasions",
+  "format": "ayah-lesson",
+  "objective": "saves",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "Al-Jumu'ah 62:9-10: pause for remembrance, then return",
+  "coreInsight": "Al-Jumu'ah 62:9 calls believers to the remembrance of Allah when the Friday call is made, and 62:10 sends them back out, remembering Him often.",
+  "hookVariants": [
+    {
+      "text": "Friday has a pause in it",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "What do you put down on Friday?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Leave the deal for later",
+      "angle": "Action",
+      "scores": {
+        "specificity": 4,
+        "relevance": 3,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 20
+    }
+  ],
+  "selectedHook": "Friday has a pause in it",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "Friday has a pause in it. / One ayah. One lesson.",
+      "voiceover": null
+    },
+    {
+      "scene": "ayah",
+      "onScreen": "quran:62:9 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "context",
+      "onScreen": "quran:62:10 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "reflection",
+      "onScreen": "REFLECTION / The lesson / The first ayah asks believers to leave trade and proceed to the remembrance of Allah at the Friday call. The next sends them back out, remembering Him often. Friday is a pause in the middle of life, not a break from it.",
+      "voiceover": null
+    },
+    {
+      "scene": "practice",
+      "onScreen": "THIS FRIDAY / Clear your schedule before the call comes · Leave the phone and the work for later · Go back to your day with dhikr on your tongue",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Pause. Remember. Return. / Save this for next Friday",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 240,
+      "startSec": 3,
+      "endSec": 8
+    },
+    {
+      "id": "context",
+      "type": "source",
+      "startFrame": 240,
+      "endFrame": 390,
+      "startSec": 8,
+      "endSec": 13
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "startFrame": 390,
+      "endFrame": 540,
+      "startSec": 13,
+      "endSec": 18
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "startFrame": 540,
+      "endFrame": 690,
+      "startSec": 18,
+      "endSec": 23
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 690,
+      "endFrame": 840,
+      "startSec": 23,
+      "endSec": 28
+    }
+  ],
+  "caption": "Jumu'ah Mubarak.\n\nAl-Jumu'ah 62:9, then the ayah after it (62:10): stop for the remembrance of Allah, then go back out remembering Him often.\n\nSwipe for the ayat and three small ways to keep the pause.\n\nSave this for next Friday.\n\n📖 Sources\n• Qur'an 62:9 (tr. Saheeh International) — quran.com/62/9\n• Qur'an 62:10 (tr. Saheeh International) — quran.com/62/10\n\n#IslamicReminder #JumuahMubarak #Quran #Friday",
+  "hashtags": [
+    "#IslamicReminder",
+    "#JumuahMubarak",
+    "#Quran",
+    "#Friday"
+  ],
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this for next Friday"
+  },
+  "coverHeadline": "Friday has a pause in it",
+  "sources": [
+    {
+      "ref": "quran:62:9",
+      "citation": "Qur'an 62:9",
+      "url": "https://quran.com/62/9",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "O you who have believed, when [the adhan] is called for the prayer on the day of Jumu'ah [Friday], then proceed to the remembrance of Allah and leave trade. That is better for you, if you only knew"
+    },
+    {
+      "ref": "quran:62:10",
+      "citation": "Qur'an 62:10",
+      "url": "https://quran.com/62/10",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "And when the prayer has been concluded, disperse within the land and seek from the bounty of Allah, and remember Allah often that you may succeed"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What quran:62:9 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:62:9"
+    },
+    {
+      "text": "What quran:62:10 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:62:10"
+    },
+    {
+      "text": "The lesson and the three steps are our reflection on the ayat.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 28,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-029-friday-has-a-pause-in-it.mp4",
+    "cover": "output/covers/deen-029-friday-has-a-pause-in-it.png",
+    "caption": "output/captions/deen-029-friday-has-a-pause-in-it.txt",
+    "storyboard": "output/storyboards/deen-029-friday-has-a-pause-in-it.md",
+    "subtitles": "output/storyboards/deen-029-friday-has-a-pause-in-it.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-20T07:21:34.117Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-029-friday-has-a-pause-in-it/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Evergreen.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
