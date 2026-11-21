@@ -1,0 +1,50 @@
+{
+  "id": "deen-030-a-dua-for-both-worlds",
+  "createdAt": "2026-11-21T07:14:20.188Z",
+  "kind": "carousel",
+  "release": {
+    "tag": "reel-deen-030-a-dua-for-both-worlds",
+    "cover": "deen-030-a-dua-for-both-worlds.jpg",
+    "contactSheet": "deen-030-a-dua-for-both-worlds-contact-sheet.png",
+    "slides": [
+      "deen-030-a-dua-for-both-worlds-slide-01.jpg",
+      "deen-030-a-dua-for-both-worlds-slide-02.jpg",
+      "deen-030-a-dua-for-both-worlds-slide-03.jpg",
+      "deen-030-a-dua-for-both-worlds-slide-04.jpg",
+      "deen-030-a-dua-for-both-worlds-slide-05.jpg"
+    ]
+  },
+  "sha256": {
+    "cover": "da49e26decc806755834a1c63c62d7d92df355eb85856b1e114ca1ecd8cde4d9",
+    "slides": [
+      "da49e26decc806755834a1c63c62d7d92df355eb85856b1e114ca1ecd8cde4d9",
+      "d5665fba59152fd9097ac312d817a5855e40dff0307dbda95e7107a0685ecc69",
+      "b1e31f91852a4390e6d51db80eec382f395ebcdbd51024a0679b0f7ac6faa690",
+      "6d0bd878bc36a29150b659e55b94b6aec486179f9f2d67502fe6ac32fa67650c",
+      "6a982855c7b108f890d5533c769520825d7eb7126b3af60b8030116e32b639b7"
+    ]
+  },
+  "durationSec": null,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 30
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
