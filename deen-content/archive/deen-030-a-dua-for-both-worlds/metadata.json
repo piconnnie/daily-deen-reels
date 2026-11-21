@@ -1,0 +1,236 @@
+{
+  "contentId": "deen-030-a-dua-for-both-worlds",
+  "version": 1,
+  "generatedAt": "2026-11-21T07:14:16.927Z",
+  "pillar": "D: Dua & Dhikr",
+  "format": "dua-card",
+  "objective": "saves",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "The du'a for good in this world and the next (Al-Baqarah 2:201)",
+  "coreInsight": "Al-Baqarah 2:201 asks for good in this world and the Hereafter, and Sahih al-Bukhari 6389 says it was the most frequent invocation of the Prophet ﷺ.",
+  "hookVariants": [
+    {
+      "text": "One du'a for both worlds",
+      "angle": "Benefit",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "Don't know what to ask for?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 22
+    },
+    {
+      "text": "His most frequent du'a",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 5,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 22
+    }
+  ],
+  "selectedHook": "One du'a for both worlds",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "One du'a for both worlds. / Arabic, meaning and source.",
+      "voiceover": null
+    },
+    {
+      "scene": "dua",
+      "onScreen": "quran:2:201 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "virtue",
+      "onScreen": "bukhari:6389 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "moments",
+      "onScreen": "WHEN TO SAY IT / When you're unsure what to ask · At the end of your own du'a · For your family, too",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Ask for good in both worlds. / Save this to learn it",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "dua",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 240,
+      "startSec": 3,
+      "endSec": 8
+    },
+    {
+      "id": "virtue",
+      "type": "source",
+      "startFrame": 240,
+      "endFrame": 390,
+      "startSec": 8,
+      "endSec": 13
+    },
+    {
+      "id": "moments",
+      "type": "cards",
+      "startFrame": 390,
+      "endFrame": 540,
+      "startSec": 13,
+      "endSec": 18
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 540,
+      "endFrame": 690,
+      "startSec": 18,
+      "endSec": 23
+    }
+  ],
+  "caption": "A short du'a to learn this week.\n\nAl-Baqarah 2:201: the Arabic, transliteration and meaning.\n\nSahih al-Bukhari 6389: it was the most frequent invocation of the Prophet ﷺ.\n\nSwipe for when to say it.\n\nSave this to learn it.\n\n📖 Sources\n• Qur'an 2:201 (tr. Saheeh International) — quran.com/2/201\n• Sahih al-Bukhari 6389 (Sahih, tr. Muhsin Khan) — sunnah.com/bukhari:6389\n\n#IslamicReminder #Dua #Quran #DuaOfTheDay",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Dua",
+    "#Quran",
+    "#DuaOfTheDay"
+  ],
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this to learn it"
+  },
+  "coverHeadline": "A du'a for both worlds",
+  "sources": [
+    {
+      "ref": "quran:2:201",
+      "citation": "Qur'an 2:201",
+      "url": "https://quran.com/2/201",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "But among them is he who says, \"Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire"
+    },
+    {
+      "ref": "bukhari:6389",
+      "citation": "Sahih al-Bukhari 6389",
+      "url": "https://sunnah.com/bukhari:6389",
+      "translation": "Muhsin Khan",
+      "grade": "Sahih",
+      "english": "Narrated Anas: The most frequent invocation of The Prophet (ﷺ) was: \"O Allah! Give to us in the world that which is good and in the Hereafter that which is good, and save us from the torment of the Fire"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What quran:2:201 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:2:201"
+    },
+    {
+      "text": "What bukhari:6389 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:6389"
+    },
+    {
+      "text": "Suggested moments to say it are our own.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 23,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-030-a-dua-for-both-worlds.mp4",
+    "cover": "output/covers/deen-030-a-dua-for-both-worlds.png",
+    "caption": "output/captions/deen-030-a-dua-for-both-worlds.txt",
+    "storyboard": "output/storyboards/deen-030-a-dua-for-both-worlds.md",
+    "subtitles": "output/storyboards/deen-030-a-dua-for-both-worlds.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-21T07:14:20.148Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-030-a-dua-for-both-worlds/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Evergreen.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
