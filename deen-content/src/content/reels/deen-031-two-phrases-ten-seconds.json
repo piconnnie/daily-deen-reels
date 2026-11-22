@@ -1,0 +1,249 @@
+{
+  "id": "deen-031-two-phrases-ten-seconds",
+  "version": 1,
+  "status": "qa-passed",
+  "kind": "reel",
+  "brief": {
+    "topic": "Sahih al-Bukhari 6406: two phrases light on the tongue",
+    "audience": "Muslims who want a short, trustworthy daily reminder they can act on",
+    "pillar": "D: Dua & Dhikr",
+    "series": "before-you-scroll",
+    "objective": "saves",
+    "format": "before-you-scroll",
+    "targetDurationSec": 20,
+    "technicalDepth": "beginner",
+    "voiceover": false,
+    "research": "not-required",
+    "constraints": [],
+    "backlogId": "t011",
+    "queueId": "q030-two-light-phrases",
+    "writer": "queue"
+  },
+  "coreInsight": "Sahih al-Bukhari 6406 names two short phrases that are easy on the tongue, heavy in the balance and dear to the Most Merciful.",
+  "hooks": [
+    {
+      "text": "Got ten seconds?",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 5,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Fits the series: a pause before scrolling."
+    },
+    {
+      "text": "Light on the tongue",
+      "angle": "Benefit",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "notes": "Echoes the hadith; better after it."
+    },
+    {
+      "text": "Two phrases to say today",
+      "angle": "Action",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "notes": "Clear but flat."
+    }
+  ],
+  "selectedHook": 0,
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "durationInFrames": 90,
+      "purpose": "Make the viewer pause.",
+      "onScreen": "Got ten seconds? / Spend them on this.",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "kicker": "BEFORE YOU SCROLL",
+      "lines": [
+        {
+          "text": "Got ten"
+        },
+        {
+          "text": "seconds?",
+          "highlight": true
+        }
+      ],
+      "sub": "Spend them on this."
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "durationInFrames": 420,
+      "purpose": "Teaching: the source, verbatim, with its reference.",
+      "onScreen": "bukhari:6406 (pulled from the verified dataset)",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "kicker": "THE PROPHET ﷺ SAID",
+      "ref": "bukhari:6406",
+      "excerpt": "There are two expressions which are very easy for the tongue to say, but they are very heavy in the balance and are very dear to The Beneficent (Allah), and they are, 'Subhan Allah Al- `Azim and 'Subhan Allah wa bihamdihi",
+      "arabicExcerpt": "سُبْحَانَ اللَّهِ الْعَظِيمِ، سُبْحَانَ اللَّهِ وَبِحَمْدِهِ",
+      "resolved": {
+        "ref": "bukhari:6406",
+        "collection": "bukhari",
+        "collectionName": "Sahih al-Bukhari",
+        "kind": "hadith",
+        "citation": "Sahih al-Bukhari 6406",
+        "url": "https://sunnah.com/bukhari:6406",
+        "arabic": "حَدَّثَنَا زُهَيْرُ بْنُ حَرْبٍ، حَدَّثَنَا ابْنُ فُضَيْلٍ، عَنْ عُمَارَةَ، عَنْ أَبِي زُرْعَةَ، عَنْ أَبِي هُرَيْرَةَ، عَنِ النَّبِيِّ صلى الله عليه وسلم قَالَ \" كَلِمَتَانِ خَفِيفَتَانِ عَلَى اللِّسَانِ، ثَقِيلَتَانِ فِي الْمِيزَانِ، حَبِيبَتَانِ إِلَى الرَّحْمَنِ، سُبْحَانَ اللَّهِ الْعَظِيمِ، سُبْحَانَ اللَّهِ وَبِحَمْدِهِ \".",
+        "english": "Narrated Abu Huraira: The Prophet (ﷺ) said, \"There are two expressions which are very easy for the tongue to say, but they are very heavy in the balance and are very dear to The Beneficent (Allah), and they are, 'Subhan Allah Al- `Azim and 'Subhan Allah wa bihamdihi",
+        "translation": "Muhsin Khan",
+        "grade": "Sahih",
+        "narrator": "Abu Huraira"
+      }
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "durationInFrames": 262,
+      "purpose": "One action + a gentle CTA.",
+      "onScreen": "Say them before you scroll. / Save this and say them daily",
+      "storyboard": {
+        "visual": "Per layout (rotates).",
+        "animation": "Staged reveal."
+      },
+      "transitionIn": "fade-up",
+      "lines": [
+        {
+          "text": "Say them"
+        },
+        {
+          "text": "before"
+        },
+        {
+          "text": "you scroll.",
+          "highlight": true
+        }
+      ],
+      "cta": "Save this and say them daily",
+      "ctaAt": 40,
+      "endCardAt": 70
+    }
+  ],
+  "cover": {
+    "kicker": "BEFORE YOU SCROLL",
+    "headline": [
+      {
+        "text": "Two phrases,"
+      },
+      {
+        "text": "ten seconds",
+        "highlight": true
+      }
+    ]
+  },
+  "caption": {
+    "opening": "Before the next video: two short phrases.",
+    "body": [
+      "Sahih al-Bukhari 6406: easy on the tongue, heavy in the balance, dear to the Most Merciful.",
+      "Say them now, then once more on your way somewhere today."
+    ],
+    "cta": "Save this and say them daily.",
+    "hashtags": [
+      "#IslamicReminder",
+      "#Dhikr",
+      "#Hadith",
+      "#BeforeYouScroll"
+    ]
+  },
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this and say them daily"
+  },
+  "claims": [
+    {
+      "text": "What bukhari:6406 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:6406"
+    },
+    {
+      "text": "Saying them before scrolling is our suggestion.",
+      "kind": "reflection"
+    }
+  ],
+  "publish": {
+    "suggestedDate": "",
+    "notes": "Evergreen."
+  },
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "recitation": {
+    "ref": "quran:33:41-42",
+    "chosen": "writer",
+    "citation": "Qur'an 33:41-42",
+    "url": "https://quran.com/33/41-42",
+    "reciter": "husary",
+    "reciterName": "Mahmoud Khalil Al-Husary",
+    "folder": "Husary_128kbps",
+    "source": "EveryAyah.com",
+    "mode": "background",
+    "sceneId": null,
+    "startFrame": 20,
+    "gapSec": 0.25,
+    "totalSec": 24.351,
+    "files": [
+      {
+        "file": "033041.mp3",
+        "url": "https://everyayah.com/data/Husary_128kbps/033041.mp3",
+        "sha256": "1819fadddbbd23d8730858fb7fe53e57521f5b79a363d14e97f30e56ecdfaf9d",
+        "durationSec": 14.219
+      },
+      {
+        "file": "033042.mp3",
+        "url": "https://everyayah.com/data/Husary_128kbps/033042.mp3",
+        "sha256": "fa4d2e8b323939a3e1242b02cd7acfe90591693fe574d4ff407f044d5b4a5413",
+        "durationSec": 9.882
+      }
+    ]
+  },
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "style": {
+    "theme": "ivory",
+    "layout": "minimal",
+    "backdrop": "plain",
+    "type": "serif",
+    "motion": "slide",
+    "music": "recitation"
+  },
+  "audio": {
+    "bed": "audio/deen-031-two-phrases-ten-seconds-bed.wav",
+    "bedVolume": 1,
+    "voiceover": null,
+    "voiceoverVolume": 1
+  },
+  "sources": [
+    {
+      "ref": "bukhari:6406",
+      "citation": "Sahih al-Bukhari 6406",
+      "url": "https://sunnah.com/bukhari:6406",
+      "translation": "Muhsin Khan",
+      "grade": "Sahih",
+      "english": "Narrated Abu Huraira: The Prophet (ﷺ) said, \"There are two expressions which are very easy for the tongue to say, but they are very heavy in the balance and are very dear to The Beneficent (Allah), and they are, 'Subhan Allah Al- `Azim and 'Subhan Allah wa bihamdihi"
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "contentId": "deen-031-two-phrases-ten-seconds",
+  "version": 1,
+  "generatedAt": "2026-11-22T06:54:21.572Z",
+  "pillar": "D: Dua & Dhikr",
+  "format": "before-you-scroll",
+  "objective": "saves",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "Sahih al-Bukhari 6406: two phrases light on the tongue",
+  "coreInsight": "Sahih al-Bukhari 6406 names two short phrases that are easy on the tongue, heavy in the balance and dear to the Most Merciful.",
+  "hookVariants": [
+    {
+      "text": "Got ten seconds?",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 5,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "Light on the tongue",
+      "angle": "Benefit",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Two phrases to say today",
+      "angle": "Action",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "Got ten seconds?",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "Got ten seconds? / Spend them on this.",
+      "voiceover": null
+    },
+    {
+      "scene": "hadith",
+      "onScreen": "bukhari:6406 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Say them before you scroll. / Save this and say them daily",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 510,
+      "startSec": 3,
+      "endSec": 17
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 510,
+      "endFrame": 772,
+      "startSec": 17,
+      "endSec": 25.73
+    }
+  ],
+  "caption": "Before the next video: two short phrases.\n\nSahih al-Bukhari 6406: easy on the tongue, heavy in the balance, dear to the Most Merciful.\n\nSay them now, then once more on your way somewhere today.\n\nSave this and say them daily.\n\n📖 Sources\n• Sahih al-Bukhari 6406 (Sahih, tr. Muhsin Khan) — sunnah.com/bukhari:6406\nFull text: Narrated Abu Huraira: The Prophet (ﷺ) said, \"There are two expressions which are very easy for the tongue to say, but they are very heavy in the balance and are very dear to The Beneficent (Allah), and they are, 'Subhan Allah Al- `Azim and 'Subhan Allah wa bihamdihi\n• Recitation: Qur'an 33:41-42 — Mahmoud Khalil Al-Husary (EveryAyah.com) — quran.com/33/41-42\n\n#IslamicReminder #Dhikr #Hadith #BeforeYouScroll",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Dhikr",
+    "#Hadith",
+    "#BeforeYouScroll"
+  ],
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this and say them daily"
+  },
+  "coverHeadline": "Two phrases, ten seconds",
+  "sources": [
+    {
+      "ref": "bukhari:6406",
+      "citation": "Sahih al-Bukhari 6406",
+      "url": "https://sunnah.com/bukhari:6406",
+      "translation": "Muhsin Khan",
+      "grade": "Sahih",
+      "english": "Narrated Abu Huraira: The Prophet (ﷺ) said, \"There are two expressions which are very easy for the tongue to say, but they are very heavy in the balance and are very dear to The Beneficent (Allah), and they are, 'Subhan Allah Al- `Azim and 'Subhan Allah wa bihamdihi"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What bukhari:6406 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:6406"
+    },
+    {
+      "text": "Saying them before scrolling is our suggestion.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 25.73,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [
+      "public/audio/deen-031-two-phrases-ten-seconds-bed.wav"
+    ],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-031-two-phrases-ten-seconds.mp4",
+    "cover": "output/covers/deen-031-two-phrases-ten-seconds.png",
+    "caption": "output/captions/deen-031-two-phrases-ten-seconds.txt",
+    "storyboard": "output/storyboards/deen-031-two-phrases-ten-seconds.md",
+    "subtitles": "output/storyboards/deen-031-two-phrases-ten-seconds.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-22T06:54:27.819Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-031-two-phrases-ten-seconds/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Evergreen.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
