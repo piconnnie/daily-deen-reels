@@ -1,0 +1,223 @@
+{
+  "contentId": "deen-032-honesty-in-small-things",
+  "version": 1,
+  "generatedAt": "2026-11-23T07:44:14.313Z",
+  "pillar": "C: Daily Deen & Practical Islam",
+  "format": "check-in",
+  "objective": "saves",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "Sahih al-Bukhari 6094: truthfulness leads to righteousness",
+  "coreInsight": "Sahih al-Bukhari 6094 describes truthfulness as a path that leads to righteousness; it is built in small, everyday honesty.",
+  "hookVariants": [
+    {
+      "text": "Honesty starts in small things",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "Would you notice a small lie?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Truth is a road",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 20
+    }
+  ],
+  "selectedHook": "Honesty starts in small things",
+  "selectionRationale": "Most relevant and gentle; invites a check-in without guilt.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "Honesty starts in small things. / A daily check-in.",
+      "voiceover": null
+    },
+    {
+      "scene": "hadith",
+      "onScreen": "bukhari:6094 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "practice",
+      "onScreen": "CHECK-IN / Did I exaggerate to make a story better? · Did I keep my word, or make an excuse? · Did I admit it when I didn't know? · Was I honest about my own mistake? · Was I truthful when no one would notice?",
+      "voiceover": null
+    },
+    {
+      "scene": "reflection",
+      "onScreen": "REFLECTION / Why it matters / This hadith describes truthfulness as a path: each honest word is a step along it. Small honesty, repeated, is how the path is walked.",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Tell the truth, even when small. / Save this for your evening check-in",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 240,
+      "startSec": 3,
+      "endSec": 8
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "startFrame": 240,
+      "endFrame": 390,
+      "startSec": 8,
+      "endSec": 13
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "startFrame": 390,
+      "endFrame": 540,
+      "startSec": 13,
+      "endSec": 18
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 540,
+      "endFrame": 690,
+      "startSec": 18,
+      "endSec": 23
+    }
+  ],
+  "caption": "Honesty is mostly built in small moments nobody sees.\n\nSahih al-Bukhari 6094: truthfulness leads to righteousness.\n\nSwipe for five quiet questions to ask yourself tonight.\n\nSave this for your evening check-in.\n\n📖 Sources\n• Sahih al-Bukhari 6094 (Sahih, tr. Muhsin Khan) — sunnah.com/bukhari:6094\nFull text: Narrated `Abdullah: The Prophet (ﷺ) said, \"Truthfulness leads to righteousness, and righteousness leads to Paradise. And a man keeps on telling the truth until he becomes a truthful person. Falsehood leads to Al-Fajur (i.e. wickedness, evil-doing), and Al-Fajur (wickedness) leads to the (Hell) Fire, and a man may keep on telling lies till he is written before Allah, a liar\n\n#IslamicReminder #DailyDeen #Honesty #Hadith",
+  "hashtags": [
+    "#IslamicReminder",
+    "#DailyDeen",
+    "#Honesty",
+    "#Hadith"
+  ],
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this for your evening check-in"
+  },
+  "coverHeadline": "Honesty in small things",
+  "sources": [
+    {
+      "ref": "bukhari:6094",
+      "citation": "Sahih al-Bukhari 6094",
+      "url": "https://sunnah.com/bukhari:6094",
+      "translation": "Muhsin Khan",
+      "grade": "Sahih",
+      "english": "Narrated `Abdullah: The Prophet (ﷺ) said, \"Truthfulness leads to righteousness, and righteousness leads to Paradise. And a man keeps on telling the truth until he becomes a truthful person. Falsehood leads to Al-Fajur (i.e. wickedness, evil-doing), and Al-Fajur (wickedness) leads to the (Hell) Fire, and a man may keep on telling lies till he is written before Allah, a liar"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What bukhari:6094 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "bukhari:6094"
+    },
+    {
+      "text": "The check-in questions and reflection are our own.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 23,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-032-honesty-in-small-things.mp4",
+    "cover": "output/covers/deen-032-honesty-in-small-things.png",
+    "caption": "output/captions/deen-032-honesty-in-small-things.txt",
+    "storyboard": "output/storyboards/deen-032-honesty-in-small-things.md",
+    "subtitles": "output/storyboards/deen-032-honesty-in-small-things.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-23T07:44:18.709Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-032-honesty-in-small-things/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Evergreen.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
