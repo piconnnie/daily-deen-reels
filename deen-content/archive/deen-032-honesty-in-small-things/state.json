@@ -1,0 +1,50 @@
+{
+  "id": "deen-032-honesty-in-small-things",
+  "createdAt": "2026-11-23T07:44:18.748Z",
+  "kind": "carousel",
+  "release": {
+    "tag": "reel-deen-032-honesty-in-small-things",
+    "cover": "deen-032-honesty-in-small-things.jpg",
+    "contactSheet": "deen-032-honesty-in-small-things-contact-sheet.png",
+    "slides": [
+      "deen-032-honesty-in-small-things-slide-01.jpg",
+      "deen-032-honesty-in-small-things-slide-02.jpg",
+      "deen-032-honesty-in-small-things-slide-03.jpg",
+      "deen-032-honesty-in-small-things-slide-04.jpg",
+      "deen-032-honesty-in-small-things-slide-05.jpg"
+    ]
+  },
+  "sha256": {
+    "cover": "850e1146e778396639d47ddd48e06df7de659f3a2c3d25c714328b261a83dc69",
+    "slides": [
+      "850e1146e778396639d47ddd48e06df7de659f3a2c3d25c714328b261a83dc69",
+      "8547c5e20577032f3c04bf698de90e2c8901da811b466704ae2bf2eef67645ff",
+      "3079668130c918c0be09f1e78f90ca2c8328e6a47469f654b5560c49f1ffe1c5",
+      "485100b0af92e1b05d6054dd78db2364ce2b570ebde6159a32282325bff0250f",
+      "ec79314961bc18725e073b110ca5467aa9ba305b38a9b9f180c480c9d942dc45"
+    ]
+  },
+  "durationSec": null,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 30
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
