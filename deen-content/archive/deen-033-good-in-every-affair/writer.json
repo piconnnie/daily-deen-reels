@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-24",
+  "writer": "queue",
+  "plan": {
+    "from": "draft",
+    "backlogId": "t018",
+    "pillar": "B",
+    "pillarName": "B: Heart-Softening Reminders",
+    "format": "heart-reminder",
+    "research": false
+  },
+  "reelId": "deen-033-good-in-every-affair",
+  "rounds": [],
+  "finalCritic": null,
+  "needsAttention": false,
+  "estimatedCostUsd": 0
+}

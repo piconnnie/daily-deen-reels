@@ -1,0 +1,38 @@
+{
+  "id": "deen-033-good-in-every-affair",
+  "createdAt": "2026-11-24T09:58:43.498Z",
+  "kind": "reel",
+  "release": {
+    "tag": "reel-deen-033-good-in-every-affair",
+    "cover": "deen-033-good-in-every-affair.jpg",
+    "contactSheet": "deen-033-good-in-every-affair-contact-sheet.png",
+    "video": "deen-033-good-in-every-affair.mp4"
+  },
+  "sha256": {
+    "video": "40b2ade3a0fd7298ae770f57f1b6f3e16022156ef69258986672fef4bc0255af",
+    "cover": "7a5ce9e5c25ba86323318b7190be45a7c40f39ad9cccc8af3b4b8466a9126144"
+  },
+  "durationSec": 37.63,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 49
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "contentId": "deen-033-good-in-every-affair",
+  "version": 1,
+  "generatedAt": "2026-11-24T09:58:38.360Z",
+  "pillar": "B: Heart-Softening Reminders",
+  "format": "heart-reminder",
+  "objective": "shares",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "Sahih Muslim 2999: good in every affair of the believer",
+  "coreInsight": "Sahih Muslim 2999: for the believer, gratitude in good times and patience in hard times both turn into good.",
+  "hookVariants": [
+    {
+      "text": "Good day or hard day?",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "Both can be good for you",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 21
+    },
+    {
+      "text": "Strange are the ways of a believer",
+      "angle": "Quote",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 20
+    }
+  ],
+  "selectedHook": "Good day or hard day?",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "Good day or hard day? / This hadith speaks to both.",
+      "voiceover": null
+    },
+    {
+      "scene": "hadith",
+      "onScreen": "muslim:2999 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "reflection",
+      "onScreen": "REFLECTION / Two responses / On a good day: gratitude. On a hard day: patience. Notice which one you are in today, and answer it the way this hadith describes.",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Thank in ease. Endure in hardship. / Send this to someone who needs it",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "hadith",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 510,
+      "startSec": 3,
+      "endSec": 17
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "startFrame": 510,
+      "endFrame": 799,
+      "startSec": 17,
+      "endSec": 26.63
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 799,
+      "endFrame": 1129,
+      "startSec": 26.63,
+      "endSec": 37.63
+    }
+  ],
+  "caption": "Whatever kind of day you're having, this hadith has a response for it.\n\nSahih Muslim 2999: gratitude in ease, patience in hardship, and good in both for the believer.\n\nToday: name which one you are in, and answer it.\n\nSend this to someone who needs it today.\n\n📖 Sources\n• Sahih Muslim 2999 (Sahih, tr. Abdul Hamid Siddiqui) — sunnah.com/muslim:2999\nFull text: Suhaib reported that Allah's Messenger (ﷺ) said: Strange are the ways of a believer for there is good in every affair of his and this is not the case with anyone else except in the case of a believer for if he has an occasion to feel delight, he thanks (God), thus there is a good for him in it, and if he gets into trouble and shows resignation (and endures it patiently), there is a good for him in it\n• Recitation: Qur'an 2:155-156 — Mohamed Siddiq Al-Minshawi (Murattal) (EveryAyah.com) — quran.com/2/155-156\n\n#IslamicReminder #Sabr #Shukr #Hadith",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Sabr",
+    "#Shukr",
+    "#Hadith"
+  ],
+  "primaryCta": {
+    "type": "share",
+    "text": "Send this to someone who needs it"
+  },
+  "coverHeadline": "Good in every affair",
+  "sources": [
+    {
+      "ref": "muslim:2999",
+      "citation": "Sahih Muslim 2999",
+      "url": "https://sunnah.com/muslim:2999",
+      "translation": "Abdul Hamid Siddiqui",
+      "grade": "Sahih",
+      "english": "Suhaib reported that Allah's Messenger (ﷺ) said: Strange are the ways of a believer for there is good in every affair of his and this is not the case with anyone else except in the case of a believer for if he has an occasion to feel delight, he thanks (God), thus there is a good for him in it, and if he gets into trouble and shows resignation (and endures it patiently), there is a good for him in it"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What muslim:2999 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "muslim:2999"
+    },
+    {
+      "text": "Naming the kind of day and responding to it is our reflection.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 37.63,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [
+      "public/audio/deen-033-good-in-every-affair-bed.wav"
+    ],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-033-good-in-every-affair.mp4",
+    "cover": "output/covers/deen-033-good-in-every-affair.png",
+    "caption": "output/captions/deen-033-good-in-every-affair.txt",
+    "storyboard": "output/storyboards/deen-033-good-in-every-affair.md",
+    "subtitles": "output/storyboards/deen-033-good-in-every-affair.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-24T09:58:43.454Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-033-good-in-every-affair/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Evergreen.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
