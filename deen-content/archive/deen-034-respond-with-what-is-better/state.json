@@ -1,0 +1,52 @@
+{
+  "id": "deen-034-respond-with-what-is-better",
+  "createdAt": "2026-11-25T08:41:17.432Z",
+  "kind": "carousel",
+  "release": {
+    "tag": "reel-deen-034-respond-with-what-is-better",
+    "cover": "deen-034-respond-with-what-is-better.jpg",
+    "contactSheet": "deen-034-respond-with-what-is-better-contact-sheet.png",
+    "slides": [
+      "deen-034-respond-with-what-is-better-slide-01.jpg",
+      "deen-034-respond-with-what-is-better-slide-02.jpg",
+      "deen-034-respond-with-what-is-better-slide-03.jpg",
+      "deen-034-respond-with-what-is-better-slide-04.jpg",
+      "deen-034-respond-with-what-is-better-slide-05.jpg",
+      "deen-034-respond-with-what-is-better-slide-06.jpg"
+    ]
+  },
+  "sha256": {
+    "cover": "f41d15800f905146ef31283aff963e97d13c6b8102a60b01cd6d9f665a7c4fff",
+    "slides": [
+      "f41d15800f905146ef31283aff963e97d13c6b8102a60b01cd6d9f665a7c4fff",
+      "7b55f2217cf266f85711508bc62e8df49cb66aa33a9b55e730a5f19eb310090e",
+      "d3b849df02ce5e33fb8c6baf1b405f0acf631dc51049e9814d5f726498dec130",
+      "2030fa4ad8b3b3e913bdc6428ee5c748c9e4de0c0f9f4e4956ad51f959b51fa2",
+      "3b4cbb76e3f389df27e95d78f226761a79e878bfe40b94b06f4e7c10fb41ba07",
+      "ad8c4fcc2e66e6fdf8fc8b694b42f499b6a42ec7d75efd8a0715c779b0bb582d"
+    ]
+  },
+  "durationSec": null,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 30
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
