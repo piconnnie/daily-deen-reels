@@ -1,0 +1,249 @@
+{
+  "contentId": "deen-034-respond-with-what-is-better",
+  "version": 1,
+  "generatedAt": "2026-11-25T08:41:11.782Z",
+  "pillar": "A: Qur'an & Hadith",
+  "format": "ayah-lesson",
+  "objective": "shares",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "Fussilat 41:34: repel evil with what is better",
+  "coreInsight": "Fussilat 41:34 asks us to answer bad with what is better, and 41:35 is honest that it takes patience.",
+  "hookVariants": [
+    {
+      "text": "When someone is unkind to you",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 5,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 24
+    },
+    {
+      "text": "A harder, better response",
+      "angle": "Curiosity",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 20
+    },
+    {
+      "text": "Not equal",
+      "angle": "Quote-led",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 3
+      },
+      "total": 19
+    }
+  ],
+  "selectedHook": "When someone is unkind to you",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "When someone is unkind to you. / One ayah. One lesson.",
+      "voiceover": null
+    },
+    {
+      "scene": "ayah",
+      "onScreen": "quran:41:34 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "context",
+      "onScreen": "quran:41:35 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "reflection",
+      "onScreen": "REFLECTION / The lesson / The ayah sets the good and the bad side by side and asks us to respond with what is better. The next ayah is honest about the cost: it takes patience. That makes it a goal to grow into, one response at a time.",
+      "voiceover": null
+    },
+    {
+      "scene": "practice",
+      "onScreen": "LIVE IT TODAY / Answer a sharp message with a calm one · Greet first, even when it feels awkward · Make du'a for someone you find difficult",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Respond with what is better. / Share it with someone who needs it",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 240,
+      "startSec": 3,
+      "endSec": 8
+    },
+    {
+      "id": "context",
+      "type": "source",
+      "startFrame": 240,
+      "endFrame": 390,
+      "startSec": 8,
+      "endSec": 13
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "startFrame": 390,
+      "endFrame": 540,
+      "startSec": 13,
+      "endSec": 18
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "startFrame": 540,
+      "endFrame": 690,
+      "startSec": 18,
+      "endSec": 23
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 690,
+      "endFrame": 840,
+      "startSec": 23,
+      "endSec": 28
+    }
+  ],
+  "caption": "For the next time someone is short with you.\n\nFussilat 41:34, then the ayah after it (41:35): it takes patience.\n\nSwipe for the ayah, its context and three small responses to try.\n\nShare it with someone who needs it.\n\n📖 Sources\n• Qur'an 41:34 (tr. Saheeh International) — quran.com/41/34\n• Qur'an 41:35 (tr. Saheeh International) — quran.com/41/35\n\n#IslamicReminder #Quran #Akhlaq #OneAyahOneLesson",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Quran",
+    "#Akhlaq",
+    "#OneAyahOneLesson"
+  ],
+  "primaryCta": {
+    "type": "share",
+    "text": "Share it with someone who needs it"
+  },
+  "coverHeadline": "Respond with what is better",
+  "sources": [
+    {
+      "ref": "quran:41:34",
+      "citation": "Qur'an 41:34",
+      "url": "https://quran.com/41/34",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "And not equal are the good deed and the bad. Repel [evil] by that [deed] which is better; and thereupon the one whom between you and him is enmity [will become] as though he was a devoted friend"
+    },
+    {
+      "ref": "quran:41:35",
+      "citation": "Qur'an 41:35",
+      "url": "https://quran.com/41/35",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "But none is granted it except those who are patient, and none is granted it except one having a great portion [of good]"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What quran:41:34 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:41:34"
+    },
+    {
+      "text": "What quran:41:35 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:41:35"
+    },
+    {
+      "text": "The lesson and the three responses are our reflection on the ayat.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 28,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-034-respond-with-what-is-better.mp4",
+    "cover": "output/covers/deen-034-respond-with-what-is-better.png",
+    "caption": "output/captions/deen-034-respond-with-what-is-better.txt",
+    "storyboard": "output/storyboards/deen-034-respond-with-what-is-better.md",
+    "subtitles": "output/storyboards/deen-034-respond-with-what-is-better.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-25T08:41:17.377Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-034-respond-with-what-is-better/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Evergreen.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
