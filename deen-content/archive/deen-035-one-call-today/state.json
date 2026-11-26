@@ -1,0 +1,42 @@
+{
+  "id": "deen-035-one-call-today",
+  "createdAt": "2026-11-26T08:31:18.363Z",
+  "kind": "story",
+  "release": {
+    "tag": "reel-deen-035-one-call-today",
+    "cover": "deen-035-one-call-today.jpg",
+    "contactSheet": "deen-035-one-call-today-contact-sheet.png",
+    "slides": [
+      "deen-035-one-call-today-slide-01.jpg"
+    ]
+  },
+  "sha256": {
+    "cover": "e85657b9c152fe5d5eac8fe41e2f9a5d3d4fdeb5c8a45f7399fc13ed75e5efb0",
+    "slides": [
+      "e85657b9c152fe5d5eac8fe41e2f9a5d3d4fdeb5c8a45f7399fc13ed75e5efb0"
+    ]
+  },
+  "durationSec": null,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 27
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
