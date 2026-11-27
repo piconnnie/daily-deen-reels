@@ -1,0 +1,156 @@
+{
+  "contentId": "deen-036-four-small-friday-deeds",
+  "version": 1,
+  "generatedAt": "2026-11-27T08:39:09.316Z",
+  "pillar": "F: Islamic Calendar & Occasions",
+  "format": "story-check-in",
+  "objective": "replies",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "Friday check-in",
+  "coreInsight": "A short Friday check-in on salawat, du'a, Qur'an and family.",
+  "hookVariants": [
+    {
+      "text": "Your Friday check-in",
+      "angle": "Timely",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "How was your Friday?",
+      "angle": "Question",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 20
+    },
+    {
+      "text": "Four small Friday deeds",
+      "angle": "List",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 21
+    }
+  ],
+  "selectedHook": "Your Friday check-in",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "check",
+      "onScreen": "FRIDAY CHECK-IN / Did I send salawat on the Prophet ﷺ? · Did I make the du'a I keep putting off? · Did I read some Qur'an today? · Did I check on someone I love?",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "check",
+      "type": "checklist",
+      "startFrame": 0,
+      "endFrame": 150,
+      "startSec": 0,
+      "endSec": 5
+    }
+  ],
+  "caption": "Jumu'ah Mubarak. A quiet Friday check-in.\n\nSalawat · du'a · Qur'an · family.\n\nReply with the one still on your list.\n\n#IslamicReminder #JumuahMubarak #DailyDeen",
+  "hashtags": [
+    "#IslamicReminder",
+    "#JumuahMubarak",
+    "#DailyDeen"
+  ],
+  "primaryCta": {
+    "type": "question",
+    "text": "Reply: which one is still on your list?"
+  },
+  "coverHeadline": "Four small Friday deeds",
+  "sources": [],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "The check-in questions are our own prompts.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 5,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-036-four-small-friday-deeds.mp4",
+    "cover": "output/covers/deen-036-four-small-friday-deeds.png",
+    "caption": "output/captions/deen-036-four-small-friday-deeds.txt",
+    "storyboard": "output/storyboards/deen-036-four-small-friday-deeds.md",
+    "subtitles": "output/storyboards/deen-036-four-small-friday-deeds.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-27T08:39:10.467Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-036-four-small-friday-deeds/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Evergreen.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
