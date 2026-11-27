@@ -1,0 +1,42 @@
+{
+  "id": "deen-036-four-small-friday-deeds",
+  "createdAt": "2026-11-27T08:39:10.537Z",
+  "kind": "story",
+  "release": {
+    "tag": "reel-deen-036-four-small-friday-deeds",
+    "cover": "deen-036-four-small-friday-deeds.jpg",
+    "contactSheet": "deen-036-four-small-friday-deeds-contact-sheet.png",
+    "slides": [
+      "deen-036-four-small-friday-deeds-slide-01.jpg"
+    ]
+  },
+  "sha256": {
+    "cover": "17c925c6680f50e5fc4973d8f8e56e0ec7072f978d4850a2457654abe58374eb",
+    "slides": [
+      "17c925c6680f50e5fc4973d8f8e56e0ec7072f978d4850a2457654abe58374eb"
+    ]
+  },
+  "durationSec": null,
+  "qa": {
+    "status": "automated-passed",
+    "errors": 0,
+    "warnings": 0,
+    "checks": 27
+  },
+  "critic": null,
+  "needsAttention": false,
+  "attentionReasons": [],
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "publish": {
+    "status": "pending",
+    "mediaId": null,
+    "permalink": null,
+    "publishedAt": null,
+    "attempts": 0,
+    "lastError": null
+  }
+}
