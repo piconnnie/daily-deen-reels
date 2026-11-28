@@ -1,0 +1,249 @@
+{
+  "contentId": "deen-037-look-back-then-look-up",
+  "version": 1,
+  "generatedAt": "2026-11-28T07:54:19.943Z",
+  "pillar": "A: Qur'an & Hadith",
+  "format": "ayah-lesson",
+  "objective": "saves",
+  "targetAudience": "Muslims who want a short, trustworthy daily reminder they can act on",
+  "topic": "Ad-Duha 93:1-3 and 93:6-8: you have not been left",
+  "coreInsight": "Surah Ad-Duha reassures the Prophet ﷺ that his Lord has not left him, then recalls how he was cared for before; looking back at past care can steady a heavy heart.",
+  "hookVariants": [
+    {
+      "text": "For a season that feels dark",
+      "angle": "Personal recognition",
+      "scores": {
+        "specificity": 4,
+        "relevance": 5,
+        "curiosity": 4,
+        "credibility": 5,
+        "comprehension": 5
+      },
+      "total": 23
+    },
+    {
+      "text": "Look back before you lose hope",
+      "angle": "Advice",
+      "scores": {
+        "specificity": 4,
+        "relevance": 4,
+        "curiosity": 3,
+        "credibility": 5,
+        "comprehension": 4
+      },
+      "total": 20
+    },
+    {
+      "text": "Morning comes after the night",
+      "angle": "Reframe",
+      "scores": {
+        "specificity": 3,
+        "relevance": 4,
+        "curiosity": 4,
+        "credibility": 4,
+        "comprehension": 5
+      },
+      "total": 20
+    }
+  ],
+  "selectedHook": "For a season that feels dark",
+  "selectionRationale": "Most relevant and clearest at a glance; the teaching pays it off.",
+  "script": [
+    {
+      "scene": "hook",
+      "onScreen": "For a season that feels dark. / One ayah. One lesson.",
+      "voiceover": null
+    },
+    {
+      "scene": "ayah",
+      "onScreen": "quran:93:1-3 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "context",
+      "onScreen": "quran:93:6-8 (pulled from the verified dataset)",
+      "voiceover": null
+    },
+    {
+      "scene": "reflection",
+      "onScreen": "REFLECTION / The lesson / The surah opens with morning light and night, then reassures the Prophet ﷺ that his Lord has not left him. Later it recalls how he was cared for. On a dark day, remembering how you were carried before can steady the heart.",
+      "voiceover": null
+    },
+    {
+      "scene": "practice",
+      "onScreen": "LIVE IT TODAY / Write down three times you were helped through · Thank Allah for each one · Ask Him for today's need",
+      "voiceover": null
+    },
+    {
+      "scene": "takeaway",
+      "onScreen": "Look back. Then look up. / Save this for a difficult day",
+      "voiceover": null
+    }
+  ],
+  "sceneTimings": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "startFrame": 0,
+      "endFrame": 90,
+      "startSec": 0,
+      "endSec": 3
+    },
+    {
+      "id": "ayah",
+      "type": "source",
+      "startFrame": 90,
+      "endFrame": 240,
+      "startSec": 3,
+      "endSec": 8
+    },
+    {
+      "id": "context",
+      "type": "source",
+      "startFrame": 240,
+      "endFrame": 390,
+      "startSec": 8,
+      "endSec": 13
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "startFrame": 390,
+      "endFrame": 540,
+      "startSec": 13,
+      "endSec": 18
+    },
+    {
+      "id": "practice",
+      "type": "checklist",
+      "startFrame": 540,
+      "endFrame": 690,
+      "startSec": 18,
+      "endSec": 23
+    },
+    {
+      "id": "takeaway",
+      "type": "takeaway",
+      "startFrame": 690,
+      "endFrame": 840,
+      "startSec": 23,
+      "endSec": 28
+    }
+  ],
+  "caption": "For a season that feels dark.\n\nSurah Ad-Duha, ayat 1–3, and later in the surah, 6–8: remembering how the Prophet ﷺ was cared for.\n\nSwipe for the ayat and one practice: look back, then look up.\n\nSave this reminder for a difficult day.\n\n📖 Sources\n• Qur'an 93:1-3 (tr. Saheeh International) — quran.com/93/1-3\n• Qur'an 93:6-8 (tr. Saheeh International) — quran.com/93/6-8\n\n#IslamicReminder #Quran #Hope #OneAyahOneLesson",
+  "hashtags": [
+    "#IslamicReminder",
+    "#Quran",
+    "#Hope",
+    "#OneAyahOneLesson"
+  ],
+  "primaryCta": {
+    "type": "save",
+    "text": "Save this for a difficult day"
+  },
+  "coverHeadline": "Look back, then look up",
+  "sources": [
+    {
+      "ref": "quran:93:1-3",
+      "citation": "Qur'an 93:1-3",
+      "url": "https://quran.com/93/1-3",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "By the morning brightness (1) And [by] the night when it covers with darkness (2) Your Lord has not taken leave of you, [O Muhammad], nor has He detested [you] (3)"
+    },
+    {
+      "ref": "quran:93:6-8",
+      "citation": "Qur'an 93:6-8",
+      "url": "https://quran.com/93/6-8",
+      "translation": "Saheeh International",
+      "grade": null,
+      "english": "Did He not find you an orphan and give [you] refuge (6) And He found you lost and guided [you] (7) And He found you poor and made [you] self-sufficient (8)"
+    }
+  ],
+  "sourcesNote": "Quotes pulled verbatim from the pinned datasets in sources/sources.json; everything else is our own reflection.",
+  "claims": [
+    {
+      "text": "What quran:93:1-3 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:93:1-3"
+    },
+    {
+      "text": "What quran:93:6-8 says, quoted verbatim.",
+      "kind": "source",
+      "ref": "quran:93:6-8"
+    },
+    {
+      "text": "The lesson and the three steps are our reflection on the ayat.",
+      "kind": "reflection"
+    }
+  ],
+  "estimatedDurationSec": 28,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "dependencies": {
+    "fonts": [
+      "public/fonts/InterDisplay-Bold.otf",
+      "public/fonts/InterDisplay-SemiBold.otf",
+      "public/fonts/Inter-Regular.otf",
+      "public/fonts/Inter-Medium.otf",
+      "public/fonts/Inter-SemiBold.otf",
+      "public/fonts/DejaVuSansMono.ttf",
+      "public/fonts/DejaVuSansMono-Bold.ttf"
+    ],
+    "audio": [],
+    "externalServices": []
+  },
+  "files": {
+    "reel": "output/reels/deen-037-look-back-then-look-up.mp4",
+    "cover": "output/covers/deen-037-look-back-then-look-up.png",
+    "caption": "output/captions/deen-037-look-back-then-look-up.txt",
+    "storyboard": "output/storyboards/deen-037-look-back-then-look-up.md",
+    "subtitles": "output/storyboards/deen-037-look-back-then-look-up.srt"
+  },
+  "qa": {
+    "status": "automated-passed",
+    "ranAt": "2026-11-28T07:54:25.320Z",
+    "errors": 0,
+    "warnings": 0,
+    "report": "output/qa/deen-037-look-back-then-look-up/report.md",
+    "manualChecks": {
+      "status": "pending",
+      "items": [
+        "Open every source link (quran.com / sunnah.com) and confirm the quote, reference and translation match what is on screen.",
+        "Read our own words (hook, reflection, caption) once more: nothing is attributed to Allah or the Prophet ﷺ that is not in the quoted source, and nothing reads as a ruling.",
+        "Watch the full MP4 at normal speed on a phone (pacing, readability, transitions) and listen to the recitation: it starts cleanly and is never cut.",
+        "Read the caption once more in Instagram's composer before posting."
+      ]
+    }
+  },
+  "approval": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null
+  },
+  "suggestedPublicationDate": "",
+  "publishNotes": "Evergreen.",
+  "repurposing": {
+    "carousel": [],
+    "followUpReel": "",
+    "linkedin": ""
+  },
+  "metricsToCapture": [
+    "reach",
+    "non_follower_reach",
+    "plays",
+    "avg_watch_time_sec",
+    "avg_watch_time_pct_of_duration",
+    "skip_rate (if shown)",
+    "shares",
+    "saves",
+    "comments_meaningful (manually counted)",
+    "profile_visits",
+    "follows",
+    "production_time_min"
+  ],
+  "performance": null
+}
