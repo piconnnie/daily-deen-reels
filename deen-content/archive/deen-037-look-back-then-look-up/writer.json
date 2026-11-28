@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-28",
+  "writer": "queue",
+  "plan": {
+    "from": "draft",
+    "backlogId": null,
+    "pillar": "A",
+    "pillarName": "A: Qur'an & Hadith",
+    "format": "ayah-lesson",
+    "research": false
+  },
+  "reelId": "deen-037-look-back-then-look-up",
+  "rounds": [],
+  "finalCritic": null,
+  "needsAttention": false,
+  "estimatedCostUsd": 0
+}
